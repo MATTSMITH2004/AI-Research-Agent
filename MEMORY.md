@@ -67,6 +67,13 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   cannot legitimately get past it with these tools — no paywall-bypass mirrors, no
   stored login. If a WSJ article is load-bearing, flag it and Matthew pastes the
   text.
+- WSJ full-article automation is PARKED until ~August 2026. WSJ sits behind
+  DataDome bot protection that blocks server-side fetches (and the login itself)
+  regardless of credentials, so do not scrape it. The plan: once Matthew has
+  university/library Factiva or ProQuest access (expected around August, with law
+  school), read full WSJ text through that legitimate channel. Revisit then. A
+  browser-side one-click capture bookmarklet is the fallback if Factiva/ProQuest
+  does not pan out.
 - Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
   Bloomberg Talks.
 - AI Daily Brief: pull the published web/markdown edition per day (via the
