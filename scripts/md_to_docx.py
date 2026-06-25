@@ -14,7 +14,7 @@ import sys
 from urllib.parse import urlparse
 
 from docx import Document
-from docx.shared import Pt, RGBColor
+from docx.shared import Pt, RGBColor, Inches
 from docx.oxml.shared import OxmlElement, qn
 
 HYPERLINK_BLUE = "0563C1"
@@ -94,6 +94,11 @@ def main():
     lines = open(src, encoding="utf-8").read().split("\n")
 
     doc = Document()
+    for section in doc.sections:
+        section.top_margin = Inches(1)
+        section.bottom_margin = Inches(1)
+        section.left_margin = Inches(1)
+        section.right_margin = Inches(1)
     style = doc.styles["Normal"]
     style.font.name = "Calibri"
     style.font.size = Pt(11)
