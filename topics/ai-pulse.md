@@ -34,7 +34,13 @@ reading-queue shape; this section governs Pulse only.)
   labeled beats, each label in bold:
   - **What happened.** The facts, with the date.
   - **The evidence.** The specific reporting or, preferably, the primary source
-    that backs it. Link it.
+    that backs it. Cite every source actually drawn on for the item, not just the
+    single best one — list them all on the Source line, each with a few words on
+    what it supports. If a claim has no source, do not make it.
+    Benchmarks and jargon: never drop a benchmark name or score without explaining,
+    in plain words, what the test measures and how to read the number (what counts
+    as good, what it means in practice). I do not know the benchmarks. Same for
+    terms like parameters, context window, or license — gloss them the first time.
   - **Why it matters to me, traced out.** The so-what chain, step by step. When
     there are several distinct reasons, use an indented bullet list, each bullet
     led by a short bold phrase.

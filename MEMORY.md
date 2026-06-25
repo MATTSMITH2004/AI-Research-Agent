@@ -34,6 +34,14 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   quote every time.
 
 ### Sources
+- Cite every source actually used in an item, not just the strongest one. List
+  them all on the Source line, each with a few words on what it supports. In the
+  Word doc, render source links as clickable blue hyperlinks (anchor = domain).
+- Always explain benchmarks in plain language — what the test measures and how to
+  read the score (higher is better, what counts as good, what it means in
+  practice) — never just drop a benchmark name or number. I do not know the
+  benchmarks. Same for jargon like parameters, context window, license: gloss on
+  first use.
 - Primary sources first, always. When someone posts a specific thing (essay,
   blog, filing, paper, model card, X/LinkedIn post), read and cite that primary
   directly — never a secondhand article about it. Secondary only supplements the
