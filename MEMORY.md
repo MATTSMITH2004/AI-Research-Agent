@@ -54,9 +54,17 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   (GLM, DeepSeek, Kimi, Qwen, etc.) — see topics/ai-pulse.md "What to track" #1.
 
 ### Sources, kept and dropped
-- Keep WSJ What's News. Try the public episode-page transcript; flag paywall gaps
-  rather than skipping silently. Do not store WSJ login credentials.
-- Dropped from the weekly scan: FT News Briefing and Bloomberg Talks.
+- WSJ: keep as a written/journalism source for article research, NOT as a podcast.
+  Read headlines/snippets via search and cite; full articles are paywalled and I
+  cannot legitimately get past it with these tools — no paywall-bypass mirrors, no
+  stored login. If a WSJ article is load-bearing, flag it and Matthew pastes the
+  text.
+- Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
+  Bloomberg Talks.
+- AI Daily Brief: pull the published web/markdown edition per day (via the
+  agent.json feed -> e/<date>.md), not the verbatim audio transcript. It is NLW's
+  own structured write-up, so it is denser and cleaner AND fewer tokens — the best
+  version, not a lossy shortcut. Skip the separate transcript.md.
 
 ## Already known and covered
 

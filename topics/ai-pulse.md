@@ -118,8 +118,13 @@ Starter set, refine as I learn which ones earn it:
   Mistral, and peers.
 - Official blogs for the big infrastructure players: Nvidia and the major cloud
   providers.
-- For the money: reputable deal and funding coverage (The Information, Bloomberg,
-  Reuters, CNBC) plus primary filings where they exist.
+- For the money: reputable deal and funding coverage (The Wall Street Journal,
+  The Information, Bloomberg, Reuters, CNBC) plus primary filings where they exist.
+  WSJ note: I can read WSJ headlines and snippets via search and cite them, but
+  full articles sit behind a paywall I cannot legitimately get past with these
+  tools — do not use paywall-bypass mirrors, and do not store my login. When a
+  specific WSJ article is load-bearing for an item, flag it and I will paste the
+  text; otherwise cite from the search snippet and note the limit.
 - High-signal Substacks and independent analysts. AI and ecosystem: Interconnects
   (Nathan Lambert) for the model and open-weight scene, ChinaTalk (Jordan
   Schneider) for US-China AI and chips, Import AI (Jack Clark) for frontier and
@@ -202,15 +207,10 @@ every episode is about AI, so pull the ones that are or that touch operating):
 - In Good Company (Nicolai Tangen, Norges Bank Investment Management), transcripts
   at https://podscripts.co/podcasts/in-good-company-with-nicolai-tangen : interviews
   with CEOs and investors on how big businesses and markets work.
-- WSJ What's News (Wall Street Journal), https://www.wsj.com/podcasts/whats-news :
-  short daily business and markets news; episode pages carry transcripts. Keep
-  this one. Try the public episode-page transcript first; if a needed article or
-  segment is paywalled, flag the gap in the coverage note rather than skipping it
-  silently (Matthew can paste the text when an item really matters). Do not store
-  his WSJ credentials.
-
-Dropped (do not scan these weekly anymore): FT News Briefing and Bloomberg Talks.
-FT was redundant daily news; Bloomberg Talks had no clean transcript source.
+Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
+Bloomberg Talks. The WSJ daily-news podcast is short headline audio and not worth
+the tokens for a weekly brief. WSJ still counts as a written/journalism source for
+article research (see "Sources to prioritize" above) — just not as a podcast.
 
 Optional and heavier: Acquired for occasional company deep dives, All-In for
 markets and venture chatter (more punditry, lower signal-to-noise).
