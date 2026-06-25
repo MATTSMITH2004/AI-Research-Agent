@@ -6,11 +6,13 @@ morning, with no prompt typing. It uses Claude Code on the web **Routines**
 
 You create the routine once in the web UI; everything it needs lives in this repo.
 
-**Chosen email method: Microsoft 365 (send from your own Outlook).** Your action
-items: (1) reconnect the Microsoft 365 connector granting **send / Mail.Send**
-permission — the current connection is read-only; (2) create the routine below
-with the Microsoft 365 connector included. No scripts or stored keys are needed
-for this path. (The SMTP script is kept only as a fallback.)
+**Chosen email method: Gmail (draft).** The Gmail connector can compose a draft
+(with the full brief in the body) but cannot send, and its attachments are "not
+supported yet" — so each Saturday the routine drops a finished, readable brief
+into your Gmail **Drafts**, with the Word doc linked from the repo. You read it in
+Drafts, or one-click Send to move it to your inbox. No extra accounts, secrets, or
+permission grants. Your only action item is creating the routine below and
+including the Gmail connector.
 
 ## One-time setup at claude.ai/code/routines
 
@@ -22,12 +24,12 @@ for this path. (The SMTP script is kept only as a fallback.)
    block it with 403s. Set the routine's environment **Network access** to **Full**
    (or **Custom** with at least: podscripts.co, youtube.com, aidailybrief.ai,
    newsletter.semianalysis.com, and the news/primary domains the brief cites).
-4. **Connectors:** include **Microsoft 365** only if you go with email Option A
-   below. Remove connectors the routine doesn't need.
+4. **Connectors:** include **Gmail** (for draft delivery). Remove connectors the
+   routine doesn't need.
 5. **Schedule trigger:** Weekly → Saturday → 9:00 AM, in your local (Eastern)
    timezone. (The UI converts local → UTC automatically.)
-6. **Environment variables (only for email Option B):** add the SMTP secrets
-   listed below. These live in the routine's vault, never in this repo.
+6. **Environment variables:** none needed for the Gmail-draft method. (Only the
+   SMTP fallback below needs secrets.)
 7. Paste the **prompt** below, then **Create**. Use **Run now** once to test.
 
 ## The routine prompt (paste this)
@@ -49,27 +51,28 @@ for this path. (The SMTP script is kept only as a fallback.)
 >    `python3 scripts/md_to_docx.py briefs/ai-pulse-<YYYY-MM-DD>.md briefs/ai-pulse-<YYYY-MM-DD>.docx`.
 > 5. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
 >    then commit and push the brief and memory to a `claude/` branch.
-> 6. Email the brief to msmith@jczmf.com using your Microsoft 365 send-mail tool
->    (search your available tools for it), subject "AI Pulse Brief — week of
->    <date>". Attach the `.docx` if the tool supports attachments; if it does not,
->    put the full brief in the email body (rendered readably) and include a link
->    to the pushed `.docx` on GitHub. Confirm the send succeeded before finishing.
+> 6. Deliver the brief by creating a Gmail draft with the `mcp__Gmail__create_draft`
+>    tool: to msmith@jczmf.com, subject "AI Pulse Brief — week of <date>". Render
+>    the FULL brief as the `htmlBody` (readable directly in the email) with a plain
+>    -text version in `body`, and include a link to the pushed `.docx` on GitHub.
+>    Do not rely on attachments (the tool does not support them). Confirm the draft
+>    was created before finishing.
 > 7. Refresh `templates/ai-pulse-format-reference.{md,docx}` from this brief only
 >    if the format changed.
 
 ## Email step
 
-**Option A — Microsoft 365 connector (CHOSEN — send from your own Outlook).**
-Requires the Microsoft 365 connector to have **send / Mail.Send** permission
-(the current connection is read-only — reconnect it granting send). Step 6 of the
-prompt above already uses the Microsoft 365 send-mail tool. No script or secrets
-needed. To grant send: reconnect Microsoft 365 at
-https://claude.ai/customize/connectors (or Settings → Connectors) and approve the
-send-mail / Mail.Send scope when prompted.
+**Chosen — Gmail draft (`mcp__Gmail__create_draft`).** Composes a fully readable
+brief in your Gmail Drafts each Saturday; you read it there or one-click Send.
+Step 6 of the prompt above uses it. No secrets or extra setup. Limits: the Gmail
+connector cannot send (draft only) and does not support attachments, so the brief
+goes in the body and the Word doc is linked from the repo.
 
-**Option B — SMTP via `scripts/send_brief_email.py` (FALLBACK, no connector changes).**
-If Mail.Send cannot be granted on your account, switch step 6 to run the script
-and set these environment variables in the routine vault instead.
+**Fallback — true auto-send to inbox via `scripts/send_brief_email.py` (SMTP).**
+Only if you later want the brief to land in your Inbox automatically with the
+`.docx` attached (no manual Send). Switch step 6 to run the script and set these
+environment variables in the routine vault (e.g. a free SendGrid account, sender
+verified):
 Add these environment variables to the routine (vault), then add to step 6:
 "Send the email by running `python3 scripts/send_brief_email.py --docx <docx>
 --md <md> --subject '<subject>'`."
