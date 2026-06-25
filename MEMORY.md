@@ -100,6 +100,14 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   own structured write-up, so it is denser and cleaner AND fewer tokens — the best
   version, not a lossy shortcut. Skip the separate transcript.md.
 
+### Automation
+- The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~9am
+  Eastern) that generates the brief and emails it to msmith@jczmf.com. Setup guide
+  and the ready-to-paste routine prompt: docs/weekly-brief-routine.md. Email is
+  sent via the Microsoft 365 connector (send-mail / Mail.Send) from Matthew's own
+  Outlook. The routine environment needs Full/Custom network access (the brief
+  scrapes the open web). scripts/send_brief_email.py is the SMTP fallback only.
+
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process
 in topics/ai-pulse.md "Source discovery"). THIS LEDGER IS PERSISTENT — never trim

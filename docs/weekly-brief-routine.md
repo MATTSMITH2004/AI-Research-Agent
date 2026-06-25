@@ -6,6 +6,12 @@ morning, with no prompt typing. It uses Claude Code on the web **Routines**
 
 You create the routine once in the web UI; everything it needs lives in this repo.
 
+**Chosen email method: Microsoft 365 (send from your own Outlook).** Your action
+items: (1) reconnect the Microsoft 365 connector granting **send / Mail.Send**
+permission — the current connection is read-only; (2) create the routine below
+with the Microsoft 365 connector included. No scripts or stored keys are needed
+for this path. (The SMTP script is kept only as a fallback.)
+
 ## One-time setup at claude.ai/code/routines
 
 1. **New routine.** Go to https://claude.ai/code/routines → **New routine**
@@ -43,21 +49,27 @@ You create the routine once in the web UI; everything it needs lives in this rep
 >    `python3 scripts/md_to_docx.py briefs/ai-pulse-<YYYY-MM-DD>.md briefs/ai-pulse-<YYYY-MM-DD>.docx`.
 > 5. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
 >    then commit and push the brief and memory to a `claude/` branch.
-> 6. Email the brief to msmith@jczmf.com — see the email step for your chosen
->    method — with the `.docx` attached and the subject
->    "AI Pulse Brief — week of <date>".
+> 6. Email the brief to msmith@jczmf.com using your Microsoft 365 send-mail tool
+>    (search your available tools for it), subject "AI Pulse Brief — week of
+>    <date>". Attach the `.docx` if the tool supports attachments; if it does not,
+>    put the full brief in the email body (rendered readably) and include a link
+>    to the pushed `.docx` on GitHub. Confirm the send succeeded before finishing.
 > 7. Refresh `templates/ai-pulse-format-reference.{md,docx}` from this brief only
 >    if the format changed.
 
-## Email step — pick ONE and keep it in the prompt
+## Email step
 
-**Option A — Microsoft 365 connector (send from your own Outlook).**
+**Option A — Microsoft 365 connector (CHOSEN — send from your own Outlook).**
 Requires the Microsoft 365 connector to have **send / Mail.Send** permission
-(the current connection is read-only — reconnect it granting send). Then add to
-the prompt's step 6: "Send the email using the Microsoft 365 send-mail tool,
-attaching the .docx." No script or secrets needed.
+(the current connection is read-only — reconnect it granting send). Step 6 of the
+prompt above already uses the Microsoft 365 send-mail tool. No script or secrets
+needed. To grant send: reconnect Microsoft 365 at
+https://claude.ai/customize/connectors (or Settings → Connectors) and approve the
+send-mail / Mail.Send scope when prompted.
 
-**Option B — SMTP via `scripts/send_brief_email.py` (no connector changes).**
+**Option B — SMTP via `scripts/send_brief_email.py` (FALLBACK, no connector changes).**
+If Mail.Send cannot be granted on your account, switch step 6 to run the script
+and set these environment variables in the routine vault instead.
 Add these environment variables to the routine (vault), then add to step 6:
 "Send the email by running `python3 scripts/send_brief_email.py --docx <docx>
 --md <md> --subject '<subject>'`."
