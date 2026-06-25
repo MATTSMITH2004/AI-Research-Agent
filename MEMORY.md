@@ -97,14 +97,21 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   version, not a lossy shortcut. Skip the separate transcript.md.
 
 ### Source-discovery ledger
-Tracks the standing "find new sources" beat (process is in topics/ai-pulse.md
-"Source discovery"). Move items between buckets as Matthew reacts.
+Tracks the standing "find new sources" beat and the promote/prune system (process
+in topics/ai-pulse.md "Source discovery"). THIS LEDGER IS PERSISTENT — never trim
+it (unlike the "recently covered" news list above, which trims to ~4-6 weeks).
+Each run, mark commentary sources hit/miss and update "last contributed."
 
-- Candidates surfaced, awaiting Matthew's verdict:
+- Standing rotation (commentary sources I scan every week):
   - SemiAnalysis (Dylan Patel), newsletter.semianalysis.com — chips, datacenters,
-    compute economics. Surfaced in the week-of-Jun-24 brief with a recommend-to-add.
-    Strong fit for the finance + infrastructure + "models and specs" lenses.
-- Promoted to standing rotation (also add to topics/ai-pulse.md source list):
+    compute economics. PROMOTED Jun 2026 (Matthew blessed it). Also added to the
+    topics/ai-pulse.md Substack list. Last contributed: week of Jun 24 (surfaced
+    as the find that promoted it).
+  - The other baseline podcasts/Substacks in topics/ai-pulse.md are the rest of
+    the rotation; start logging hit/miss for them as runs accumulate.
+- Candidates surfaced, awaiting Matthew's verdict:
+  - (none open)
+- Flagged for possible pruning (~4 straight misses / quality drop / redundant):
   - (none yet)
 - Passed on / rejected (do not re-surface):
   - (none yet)

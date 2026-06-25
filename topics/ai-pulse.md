@@ -115,11 +115,32 @@ treat this as optional color; it is a real job each week. How it works:
   weak ones, and a dry week is fine to report as dry.
 - Surface. Put the best one to three in the brief's "New sources worth adding"
   section with a short what-it-is / why-it-fits and a clear recommendation.
-- Promote and prune. Track candidates in MEMORY.md (the source-discovery ledger).
-  When I bless one, add it to the standing source list here and give it normal
-  weight in future briefs. When I pass on one, record that so it is not
-  re-surfaced. A source that earns its place over a few weeks should start showing
-  up as a regular, cited voice, not just a suggestion.
+- Promote and prune. Track everything in MEMORY.md (the source-discovery ledger).
+  When I bless a candidate, add it to the standing source list here and give it
+  normal weight in future briefs. A source that earns its place should start
+  showing up as a regular, cited voice, not just a suggestion.
+
+The promote/prune system (keep it lightweight):
+
+- Two kinds of memory, do not confuse them. The "recently covered" news list in
+  MEMORY.md trims to ~4-6 weeks on purpose (old news should fall off). The
+  source-discovery ledger is PERSISTENT and never trimmed — it is the long-horizon
+  memory that makes promote/prune possible. No need to extend the news window for
+  this; the ledger lives in a committed file and persists on its own.
+- Promote (candidate -> rotation): when Matthew blesses it, or when I have
+  recommended it and it has delivered brief-worthy material across ~3 separate
+  weeks and he confirms. On promotion, add it to the source list above and to the
+  ledger's rotation bucket.
+- Track hits and misses. Each run, in the ledger, mark every commentary source
+  (podcasts, Substacks, YouTube channels) as a hit (it contributed to the brief)
+  or a miss (checked, nothing worth pulling), and note when it last contributed.
+  This is cheap — the coverage section already records reached vs not-reached.
+- Prune (rotation -> dropped): when a commentary source hits ~4 consecutive
+  misses, or its quality clearly drops, or a stronger source now covers the same
+  beat, flag it for me in the brief ("consider dropping X — N weeks without a
+  contribution") and let me decide. Never silently drop a source I chose. This
+  applies only to the commentary rotation, where a slot has real cost — not to
+  news sources (lab blogs, wires), which are simply checked as needed.
 
 ## What to track (rough priority)
 
@@ -175,7 +196,9 @@ Starter set, refine as I learn which ones earn it:
 - High-signal Substacks and independent analysts. AI and ecosystem: Interconnects
   (Nathan Lambert) for the model and open-weight scene, ChinaTalk (Jordan
   Schneider) for US-China AI and chips, Import AI (Jack Clark) for frontier and
-  policy, One Useful Thing (Ethan Mollick) for practical, operator-level AI use.
+  policy, SemiAnalysis (Dylan Patel) for chips, datacenters, and compute economics
+  (promoted Jun 2026 — the money-and-engineering read on the AI supply chain),
+  One Useful Thing (Ethan Mollick) for practical, operator-level AI use.
   Finance and the tech-finance seam (the tangential angle I want): The Diff (Byrne
   Hobart) for the finance-meets-strategy intersection, The Generalist (Mario
   Gabriele) for deep dives on companies and business models, Net Interest (Marc
