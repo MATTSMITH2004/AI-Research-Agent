@@ -42,7 +42,21 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   not repeat that.)
 
 ### Emphasis
-- (none durable yet)
+- Keep the lens mix balanced for now; do not tilt the whole brief toward any one
+  angle. The three I care about roughly equally: operator / idea-generation,
+  finance, and the technical apparatus.
+- The technical interest is genuine, not just background. I want to track how the
+  technology, the companies, and the people are advancing and what is changing —
+  and especially the different models and the specs and trade-offs between them.
+  When a model is material, give the concrete comparison (context window, price,
+  benchmarks, speed, strengths/weaknesses), pitched for fluency, not engineering.
+- Standing "models and their specs" beat, including open-weight and Chinese models
+  (GLM, DeepSeek, Kimi, Qwen, etc.) — see topics/ai-pulse.md "What to track" #1.
+
+### Sources, kept and dropped
+- Keep WSJ What's News. Try the public episode-page transcript; flag paywall gaps
+  rather than skipping silently. Do not store WSJ login credentials.
+- Dropped from the weekly scan: FT News Briefing and Bloomberg Talks.
 
 ## Already known and covered
 

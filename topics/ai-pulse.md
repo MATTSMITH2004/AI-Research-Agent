@@ -76,9 +76,14 @@ only when an item genuinely has that angle.
 
 ## What to track (rough priority)
 
-1. Frontier model releases and meaningful capability or pricing changes from the
-   major labs. What shipped, what is actually different about it, and what people
-   are saying about it.
+1. Models and their specs (a standing beat — sweep this every week, even a quiet
+   one). What shipped or changed across the major labs AND the open-weight and
+   Chinese world (GLM, DeepSeek, Kimi, Qwen, and peers — the part most likely to
+   get skipped, so check it deliberately). When a release is material, lay out
+   what is actually different in concrete terms: context window, price per token,
+   benchmarks, speed, and what it is good and bad at. I want to understand the
+   models and the trade-offs between them, pitched for fluency, not engineering.
+   Include what people are saying about it.
 2. The money. Funding rounds, infrastructure and data-center spend, big commercial
    deals, valuations. Where capital is flowing and what it implies.
 3. Agents and agent tooling at the news level. Notable launches and what companies
@@ -197,13 +202,15 @@ every episode is about AI, so pull the ones that are or that touch operating):
 - In Good Company (Nicolai Tangen, Norges Bank Investment Management), transcripts
   at https://podscripts.co/podcasts/in-good-company-with-nicolai-tangen : interviews
   with CEOs and investors on how big businesses and markets work.
-- Bloomberg Talks (Bloomberg): short interviews with executives and newsmakers. No
-  clean transcript source found yet, so expect it to show as not-reached in Cowork
-  until the cloud routine, where the audio itself can be transcribed.
 - WSJ What's News (Wall Street Journal), https://www.wsj.com/podcasts/whats-news :
-  short daily business and markets news; episode pages carry transcripts.
-- FT News Briefing (Financial Times), https://www.ft.com/news-briefing : short
-  daily global business and markets news.
+  short daily business and markets news; episode pages carry transcripts. Keep
+  this one. Try the public episode-page transcript first; if a needed article or
+  segment is paywalled, flag the gap in the coverage note rather than skipping it
+  silently (Matthew can paste the text when an item really matters). Do not store
+  his WSJ credentials.
+
+Dropped (do not scan these weekly anymore): FT News Briefing and Bloomberg Talks.
+FT was redundant daily news; Bloomberg Talks had no clean transcript source.
 
 Optional and heavier: Acquired for occasional company deep dives, All-In for
 markets and venture chatter (more punditry, lower signal-to-noise).
