@@ -20,15 +20,29 @@ How to maintain this file:
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.
 
 ### Style and formatting
-- (none yet)
+- Pulse brief structure: Title + "Week of" line, short intro, then Top
+  developments as numbered claim-sentence headings. Each top item is broken into
+  labeled beats — What happened / The evidence / Why it matters to me, traced out
+  (use an indented bullet list when there are multiple reasons) / My read. Always
+  keep "My read" explicitly labeled as my own opinion, separated from the facts.
+  Full template lives in topics/ai-pulse.md "Output shape."
+- Keep "What people are saying" as its own section (do not fold the perspective
+  takes into the items). Write each take as two beats: what the episode/post was
+  about, then why it matters. Give more depth for high-signal speakers (major
+  CEOs, frontier-lab leaders, serious investors) — more on what was actually
+  said, not a one-liner. Include a good quote when there is one; do not force a
+  quote every time.
 
 ### Sources
-- (which sources have earned their place, which to drop, which to add)
-- (none yet)
+- Primary sources first, always. When someone posts a specific thing (essay,
+  blog, filing, paper, model card, X/LinkedIn post), read and cite that primary
+  directly — never a secondhand article about it. Secondary only supplements the
+  primary or fills in when no primary exists. (The week-of-Jun-24 brief wrongly
+  cited a TheStreet article for Nadella's essay instead of his actual post — do
+  not repeat that.)
 
 ### Emphasis
-- (topics or angles I have said to weight up or down)
-- (none yet)
+- (none durable yet)
 
 ## Already known and covered
 

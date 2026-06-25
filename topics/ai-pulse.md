@@ -21,10 +21,49 @@ Weekly. Default window is the last 7 days.
 
 ## Output shape
 
-The standard news brief defined in CLAUDE.md: a scannable top layer of quick hits,
-each with a why-phrase, then the few items that earn it written as full deep dives.
-This is the default the skill produces, so nothing special is needed here. (The
-Playbook config will override this with a reading-queue shape.)
+Build the Pulse brief in this exact structure every week. It is the shape worked
+out from the brief Matthew likes. (The Playbook config overrides this with a
+reading-queue shape; this section governs Pulse only.)
+
+- **Title block.** "AI Pulse Brief" and a "Week of <date range>" line.
+- **Intro.** Two to four sentences on the week: name the single biggest story and
+  the through-line that connects the rest. Direct, no throat-clearing.
+- **Top developments (3 to 5).** Each item is a numbered heading written as a
+  full claim sentence, not a short label. The heading should state what happened
+  and signal why it is the story. Inside each item, walk the chain with these
+  labeled beats, each label in bold:
+  - **What happened.** The facts, with the date.
+  - **The evidence.** The specific reporting or, preferably, the primary source
+    that backs it. Link it.
+  - **Why it matters to me, traced out.** The so-what chain, step by step. When
+    there are several distinct reasons, use an indented bullet list, each bullet
+    led by a short bold phrase.
+  - **My read.** My own opinion, clearly labeled as mine and separated from the
+    facts above, including the signal-versus-hype call.
+
+  End each item with a "Source:" line. The exact beat labels can flex to the
+  story (for example "What actually triggered it" or "One caution, flagged"), but
+  keep the fact then proof then so-what then my-read spine and keep My read
+  labeled.
+- **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
+  each: a bold lead-in sentence, a one-line why, and a link.
+- **What people are saying.** The perspective layer from the podcasts and
+  Substacks, kept as its own section (do not fold it into the items). For each
+  show or writer worth surfacing, write two beats: what the episode or post was
+  actually about, then why it matters or what context it adds. Two rules:
+  - Scale the depth to the speaker. When it is a high-signal voice (a major CEO,
+    a frontier-lab leader, a serious investor), give more on what was actually
+    said, not a single line.
+  - Use a quote when there is a genuinely good one. Not every show needs a quote,
+    but a sharp line beats a paraphrase. Cite the specific episode or post.
+- **On my radar.** Things that have not landed yet, open questions, threads to
+  follow next week. Bullets.
+- **Source coverage this week.** A short closing section: what was pulled
+  (primary and verification), what could not be reached, and any strong new
+  source worth adding.
+
+Length follows substance. A quiet week is short; a rich week can run long. Never
+pad, and never compress something worth teaching just to stay short.
 
 ## Lens weighting for this topic
 
@@ -60,7 +99,15 @@ only when an item genuinely has that angle.
 
 ## Sources to prioritize
 
-Lead with primary sources. Starter set, refine as I learn which ones earn it:
+Lead with primary sources, and mean it. When a person or company posts a
+specific thing — an essay, a blog post, a filing, a paper, a model card, an X or
+LinkedIn post — go find and read that primary source and cite it directly. Do not
+cite a secondhand article about it (a Fortune or TheStreet write-up of Satya
+Nadella's essay is the anti-pattern). Secondary coverage is only for supplementing
+the primary or for when no primary exists. If the primary cannot be found, say so
+rather than passing off the secondhand version as the source.
+
+Starter set, refine as I learn which ones earn it:
 
 - Major lab newsrooms and blogs: Anthropic, OpenAI, Google DeepMind, Meta AI,
   Mistral, and peers.

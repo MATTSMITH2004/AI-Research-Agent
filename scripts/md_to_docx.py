@@ -50,6 +50,8 @@ def main():
             continue
         if line.startswith("# "):
             doc.add_heading(line[2:].strip(), level=0)
+        elif line.startswith("### "):
+            doc.add_heading(line[4:].strip(), level=2)
         elif line.startswith("## "):
             doc.add_heading(line[3:].strip(), level=1)
         elif line.startswith("- "):
