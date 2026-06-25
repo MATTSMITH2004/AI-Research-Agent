@@ -55,8 +55,12 @@ reading-queue shape; this section governs Pulse only.)
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
   Substacks, kept as its own section (do not fold it into the items). For each
-  show or writer worth surfacing, write two beats: what the episode or post was
-  actually about, then why it matters or what context it adds. Two rules:
+  show or writer worth surfacing, write two beats, each opened with a literal
+  bold label: "**What it was about:**" then "**Why it matters:**". These two
+  labels are keys that should stand out — in the Word doc they render bold in a
+  distinct accent color (any bold label ending in a colon is auto-colored by the
+  renderer), so always write them exactly as those two bold, colon-terminated
+  labels. Two more rules:
   - Scale the depth to the speaker. When it is a high-signal voice (a major CEO,
     a frontier-lab leader, a serious investor), give more on what was actually
     said, not a single line.

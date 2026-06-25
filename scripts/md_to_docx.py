@@ -18,6 +18,9 @@ from docx.shared import Pt, RGBColor, Inches
 from docx.oxml.shared import OxmlElement, qn
 
 HYPERLINK_BLUE = "0563C1"
+# accent color for label-style keys (a bold run ending in ":"), e.g. the
+# "What it was about:" / "Why it matters:" keys in the perspective section.
+LABEL_COLOR = RGBColor(0x0F, 0x76, 0x6E)  # dark teal
 URL_RE = r"https?://[^\s)\]>;]+"
 TOKEN = re.compile(r"(\*\*.+?\*\*|\*[^*]+?\*|" + URL_RE + r")")
 
@@ -73,7 +76,11 @@ def add_inline(paragraph, text, size=None):
         if not part:
             continue
         if part.startswith("**") and part.endswith("**"):
-            _sized(paragraph.add_run(part[2:-2]), size).bold = True
+            run = _sized(paragraph.add_run(part[2:-2]), size)
+            run.bold = True
+            # label-style keys (bold text ending in a colon) get the accent color
+            if run.text.strip().endswith(":"):
+                run.font.color.rgb = LABEL_COLOR
         elif part.startswith("*") and part.endswith("*"):
             _sized(paragraph.add_run(part[1:-1]), size).italic = True
         elif re.fullmatch(URL_RE, part):

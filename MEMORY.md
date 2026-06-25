@@ -27,8 +27,10 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   keep "My read" explicitly labeled as my own opinion, separated from the facts.
   Full template lives in topics/ai-pulse.md "Output shape."
 - Keep "What people are saying" as its own section (do not fold the perspective
-  takes into the items). Write each take as two beats: what the episode/post was
-  about, then why it matters. Give more depth for high-signal speakers (major
+  takes into the items). Write each take as two beats opened with literal bold
+  labels — "**What it was about:**" and "**Why it matters:**". These labels are
+  keys and must stand out: the Word renderer auto-colors any bold colon-terminated
+  label in a distinct accent (dark teal), so always write them in that exact form. Give more depth for high-signal speakers (major
   CEOs, frontier-lab leaders, serious investors) — more on what was actually
   said, not a one-liner. Include a good quote when there is one; do not force a
   quote every time.
