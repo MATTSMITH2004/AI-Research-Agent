@@ -105,12 +105,13 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
   environment needs Full/Custom network access (the brief scrapes the open web).
-- Delivery: GMAIL DRAFT via mcp__Gmail__create_draft, to msmith@jczmf.com. The
-  Gmail connector can draft but NOT send, and does NOT support attachments — so
-  render the FULL brief into the htmlBody (readable in-email) with a plaintext
-  body, and link the committed .docx on GitHub. Matthew reads it in Drafts or
-  one-click Sends it. scripts/send_brief_email.py (SMTP/SendGrid) is the fallback
-  only if he later wants true auto-send to the inbox with the .docx attached.
+- Delivery: REAL SEND via scripts/mailer.py (Gmail app-password SMTP). The digest
+  goes to MULTIPLE recipients, so it must be a true sent email (no manual click),
+  Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached. Env vars
+  (routine vault): GMAIL_ADDRESS, GMAIL_APP_PASSWORD, PULSE_RECIPIENTS. The
+  routine's final step runs mailer.py; it supports --no-email for a dry run. Do
+  NOT use the Gmail draft connector (draft-only, no attachments — rejected). The
+  same script works with SendGrid/any SMTP via PULSE_SMTP_HOST/PORT overrides.
 
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process
