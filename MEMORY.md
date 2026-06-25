@@ -105,13 +105,16 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
   environment needs Full/Custom network access (the brief scrapes the open web).
-- Delivery: REAL SEND via scripts/mailer.py (Gmail app-password SMTP). The digest
-  goes to MULTIPLE recipients, so it must be a true sent email (no manual click),
-  Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached. Env vars
-  (routine vault): GMAIL_ADDRESS, GMAIL_APP_PASSWORD, PULSE_RECIPIENTS. The
-  routine's final step runs mailer.py; it supports --no-email for a dry run. Do
-  NOT use the Gmail draft connector (draft-only, no attachments — rejected). The
-  same script works with SendGrid/any SMTP via PULSE_SMTP_HOST/PORT overrides.
+- Delivery: REAL SEND via scripts/mailer.py using the SendGrid HTTPS API. The
+  digest goes to MULTIPLE recipients, so it must be a true sent email (no manual
+  click), Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached.
+  Env vars (routine vault): SENDGRID_API_KEY, SENDGRID_FROM (verified Single
+  Sender), PULSE_RECIPIENTS. mailer.py supports --no-email for a dry run.
+- IMPORTANT environment fact: the cloud env BLOCKS outbound SMTP (ports 587/465) —
+  only HTTP/HTTPS egress works — so SMTP senders (Gmail app-password, Outlook
+  SMTP) cannot connect. That is why we use an HTTPS email API. Microsoft 365 send
+  is unavailable (connector exposes no send option), and the Gmail connector can
+  only draft (no send, no attachments). SendGrid HTTPS API confirmed reachable.
 
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process
