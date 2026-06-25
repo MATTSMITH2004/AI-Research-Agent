@@ -21,9 +21,13 @@ Weekly. Default window is the last 7 days.
 
 ## Output shape
 
-Build the Pulse brief in this exact structure every week. It is the shape worked
-out from the brief Matthew likes. (The Playbook config overrides this with a
-reading-queue shape; this section governs Pulse only.)
+Build the Pulse brief in this exact structure every week. The canonical example of
+the format — match its structure, sectioning, and styling — is
+`templates/ai-pulse-format-reference.docx` (and the `.md` beside it), built from
+the week-of-Jun-24 brief. It supersedes the earlier June-20 layout (now in
+`briefs/archive/`); when in doubt about format, follow the reference file. (The
+Playbook config overrides this with a reading-queue shape; this section governs
+Pulse only.)
 
 - **Title block.** "AI Pulse Brief" and a "Week of <date range>" line.
 - **Intro.** Two to four sentences on the week: name the single biggest story and

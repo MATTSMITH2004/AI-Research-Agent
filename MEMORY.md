@@ -20,6 +20,10 @@ How to maintain this file:
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.
 
 ### Style and formatting
+- Canonical format reference: templates/ai-pulse-format-reference.docx/.md (the
+  week-of-Jun-24 brief). This is THE format going forward; match it. It replaced
+  the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
+  reference from the latest brief whenever the format meaningfully changes.
 - Pulse brief structure: Title + "Week of" line, short intro, then Top
   developments as numbered claim-sentence headings. Each top item is broken into
   labeled beats — What happened / The evidence / Why it matters to me, traced out
