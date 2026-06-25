@@ -30,7 +30,11 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   takes into the items). Write each take as two beats opened with literal bold
   labels — "**What it was about:**" and "**Why it matters:**". These labels are
   keys and must stand out: the Word renderer auto-colors any bold colon-terminated
-  label in a distinct accent (dark teal), so always write them in that exact form. Give more depth for high-signal speakers (major
+  label in a distinct accent (dark teal), so always write them in that exact form.
+- Substacks get FULL parity with the podcasts in that section — each its own
+  labeled two-beat entry at the same depth, never compressed into one summary
+  paragraph. They are a top-tier perspective source. (Week-of-Jun-24 brief first
+  shortchanged them in one paragraph; corrected.) Give more depth for high-signal speakers (major
   CEOs, frontier-lab leaders, serious investors) — more on what was actually
   said, not a one-liner. Include a good quote when there is one; do not force a
   quote every time.
@@ -91,6 +95,19 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   agent.json feed -> e/<date>.md), not the verbatim audio transcript. It is NLW's
   own structured write-up, so it is denser and cleaner AND fewer tokens — the best
   version, not a lossy shortcut. Skip the separate transcript.md.
+
+### Source-discovery ledger
+Tracks the standing "find new sources" beat (process is in topics/ai-pulse.md
+"Source discovery"). Move items between buckets as Matthew reacts.
+
+- Candidates surfaced, awaiting Matthew's verdict:
+  - SemiAnalysis (Dylan Patel), newsletter.semianalysis.com — chips, datacenters,
+    compute economics. Surfaced in the week-of-Jun-24 brief with a recommend-to-add.
+    Strong fit for the finance + infrastructure + "models and specs" lenses.
+- Promoted to standing rotation (also add to topics/ai-pulse.md source list):
+  - (none yet)
+- Passed on / rejected (do not re-surface):
+  - (none yet)
 
 ## Already known and covered
 

@@ -70,6 +70,16 @@ reading-queue shape; this section governs Pulse only.)
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the
     no-unexplained-term rule.
+  - Substacks get FULL parity with the podcasts. Give each Substack worth
+    surfacing its own labeled two-beat entry, same depth as a show — do not
+    compress several Substacks into one summary paragraph. They are a top-tier
+    perspective source, not a footnote.
+- **New sources worth adding.** The output of the standing source-discovery beat
+  (see "Source discovery" below). One to three newly found high-signal sources
+  this week — Substacks, podcasts, YouTube channels, analysts, sites — each with a
+  short "**What it is:**" / "**Why it fits:**" write-up and a clear recommendation
+  to add it or pass. Skip the section only in a week where nothing good turned up,
+  and say so if so. When I bless one, promote it into the standing source list.
 - **On my radar.** Things that have not landed yet, open questions, threads to
   follow next week. Bullets.
 - **Source coverage this week.** A short closing section: what was pulled
@@ -87,6 +97,29 @@ different and where things are heading. After that, read everything through fina
 and economics (where is the money, who wins) and idea generation (operator angles).
 The situational lenses, market structure, legal, and cross-domain ripple, come in
 only when an item genuinely has that angle.
+
+## Source discovery (standing beat)
+
+The listed sources are a baseline, not a cage. Every run, actively hunt for new
+high-signal sources beyond the list — Substacks, podcasts, YouTube channels,
+independent analysts, interesting sites, sharp people on X worth following. Do not
+treat this as optional color; it is a real job each week. How it works:
+
+- Scout. While researching the week, notice who keeps producing genuinely good
+  work that is not already in my rotation, and run a deliberate search or two for
+  new voices in AI, AI-and-finance, compute and chips, and the operator/idea
+  angle.
+- Vet. Only surface sources that clear a real bar: original analysis, primary
+  reporting, or a perspective I am not already getting. Skip SEO content farms,
+  rehashers, and hype accounts. Quality over volume — one strong find beats five
+  weak ones, and a dry week is fine to report as dry.
+- Surface. Put the best one to three in the brief's "New sources worth adding"
+  section with a short what-it-is / why-it-fits and a clear recommendation.
+- Promote and prune. Track candidates in MEMORY.md (the source-discovery ledger).
+  When I bless one, add it to the standing source list here and give it normal
+  weight in future briefs. When I pass on one, record that so it is not
+  re-surfaced. A source that earns its place over a few weeks should start showing
+  up as a regular, cited voice, not just a suggestion.
 
 ## What to track (rough priority)
 
