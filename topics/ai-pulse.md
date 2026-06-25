@@ -62,6 +62,10 @@ reading-queue shape; this section governs Pulse only.)
     said, not a single line.
   - Use a quote when there is a genuinely good one. Not every show needs a quote,
     but a sharp line beats a paraphrase. Cite the specific episode or post.
+  - Gloss the jargon here too. Buzzy business or tech phrases a guest uses
+    ("industrialization of software," "legacy migration," "data pipeline," and the
+    like) must be explained in plain words — this section is not exempt from the
+    no-unexplained-term rule.
 - **On my radar.** Things that have not landed yet, open questions, threads to
   follow next week. Bullets.
 - **Source coverage this week.** A short closing section: what was pulled

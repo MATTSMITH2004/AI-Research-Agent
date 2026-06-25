@@ -42,6 +42,15 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   practice) — never just drop a benchmark name or number. I do not know the
   benchmarks. Same for jargon like parameters, context window, license: gloss on
   first use.
+- This applies to ALL sections (including "What people are saying"), and to
+  business/tech buzzwords, not just hard technical terms. Never let an unexplained
+  buzzy phrase carry the point. Things like "industrialization of software,"
+  "craft-and-margin economics," "legacy migration," "data pipeline," "front door
+  to computing" must be glossed in plain words I already have. Finance
+  fundamentals I know (margins, valuation, etc.) do not need spelling out, but a
+  vague tech-business phrase built around them still does. (Critique on the
+  week-of-Jun-24 Snowflake item: "craft-and-margin economics" and "agent-driven
+  legacy migrations" went unexplained — do not repeat that.)
 - Primary sources first, always. When someone posts a specific thing (essay,
   blog, filing, paper, model card, X/LinkedIn post), read and cite that primary
   directly — never a secondhand article about it. Secondary only supplements the
