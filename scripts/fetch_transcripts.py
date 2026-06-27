@@ -29,13 +29,15 @@ import datetime as dt
 import json
 import re
 import sys
+import time
 import urllib.request
 import urllib.error
 
 from bs4 import BeautifulSoup
 
 UA = "Mozilla/5.0 (compatible; research-digest/1.0)"
-TIMEOUT = 30
+TIMEOUT = 45        # seconds per attempt (podscripts.co can be slow)
+RETRIES = 3         # transient timeouts / 5xx are common; retry before giving up
 
 
 # --------------------------------------------------------------------------- #
@@ -59,9 +61,24 @@ SHOWS = {
 
 
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return r.read().decode("utf-8", "ignore")
+    """Fetch a URL, retrying on transient failures (timeouts, 5xx, gateway
+    errors) with backoff. podscripts.co intermittently times out or returns 502;
+    a couple of retries recovers almost all of those. 4xx errors fail fast."""
+    last = None
+    for attempt in range(RETRIES):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                return r.read().decode("utf-8", "ignore")
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code < 500:      # 404 etc. won't fix themselves — stop now
+                raise
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last = e              # timeout / connection reset / DNS — retry
+        if attempt < RETRIES - 1:
+            time.sleep(2 * (attempt + 1))   # 2s, then 4s
+    raise last
 
 
 def in_window(date, days):
