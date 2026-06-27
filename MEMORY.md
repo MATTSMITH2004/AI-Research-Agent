@@ -101,6 +101,13 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   version, not a lossy shortcut. Skip the separate transcript.md.
 
 ### Automation
+- CRITICAL git rule: NEVER force-reset claude/ai-pulse-weekly to main
+  (`git branch -f claude/ai-pulse-weekly main` + force-push). That DISCARDS the
+  routine's accumulated briefs and MEMORY updates — it already wiped the 06-27
+  brief once (recovered from orphaned commit 1a6d3ab). To push config changes from
+  main into the weekly branch, MERGE: `git checkout claude/ai-pulse-weekly &&
+  git merge main && git push` (no force). To bring accumulated briefs/MEMORY into
+  main, merge the other way (weekly -> main). Always merge, never force-reset.
 - The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~9am
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
@@ -139,11 +146,30 @@ Each run, mark commentary sources hit/miss and update "last contributed."
 
 - Standing rotation (commentary sources I scan every week):
   - SemiAnalysis (Dylan Patel), newsletter.semianalysis.com — chips, datacenters,
-    compute economics. PROMOTED Jun 2026 (Matthew blessed it). Also added to the
-    topics/ai-pulse.md Substack list. Last contributed: week of Jun 24 (surfaced
-    as the find that promoted it).
-  - The other baseline podcasts/Substacks in topics/ai-pulse.md are the rest of
-    the rotation; start logging hit/miss for them as runs accumulate.
+    compute economics. PROMOTED Jun 2026 (Matthew blessed it). Last contributed:
+    week of Jun 24 (surfaced as the find that promoted it). Week of Jun 27: no
+    new in-window post found (STEEL lab announcement noted as context but predated
+    window).
+  - No Priors (Sarah Guo + Elad Gil): HIT Jun 27 (Noam Brown benchmark episode
+    contributed as a top "What people are saying" entry).
+  - Dwarkesh Podcast: HIT Jun 27 (training paradigm essay contributed as a
+    top "What people are saying" entry).
+  - Greg Isenberg: HIT Jun 27 (six skills episode contributed).
+  - Odd Lots: HIT Jun 27 (Jun 20 Substack creators episode; Jun 25-26 episodes
+    non-AI). Last AI-relevant content week of Jun 24 (Grace Shao, Grantham, Clark).
+  - a16z Podcast: MISS Jun 27 (timeout error, could not reach).
+  - Hard Fork: MISS Jun 27 (timeout error, could not reach).
+  - In Good Company: MISS Jun 27 (502 error, could not reach).
+  - Interconnects (Nathan Lambert): MISS Jun 27 (listing page subscription-gated;
+    no posts surfaced). Last contributed: week of Jun 24.
+  - Import AI (Jack Clark): no new in-window episode this week (Jun 22 was last
+    week's brief). Last contributed: week of Jun 24.
+  - Stratechery (Ben Thompson): HIT Jun 27 ("Anthropic and Alignment" free
+    article contributed as a "What people are saying" entry).
+  - Noahpinion (Noah Smith): MISS Jun 27 (no new in-window post found).
+  - The Diff (Byrne Hobart): MISS Jun 27 (paywalled / no in-window post found).
+  - Money Stuff (Matt Levine): MISS Jun 27 (no in-window post found).
+  - One Useful Thing (Ethan Mollick): MISS Jun 27 (no in-window post found).
 - Candidates surfaced, awaiting Matthew's verdict:
   - (none open)
 - Flagged for possible pruning (~4 straight misses / quality drop / redundant):
@@ -172,6 +198,21 @@ Baseline I already know (do not re-explain):
 - The basics of how agents are wired up: skills, context files, MCP.
 
 Recently covered (rolling; keep roughly the last 4 to 6 weeks, trim older):
+
+- Week of Jun 27, 2026 (partial resolution + hardware proof points):
+  - Mythos partial reprieve (Jun 26): US Commerce cleared Mythos 5 for 100+ US trusted-partner institutions; Fable still banned; Lutnick letter citing "appropriate safeguards." Fable conversations ongoing through weekend. Ben Thompson Stratechery "Anthropic and Alignment" — corporate safety gates can't substitute for democratic accountability; parallel to nuclear governance. Legion lawsuit against US over Fable ban still live.
+  - OpenAI Jalapeño chip (Jun 24): first custom inference ASIC with Broadcom; 9 months design to TSMC 3nm tape-out; AI-assisted design process; claims 50% cheaper inference vs Nvidia GPUs (self-reported, unverified); deployment end of 2026; Broadcom CEO: demand "simply insatiable" through 2028; won't reduce Nvidia orders near-term.
+  - Claude Tag in Slack (Jun 23–24): Anthropic puts Claude Code into Slack as persistent org teammate on Opus 4.8; 65% of Anthropic product code from Claude Tag internally; Tobin South: "90%-plus of my work"; Karpathy: "third major redesign of how we interact with LLMs"; concerns: surveillance optics in shared channels; Hugging Face counter: build your own agent; KPMG/UT Austin 1.4M interaction study — high-impact users treat AI as reasoning partner not prompt tool.
+  - Micron Q3 FY2026 blowout (Jun 25): $41.46B revenue up 346% YoY from $9.3B; Q4 guidance $50B (vs $43.2B est.); stock +15% after-hours; HBM4 shipping for Nvidia Vera Rubin; 2026 HBM fully booked; 16 long-term supply agreements, $22B committed; 81% projected Q4 gross margin.
+  - Anthropic-Alibaba distillation (Jun 24–25): 28.8M Claude interactions via 25,000 fake accounts April-June; largest known distillation campaign; targeted software engineering + agentic reasoning; Anthropic wrote to White House; shadow market in China selling Claude API access at 90% off via stolen credentials.
+  - Gemini 3.5 Pro slips to July — confirmed missed June 30 target; two slips now.
+  - Grok 5 missed Q2 window; xAI shipped Grok Voice, Grok Imagine Video 1.5, /goal in Grok Build instead; Q3 expected.
+  - DeepMind exodus continues: Jonas Adler + Alexander Pritzel to Anthropic (follows Shazeer/Jumper from prior week).
+  - Meta sole holdout on voluntary safety model review; White House pressing.
+  - Commerce Dept closed-door meeting on Chinese robots (Boston Dynamics, SpaceX, Siemens, Goldman); GUARD Act moving in Congress.
+  - ByteDance Seedance 2.5: 30s clips, 4K, 50 input references + multimedia.
+  - xAI /goal primitive in Grok Build (Grok fine-tune + Cursor Composer 2.5).
+  - Perspective: No Priors Noam Brown (benchmarks don't control for compute budget; models think for weeks before plateauing; safety frameworks ignore test-time compute; Erdős Unit Distance Conjecture disproved at "dirt cheap" cost; latent frontier capability underexplored); Dwarkesh "next training paradigm" (RLVR generalization bet; grindability bottleneck for law/politics; OPSD for continual learning; ~30-50% of lab compute to inference with zero training signal feedback; "wasted inference" problem); Stratechery Thompson "Anthropic and Alignment" (democratic oversight must govern military AI; corporate gatekeeping insufficient); Odd Lots Jun 20 (Substack writers on covering AI-markets era; "being cited by the AI" as distribution strategy); Greg Isenberg "six skills" (agent design, distribution, robotics, curation/yapping, builder-distributor, IRL community; most companies need an AI "operating system" builder).
 
 - Week of Jun 24, 2026 (loud week; competition reordering the board):
   - GLM 5.2 "DeepSeek moment": Z.ai open-weight model (released Jun 16) did NOT fade after a weekend of use; ranks #1 on Design Arena for websites (ahead of Fable 5); 62.1 SWE-bench Pro vs GPT-5.5 58.6, within ~1pt of Opus 4.8 on FrontierSWE; ~3.6x/5.7x cheaper than Opus but emits ~25% more code and ~2x slower (Theo: not actually cheaper). NLW: "two-horse race has been broken." Don't buy 8 H200s (~$400K / $20K/mo) — use a router.

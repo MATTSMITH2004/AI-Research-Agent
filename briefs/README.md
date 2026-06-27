@@ -6,6 +6,7 @@ here each Saturday.
 
 | Week of | Word doc | Markdown |
 | --- | --- | --- |
+| June 21–27, 2026 | [ai-pulse-2026-06-27.docx](ai-pulse-2026-06-27.docx) | [ai-pulse-2026-06-27.md](ai-pulse-2026-06-27.md) |
 | June 18–24, 2026 | [ai-pulse-2026-06-24.docx](ai-pulse-2026-06-24.docx) | [ai-pulse-2026-06-24.md](ai-pulse-2026-06-24.md) |
 
 _Older, pre-current-format briefs are in [`archive/`](archive/)._
