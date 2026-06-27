@@ -50,13 +50,13 @@ SHOWS = {
     # --- AI-focused ---
     "ai-daily-brief": {"type": "web", "base": "https://aidailybrief.ai/e/", "name": "The AI Daily Brief", "md_suffix": ".md"},
     "no-priors":      {"type": "youtube", "handle": "@NoPriorsPodcast", "name": "No Priors"},
-    "a16z":           {"type": "podscripts", "slug": "a16z-podcast", "name": "a16z Podcast"},
+    "a16z":           {"type": "podscripts", "slug": "a16z-podcast", "name": "a16z Podcast", "yt": "@a16z"},
     "dwarkesh":       {"type": "youtube", "handle": "@DwarkeshPatel", "name": "Dwarkesh Podcast"},
     "greg-isenberg":  {"type": "youtube", "handle": "@GregIsenberg", "name": "Greg Isenberg"},
-    "hard-fork":      {"type": "podscripts", "slug": "hard-fork", "name": "Hard Fork"},
+    "hard-fork":      {"type": "podscripts", "slug": "hard-fork", "name": "Hard Fork", "yt": "@hardfork"},
     # --- Markets / finance / business ---
     "odd-lots":        {"type": "podscripts", "slug": "odd-lots", "name": "Odd Lots"},
-    "in-good-company": {"type": "podscripts", "slug": "in-good-company-with-nicolai-tangen", "name": "In Good Company"},
+    "in-good-company": {"type": "podscripts", "slug": "in-good-company-with-nicolai-tangen", "name": "In Good Company", "yt": "@InGoodCompanyPodcast"},
 }
 
 
@@ -273,10 +273,29 @@ def web_fetch(base, ep_id, md_suffix=None):
 # --------------------------------------------------------------------------- #
 # dispatch
 # --------------------------------------------------------------------------- #
+def _youtube_id(s):
+    """Return a YouTube videoId if s is a watch URL or a bare 11-char id, else
+    None. podscripts slugs are long hyphenated strings, so they never collide."""
+    if not s:
+        return None
+    m = re.search(r"(?:v=|youtu\.be/|/watch\?v=)([A-Za-z0-9_-]{11})", s)
+    if m:
+        return m.group(1)
+    return s if re.fullmatch(r"[A-Za-z0-9_-]{11}", s) else None
+
+
 def list_show(key, days):
     cfg = SHOWS[key]
     if cfg["type"] == "podscripts":
-        return podscripts_list(cfg["slug"], days)
+        try:
+            return podscripts_list(cfg["slug"], days)
+        except Exception as e:
+            if cfg.get("yt"):
+                sys.stderr.write(
+                    f"# {key}: podscripts failed ({type(e).__name__}); "
+                    f"falling back to YouTube {cfg['yt']}\n")
+                return youtube_list(cfg["yt"], days)
+            raise
     if cfg["type"] == "youtube":
         return youtube_list(cfg["handle"], days)
     if cfg["type"] == "web":
@@ -287,6 +306,10 @@ def list_show(key, days):
 def fetch_show(key, ep_id):
     cfg = SHOWS[key]
     if cfg["type"] == "podscripts":
+        # a YouTube id/url means the listing fell back to YouTube — fetch captions
+        vid = _youtube_id(ep_id)
+        if vid:
+            return youtube_fetch(vid)
         return podscripts_fetch(cfg["slug"], ep_id)
     if cfg["type"] == "youtube":
         return youtube_fetch(ep_id)
@@ -383,3 +406,8 @@ if __name__ == "__main__":
 #   1-2 days of a show may not have a transcript yet.
 # - Stratechery, Odd Lots (Bloomberg site), WSJ, FT, NYT Hard Fork pages are
 #   paywalled; podscripts covers Hard Fork/Odd Lots, the rest need WebFetch.
+# - Resilience: get() retries transient timeouts/5xx with backoff. podscripts
+#   shows with a "yt" handle fall back to YouTube when podscripts is fully down
+#   (a16z, hard-fork, in-good-company). The fallback yields fewer/clip episodes
+#   than podscripts, so it is a backstop, not a full replacement. Odd Lots has no
+#   yt fallback (its YouTube channel is sparse) — rely on retry + WebSearch there.
