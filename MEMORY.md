@@ -143,6 +143,15 @@ Each run, mark commentary sources hit/miss and update "last contributed."
 - Passed on / rejected (do not re-surface):
   - (none yet)
 
+## Working process
+
+- For any change Matthew requests, always work on a branch first, show him the
+  change, and only merge to `main` after he approves. Handle all the git mechanics
+  for him — he does not run git himself. Exception: for tiny, obvious fixes he says
+  "just push," commit straight to `main`.
+- `main` is the live version the weekly Routine runs from, so any change meant to
+  affect the automated brief must end up merged to `main`.
+
 ## Already known and covered
 
 What I already understand (so the agent does not over-explain) and what has
