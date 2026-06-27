@@ -49,13 +49,27 @@ def _parse_recipients(raw):
 
 
 def _intro_from_md(md_path):
+    """The brief's first real paragraph, with a leading 'Matthew, ' stripped so it
+    doesn't double the email greeting."""
     if not md_path or not os.path.exists(md_path):
         return ""
     for line in open(md_path, encoding="utf-8"):
         s = line.strip()
         if not s or s.startswith("#") or s.startswith("*Week of"):
             continue
-        return s
+        s = re.sub(r"^Matthew,\s*", "", s)
+        return s[:1].upper() + s[1:] if s else s
+    return ""
+
+
+def _week_from_md(md_path):
+    """Pull the 'Week of ...' label from the brief, e.g. 'June 18-24, 2026'."""
+    if not md_path or not os.path.exists(md_path):
+        return ""
+    for line in open(md_path, encoding="utf-8"):
+        m = re.match(r"\*?Week of\s+(.+?)\*?$", line.strip())
+        if m:
+            return m.group(1).strip()
     return ""
 
 
@@ -90,10 +104,13 @@ def main():
         sys.exit("error: PULSE_RECIPIENTS is empty — set the BCC distribution list")
 
     intro = _intro_from_md(args.md)
-    body = (intro + "\n\n" if intro else "") + \
-        "Your AI Pulse brief is attached as a Word document. The full text is below.\n"
-    if args.md and os.path.exists(args.md):
-        body += "\n" + "-" * 60 + "\n\n" + open(args.md, encoding="utf-8").read()
+    week = _week_from_md(args.md)
+    lead = (f"Attached is your AI Pulse brief for the week of {week}."
+            if week else "Attached is your AI Pulse brief.")
+    parts = ["Hi Matthew,", lead]
+    if intro:
+        parts.append(intro)
+    body = "\n\n".join(parts) + "\n"
 
     with open(args.docx, "rb") as f:
         docx_b64 = base64.b64encode(f.read()).decode("ascii")

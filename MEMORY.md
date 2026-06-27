@@ -110,6 +110,13 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   click), Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached.
   Env vars (routine vault): SENDGRID_API_KEY, SENDGRID_FROM (verified Single
   Sender), PULSE_RECIPIENTS. mailer.py supports --no-email for a dry run.
+- Email body format (set in mailer.py): "Hi Matthew," + "Attached is your AI Pulse
+  brief for the week of <date>." + the brief's intro paragraph, then the .docx
+  attached. Do NOT dump the full brief text in the body.
+- Deliverability note: sending from a free gmail.com From lands in Junk on
+  corporate M365 (DMARC mismatch). It delivers, just to Junk. The durable fix for
+  inbox delivery is a domain Matthew controls, authenticated (SPF/DKIM) in
+  SendGrid — parked until he has a domain.
 - IMPORTANT environment fact: the cloud env BLOCKS outbound SMTP (ports 587/465) —
   only HTTP/HTTPS egress works — so SMTP senders (Gmail app-password, Outlook
   SMTP) cannot connect. That is why we use an HTTPS email API. Microsoft 365 send
