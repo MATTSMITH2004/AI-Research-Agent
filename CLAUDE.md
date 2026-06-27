@@ -94,6 +94,13 @@ Situational lenses, used only when an item genuinely has that angle:
 
 ## How briefs should read
 
+- Audience and voice. The brief is a standalone publication written for a
+  distribution list of readers, in a neutral, third-person voice. Do not address it
+  to any one person or open with a name or greeting — no "Matthew," and no
+  second-person "you." Everything below about who I am, the lenses, and how to
+  calibrate explanation describes the reader to write *for*, not a person to speak
+  *to*. Editorial opinion is still welcome, but labeled as the writer's read and
+  kept impersonal (see "My take" in the topic config), not a note to me.
 - Hybrid shape. A scannable top layer of quick one-line hits for awareness, then
   the few items that earn it get the full treatment below.
 - Every item carries its significance. No naked facts. A quick hit ends with a short
