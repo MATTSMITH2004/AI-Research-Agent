@@ -50,13 +50,13 @@ Pulse only.)
   - **Why it matters.** The so-what chain, step by step. When there are several
     distinct reasons, use an indented bullet list, each bullet led by a short bold
     phrase.
-  - **The take.** The writer's own opinion, clearly labeled as editorial and
-    separated from the facts above, including the signal-versus-hype call. Keep it
-    impersonal — a publication's read, not a note to one reader.
+  - **My take.** The writer's own opinion, clearly labeled as editorial and
+    separated from the facts above, including the signal-versus-hype call. It is the
+    writer's voice, not a note addressed to any one reader.
 
   End each item with a "Source:" line. The exact beat labels can flex to the
   story (for example "What actually triggered it" or "One caution, flagged"), but
-  keep the fact then proof then so-what then take spine and keep The take labeled.
+  keep the fact then proof then so-what then take spine and keep My take labeled.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and

@@ -27,13 +27,15 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
 - Pulse brief structure: Title + "Week of" line, short intro, then Top
   developments as numbered claim-sentence headings. Each top item is broken into
   labeled beats — What happened / The evidence / Why it matters (use an indented
-  bullet list when there are multiple reasons) / The take. Always keep "The take"
+  bullet list when there are multiple reasons) / My take. Always keep "My take"
   explicitly labeled as editorial opinion, separated from the facts.
   Full template lives in topics/ai-pulse.md "Output shape."
 - VOICE: the brief is written neutrally, as a publication for a distribution list —
-  NOT addressed to Matthew. No "Matthew," intro, no second-person "you," no
-  first-person "me." The beats are "Why it matters" and "The take" (was "Why it
-  matters to me" / "My read"). The who-I-am/lenses/calibration context describes the
+  NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
+  the reader, no "to me." The beats are "Why it matters" and "My take" (was "Why it
+  matters to me" / "My read"). "My take" is the writer's editorial voice, not a note
+  to Matthew. Everything else stays personalized to Matthew (who I am, the lenses,
+  how to calibrate depth, what matters) — only the addressing goes neutral. The who-I-am/lenses/calibration context describes the
   reader to write for, not someone to speak to. (Changed Jun 27, 2026.)
 - Keep "What people are saying" as its own section (do not fold the perspective
   takes into the items). Write each take as two beats opened with literal bold
