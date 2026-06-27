@@ -37,6 +37,11 @@ attached.
    api.sendgrid.com, and the news/primary domains the brief cites).
 3. **Connectors:** none required for email (SendGrid is a plain HTTPS call). Keep
    only connectors the brief itself needs.
+3a. **Permissions → Allow unrestricted branch pushes:** turn this ON for the repo.
+   Without it the routine can only push to `claude/`-prefixed branches, so each
+   week's `MEMORY.md` update would NOT land on `main` — and the next run, which
+   clones `main`, would lose the "recently covered" history and start repeating
+   items. With it on, the run commits the brief and MEMORY straight to `main`.
 4. **Environment variables (vault):** set the three below. They never live in the
    repo.
 
@@ -54,7 +59,7 @@ attached.
 
 > Generate this week's AI Pulse brief and email it to the distribution list.
 >
-> 1. First, ensure the repo is on the agent branch: `git fetch origin && git checkout claude/tender-ritchie-f3exa7` (this is where the skill, scripts, and config live until merged to main).
+> 1. Work on `main` (it has the skill, scripts, config, and the format reference).
 > 2. Read `CLAUDE.md`, `MEMORY.md`, and `topics/ai-pulse.md`, and apply all of it.
 > 3. Run the `research-digest` skill for `topics/ai-pulse.md` over the past 7 days
 >    (Saturday-to-Saturday: cover developments since last week's brief). Use
@@ -73,7 +78,10 @@ attached.
 >    the Word doc with
 >    `python3 scripts/md_to_docx.py briefs/ai-pulse-<YYYY-MM-DD>.md briefs/ai-pulse-<YYYY-MM-DD>.docx`.
 > 6. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
->    then commit and push the brief and memory to a `claude/` branch.
+>    then commit and push the brief AND the updated `MEMORY.md` to `main`. Pushing
+>    MEMORY to `main` is essential — it is how next week knows what was already
+>    covered and avoids repeats. (The routine has "Allow unrestricted branch
+>    pushes" enabled so it can write to `main`.)
 > 7. Send the brief by running:
 >    `python3 scripts/mailer.py --docx briefs/ai-pulse-<YYYY-MM-DD>.docx --md briefs/ai-pulse-<YYYY-MM-DD>.md --subject "AI Pulse Brief — week of <date>"`
 >    This sends a real email via SendGrid, Bcc'd to `PULSE_RECIPIENTS`, with the
