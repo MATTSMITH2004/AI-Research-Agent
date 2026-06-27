@@ -1,0 +1,36 @@
+name: Sync weekly briefs to main
+
+# Every time the weekly routine pushes a new brief to claude/ai-pulse-weekly,
+# this merges that branch into main so main stays a complete, up-to-date mirror.
+# Runs on GitHub's servers (not the routine), which is why it can write to main
+# without the "unrestricted branch pushes" permission the routine lacks.
+
+on:
+  push:
+    branches:
+      - claude/ai-pulse-weekly
+
+permissions:
+  contents: write
+
+# If two pushes land close together, finish one merge before starting the next.
+concurrency:
+  group: sync-weekly-to-main
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main (full history)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Merge claude/ai-pulse-weekly into main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git merge --no-edit origin/claude/ai-pulse-weekly
+          git push origin main
