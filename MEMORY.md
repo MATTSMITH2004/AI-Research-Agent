@@ -101,6 +101,13 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   version, not a lossy shortcut. Skip the separate transcript.md.
 
 ### Automation
+- CRITICAL git rule: NEVER force-reset claude/ai-pulse-weekly to main
+  (`git branch -f claude/ai-pulse-weekly main` + force-push). That DISCARDS the
+  routine's accumulated briefs and MEMORY updates — it already wiped the 06-27
+  brief once (recovered from orphaned commit 1a6d3ab). To push config changes from
+  main into the weekly branch, MERGE: `git checkout claude/ai-pulse-weekly &&
+  git merge main && git push` (no force). To bring accumulated briefs/MEMORY into
+  main, merge the other way (weekly -> main). Always merge, never force-reset.
 - The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~9am
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
