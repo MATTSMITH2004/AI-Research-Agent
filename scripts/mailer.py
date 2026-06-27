@@ -107,7 +107,7 @@ def main():
     week = _week_from_md(args.md)
     lead = (f"Attached is your AI Pulse brief for the week of {week}."
             if week else "Attached is your AI Pulse brief.")
-    parts = ["Hi Matthew,", lead]
+    parts = ["Good morning,", lead]
     if intro:
         parts.append(intro)
     parts.append("— Sent automatically by your AI Pulse research agent.")
