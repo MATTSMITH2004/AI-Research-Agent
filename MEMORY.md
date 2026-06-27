@@ -105,6 +105,14 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
   environment needs Full/Custom network access (the brief scrapes the open web).
+- State branch: the routine runs on the dedicated branch `claude/ai-pulse-weekly`,
+  NOT main. It checks out that branch at the start (it carries the rolling
+  MEMORY.md + past briefs) and pushes the new brief + MEMORY back to it each week.
+  Reason: enabling "Allow unrestricted branch pushes" (needed to push to main)
+  breaks routine creation on Matthew's GitHub install, but `claude/`-prefixed
+  branches are always pushable. Keeping state on this branch preserves the
+  recently-covered history week to week, which is what prevents repeats. (To fold
+  the accumulated briefs into main, merge claude/ai-pulse-weekly -> main manually.)
 - Delivery: REAL SEND via scripts/mailer.py using the SendGrid HTTPS API. The
   digest goes to MULTIPLE recipients, so it must be a true sent email (no manual
   click), Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached.
