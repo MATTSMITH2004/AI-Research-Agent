@@ -79,17 +79,19 @@ attached.
 > 5. Save the brief to `briefs/ai-pulse-<YYYY-MM-DD>.md` (today's date) and render
 >    the Word doc with
 >    `python3 scripts/md_to_docx.py briefs/ai-pulse-<YYYY-MM-DD>.md briefs/ai-pulse-<YYYY-MM-DD>.docx`.
-> 6. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
->    then commit and push the brief AND the updated `MEMORY.md` to the branch
->    `claude/ai-pulse-weekly`. Pushing MEMORY there is essential — it is how next
->    week (which checks out that same branch in step 1) knows what was already
->    covered and avoids repeats.
-> 7. Send the brief by running:
+> 6. Add a row for this brief at the TOP of the table in `briefs/README.md` (the
+>    archive index): the week-of date, and links to this brief's `.docx` and `.md`.
+> 7. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
+>    then commit and push the brief, the updated `briefs/README.md`, AND the
+>    updated `MEMORY.md` to the branch `claude/ai-pulse-weekly`. Pushing MEMORY
+>    there is essential — it is how next week (which checks out that same branch in
+>    step 1) knows what was already covered and avoids repeats.
+> 8. Send the brief by running:
 >    `python3 scripts/mailer.py --docx briefs/ai-pulse-<YYYY-MM-DD>.docx --md briefs/ai-pulse-<YYYY-MM-DD>.md --subject "AI Pulse Brief — week of <date>"`
 >    This sends a real email via SendGrid, Bcc'd to `PULSE_RECIPIENTS`, with the
 >    `.docx` attached. Confirm the script printed a "sent ... via SendGrid" line
 >    before finishing.
-> 8. Refresh `templates/ai-pulse-format-reference.{md,docx}` from this brief only
+> 9. Refresh `templates/ai-pulse-format-reference.{md,docx}` from this brief only
 >    if the format changed.
 
 ## The sender — `scripts/mailer.py`
