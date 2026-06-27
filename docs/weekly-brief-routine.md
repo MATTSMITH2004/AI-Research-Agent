@@ -56,7 +56,11 @@ attached.
 >
 > 1. First, ensure the repo is on the agent branch: `git fetch origin && git checkout claude/tender-ritchie-f3exa7` (this is where the skill, scripts, and config live until merged to main).
 > 2. Read `CLAUDE.md`, `MEMORY.md`, and `topics/ai-pulse.md`, and apply all of it.
-> 3. Run the `research-digest` skill for `topics/ai-pulse.md` over the past 7 days.
+> 3. Run the `research-digest` skill for `topics/ai-pulse.md` over the past 7 days
+>    (Saturday-to-Saturday: cover developments since last week's brief). Use
+>    `MEMORY.md`'s "recently covered" list to skip anything already reported in a
+>    prior brief — never repeat an item. Updating MEMORY in step 6 sets the
+>    boundary so next week resumes exactly where this one stopped.
 >    Follow the canonical format in `templates/ai-pulse-format-reference.docx` and
 >    every rule in the config and MEMORY (structured deep items with the labeled
 >    beats and "My read"; full "What people are saying" with podcast AND Substack
