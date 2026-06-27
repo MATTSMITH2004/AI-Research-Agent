@@ -110,6 +110,7 @@ def main():
     parts = ["Hi Matthew,", lead]
     if intro:
         parts.append(intro)
+    parts.append("— Sent automatically by your AI Pulse research agent.")
     body = "\n\n".join(parts) + "\n"
 
     with open(args.docx, "rb") as f:
