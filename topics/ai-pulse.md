@@ -31,7 +31,9 @@ Pulse only.)
 
 - **Title block.** "AI Pulse Brief" and a "Week of <date range>" line.
 - **Intro.** Two to four sentences on the week: name the single biggest story and
-  the through-line that connects the rest. Direct, no throat-clearing.
+  the through-line that connects the rest. Direct, no throat-clearing. Write it as
+  a neutral publication opener — do not address a reader by name or open with a
+  greeting ("Matthew," / "Good morning,").
 - **Top developments (3 to 5).** Each item is a numbered heading written as a
   full claim sentence, not a short label. The heading should state what happened
   and signal why it is the story. Inside each item, walk the chain with these
@@ -45,16 +47,16 @@ Pulse only.)
     in plain words, what the test measures and how to read the number (what counts
     as good, what it means in practice). I do not know the benchmarks. Same for
     terms like parameters, context window, or license — gloss them the first time.
-  - **Why it matters to me, traced out.** The so-what chain, step by step. When
-    there are several distinct reasons, use an indented bullet list, each bullet
-    led by a short bold phrase.
-  - **My read.** My own opinion, clearly labeled as mine and separated from the
-    facts above, including the signal-versus-hype call.
+  - **Why it matters.** The so-what chain, step by step. When there are several
+    distinct reasons, use an indented bullet list, each bullet led by a short bold
+    phrase.
+  - **The take.** The writer's own opinion, clearly labeled as editorial and
+    separated from the facts above, including the signal-versus-hype call. Keep it
+    impersonal — a publication's read, not a note to one reader.
 
   End each item with a "Source:" line. The exact beat labels can flex to the
   story (for example "What actually triggered it" or "One caution, flagged"), but
-  keep the fact then proof then so-what then my-read spine and keep My read
-  labeled.
+  keep the fact then proof then so-what then take spine and keep The take labeled.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
