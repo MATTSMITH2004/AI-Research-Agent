@@ -17,18 +17,24 @@ is the subject matter. One skill, many topics.
 
 ## Inputs
 
-- **Topic**: which config to use, e.g. `topics/ai-weekly.md`. If I do not name
+- **Topic**: which config to use, e.g. `topics/ai-pulse.md`. If I do not name
   one, ask which topic, or infer it if it is obvious from what I said.
 - **Window**: the time range to cover. Default to the cadence named in the topic
-  config (for ai-weekly, the last 7 days). If I give a range, use that instead.
+  config (for ai-pulse, the last 7 days). If I give a range, use that instead.
 
 ## Steps
 
-1. **Read the topic config** under `topics/`. It tells you the sources to
-   prioritize, the keywords and subtopics to watch, and what to flag. Treat it as
-   the brief on what I care about for this topic. Also read `MEMORY.md`: it holds
-   preferences learned from my past feedback, what I already know, and what has
-   already been covered. Apply all of it.
+1. **Read the context.** `CLAUDE.md` (the fixed foundation — who I am, the lenses,
+   and the voice and sourcing rules) loads automatically at the start of the
+   session, so it is already in context; apply it. Then read the **topic config**
+   under `topics/` — the canonical template for this topic: the sources to
+   prioritize, the subtopics to watch, what to flag, and the exact output shape —
+   and `MEMORY.md`, which holds preferences learned from my past feedback, what I
+   already know, and what has already been covered. Apply all of it. If the three
+   ever conflict, follow the precedence rule in `CLAUDE.md`: CLAUDE governs identity
+   and principles, the topic config is the canonical template for how to build the
+   brief, and `MEMORY.md`'s learned preferences win on execution details — and flag
+   a genuine contradiction rather than silently picking one.
 
 2. **Gather the written sources.** Work through each written source listed in the
    config, and also search the open web broadly, with several focused searches
@@ -63,10 +69,14 @@ is the subject matter. One skill, many topics.
    a recent brief (both tracked in `MEMORY.md`).
 
 7. **Synthesize.** For each item that makes the cut, write what happened and why
-   it matters to me, in my own-words summary. Do not reproduce source text.
+   it matters, judged through my lenses, in your own words and in the neutral voice
+   set by `CLAUDE.md` and the topic config (not addressed to a reader). Do not
+   reproduce source text.
 
-8. **Produce the brief as a Word document.** Format using the template below and
-   save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
+8. **Produce the brief as a Word document.** Format it using the topic config's
+   output shape as the canonical structure (for ai-pulse, the "Output shape"
+   section, and match the worked example in `templates/` if the topic provides
+   one). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
    Then give me the highlights inline.
 
@@ -87,29 +97,22 @@ is the subject matter. One skill, many topics.
 
 ## Brief format
 
-```
-# <Topic> brief — week of <date>
+The brief's structure is defined by the **topic config**, not here. Follow its
+"Output shape" section as the canonical template, and match the worked example in
+`templates/` if the topic provides one. Keep the format in one place — do not carry
+a second, drifting copy in this file.
 
-## Top developments
-For each (aim for 3 to 5):
-- **<Headline in my words>**
-  What happened, then why it matters to me. 2 to 4 sentences.
-  Source: <link>
+For a topic whose config does not define an output shape, fall back to a simple
+structure: a "Top developments" list (3 to 5 items, each a headline in my words,
+then what happened and why it matters, then a Source link), then "Worth a skim,"
+then "On my radar."
 
-## Worth a skim
-Shorter items that are relevant but not urgent. One line each, with a link.
-
-## On my radar
-Things to watch that have not landed yet, open questions, or threads to follow
-next week.
-```
-
-If the window was quiet, a short brief with only a Top developments section is
-the right answer. Do not pad.
+If the window was quiet, a short brief is the right answer. Do not pad.
 
 ## Notes
 
-- Honor every output preference in CLAUDE.md (plain and direct, no em dashes,
-  source links, no invented sources).
+- Honor every output preference in CLAUDE.md (plain and direct, always source,
+  no invented sources, and the voice and tone rules — including that em dashes are
+  welcome in the brief).
 - This skill should work for any topic. If something here is AI-specific, it
   belongs in the topic config, not in this file.
