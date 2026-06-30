@@ -24,19 +24,19 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   week-of-Jun-24 brief). This is THE format going forward; match it. It replaced
   the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
   reference from the latest brief whenever the format meaningfully changes.
-- Pulse brief structure: Title + "Week of" line, short intro, then Top
-  developments as numbered claim-sentence headings. Each top item is broken into
-  labeled beats — What happened / The evidence / Why it matters (use an indented
-  bullet list when there are multiple reasons) / My take. Always keep "My take"
-  explicitly labeled as editorial opinion, separated from the facts.
-  Full template lives in topics/ai-pulse.md "Output shape."
+- Pulse brief structure — the 3-required + 2-optional beat design (What happened,
+  optional "Does it hold up?" / "Both sides," Why it matters, My take): the canonical
+  template lives in topics/ai-pulse.md "Output shape." Don't restate the full
+  template here — edit it there. Standing reminders that tie to the other rules:
+  keep "My take" labeled as editorial, fold the evidence inline (no separate evidence
+  beat), and keep the voice neutral per the VOICE rule below.
 - VOICE: the brief is written neutrally, as a publication for a distribution list —
   NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
   the reader, no "to me." The beats are "Why it matters" and "My take" (was "Why it
   matters to me" / "My read"). "My take" is the writer's editorial voice, not a note
   to Matthew. Everything else stays personalized to Matthew (who I am, the lenses,
-  how to calibrate depth, what matters) — only the addressing goes neutral. The who-I-am/lenses/calibration context describes the
-  reader to write for, not someone to speak to. (Changed Jun 27, 2026.)
+  how to calibrate depth, what matters) — only the addressing goes neutral.
+  (Changed Jun 27, 2026.)
 - Keep "What people are saying" as its own section (do not fold the perspective
   takes into the items). Write each take as two beats opened with literal bold
   labels — "**What it was about:**" and "**Why it matters:**". These labels are
@@ -115,7 +115,7 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   main into the weekly branch, MERGE: `git checkout claude/ai-pulse-weekly &&
   git merge main && git push` (no force). To bring accumulated briefs/MEMORY into
   main, merge the other way (weekly -> main). Always merge, never force-reset.
-- The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~9am
+- The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~8am
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
   environment needs Full/Custom network access (the brief scrapes the open web).

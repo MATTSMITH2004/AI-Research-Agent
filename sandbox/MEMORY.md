@@ -24,41 +24,19 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   week-of-Jun-24 brief). This is THE format going forward; match it. It replaced
   the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
   reference from the latest brief whenever the format meaningfully changes.
-- Pulse brief structure: Title + "Week of" line, short intro, then Top
-  developments as numbered claim-sentence headings (each heading is a thesis, not
-  a topic label). Each top item is built from these beats, in this order:
-  - What happened — REQUIRED. the full picture in prose, with caveats, corroboration, and
-    glossary asides woven INLINE next to the claim they qualify. No separate
-    "evidence" beat (it only re-narrated the event); sourcing lives in the Source
-    line at the foot of the item.
-  - Does it hold up? — OPTIONAL. Include only when there's a self-reported or
-    contestable claim worth stress-testing (a vendor benchmark, a big growth
-    number). State plainly what's proven vs. unverified. Skip when the facts are
-    not in dispute.
-  - Both sides — OPTIONAL. Include only when there's a genuine interpretive
-    disagreement. One framing line naming the axis of dispute, then one bullet per
-    side, each steelmanned and attributed where possible, then an optional closing
-    line only if there's a real synthesis to name. If it would collapse to "the
-    obvious view plus a token objection," cut the beat — a forced debate is worse
-    than none.
-  - Why it matters — REQUIRED. the significance, traced through my standing lenses
-    (operator / finance / technical) as general consequence, not addressed to any
-    reader. Use an indented bullet list when there are multiple distinct reasons.
-  - My take — REQUIRED. the writer's editorial verdict, ALWAYS explicitly labeled as opinion
-    and separated from the facts. When a "Both sides" beat ran, adjudicate between
-    the reads here rather than asserting a verdict cold.
-  - Optional beats sit between "What happened" and "Why it matters." Most items run
-    3 beats; 4 when one optional fires; 5 is rare (only when an item has both a
-    contestable claim and a live debate). Voice stays neutral per the VOICE rule
-    below — lens and sourcing are always mine, only the addressing is neutral.
-Full template lives in topics/ai-pulse.md "Output shape."
+- Pulse brief structure — the 3-required + 2-optional beat design (What happened,
+  optional "Does it hold up?" / "Both sides," Why it matters, My take): the canonical
+  template lives in topics/ai-pulse.md "Output shape." Don't restate the full
+  template here — edit it there. Standing reminders that tie to the other rules:
+  keep "My take" labeled as editorial, fold the evidence inline (no separate evidence
+  beat), and keep the voice neutral per the VOICE rule below.
 - VOICE: the brief is written neutrally, as a publication for a distribution list —
   NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
   the reader, no "to me." The beats are "Why it matters" and "My take" (was "Why it
   matters to me" / "My read"). "My take" is the writer's editorial voice, not a note
   to Matthew. Everything else stays personalized to Matthew (who I am, the lenses,
-  how to calibrate depth, what matters) — only the addressing goes neutral. The who-I-am/lenses/calibration context describes the
-  reader to write for, not someone to speak to. (Changed Jun 27, 2026.)
+  how to calibrate depth, what matters) — only the addressing goes neutral.
+  (Changed Jun 27, 2026.)
 - Keep "What people are saying" as its own section (do not fold the perspective
   takes into the items). Write each take as two beats opened with literal bold
   labels — "**What it was about:**" and "**Why it matters:**". These labels are

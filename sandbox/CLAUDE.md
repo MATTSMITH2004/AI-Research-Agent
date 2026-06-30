@@ -27,6 +27,16 @@ already know, and what has already been covered. When I give durable feedback,
 update `MEMORY.md` in place, replacing what it supersedes rather than appending,
 and record only standing preferences, not one-offs.
 
+Precedence and conflicts. These three files — this one, `MEMORY.md`, and the topic
+config under `topics/` — should agree, and a real contradiction between them is a
+bug to fix, not a state to run on. When they do conflict: this file (CLAUDE.md)
+governs identity and principles — who I am, the lenses, the core voice and sourcing
+rules — and is not overridden by the others. For execution details (how exactly to
+build a given brief), the topic config is the canonical template, and `MEMORY.md`'s
+learned preferences take precedence where they speak, since they are the most recent
+feedback. If you hit a genuine contradiction you cannot cleanly resolve under these
+rules, surface it to me rather than silently picking one.
+
 ## Who I am
 
 I am Matthew. I studied accounting at the University of Florida and was president
@@ -105,9 +115,9 @@ Situational lenses, used only when an item genuinely has that angle:
   the few items that earn it get the full treatment below.
 - Every item carries its significance. No naked facts. A quick hit ends with a short
   why-phrase. A deep item walks the full chain.
-- Deep items are written as a sequence: what happened, the evidence for it (with the
-  source), then what it means and why is it important to me, traced step by step rather than asserted. Fact,
-  proof, so-what.
+- Deep items are written as a sequence: what happened with the evidence for it woven
+  in (and the source), then what it means and why it matters, judged through my
+  lenses, traced step by step rather than asserted. Fact, proof, so-what.
 - Length follows substance. Never pad to fill space, and never compress something
   worth teaching just to stay short. A quiet week is short. A rich week can run
   long, and that is fine. These are weekly sit-down reads, not daily pings, so a 30
