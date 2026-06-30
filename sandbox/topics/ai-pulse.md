@@ -80,6 +80,14 @@ Pulse only.)
   story, but keep that spine and always keep My take labeled. Most items run three
   beats; four when one optional fires; five is rare, only when an item genuinely
   has both a contestable claim and a live debate.
+
+  Readability — keep paragraphs short. A beat is not required to be a single
+  paragraph. When a beat's prose runs long (more than about four or five sentences),
+  break it into two or three shorter paragraphs at natural seams rather than one
+  dense block — the first paragraph carries the bold beat label, the continuation
+  paragraphs do not repeat it. This holds for every section, including the longer
+  "What people are saying" entries, not just the top items. Dense walls of text are
+  the thing to avoid.
   
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
