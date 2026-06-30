@@ -129,12 +129,15 @@ pad, and never compress something worth teaching just to stay short.
 
 ## Lens weighting for this topic
 
-AI leans hardest on the technical apparatus and trend angles, because here I am
-building real fluency, so always teach the technical layer and always note what is
-different and where things are heading. After that, read everything through finance
-and economics (where is the money, who wins) and idea generation (operator angles).
-The situational lenses, market structure, legal, and cross-domain ripple, come in
-only when an item genuinely has that angle.
+AI reads through three core lenses kept in rough balance — the technical apparatus,
+finance and economics (where is the money, who wins), and idea generation (operator
+angles) — with no standing tilt toward any one. Apply whichever genuinely fit an
+item and lead with the most material. Two things hold regardless of weighting:
+always teach the technical layer when it appears (how it works, what is different,
+where things are heading, pitched for fluency — never skip or shrink it), and run
+the standing "models and their specs" sweep every week. The situational lenses,
+market structure, legal, and cross-domain ripple, come in only when an item
+genuinely has that angle.
 
 ## Source discovery (standing beat)
 
