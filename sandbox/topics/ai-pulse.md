@@ -1,7 +1,7 @@
 # Topic: AI Pulse
 
 The stay-informed-and-connect-dots brief for AI. This is the Pulse job: situational
-awareness of the space, tied back to money, markets, and my own ideas. The
+awareness of the space, tied back to money, markets, technology, and my own ideas. The
 research-digest skill reads this to know what to gather and how to judge relevance
 for AI. Edit it freely as my interests shift. This is the cheap, frequently-changed
 file. The skill itself stays put.
@@ -9,7 +9,7 @@ file. The skill itself stays put.
 ## Scope
 
 AI-centered, but not AI-only. The aperture is AI and its orbit: the technology
-itself, plus how it moves money, markets, labor, and business, plus genuinely
+itself, plus how it moves money, markets, technology, labor, and business, plus genuinely
 adjacent or tangential developments that matter to an operator with my interests
 (finance, deals, starting and buying businesses). If something is not strictly an
 AI story but connects to AI or to where I am headed, it belongs. Do not filter it
@@ -37,26 +37,50 @@ Pulse only.)
 - **Top developments (3 to 5).** Each item is a numbered heading written as a
   full claim sentence, not a short label. The heading should state what happened
   and signal why it is the story. Inside each item, walk the chain with these
-  labeled beats, each label in bold:
-  - **What happened.** The facts, with the date.
-  - **The evidence.** The specific reporting or, preferably, the primary source
-    that backs it. Cite every source actually drawn on for the item, not just the
-    single best one — list them all on the Source line, each with a few words on
-    what it supports. If a claim has no source, do not make it.
+  labeled beats, each label in bold. Three beats are required and appear in every
+  item; two are optional and fire only when the story earns them:
+  - **What happened.** *(required)* The facts, with the date, told as one picture.
+    Weave the supporting proof, corroboration, caveats, and any glossary asides
+    INLINE, next to the claim they qualify — there is no separate "evidence" beat
+    (it only re-narrated the event). Prefer the primary source; cite every source
+    actually drawn on for the item, not just the best one, on the Source line
+    below. If a claim has no source, do not make it.
     Benchmarks and jargon: never drop a benchmark name or score without explaining,
     in plain words, what the test measures and how to read the number (what counts
     as good, what it means in practice). I do not know the benchmarks. Same for
     terms like parameters, context window, or license — gloss them the first time.
-  - **Why it matters.** The so-what chain, step by step. When there are several
+  - **Does it hold up?** *(optional)* Include only when the item rests on a
+    self-reported or contestable claim worth stress-testing — a vendor's own
+    benchmark, a striking growth number, an unverified capability. State plainly
+    what is actually proven versus what is self-reported or unverified. Skip it
+    when the facts are not in dispute.
+  - **Both sides.** *(optional)* Include only when there is a genuine interpretive
+    disagreement about what the news means (not a manufactured one). Open with one
+    framing line naming the axis of dispute, then one bullet per side, each giving
+    the strongest version of that side and attributed where possible, then an
+    optional closing line only if there is a real synthesis to name. If it would
+    collapse to "the obvious view plus a token objection," cut the beat — a forced
+    debate is worse than none.
+  - **Why it matters.** *(required)* The so-what chain, step by step, traced
+    through my standing lenses (technical, finance, operator) as general
+    significance — neutral voice, not addressed to a reader. When there are several
     distinct reasons, use an indented bullet list, each bullet led by a short bold
     phrase.
-  - **My take.** The writer's own opinion, clearly labeled as editorial and
-    separated from the facts above, including the signal-versus-hype call. It is the
-    writer's voice, not a note addressed to any one reader.
+  - **My take.** *(required)* The writer's own opinion, clearly labeled as
+    editorial and separated from the facts above, including the signal-versus-hype
+    call. It is the writer's voice, not a note addressed to any one reader. When a
+    "Both sides" beat ran, adjudicate between the reads here rather than restating
+    them — land where the weight falls and why.
 
-  End each item with a "Source:" line. The exact beat labels can flex to the
-  story (for example "What actually triggered it" or "One caution, flagged"), but
-  keep the fact then proof then so-what then take spine and keep My take labeled.
+  End each item with a "Source:" line listing every source used, each tagged with
+  a few words on what it supports. The standing beat order is fixed — What happened,
+  then the optional Does it hold up? and/or Both sides, then Why it matters, then
+  My take — and the optionals always sit between What happened and Why it matters.
+  The three required beats appear every time; wording inside a beat can flex to the
+  story, but keep that spine and always keep My take labeled. Most items run three
+  beats; four when one optional fires; five is rare, only when an item genuinely
+  has both a contestable claim and a live debate.
+  
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
