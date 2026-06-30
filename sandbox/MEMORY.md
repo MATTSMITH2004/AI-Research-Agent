@@ -25,10 +25,32 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
   reference from the latest brief whenever the format meaningfully changes.
 - Pulse brief structure: Title + "Week of" line, short intro, then Top
-  developments as numbered claim-sentence headings. Each top item is broken into
-  labeled beats — What happened / The evidence / Why it matters (use an indented
-  bullet list when there are multiple reasons) / My take. Always keep "My take"
-  explicitly labeled as editorial opinion, separated from the facts.
+  developments as numbered claim-sentence headings (each heading is a thesis, not
+  a topic label). Each top item is built from these beats, in this order:
+  - What happened — REQUIRED. the full picture in prose, with caveats, corroboration, and
+    glossary asides woven INLINE next to the claim they qualify. No separate
+    "evidence" beat (it only re-narrated the event); sourcing lives in the Source
+    line at the foot of the item.
+  - Does it hold up? — OPTIONAL. Include only when there's a self-reported or
+    contestable claim worth stress-testing (a vendor benchmark, a big growth
+    number). State plainly what's proven vs. unverified. Skip when the facts are
+    not in dispute.
+  - Both sides — OPTIONAL. Include only when there's a genuine interpretive
+    disagreement. One framing line naming the axis of dispute, then one bullet per
+    side, each steelmanned and attributed where possible, then an optional closing
+    line only if there's a real synthesis to name. If it would collapse to "the
+    obvious view plus a token objection," cut the beat — a forced debate is worse
+    than none.
+  - Why it matters — REQUIRED. the significance, traced through my standing lenses
+    (operator / finance / technical) as general consequence, not addressed to any
+    reader. Use an indented bullet list when there are multiple distinct reasons.
+  - My take — REQUIRED. the writer's editorial verdict, ALWAYS explicitly labeled as opinion
+    and separated from the facts. When a "Both sides" beat ran, adjudicate between
+    the reads here rather than asserting a verdict cold.
+  - Optional beats sit between "What happened" and "Why it matters." Most items run
+    3 beats; 4 when one optional fires; 5 is rare (only when an item has both a
+    contestable claim and a live debate). Voice stays neutral per the VOICE rule
+    below — lens and sourcing are always mine, only the addressing is neutral.
   Full template lives in topics/ai-pulse.md "Output shape."
 - VOICE: the brief is written neutrally, as a publication for a distribution list —
   NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
@@ -115,7 +137,7 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   main into the weekly branch, MERGE: `git checkout claude/ai-pulse-weekly &&
   git merge main && git push` (no force). To bring accumulated briefs/MEMORY into
   main, merge the other way (weekly -> main). Always merge, never force-reset.
-- The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~9am
+- The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~8am
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
   environment needs Full/Custom network access (the brief scrapes the open web).
