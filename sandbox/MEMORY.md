@@ -30,50 +30,34 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   template here — edit it there. Standing reminders that tie to the other rules:
   keep "My take" labeled as editorial, fold the evidence inline (no separate evidence
   beat), and keep the voice neutral per the VOICE rule below.
-- VOICE: the brief is written neutrally, as a publication for a distribution list —
-  NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
-  the reader, no "to me." The beats are "Why it matters" and "My take" (was "Why it
-  matters to me" / "My read"). "My take" is the writer's editorial voice, not a note
-  to Matthew. Everything else stays personalized to Matthew (who I am, the lenses,
-  how to calibrate depth, what matters) — only the addressing goes neutral.
-  (Changed Jun 27, 2026.)
-- Keep "What people are saying" as its own section (do not fold the perspective
-  takes into the items). Write each take as two beats opened with literal bold
-  labels — "**What it was about:**" and "**Why it matters:**". These labels are
-  keys and must stand out: the Word renderer auto-colors any bold colon-terminated
-  label in a distinct accent (dark teal), so always write them in that exact form.
-- Substacks get FULL parity with the podcasts in that section — each its own
-  labeled two-beat entry at the same depth, never compressed into one summary
-  paragraph. They are a top-tier perspective source. (Week-of-Jun-24 brief first
-  shortchanged them in one paragraph; corrected.) Give more depth for high-signal speakers (major
-  CEOs, frontier-lab leaders, serious investors) — more on what was actually
-  said, not a one-liner. Include a good quote when there is one; do not force a
-  quote every time.
+- VOICE (changed Jun 27, 2026): the brief reads neutrally for a distribution list,
+  not addressed to Matthew — the full rule lives in CLAUDE "Audience and voice" and
+  is applied in topics' beats. The deltas to remember: the beats were renamed ("Why
+  it matters to me" -> "Why it matters," "My read" -> "My take"), and only the
+  addressing is neutral — lenses, calibration, and what-matters stay personalized
+  to Matthew.
+- "What people are saying" format — its own section, two bold colon-labels
+  ("**What it was about:**" / "**Why it matters:**") that the renderer auto-colors
+  dark teal, Substack parity with the podcasts, depth scaled to the speaker, and a
+  quote when there's a good one: the full spec lives in topics/ai-pulse.md "Output
+  shape." Learned anchor to keep: the week-of-Jun-24 brief shortchanged the
+  Substacks by compressing them into one paragraph — give each its own full
+  two-beat entry, never compress.
 
 ### Sources
-- Cite every source actually used in an item, not just the strongest one. List
-  them all on the Source line, each with a few words on what it supports. In the
-  Word doc, render source links as clickable blue hyperlinks (anchor = domain).
-- Always explain benchmarks in plain language — what the test measures and how to
-  read the score (higher is better, what counts as good, what it means in
-  practice) — never just drop a benchmark name or number. I do not know the
-  benchmarks. Same for jargon like parameters, context window, license: gloss on
-  first use.
-- This applies to ALL sections (including "What people are saying"), and to
-  business/tech buzzwords, not just hard technical terms. Never let an unexplained
-  buzzy phrase carry the point. Things like "industrialization of software,"
-  "craft-and-margin economics," "legacy migration," "data pipeline," "front door
-  to computing" must be glossed in plain words I already have. Finance
-  fundamentals I know (margins, valuation, etc.) do not need spelling out, but a
-  vague tech-business phrase built around them still does. (Critique on the
-  week-of-Jun-24 Snowflake item: "craft-and-margin economics" and "agent-driven
-  legacy migrations" went unexplained — do not repeat that.)
-- Primary sources first, always. When someone posts a specific thing (essay,
-  blog, filing, paper, model card, X/LinkedIn post), read and cite that primary
-  directly — never a secondhand article about it. Secondary only supplements the
-  primary or fills in when no primary exists. (The week-of-Jun-24 brief wrongly
-  cited a TheStreet article for Nadella's essay instead of his actual post — do
-  not repeat that.)
+- The sourcing rules themselves live in CLAUDE ("Voice and sourcing," "Jargon
+  rule") and topics ("Sources to prioritize" + the What-happened beat): cite every
+  source used on the Source line; primary sources over secondhand articles; gloss
+  every benchmark and every tech-business buzzword in plain words, in every section
+  including "What people are saying." Renderer detail (lives only here): source
+  links render as clickable blue hyperlinks, anchor = the domain.
+- Learned anchors to keep — specific past misses, do not repeat:
+  - Benchmarks/buzzwords: the week-of-Jun-24 Snowflake item left "craft-and-margin
+    economics" and "agent-driven legacy migrations" unexplained.
+  - Primary sources: the week-of-Jun-24 brief wrongly cited a TheStreet article for
+    Nadella's essay instead of his actual post.
+  - Finance fundamentals I already know (margins, valuation, and the like) do not
+    need glossing — but a vague tech-business phrase built around them still does.
 
 ### Emphasis
 - Keep the lens mix balanced for now; do not tilt the whole brief toward any one
