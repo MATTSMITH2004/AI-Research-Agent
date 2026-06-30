@@ -108,10 +108,11 @@ Pulse only.)
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the
     no-unexplained-term rule.
-  - Substacks get FULL parity with the podcasts. Give each Substack worth
-    surfacing its own labeled two-beat entry, same depth as a show — do not
-    compress several Substacks into one summary paragraph. They are a top-tier
-    perspective source, not a footnote.
+  - Every perspective source gets the same full treatment — podcast, YouTube
+    channel, or Substack alike. Give each one worth surfacing its own labeled
+    two-beat entry at full depth; do not compress any of them into a summary
+    paragraph or bury them as a footnote. (Substacks were the ones shortchanged
+    before, so watch them especially, but the rule is medium-neutral.)
 - **New sources worth adding.** The output of the standing source-discovery beat
   (see "Source discovery" below). One to three newly found high-signal sources
   this week — Substacks, podcasts, YouTube channels, analysts, sites — each with a
@@ -129,12 +130,15 @@ pad, and never compress something worth teaching just to stay short.
 
 ## Lens weighting for this topic
 
-AI leans hardest on the technical apparatus and trend angles, because here I am
-building real fluency, so always teach the technical layer and always note what is
-different and where things are heading. After that, read everything through finance
-and economics (where is the money, who wins) and idea generation (operator angles).
-The situational lenses, market structure, legal, and cross-domain ripple, come in
-only when an item genuinely has that angle.
+AI reads through three core lenses kept in rough balance — the technical apparatus,
+finance and economics (where is the money, who wins), and idea generation (operator
+angles) — with no standing tilt toward any one. Apply whichever genuinely fit an
+item and lead with the most material. Two things hold regardless of weighting:
+always teach the technical layer when it appears (how it works, what is different,
+where things are heading, pitched for fluency — never skip or shrink it), and run
+the standing "models and their specs" sweep every week. The situational lenses,
+market structure, legal, and cross-domain ripple, come in only when an item
+genuinely has that angle.
 
 ## Source discovery (standing beat)
 
@@ -252,12 +256,14 @@ there: research the open web freely, follow leads to sources not on these lists,
 and surface anything genuinely relevant wherever it comes from. If you keep
 finding a strong source that is not listed, flag it so I can add it.
 
-Special weight on Substacks. They are my favorite perspective source, the place
-writers spell out what they are actually seeing, so I want them in every brief,
-not as occasional links. Scan the listed Substacks every week without fail, and
-keep hunting for strong new ones beyond the list. Treat them as a perspective
-source on par with the podcasts: their takes belong in the brief's "What people
-are saying" section, summarized with a point of view, not buried as a passing
+Special weight on the perspective layer — Substacks, podcasts, and YouTube alike.
+These are where writers and speakers spell out what they are actually seeing, and
+they are co-equal top-tier sources for the brief: no medium ranks above the others.
+Substacks are the written analysis; podcasts and YouTube are the interviews and
+discussion. All of them belong in every brief, not as occasional links. Scan the
+listed ones every week without fail, and keep hunting for strong new ones beyond the
+list. Their takes belong in the brief's "What people are saying" section, each
+summarized with a point of view and given real depth, not buried as a passing
 citation.
 
 ### Video and podcast sources
@@ -288,8 +294,20 @@ How to use them:
 AI-focused shows:
 
 - The AI Daily Brief (Nathaniel Whittemore), https://aidailybrief.ai and
-  https://www.youtube.com/@AIDailyBrief : daily news plus analysis. Web editions
-  are readable directly; also a feed for agents at aidailybrief.ai/agent.json.
+  https://www.youtube.com/@AIDailyBrief : daily AI news plus analysis, and one of
+  the best secondary maps of the week. Read EVERY daily edition in the window — one
+  per day, do not sample just a few — and read the web/markdown edition (NLW's own
+  structured write-up, via the agent.json feed -> e/<date>.md), not the audio
+  transcript; the web edition is denser, cleaner, and fewer tokens. Use it as a
+  lead-finder: it tells you much of what happened across the week, so for stories it
+  surfaces that earn a place in the brief, go find the PRIMARY source (or other
+  independent coverage) and build the item off that where one exists. Two caveats,
+  both important: it is NOT the only map — cross-check it against the other
+  discovery sources (WSJ and other headlines, the Substacks, YouTube, and the
+  podcasts) so a story it misses does not slip through. And the AI Daily Brief is
+  itself a good, citable secondary source — cite it on the Source line where it
+  backs a point or for NLW's own analysis; prefer the primary when one exists, but
+  sourcing the AI Daily Brief is fully allowed and encouraged.
 - No Priors (Sarah Guo and Elad Gil), https://www.youtube.com/@NoPriorsPodcast :
   investor and founder lens, where AI is headed and how it reshapes businesses.
 - a16z Podcast (Andreessen Horowitz), https://www.youtube.com/@a16z, transcripts at
