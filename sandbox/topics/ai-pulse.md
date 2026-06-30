@@ -108,10 +108,11 @@ Pulse only.)
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the
     no-unexplained-term rule.
-  - Substacks get FULL parity with the podcasts. Give each Substack worth
-    surfacing its own labeled two-beat entry, same depth as a show — do not
-    compress several Substacks into one summary paragraph. They are a top-tier
-    perspective source, not a footnote.
+  - Every perspective source gets the same full treatment — podcast, YouTube
+    channel, or Substack alike. Give each one worth surfacing its own labeled
+    two-beat entry at full depth; do not compress any of them into a summary
+    paragraph or bury them as a footnote. (Substacks were the ones shortchanged
+    before, so watch them especially, but the rule is medium-neutral.)
 - **New sources worth adding.** The output of the standing source-discovery beat
   (see "Source discovery" below). One to three newly found high-signal sources
   this week — Substacks, podcasts, YouTube channels, analysts, sites — each with a
@@ -255,12 +256,14 @@ there: research the open web freely, follow leads to sources not on these lists,
 and surface anything genuinely relevant wherever it comes from. If you keep
 finding a strong source that is not listed, flag it so I can add it.
 
-Special weight on Substacks. They are my favorite perspective source, the place
-writers spell out what they are actually seeing, so I want them in every brief,
-not as occasional links. Scan the listed Substacks every week without fail, and
-keep hunting for strong new ones beyond the list. Treat them as a perspective
-source on par with the podcasts: their takes belong in the brief's "What people
-are saying" section, summarized with a point of view, not buried as a passing
+Special weight on the perspective layer — Substacks, podcasts, and YouTube alike.
+These are where writers and speakers spell out what they are actually seeing, and
+they are co-equal top-tier sources for the brief: no medium ranks above the others.
+Substacks are the written analysis; podcasts and YouTube are the interviews and
+discussion. All of them belong in every brief, not as occasional links. Scan the
+listed ones every week without fail, and keep hunting for strong new ones beyond the
+list. Their takes belong in the brief's "What people are saying" section, each
+summarized with a point of view and given real depth, not buried as a passing
 citation.
 
 ### Video and podcast sources
