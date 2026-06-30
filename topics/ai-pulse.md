@@ -124,6 +124,13 @@ Pulse only.)
 - **Source coverage this week.** A short closing section: what was pulled
   (primary and verification), what could not be reached, and any strong new
   source worth adding.
+- **Config notes.** The very last line of the brief: a one-line report on whether
+  any contradiction between the config files (CLAUDE.md, this topic config, and
+  MEMORY.md) turned up during the run. If none, say so in a few words ("Config
+  notes: no contradictions this run."). If one did, name it in a sentence or two —
+  what conflicted and which way it was resolved — noting that MEMORY.md always wins
+  by rule, and flag a major contradiction clearly so it can be fixed in the files
+  later. This is a report only; it never blocks or delays the brief.
 
 Length follows substance. A quiet week is short; a rich week can run long. Never
 pad, and never compress something worth teaching just to stay short.

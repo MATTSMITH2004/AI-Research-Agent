@@ -29,13 +29,16 @@ and record only standing preferences, not one-offs.
 
 Precedence and conflicts. These three files — this one, `MEMORY.md`, and the topic
 config under `topics/` — should agree, and a real contradiction between them is a
-bug to fix, not a state to run on. When they do conflict: this file (CLAUDE.md)
-governs identity and principles — who I am, the lenses, the core voice and sourcing
-rules — and is not overridden by the others. For execution details (how exactly to
-build a given brief), the topic config is the canonical template, and `MEMORY.md`'s
-learned preferences take precedence where they speak, since they are the most recent
-feedback. If you hit a genuine contradiction you cannot cleanly resolve under these
-rules, surface it to me rather than silently picking one.
+bug to fix. But a contradiction must never block, delay, or stop the brief: the
+brief always goes out on schedule, no matter what. So when they conflict, resolve it
+and keep going under one simple rule — **`MEMORY.md` always takes precedence over
+everything,** including this file and the topic config, because it is the most
+recent and most specific record of what I want. Apply MEMORY's side, finish the
+brief, and do not stop to ask. Then report it, do not bury it: note any contradiction
+you hit at the bottom of the brief (the topic config's closing "Config notes" item),
+briefly — what conflicted and which way it was resolved — and flag a major one
+clearly so I can come in and fix the files later. Resolution always happens
+out-of-band, in a later edit to these files, never by holding the brief.
 
 ## Who I am
 

@@ -185,3 +185,7 @@ Each week, beyond the baseline list, new high-signal sources are scouted — Sub
 **Could not reach:** One Useful Thing (Ethan Mollick) had no in-window post, and The Diff's in-window issue was fully paywalled. WSJ articles are cited from search snippets where they come up (full text is paywalled); the WSJ What's News podcast, FT News Briefing, and Bloomberg Talks have been dropped from the weekly scan.
 
 **Date caveats:** GLM 5.2's release (June 16), the SpaceX–Cursor deal (June 16), and the Nadella essay's posting (June 14) originate just before the window; carried only for their in-window follow-on.
+
+## Config notes
+
+**Config notes:** no contradictions this run — CLAUDE.md, the topic config, and MEMORY.md were consistent.

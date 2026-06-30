@@ -31,10 +31,10 @@ is the subject matter. One skill, many topics.
    prioritize, the subtopics to watch, what to flag, and the exact output shape —
    and `MEMORY.md`, which holds preferences learned from my past feedback, what I
    already know, and what has already been covered. Apply all of it. If the three
-   ever conflict, follow the precedence rule in `CLAUDE.md`: CLAUDE governs identity
-   and principles, the topic config is the canonical template for how to build the
-   brief, and `MEMORY.md`'s learned preferences win on execution details — and flag
-   a genuine contradiction rather than silently picking one.
+   ever conflict, follow the precedence rule in `CLAUDE.md`: never block the brief on
+   a contradiction — `MEMORY.md` always takes precedence over everything, so apply
+   its side and keep going, then note the contradiction at the bottom of the brief
+   (the topic config's closing "Config notes" item) for me to resolve later.
 
 2. **Gather the written sources.** Work through each written source listed in the
    config, and also search the open web broadly, with several focused searches
