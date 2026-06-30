@@ -294,8 +294,16 @@ How to use them:
 AI-focused shows:
 
 - The AI Daily Brief (Nathaniel Whittemore), https://aidailybrief.ai and
-  https://www.youtube.com/@AIDailyBrief : daily news plus analysis. Web editions
-  are readable directly; also a feed for agents at aidailybrief.ai/agent.json.
+  https://www.youtube.com/@AIDailyBrief : daily AI news plus analysis, and the
+  single best secondary map of the week. Read EVERY daily edition in the window —
+  one per day, do not sample just a few — and read the web/markdown edition (NLW's
+  own structured write-up, via the agent.json feed -> e/<date>.md), not the audio
+  transcript; the web edition is denser, cleaner, and fewer tokens. Use it as a
+  lead-finder, not a source to relay: it tells you what happened across the week, so
+  for any story it surfaces that earns a place in the brief, go out and find the
+  PRIMARY source (or other independent coverage) and build the item off that,
+  citing the primary. The AI Daily Brief points you to the story; the primary
+  source backs it.
 - No Priors (Sarah Guo and Elad Gil), https://www.youtube.com/@NoPriorsPodcast :
   investor and founder lens, where AI is headed and how it reshapes businesses.
 - a16z Podcast (Andreessen Horowitz), https://www.youtube.com/@a16z, transcripts at

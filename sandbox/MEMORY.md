@@ -86,10 +86,10 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   does not pan out.
 - Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
   Bloomberg Talks.
-- AI Daily Brief: pull the published web/markdown edition per day (via the
-  agent.json feed -> e/<date>.md), not the verbatim audio transcript. It is NLW's
-  own structured write-up, so it is denser and cleaner AND fewer tokens — the best
-  version, not a lossy shortcut. Skip the separate transcript.md.
+- AI Daily Brief sourcing — read every daily web/markdown edition in the window,
+  use it as a lead-finder to primary sources, the agent.json feed -> e/<date>.md
+  path, skip the audio transcript: the full rule now lives in topics/ai-pulse.md
+  (the AI Daily Brief entry under "AI-focused shows").
 
 ### Automation
 - CRITICAL git rule: NEVER force-reset claude/ai-pulse-weekly to main
