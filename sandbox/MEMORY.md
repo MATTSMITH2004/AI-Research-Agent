@@ -51,7 +51,7 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
     3 beats; 4 when one optional fires; 5 is rare (only when an item has both a
     contestable claim and a live debate). Voice stays neutral per the VOICE rule
     below — lens and sourcing are always mine, only the addressing is neutral.
-  Full template lives in topics/ai-pulse.md "Output shape."
+Full template lives in topics/ai-pulse.md "Output shape."
 - VOICE: the brief is written neutrally, as a publication for a distribution list —
   NOT addressed to Matthew. No "Matthew," intro, no second-person "you" addressing
   the reader, no "to me." The beats are "Why it matters" and "My take" (was "Why it
