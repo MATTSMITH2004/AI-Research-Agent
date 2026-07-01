@@ -91,6 +91,9 @@ def main():
     ap.add_argument("--subject", required=True)
     ap.add_argument("--no-email", action="store_true",
                     help="dry run: build the payload and report, but do not call the API")
+    ap.add_argument("--test", action="store_true",
+                    help="send only to the sender (no bcc list) to verify the sender "
+                         "address works, without emailing the recipient list")
     args = ap.parse_args()
 
     if not os.path.exists(args.docx):
@@ -116,12 +119,19 @@ def main():
     with open(args.docx, "rb") as f:
         docx_b64 = base64.b64encode(f.read()).decode("ascii")
 
-    payload = {
+    if args.test:
+        # test mode: send ONLY to the sender, no bcc — verifies the sender without
+        # touching the recipient list
+        personalizations = [{"to": [{"email": sender}]}]
+    else:
         # visible To is the sender; the whole list is Bcc so recipients don't see each other
-        "personalizations": [{
+        personalizations = [{
             "to": [{"email": sender}],
             "bcc": [{"email": r} for r in recipients],
-        }],
+        }]
+
+    payload = {
+        "personalizations": personalizations,
         "from": {"email": sender},
         "subject": args.subject,
         "content": [{"type": "text/plain", "value": body}],
@@ -137,7 +147,10 @@ def main():
         print("DRY RUN (--no-email): payload built, not calling the API.")
         print(f"  subject:    {args.subject}")
         print(f"  from/to:    {sender}")
-        print(f"  bcc ({len(recipients)}): {', '.join(recipients)}")
+        if args.test:
+            print("  mode:       TEST — sends only to the sender, no bcc list")
+        else:
+            print(f"  bcc ({len(recipients)}): {', '.join(recipients)}")
         print(f"  attachment: {os.path.basename(args.docx)} "
               f"({len(docx_b64)} b64 chars)")
         return
@@ -163,8 +176,12 @@ def main():
         sys.exit(f"error: could not reach SendGrid: {e.reason}")
 
     # SendGrid returns 202 Accepted on success
-    print(f"sent '{args.subject}' to {len(recipients)} BCC recipient(s) "
-          f"via SendGrid (HTTP {code})")
+    if args.test:
+        print(f"TEST sent '{args.subject}' to {sender} only (no bcc list) "
+              f"via SendGrid (HTTP {code})")
+    else:
+        print(f"sent '{args.subject}' to {len(recipients)} BCC recipient(s) "
+              f"via SendGrid (HTTP {code})")
 
 
 if __name__ == "__main__":
