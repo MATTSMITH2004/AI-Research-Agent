@@ -22,15 +22,21 @@ the next brief, then delete it from this list (do not let it linger or harden in
 standing rule).
 
 - **Alex Karp (Palantir CEO) CNBC "Squawk Box" interview, July 1, 2026.** Cover it
-  this week; it can be found via X if needed. Primary source is CNBC's full video:
-  https://www.cnbc.com/video/2026/07/01/watch-palantir-ceo-alex-karp-on-new-nvidia-deal.html
-  (supporting write-up: https://www.cnbc.com/2026/07/01/palantir-karp-open-ai-anthropic-tokens.html).
+  this week. Matthew's provided clip is on X:
+  https://x.com/hamptonism/status/2072316268326052157 — cite it as the pointer.
+  NOTE ON SOURCING: the CNBC full video is locked/paywalled, and x.com pages cannot
+  be fetched server-side (login wall), so do NOT rely on reaching either for the
+  substance. Pull the actual content and quotes from the accessible written coverage
+  and cite it alongside the clip:
+  https://www.cnbc.com/2026/07/01/palantir-karp-open-ai-anthropic-tokens.html ;
+  https://www.forbes.com/sites/tylerroush/2026/07/01/palantir-billionaire-alex-karp-calls-ai-industry-effing-insane-in-heated-interview/ ;
+  https://finance.yahoo.com/technology/ai/articles/alex-karp-touts-palantir-nvidia-132554043.html
   Angles that matter: the new Palantir–Nvidia secure-AI partnership; Karp's attack on
   the OpenAI/Anthropic token-pricing model ("something has gone completely wrong,"
   labs overcharging and exploiting customer data); the national-security argument
-  against outsourcing military AI to Silicon Valley; Palantir stock up ~9%. Best fit
-  is "What people are saying," and it connects to the token-economics and
-  market-structure threads.
+  against outsourcing military AI to Silicon Valley; Palantir stock up ~9%; and the
+  interview's notably heated tone. Best fit is "What people are saying," and it
+  connects to the token-economics and market-structure threads.
 
 ## Learned preferences
 
