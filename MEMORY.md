@@ -15,6 +15,23 @@ How to maintain this file:
   state it back to me before saving it.
 - Keep it lean. Trim anything stale.
 
+## One-off requests for the next brief
+
+Ad-hoc asks for the upcoming run only — NOT durable preferences. Action each one in
+the next brief, then delete it from this list (do not let it linger or harden into a
+standing rule).
+
+- **Alex Karp (Palantir CEO) CNBC "Squawk Box" interview, July 1, 2026.** Cover it
+  this week; it can be found via X if needed. Primary source is CNBC's full video:
+  https://www.cnbc.com/video/2026/07/01/watch-palantir-ceo-alex-karp-on-new-nvidia-deal.html
+  (supporting write-up: https://www.cnbc.com/2026/07/01/palantir-karp-open-ai-anthropic-tokens.html).
+  Angles that matter: the new Palantir–Nvidia secure-AI partnership; Karp's attack on
+  the OpenAI/Anthropic token-pricing model ("something has gone completely wrong,"
+  labs overcharging and exploiting customer data); the national-security argument
+  against outsourcing military AI to Silicon Valley; Palantir stock up ~9%. Best fit
+  is "What people are saying," and it connects to the token-economics and
+  market-structure threads.
+
 ## Learned preferences
 
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.
