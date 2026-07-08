@@ -90,14 +90,23 @@ is the subject matter. One skill, many topics.
    strong source you found outside the config that I might want to add. This keeps
    the source coverage honest and visible rather than silently partial.
 
-10. **Update memory.** After the brief is done, update `MEMORY.md` in place:
-    - Add the items you just reported to the "recently covered" list for this
-      topic, and trim entries older than roughly the last 4 to 6 weeks.
-    - If I gave feedback this session (on style, sources, emphasis, or what I
-      already understand), fold it into the right section as a durable rule.
-      Replace any entry it supersedes rather than appending a new one. Record only
-      standing preferences, not one-offs, and if a rule is ambiguous, state it
-      back to me before saving it.
+10. **Update memory and route feedback.** After the brief is done:
+    - Update `MEMORY.md` with STATE only: add what you reported to the
+      "recently covered" list and trim past ~4-6 weeks; update the model ledger
+      if a covered release moved the standings; update the source-discovery
+      ledger's hit/miss marks. Do not write style or structure rules here.
+    - If I gave feedback this session, route it by kind:
+      - Prose/writing-craft (how sentences are built, word choice, banned
+        constructions, causal-chain or topic-sentence rules) → propose an edit
+        to the `house-writing-style` skill.
+      - Brief-shape or coverage (beats, sections, ordering, ranking, what to
+        cover or exclude, sources, recurring voices) → propose an edit to the
+        topic config.
+      - Only durable cross-topic preferences that are neither → MEMORY.md.
+    - For anything routed to a skill or config file, state the exact edit and
+      where it goes, and output it as a paste-ready block rather than writing
+      the file yourself. Record standing rules only, not one-offs; if a rule is
+      ambiguous, confirm before saving.
 
 ## Writing and curation rules
 
