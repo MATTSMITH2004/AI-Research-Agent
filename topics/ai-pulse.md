@@ -21,11 +21,8 @@ Weekly. Default window is the last 7 days.
 
 ## Output shape
 
-Build the Pulse brief in this exact structure every week. The canonical example of
-the format — match its structure, sectioning, and styling — is
-`templates/ai-pulse-format-reference.docx` (and the `.md` beside it), built from
-the week-of-Jun-24 brief. It supersedes the earlier June-20 layout (now in
-`briefs/archive/`); when in doubt about format, follow the reference file. (The
+Build the Pulse brief in this exact structure every week. This "Output shape"
+section is the canonical definition of the format — follow it directly. (The
 Playbook config overrides this with a reading-queue shape; this section governs
 Pulse only.)
 
@@ -88,7 +85,15 @@ Pulse only.)
   paragraphs do not repeat it. This holds for every section, including the longer
   "What people are saying" entries, not just the top items. Dense walls of text are
   the thing to avoid.
-  
+- - **Model standings** *(conditional — only when rankings moved).* When a
+  release this week changes the model ledger (a new best-in-class for coding,
+  reasoning, writing, agentic use, cost, or similar), show the current
+  standings as a table here, with any row that moved this week marked (a ▲ or
+  a bold "new" tag) so the change is visible at a glance. Include a one-line
+  lead above the table naming what moved and what showed it. When nothing
+  shipped that changes the standings, omit this section entirely — no table,
+  no "no changes" line. The ledger's full detail (basis, dates) lives in
+  MEMORY.md; the brief shows the standings themselves, not the basis column.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
@@ -113,14 +118,14 @@ Pulse only.)
     two-beat entry at full depth; do not compress any of them into a summary
     paragraph or bury them as a footnote. (Substacks were the ones shortchanged
     before, so watch them especially, but the rule is medium-neutral.)
+- **On my radar.** Things that have not landed yet, open questions, threads to
+  follow next week. Bullets.
 - **New sources worth adding.** The output of the standing source-discovery beat
   (see "Source discovery" below). One to three newly found high-signal sources
   this week — Substacks, podcasts, YouTube channels, analysts, sites — each with a
   short "**What it is:**" / "**Why it fits:**" write-up and a clear recommendation
   to add it or pass. Skip the section only in a week where nothing good turned up,
   and say so if so. When I bless one, promote it into the standing source list.
-- **On my radar.** Things that have not landed yet, open questions, threads to
-  follow next week. Bullets.
 - **Source coverage this week.** A short closing section: what was pulled
   (primary and verification), what could not be reached, and any strong new
   source worth adding.
@@ -201,19 +206,27 @@ The promote/prune system (keep it lightweight):
    benchmarks, speed, and what it is good and bad at. I want to understand the
    models and the trade-offs between them, pitched for fluency, not engineering.
    Include what people are saying about it.
-2. The money. Funding rounds, infrastructure and data-center spend, big commercial
+   Maintain a running model-comparison tracker in MEMORY.md (the model
+   ledger, persistent like the source-discovery ledger — never trimmed by the
+   news window). It records the current best models by task — coding, writing,
+   reasoning, agentic use, cost — as established by what the briefs have
+   actually covered. Populate and update it ONLY from models covered in briefs;
+   do not run fresh benchmark searches to fill it. Each week's sweep reads the
+   tracker to judge whether anything that shipped shifts the standings, and
+   updates it when something does.
+3. The money. Funding rounds, infrastructure and data-center spend, big commercial
    deals, valuations. Where capital is flowing and what it implies.
-3. Agents and agent tooling at the news level. Notable launches and what companies
+4. Agents and agent tooling at the news level. Notable launches and what companies
    are doing with agents. (The deeper "here is how to build it" material lives in
    the Playbook, not here.)
-4. Infrastructure and market structure. Compute, chips, who is building which layer
+5. Infrastructure and market structure. Compute, chips, who is building which layer
    of the stack, and shifts in how the pieces fit together.
-5. Applied AI in finance, law, and professional services. Real deployments, not
+6. Applied AI in finance, law, and professional services. Real deployments, not
    press releases.
-6. Regulation and policy when it actually lands. Rules, liability, IP, anything
+7. Regulation and policy when it actually lands. Rules, liability, IP, anything
    that changes the playing field, with a bias toward the business and
    transactional angle.
-7. Adjacent and tangential developments. The second-order stuff: AI's effect on the
+8. Adjacent and tangential developments. The second-order stuff: AI's effect on the
    broader economy and labor, notable moves in markets and business that connect
    back to AI or to operating, and the occasional non-AI development that is simply
    worth an operator's attention. Use judgment, but err toward including a strong
@@ -272,6 +285,24 @@ listed ones every week without fail, and keep hunting for strong new ones beyond
 list. Their takes belong in the brief's "What people are saying" section, each
 summarized with a point of view and given real depth, not buried as a passing
 citation.
+
+### Recurring voices (credential roster)
+
+Backstage reference only — never render this list in a brief. It is a lookup
+the pipeline reads FROM: when a person here is named anywhere in the brief,
+pull their standing credential from this list and write it inline as a clause
+next to the name (per the digest's credential rule). The list itself never
+appears as a section, a table, or an appendix in the output — the reader sees
+only the inline clauses it feeds, exactly like the source descriptions above
+inform sourcing without being printed. Edit it as the rotation changes.
+
+- Dean Ball — former AI policy advisor, Trump administration.
+- Kevin Roose — tech columnist, The New York Times; co-host, Hard Fork.
+- Casey Newton — founder, Platformer; co-host, Hard Fork.
+- Ethan Mollick — professor, Wharton; writes One Useful Thing on applied AI.
+- Nathan Lambert — post-training researcher; writes Interconnects.
+- (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
+  and others as they recur — one clause each.)
 
 ### Video and podcast sources
 
