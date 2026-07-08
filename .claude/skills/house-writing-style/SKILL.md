@@ -1,106 +1,126 @@
 ---
 name: house-writing-style
-description: >
-  The house rules for how prose is built — voice, causal structure, jargon
-  glossing, banned constructions, and attribution — for any writing in Matthew's
-  name (the AI Pulse and other briefs, plus memos and drafts). Read and apply this
-  before drafting any prose that should read in the house style. It governs the
-  sentence-and-paragraph craft; the brief's structure lives in the topic config, and
-  brief-level curation lives in the research-digest skill's "Writing and curation
-  rules." [DRAFT — workshopped on claude/workshop; not yet live.]
+description: Matthew's rules for analytical prose. Apply whenever drafting
+  analytical writing of any kind — briefs, digests, memos, summaries,
+  explanations of news or research. Read this before drafting, not after.
 ---
 
-# House Writing Style
+# House writing style
 
-How the prose itself is built, so everything reads as one publication. This is the
-sentence-and-paragraph layer only. It does not define *what* a brief contains (topic
-config) or *how a brief is curated* (research-digest's "Writing and curation rules")
-— it governs *how the words go together*.
+These rules were derived from line-level diagnosis of actual output, not
+from abstract principles. Each has a before/after from a real brief.
+When a rule conflicts with sounding polished, follow the rule.
 
-## Voice (the baseline)
+## 1. Show the transmission mechanism
 
-- Neutral, third-person publication voice. No second-person "you," no "Matthew,"
-  opener, no addressing any one reader. Editorial opinion is welcome but labeled and
-  impersonal. (Canonical audience rule: CLAUDE.md "Audience and voice.")
-- Direct, concrete, evidence-first. No fluff, no abstraction for its own sake.
-- Em dashes are welcome. (Avoid them only in text drafted in Matthew's own voice to
-  send to other people, where they read as AI.)
+Every causal claim must walk the reader through each step: a → b → c.
+Never state a cause and its distant consequence with the middle missing.
+Audit trigger: any sentence using "meaning," "so," a colon, or an em-dash
+to carry causal weight. Ask: can the reader reconstruct every step? If
+not, unpack it into sequence — even at the cost of more words.
 
-## 1. Causal chains, not lists
+BEFORE: "researchers found a jailbreak that could surface
+cyberattack-relevant vulnerabilities — a shutdown that even blocked
+Anthropic's own foreign-national employees."
+(Jumps from the flaw to a consequence three steps downstream.)
 
-Connect points by cause and effect; do not lay them side by side as interchangeable
-facts. The reader should be carried from one point to the next by "which means / which
-is why / because," not by "and also."
+AFTER: "Amazon researchers found a jailbreak: prompts that got the model
+to reveal software flaws useful for planning cyberattacks. The government
+responded by banning all foreign use of the model. That ban covered
+foreign nationals working inside the US — including Anthropic's own
+employees — so the company shut off access for everyone rather than
+police who could log in."
 
-- Weak: "The regime licenses releases. Enterprises are shifting to open models."
-- Strong: "Because release timing is now an unlegislated regulatory variable,
-  enterprises are hedging into open-weight models they can't have switched off."
+When relaying someone else's argument, render it as an explicit chain
+(their claim is: a, therefore b, therefore c), and if a step contradicts
+common intuition (e.g. "demand is set by price"), explain what they
+actually mean before moving on.
 
-Build significance as a single traced line — fact → what it causes → why that
-matters — not a pile of true statements sitting next to each other.
+## 2. Claim first, then evidence
 
-## 2. Topic sentence first
+Open every item and every paragraph with a topic sentence stating the
+frame. The reader should know what they are about to read and why before
+any specifics arrive. Specs, benchmarks, quotes, and numbers follow the
+claim — never precede it.
 
-Lead every paragraph with its point, then support it. Never bury the conclusion at
-the end or make the reader assemble it. One paragraph, one idea; the first sentence
-states it, the rest earns it.
+BEFORE: an item that opens with Fable's return, drifts into Sonnet 5
+specs, then GPT-5.6 tiers, then Chinese benchmarks, with the point
+emerging only by accumulation.
 
-- Weak: three sentences of setup, then finally the point.
-- Strong: the point first, then the three sentences that back it.
+AFTER: "Three frontier models shipped this week: Fable 5 returned,
+Anthropic released Claude Sonnet 5, and OpenAI previewed GPT-5.6. Here is
+how they compare — and why the benchmark numbers deserve skepticism."
+Then the details, in that promised order.
 
-## 3. Gloss the jargon, always
+## 3. Gloss jargon once; disambiguate names
 
-The first time a real technical term, benchmark, or tech-business buzzword appears,
-gloss it in a few plain words — what it is and how to read it. Never let an
-unexplained term carry the point, even in a one-line item.
+No term the reader doesn't already own may carry the significance of a
+sentence. Gloss on first use — one clause, plain words — then use the
+term freely afterward. Company or product names that read as common nouns
+("Together AI," "Exponential") must be introduced so they can't be
+misparsed. A term is only worth retaining at all if it will recur;
+otherwise use the plain-language version and drop the term.
 
-- Benchmarks: say what the test measures and what a good score means, not just the
-  number.
-- Buzzwords ("industrialization of software," "legacy migration," "front door to
-  computing") get a plain-words translation.
-- Finance fundamentals (margins, valuation, multiples, run-rate) do NOT need
-  glossing — Matthew knows them. A vague tech-business phrase built around them
-  still does.
+BEFORE: "Together AI raised an $800M Series C — a 'neocloud' renting
+compute for open-source models without hyperscaler lock-in."
 
-## 4. Banned constructions (the AI tells)
+AFTER: "Together AI, a startup that rents out GPU computing power for
+running open-source models, raised an $800M Series C. Investors are
+calling this category 'neoclouds': cloud providers that, unlike Amazon
+or Microsoft, don't tie customers to one company's ecosystem."
 
-Cut these on sight; they read as machine-written or as filler:
+## 4. Every fact must earn its place — visibly
 
-- **Hedge/filler openers:** "It's worth noting that," "It's important to remember,"
-  "Needless to say," "At the end of the day."
-- **Inflated register:** "in the ever-evolving landscape," "in today's fast-paced
-  world," "a testament to," "delve into," "tapestry," "realm," "navigate the
-  complexities of."
-- **Empty both-sidesing as a conclusion:** "only time will tell," "the possibilities
-  are endless," "a double-edged sword."
-- **Symmetry crutches:** reflexive "Not only X, but also Y," and rule-of-three lists
-  that pad rather than build.
-- **Throat-clearing:** restating the prompt or the section's own purpose before
-  saying anything ("This section examines…").
+State each fact's relevance to the point it serves, in the same sentence
+or the one after. If the tie-back can't be written, the fact moves to
+where it belongs or gets cut. A fact that is true, sourced, and
+interesting is still clutter if the reader has to guess why it's here.
 
-Say the thing plainly instead. Test: if a sentence survives deletion of its first
-few words, delete them.
+BEFORE: "Anthropic shipped Claude Sonnet 5 the same day." (In an item
+about the Fable ban — connection never stated.)
 
-## 5. Attribution discipline
+AFTER: either cut it from this item, or: "Anthropic shipped Claude
+Sonnet 5 the same day — a signal it spent the shutdown building rather
+than stalling."
 
-- Separate fact from the writer's read. If a claim comes from a source, it is
-  reported and cited; if it is the writer's synthesis or opinion, it is labeled as
-  such. Never blur the two inside one sentence.
-- Prefer primary sources, and attribute a claim to whoever actually made it — not to
-  a secondhand write-up of it.
-- When a named voice is used, keep the attribution honest about what they actually
-  said versus how it is being framed.
+## 5. No idiom unless literally true; no self-narration
 
-(Brief-level rules — crediting every named person, a source link on every item,
-restating a cross-referenced item before contrasting it — live in research-digest's
-"Writing and curation rules," which sits on top of this skill.)
+Test every idiom and stock phrase: is it literally true of the situation?
+"Closed the loop" fails unless something actually loops. If it fails,
+say the plain thing: "the situation was resolved."
 
-## Relationship to the other files
+The document never narrates itself or its predecessors ("last week's
+brief covered..."). If prior context is needed, give the context itself;
+a pointer to prior coverage goes in a short parenthetical at the end of
+the sentence, never as the sentence's subject.
 
-- `CLAUDE.md` holds identity, the lenses, and the canonical audience/voice rule;
-  this skill is the prose-craft layer that operationalizes it. If they ever conflict,
-  `CLAUDE.md` and `MEMORY.md` win per the precedence rule.
-- `research-digest` reads this at step 7, then applies its brief-level "Writing and
-  curation rules" on top.
-- Keep this file to prose craft. Anything about *what to cover* or *brief structure*
-  belongs in the topic config, not here.
+Banned constructions (grows over time):
+- "closed the loop" / "come full circle"
+- "partial climbdown" and similar editorializing shorthand for events
+- "Last week's brief covered..." or any self-referential opener
+- "it's not just X, it's Y"
+- significance-inflation verbs doing a claim's work: "underscores,"
+  "highlights," "signals," "cements," "marks a turning point"
+- participial significance tails: ", cementing its position as..."
+- "in recent developments" and all throat-clearing openers
+
+## 6. Plain clauses over noun-piles; use the industry's own words
+
+If a hyphenated compound can be replaced by a plain clause, replace it:
+"cyberattack-relevant vulnerabilities" → "flaws that could help conduct
+cyberattacks." Call things what their industry calls them: "frontier
+labs," not "vendors." Cut modifiers that subtract meaning ("targeted
+gross margin" → "gross margin").
+
+## 7. Attribute contested facts; own your reads
+
+Two kinds of claims, two treatments:
+- Contested or self-reported facts and analytical framings (a company's
+  own 99% figure; a revenue-vs-depreciation threshold) get attribution
+  AND their limitations noted: whose claim, what it assumes, what it
+  leaves out ("depreciation is a proxy for hardware cost, not the full
+  cost base").
+- Interpretive reads that follow from the analysis are stated flat, in
+  the document's own voice, unattributed. Never borrow a quoted source's
+  mouth for a conclusion you hold yourself. Quotes confirm points already
+  made; they do not carry them.
