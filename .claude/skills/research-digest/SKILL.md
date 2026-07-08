@@ -140,9 +140,14 @@ lives in the topic config, not here.
   - After: same claim, with the primary source linked inline. If no source can be
     found, the item doesn't run.
 
-- **Credentials before quotes.** Every speaker gets a credential clause before
-  their first quote or paraphrase: role, affiliation, and why they are worth
-  hearing on this subject.
+- **Credential every named person, every time.** Any time a person is named —
+  in a top development, a skim item, or a perspective entry — attach a
+  credential clause: their role, their affiliation, and in one phrase what that
+  company or body. This holds on every mention, not
+  just the first, and whether or not they are quoted. Keep it to a clause, not
+  a biography — a name that recurs in one item gets a light tag each time, not
+  a repeated paragraph. Pull standing wording from the topic config's
+  recurring-voices roster where one exists, so the description stays consistent.
   - Before: "...as Dean Ball put it, 'this opacity will not lend itself well to a
     stable, investable industry.'"
   - After: "...as Dean Ball, a former AI policy advisor in the Trump
