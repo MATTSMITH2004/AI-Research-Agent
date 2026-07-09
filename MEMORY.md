@@ -203,14 +203,23 @@ Each run, mark commentary sources hit/miss and update "last contributed."
     as a miss on AI-relevance grounds, just off-topic this week.
   - Net Interest (Marc Rubinstein): MISS week of Jul 4 (no post published in
     the window).
-- Candidates surfaced, awaiting Matthew's verdict:
   - BG2 Pod (Brad Gerstner + Bill Gurley), bg2pod.com — investor-led AI-and-markets
-    analysis (capex circularity, hidden leverage). Surfaced week of Jul 4.
+    analysis (AI capex, circular revenue, hidden leverage). PROMOTED Jul 2026
+    (Matthew blessed it; surfaced and promoted the same week, Jul 4).
+  - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space — AI
+    engineering at the practitioner level. PROMOTED Jul 2026 (Matthew blessed it;
+    moved from the Playbook into the Pulse rotation).
+  - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer — talks and keynotes
+    from the AI Engineer World's Fair and Summit. PROMOTED Jul 2026 (Matthew
+    blessed it).
+- Candidates surfaced, awaiting Matthew's verdict (on trial — promote after ~3
+  hit-weeks, prune after ~4 straight misses):
   - Every (Dan Shipper), every.to — hands-on, falsifiable AI product testing
     ("Vibe Check" series scored Fable 5 vs Opus 4.8 vs GPT-5.5 on a concrete
-    benchmark). Surfaced week of Jul 4.
+    benchmark). Surfaced week of Jul 4; on trial.
   - The Cognitive Revolution (Nathan Labenz), cognitiverevolution.ai — technical/
-    practitioner-level interviews with AI researchers. Surfaced week of Jul 4.
+    practitioner-level interviews with AI researchers. Surfaced week of Jul 4;
+    on trial.
 - Flagged for possible pruning (~4 straight misses / quality drop / redundant):
   - (none yet — Stratechery's miss this week was an announced break, not quality;
     Noahpinion and Money Stuff are on their second-ish thin week but not yet at
