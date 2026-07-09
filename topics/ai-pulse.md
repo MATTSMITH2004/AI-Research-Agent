@@ -247,7 +247,9 @@ Starter set, refine as I learn which ones earn it:
   Schneider) for US-China AI and chips, Import AI (Jack Clark) for frontier and
   policy, SemiAnalysis (Dylan Patel) for chips, datacenters, and compute economics
   (promoted Jun 2026 — the money-and-engineering read on the AI supply chain),
-  One Useful Thing (Ethan Mollick) for practical, operator-level AI use.
+  One Useful Thing (Ethan Mollick) for practical, operator-level AI use, and Every
+  (Dan Shipper, https://every.to) for hands-on, first-hand, falsifiable testing of
+  AI tools and models rather than secondhand commentary.
   Finance and the tech-finance seam (the tangential angle I want): The Diff (Byrne
   Hobart) for the finance-meets-strategy intersection, The Generalist (Mario
   Gabriele) for deep dives on companies and business models, Net Interest (Marc
@@ -330,6 +332,17 @@ AI-focused shows:
   accessible, ties AI to the broader news cycle. NYT publishes transcripts.
 - Stratechery / Sharp Tech (Ben Thompson), https://stratechery.com : strategy,
   platform economics, and market structure.
+- The Cognitive Revolution (Nathan Labenz), https://www.cognitiverevolution.ai :
+  technical interviews with AI researchers and builders at the frontier, hosted by a
+  practitioner who runs his own AI company. Strongest for the build-real-fluency
+  mandate — how the technology actually works, not just product news.
+- Latent Space (swyx / Shawn Wang and Alessio Fanelli), https://www.latent.space :
+  AI engineering at the practitioner level. Pull its AI-market, model, and
+  builder-trend discussions (leave the deep how-to-build tutorials to the Playbook).
+- AI Engineer (YouTube channel), https://www.youtube.com/@aiDotEngineer : talks and
+  keynotes from the AI Engineer World's Fair and Summit, where practitioners present
+  how they actually build with AI (e.g. the "Field Guide to Fable" talk). Pull the
+  transcript of any in-window talk worth surfacing.
 
 Markets, finance, and business shows (the tangential and cross-domain angle; not
 every episode is about AI, so pull the ones that are or that touch operating):
@@ -340,6 +353,10 @@ every episode is about AI, so pull the ones that are or that touch operating):
 - In Good Company (Nicolai Tangen, Norges Bank Investment Management), transcripts
   at https://podscripts.co/podcasts/in-good-company-with-nicolai-tangen : interviews
   with CEOs and investors on how big businesses and markets work.
+- BG2 Pod (Brad Gerstner of Altimeter Capital and Bill Gurley of Benchmark),
+  https://www.bg2pod.com : biweekly, numbers-driven analysis at the AI-and-markets
+  intersection from two working investors who actually allocate capital. Strong for
+  the finance lens — AI capex, circular-revenue and hidden-leverage scrutiny.
 Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
 Bloomberg Talks. The WSJ daily-news podcast is short headline audio and not worth
 the tokens for a weekly brief. WSJ still counts as a written/journalism source for
@@ -348,8 +365,9 @@ article research (see "Sources to prioritize" above) — just not as a podcast.
 Optional and heavier: Acquired for occasional company deep dives, All-In for
 markets and venture chatter (more punditry, lower signal-to-noise).
 
-Latent Space (AI engineering, practitioner level) is build-focused, so it will
-live in the Playbook config rather than here.
+Latent Space is now part of the Pulse rotation (listed under AI-focused shows
+above). Its deep build-tutorials still belong to the Playbook; here, pull its
+AI-market, model, and practitioner-trend discussions.
 
 ## What I already know and have covered
 
