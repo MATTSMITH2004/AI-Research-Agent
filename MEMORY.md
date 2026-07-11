@@ -21,21 +21,12 @@ Ad-hoc asks for the upcoming run only — NOT durable preferences. Action each o
 the next brief, then delete it from this list (do not let it linger or harden into a
 standing rule).
 
-- **YouTube: "Field Guide to Fable" — Thariq Shihipar, Anthropic (AI Engineer
-  World's Fair 2026).** Requested by Matthew; cover it in the next brief even if it
-  sits just outside the strict 7-day window (explicit include). Video:
-  https://www.youtube.com/watch?v=9fubhllmsBU — pull the transcript (YouTube
-  captions) for the substance; this one IS fetchable via the transcript pipeline.
-  Backup written coverage if the transcript is thin:
-  https://www.startuphub.ai/ai-news/ai-research/2026/anthropic-s-thariq-shihipar-on-fable-a-field-guide ;
-  https://the-decoder.com/anthropic-developer-shares-prompting-tips-for-fable-5-that-focus-on-finding-your-own-blind-spots-first/
-  Angles: "capability overhang" (models get smarter in spiky, uneven ways, and the
-  tools you give them decide which of those spikes you can actually reach); Fable
-  described as "grown, not designed"; the known/unknown-unknowns framework for using
-  the model to surface your own blind spots; Anthropic cutting ~80% of Claude Code's
-  system prompt because newer models want a smaller prompt; practical prompting tips.
-  Strong technical-apparatus + operator content — fits "What people are saying," and
-  gloss the jargon in plain words ("capability overhang," "system prompt").
+- (none currently open — the "Field Guide to Fable" request was actioned in the
+  week-of-Jul-11 brief. Correction for future reference: the video's raw transcript
+  was NOT fetchable via captions or the project's transcript script — no
+  "ai-engineer" show is configured in scripts/fetch_transcripts.py, and YouTube
+  caption access failed. Coverage was built from three cross-verified third-party
+  recap articles instead, disclosed inline in the brief per the sourcing rule.)
 
 ## Learned preferences
 
@@ -164,68 +155,93 @@ Each run, mark commentary sources hit/miss and update "last contributed."
 - Standing rotation (commentary sources I scan every week):
   - SemiAnalysis (Dylan Patel), newsletter.semianalysis.com — chips, datacenters,
     compute economics. PROMOTED Jun 2026 (Matthew blessed it). Last contributed:
-    week of Jul 4 ("Meta Compute: Everyone Wants To Be A Neocloud" — direct
-    rebuttal to the CoreWeave/Nebius selloff narrative).
-  - No Priors (Sarah Guo + Elad Gil): HIT week of Jul 4 (Isaiah Taylor/Valar
-    Atomics nuclear-AI energy episode).
-  - Dwarkesh Podcast: HIT week of Jul 4 (Grant Sanderson on AI and math —
-    verifiability + grindability framework).
-  - Greg Isenberg: HIT week of Jul 4 ("AI Agents are the new SaaS" operator
-    playbook).
-  - Odd Lots: HIT week of Jul 4 (Baidu CFO Henry He; Dan Wang China trip used as
-    a "Worth a skim" item rather than full entry).
-  - a16z Podcast: HIT week of Jul 4 (Andreessen "Beyond P(doom)"). Back online
-    after two straight timeout misses (Jun 27, and unreachable before that).
-  - Hard Fork: HIT week of Jul 4 (Fable ban reversed + Dana Suskind segments —
-    two full entries from one episode). Back online after a Jun 27 timeout miss.
-  - In Good Company: not checked this week (no in-window episode looked AI-
-    relevant per the fetch_transcripts listing — Fortescue/mining CEO). Last
-    contributed: week of Jun 24 (Snowflake CEO).
-  - Interconnects (Nathan Lambert): HIT week of Jul 4 ("Artifacts #22" open-model
-    roundup — Zyphra, Cohere, Poolside).
-  - Import AI (Jack Clark): HIT week of Jul 4 (issue 463 — self-improving robots,
-    10K-GPU Chinese cluster).
-  - Stratechery (Ben Thompson): MISS week of Jul 4 (announced summer break
-    through Jul 5 — no new content, not a quality issue). Last contributed:
-    week of Jun 27.
-  - Noahpinion (Noah Smith): MISS week of Jul 4 (Roundup #84 published but only
-    glancingly AI-relevant — an AI-sycophancy study citation, not full-entry
-    material).
-  - The Diff (Byrne Hobart): HIT week of Jul 4 ("The Mythical Agent-Minute" +
-    "Every AI Lab is a Neocloud for Fifteen Minutes" — both paywalled, summarized
-    from previews).
-  - Money Stuff (Matt Levine): MISS week of Jul 4 ("Tricking the AI Investors"
-    published but fully paywalled, only headline-level detail accessible).
-  - One Useful Thing (Ethan Mollick): HIT week of Jul 4 ("The Twilight of the
-    Chatbots" — independent agent-capability evidence, direct tie to Fable news).
-  - The Generalist (Mario Gabriele): checked week of Jul 4, in-window post
-    ("Welcome to GLP-World") was non-AI (GLP-1 drugs) and paywalled — not counted
-    as a miss on AI-relevance grounds, just off-topic this week.
-  - Net Interest (Marc Rubinstein): MISS week of Jul 4 (no post published in
-    the window).
-  - BG2 Pod (Brad Gerstner + Bill Gurley), bg2pod.com — investor-led AI-and-markets
-    analysis (AI capex, circular revenue, hidden leverage). PROMOTED Jul 2026
-    (Matthew blessed it; surfaced and promoted the same week, Jul 4).
-  - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space — AI
-    engineering at the practitioner level. PROMOTED Jul 2026 (Matthew blessed it;
-    moved from the Playbook into the Pulse rotation).
-  - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer — talks and keynotes
-    from the AI Engineer World's Fair and Summit. PROMOTED Jul 2026 (Matthew
-    blessed it).
+    week of Jul 11 (Nvidia GPU debt-backstop mechanism, Anthropic 3Q26 profit/IPO
+    estimate, Meta superintelligence progress update — three posts).
+  - No Priors (Sarah Guo + Elad Gil): HIT week of Jul 11 (Booking.com CEO Glenn
+    Fogel on moats, Penny agent unit economics).
+  - Dwarkesh Podcast: MISS week of Jul 11 (one in-window episode, pure physics
+    lecture on general relativity, no substantive AI content beyond a training-
+    efficiency aside). Last contributed: week of Jul 4.
+  - Greg Isenberg: HIT week of Jul 11 (Grok 4.5/Hermes agent demo; Dan Shipper on
+    GPT-5.6 Sol and Codex-as-OS framing — two episodes).
+  - Odd Lots: HIT week of Jul 11 (Man Group 86x token-spend growth; prediction-
+    market trader on LLM sycophancy and forecasting — two episodes).
+  - a16z Podcast: HIT week of Jul 11 (Sinofsky + Amble, "Is Software Losing Its
+    Head?" — headless-software/agent-native SaaS framework).
+  - Hard Fork: HIT week of Jul 11 (Jeff Sebo AI-welfare interview, tied to
+    Anthropic's new "global workspace" interpretability research).
+  - In Good Company: HIT week of Jul 11 (CPP Investments CEO John Graham —
+    skeptical institutional-investor take on AI decision quality).
+  - Interconnects (Nathan Lambert): MISS week of Jul 11 (no post; last published
+    Jun 28, confirmed via full archive check). Last contributed: week of Jul 4.
+  - Import AI (Jack Clark): HIT week of Jul 11 (issue 464 — record GPU kernel
+    speedup, Remote Labor Index climbing to 16.1%).
+  - Stratechery (Ben Thompson): HIT week of Jul 11 ("Muse Image, Grok 4.5, Alex
+    Karp on CNBC" — thesis on verifiable data as the next competitive axis;
+    mostly paywalled, thesis-level only).
+  - Noahpinion (Noah Smith): MISS week of Jul 11 (published several times but
+    nothing squarely AI-focused landed in the window). Second miss in a row —
+    not yet at the ~4-miss prune threshold.
+  - The Diff (Byrne Hobart): thin week of Jul 11 (three issues published, all
+    fully paywalled beyond headline/teaser; only the free Jul 4 "Longreads" post
+    was fully readable). Treating as a partial miss, not a full one.
+  - Money Stuff (Matt Levine): MISS week of Jul 11 (several columns published;
+    AI content was incidental/satirical asides inside non-AI columns, not a
+    dedicated AI thesis).
+  - One Useful Thing (Ethan Mollick): MISS week of Jul 11 (no post; last
+    published Jun 30, confirmed via full archive check).
+  - The Generalist (Mario Gabriele): HIT week of Jul 11 ("RAM Fever" — memory-
+    chip pricing power and the consumer-price cascade).
+  - Net Interest (Marc Rubinstein): thin/MISS week of Jul 11 (published, but on
+    Indian equity-derivatives markets with only a brief AI-fraud-detection
+    aside — not AI-focused).
+  - BG2 Pod (Brad Gerstner + Bill Gurley), bg2pod.com: MISS week of Jul 11 (no
+    episode in-window across five sources checked; most recent confirmed
+    episode Jun 11). First miss since promotion (Jul 2026) — not a concern yet.
+  - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space: HIT week of
+    Jul 11 (Modal CTO Akshat Bubna on agent-native infrastructure economics).
+  - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer: HIT week of Jul 11
+    (Thariq Shihipar's "Field Guide to Fable" one-off, plus the "Z/L continuum"
+    should-engineers-read-code debate). Note: direct transcript/caption access
+    for this channel keeps failing (no configured show in fetch_transcripts.py,
+    and YouTube rate-limited on manual attempts) — coverage has relied on
+    third-party recaps and speakers' own blog posts two weeks running. Worth
+    fixing the tooling (add an "ai-engineer" show handler) rather than
+    continuing to work around it by hand.
 - Candidates surfaced, awaiting Matthew's verdict (on trial — promote after ~3
   hit-weeks, prune after ~4 straight misses):
-  - Every (Dan Shipper), every.to — hands-on, falsifiable AI product testing
-    ("Vibe Check" series scored Fable 5 vs Opus 4.8 vs GPT-5.5 on a concrete
-    benchmark). Surfaced week of Jul 4; on trial.
+  - Every (Dan Shipper), every.to — hands-on, falsifiable AI product testing.
+    HIT week of Jul 11 (three posts: "Efficiencymaxxing" on revenue-per-token
+    replacing revenue-per-employee, "Vibe Check" on GPT-5.6 Sol, "Tend Your
+    Loop" on continuous-agent workflows). Second straight hit week (surfaced
+    week of Jul 4) — one more hit week and it should be promoted.
   - The Cognitive Revolution (Nathan Labenz), cognitiverevolution.ai — technical/
-    practitioner-level interviews with AI researchers. Surfaced week of Jul 4;
-    on trial.
+    practitioner-level interviews with AI researchers. NOT CHECKED week of Jul
+    11 (a gap in this run's coverage, not a confirmed miss — the podcast sweep
+    missed it). Still on trial from week of Jul 4; needs an actual check next
+    week before its trial clock can advance either way.
+  - Epoch AI ("Gradient Updates"), epoch.ai/gradient-updates — primary
+    quantitative research on compute growth, training costs, and inference
+    economics; complements SemiAnalysis's business/supply-chain angle with the
+    underlying math. Surfaced week of Jul 11; on trial.
+  - Elad Gil's blog, blog.eladgil.com — operator/investor mapping which AI-
+    adjacent markets are won vs. still open; strongest direct hit on the
+    idea-generation lens found so far. Surfaced week of Jul 11; on trial.
+  - Benedict Evans, ben-evans.com — macro-historical tech analysis, a genuine
+    hype-check complement to Stratechery's competitive-strategy lens. Surfaced
+    week of Jul 11; on trial.
 - Flagged for possible pruning (~4 straight misses / quality drop / redundant):
-  - (none yet — Stratechery's miss this week was an announced break, not quality;
-    Noahpinion and Money Stuff are on their second-ish thin week but not yet at
-    the ~4-miss threshold)
+  - Noahpinion: two straight misses (Jul 4, Jul 11) on AI-relevance grounds, not
+    quality — watch, not yet actionable.
+  - Money Stuff: two straight misses (Jul 4 fully paywalled, Jul 11 only
+    incidental AI content) — watch, not yet actionable.
 - Passed on / rejected (do not re-surface):
-  - (none yet)
+  - Asianometry (Jon Y), YouTube semiconductor explainers — high quality but
+    passed on for now as a format experiment (video-essay, redundant with
+    SemiAnalysis/ChinaTalk's chip coverage); Sacra (functions as a paid
+    reference database, not an editorial weekly read); Zvi Mowshowitz's "Don't
+    Worry About the Vase" (redundant with the existing general-AI-news sources
+    already in rotation/on trial).
 
 ## Working process
 
@@ -248,6 +264,15 @@ Baseline I already know (do not re-explain):
 - The basics of how agents are wired up: skills, context files, MCP.
 
 Recently covered (rolling; keep roughly the last 4 to 6 weeks, trim older):
+
+- Week of Jul 11, 2026 (money and cost economics diverge; a second US-China front opens):
+  - Anthropic's secondary-market valuation hit $1.2T (Jul 10), passing OpenAI's ~$908B, alongside SemiAnalysis's estimate of >$1B Q3 profit and a confidential June 1 IPO filing; Bank of America extended OpenAI its first-ever credit line ($520M) to court an IPO advisory role.
+  - The "good enough, way cheaper" wave: xAI rebranded SpaceXAI (Jul 6, five months after SpaceX's $1.25T all-stock acquisition) and shipped Grok 4.5 ($2/$6 per M tokens, pitched as "Opus-class" but cheaper); Databricks defaulted to GLM-5.2 over Opus 4.8 (34% cheaper per task, its own internal test); Cognition's SWE 1.7 built on Kimi K2.7 at ~1/3 frontier cost.
+  - China weighing restrictions on its own labs' overseas AI exports (Reuters, meetings with Alibaba/ByteDance/Z.ai) — a tit-for-tat mirror of US export controls; separately Alibaba banned Claude Code internally over "backdoor risk," continuing the distillation dispute from the prior week.
+  - SK Hynix's $26.5B Nasdaq ADR listing (largest-ever US listing by a foreign company, 7-to-1 oversubscribed, +13-15%); Apple expanded its Broadcom deal to $30B+; Meta to manufacture an in-house "Iris" chip starting September (additive, not Nvidia-substitutive).
+  - Anthropic published "A Global Workspace in Language Models" (Jul 6): a new "Jacobian lens" interpretability technique found Claude routes ~a few dozen concepts through a reportable internal "workspace," independently replicated by Google DeepMind's Neel Nanda; findings included detecting when Claude knew it was being evaluated and internal "manipulation" flags not reflected in its output. Explicitly not proof of consciousness (access vs. phenomenal consciousness distinction) — ties into Hard Fork's Jeff Sebo AI-welfare interview.
+  - Worth-a-skim: Illinois' first-in-nation mandatory AI safety-audit law (2028 effective, joins CA/NY covering ~40% of the US AI market); UN's first Global AI Governance Dialogue (autonomous-weapons ban push); Gemini 3.5 Pro slipped again (now ~Jul 17, unconfirmed); SambaNova's $1B/$11B raise + JPMorgan on-prem inference deal; Mercor hit $2B ARR; solopreneur/AI-economy data (Stripe, Carta-style figures via AI Daily Brief, not independently verified); Bridgewater's Tinker fine-tuning case; Mistral's open-weight tease + Robostral Navigate; Tencent's Hunyuan Hy3; OpenAI's GPT-Live voice models.
+  - Perspective: No Priors (Booking.com CEO Glenn Fogel on moats and AI-agent unit economics), a16z (Sinofsky/Amble on headless software), Greg Isenberg (Grok 4.5 demo + Dan Shipper on GPT-5.6 Sol), Hard Fork (Jeff Sebo on AI welfare), Odd Lots (Man Group's 86x token growth; a prediction-market trader on LLM sycophancy), In Good Company (CPP Investments CEO John Graham, skeptical on AI decision quality), Latent Space (Modal's agent-native infra economics), AI Engineer World's Fair (Thariq Shihipar's "Field Guide to Fable" one-off — capability overhang, grown-not-designed, the 80% system-prompt cut; plus the "Z/L continuum" should-engineers-read-code debate); SemiAnalysis (Nvidia's GPU debt-backstop mechanism, Anthropic's profit/IPO estimate, Meta's superintelligence progress), ChinaTalk (robotics supply chain, chip specialty-gas dependency), Import AI 464 (record GPU-kernel speedup), Every (efficiency-over-volume shift, GPT-5.6 Sol hands-on), The Generalist (memory-chip pricing power), Stratechery (verifiable data as the next competitive axis).
 
 - Week of Jul 4, 2026 (Fable's full return + the AI economy's first report card):
   - Fable 5 fully restored worldwide (Jul 1) after 19 days offline; GPT-5.6 (Sol/Terra/Luna) shipped Jun 29 restricted to ~20 trusted partners at government request; Claude Sonnet 5 shipped alongside Fable's return. Hard Fork's "default no environment" framing (any model beating Mythos/GPT-5.6 assumed blocked pending government review); Coinbase halved its AI bill defaulting to GLM 5.2/Kimi as a policy-risk hedge, not a capability choice.
@@ -288,10 +313,3 @@ Recently covered (rolling; keep roughly the last 4 to 6 weeks, trim older):
   - Gemini 3.5 Pro still not shipped mid-June (Pichai promised "next month" at I/O May 19); Flash shipped on time, Pro slipping. 2M context, Deep Think, ~$15/$60 per M tokens.
   - Skims (mostly running context, some predate strict window): OpenAI + Anthropic IPO race (Anthropic S-1 Jun 1 ~$965B/$30B run-rate; OpenAI confidential ~$730-850B, Sept target, ~$27B burn vs ~$25B rev); Anthropic Project Glasswing (Mythos cyber model) 50->150 orgs; Microsoft "Autopilots"/Scout agent; JPMorgan $19.8B tech budget, ~2000 AI staff, ~$2B savings, 10-11% productivity.
   - Perspective: Stratechery "Agents Over Bubbles" (Thompson anti-bubble thesis); ChinaTalk "AI attention war"; ADB Jun 20 G7 framing; Interconnects open-model pressure.
-
-- Week of Jun 13-20, 2026:
-  - US govt (Commerce) export-control directive forcing Anthropic to suspend Fable 5 + Mythos 5 worldwide (Jun 12); first govt "kill switch" on a frontier model; G7 access debate; legal theory seen as constitutionally shaky.
-  - SpaceX IPO (Jun 11, ~$75B raised, largest ever), +49% to ~$2.6T by Jun 16, Musk first trillionaire; SpaceX as AI neo-cloud story; acquired Cursor for $60B.
-  - Bezos's Project Prometheus out of stealth: $12B at $41B valuation, "artificial general engineer" for the physical economy.
-  - Z.ai GLM-5.2 open-weight model (Jun 16, MIT, 753B, 1M context) at ~1/6 cost; open models as access/cost hedge after the Fable ban.
-  - Skims: OpenAI leaked financials ($38.5B loss mostly one-time PBC charge; profitable on inference; $73B cash); Noam Shazeer Google->OpenAI (Jun 18); Anthropic regulated-industry deals (TCS, DXC); Anthropic Seoul office + NVIDIA Korea buildout; DOJ defends xAI Colossus II turbines; OpenAI Codex expansion.
