@@ -15,37 +15,17 @@ How to maintain this file:
   state it back to me before saving it.
 - Keep it lean. Trim anything stale.
 
-## One-off requests for the next brief
-
-Ad-hoc asks for the upcoming run only — NOT durable preferences. Action each one in
-the next brief, then delete it from this list (do not let it linger or harden into a
-standing rule).
-
-- **YouTube: "Field Guide to Fable" — Thariq Shihipar, Anthropic (AI Engineer
-  World's Fair 2026).** Requested by Matthew; cover it in the next brief even if it
-  sits just outside the strict 7-day window (explicit include). Video:
-  https://www.youtube.com/watch?v=9fubhllmsBU — pull the transcript (YouTube
-  captions) for the substance; this one IS fetchable via the transcript pipeline.
-  Backup written coverage if the transcript is thin:
-  https://www.startuphub.ai/ai-news/ai-research/2026/anthropic-s-thariq-shihipar-on-fable-a-field-guide ;
-  https://the-decoder.com/anthropic-developer-shares-prompting-tips-for-fable-5-that-focus-on-finding-your-own-blind-spots-first/
-  Angles: "capability overhang" (models get smarter in spiky, uneven ways, and the
-  tools you give them decide which of those spikes you can actually reach); Fable
-  described as "grown, not designed"; the known/unknown-unknowns framework for using
-  the model to surface your own blind spots; Anthropic cutting ~80% of Claude Code's
-  system prompt because newer models want a smaller prompt; practical prompting tips.
-  Strong technical-apparatus + operator content — fits "What people are saying," and
-  gloss the jargon in plain words ("capability overhang," "system prompt").
-
 ## Learned preferences
 
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.
 
 ### Style and formatting
-- Canonical format reference: templates/ai-pulse-format-reference.docx/.md (the
-  week-of-Jun-24 brief). This is THE format going forward; match it. It replaced
-  the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
-  reference from the latest brief whenever the format meaningfully changes.
+- Canonical format: topics/ai-pulse.md "Output shape" is THE format definition —
+  self-contained, no external template. The old reference docx
+  (templates/ai-pulse-format-reference.docx/.md) was DELETED Jul 2026; do not
+  look for it or flag its absence as a config error. If a worked example is ever
+  wanted again, regenerate it from a recent approved brief — but the Output
+  shape section remains canonical either way.
 - Pulse brief structure — the 3-required + 2-optional beat design (What happened,
   optional "Does it hold up?" / "Both sides," Why it matters, My take): the canonical
   template lives in topics/ai-pulse.md "Output shape." Don't restate the full
