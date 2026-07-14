@@ -85,7 +85,7 @@ Pulse only.)
   paragraphs do not repeat it. This holds for every section, including the longer
   "What people are saying" entries, not just the top items. Dense walls of text are
   the thing to avoid.
-- - **Model standings** *(conditional — only when rankings moved).* When a
+- **Model standings** *(conditional — only when rankings moved).* When a
   release this week changes the model ledger (a new best-in-class for coding,
   reasoning, writing, agentic use, cost, or similar), show the current
   standings as a table here, with any row that moved this week marked (a ▲ or
