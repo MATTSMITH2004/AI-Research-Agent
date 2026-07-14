@@ -117,7 +117,12 @@ margin"
 AFTER: "flaws that could help conduct cyberattacks" / "frontier labs" / "gross
 margin"
 
+## 7. A number carries its source and its limits
 
+Self-reported figures and analytical proxies never stand alone as settled fact.
+Say whose number it is, and in one clause what it assumes or leaves out. This is
+not hedging — it is the difference between reporting a measurement and endorsing
+a conclusion the measurement doesn't fully support.
 
 BEFORE: "Q1 revenue exceeded depreciation for the first time — the industry is
 now profitable."
