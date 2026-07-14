@@ -61,7 +61,7 @@ attached.
 
 > Generate this week's AI Pulse brief and email it to the distribution list.
 >
-> 1. Switch to the weekly state branch: git fetch origin && git checkout claude/ai-pulse-weekly. This branch carries the rolling MEMORY.md and past briefs (plus all the skill, scripts, config, and format reference).
+> 1. Switch to the weekly state branch: git fetch origin && git checkout claude/ai-pulse-weekly. This branch carries the rolling MEMORY.md and past briefs (plus the skills, scripts, and config).
 > 2. Read `CLAUDE.md`, `MEMORY.md`, and `topics/ai-pulse.md`, and apply all of it.
 > 3. Run the `research-digest` skill for `topics/ai-pulse.md` over the past 7 days
 >    (Saturday-to-Saturday: cover developments since last week's brief). Use
