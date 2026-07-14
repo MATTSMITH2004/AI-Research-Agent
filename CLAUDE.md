@@ -55,6 +55,14 @@ briefly — what conflicted and which way it was resolved — and flag a major o
 clearly so I can come in and fix the files later. Resolution always happens
 out-of-band, in a later edit to these files, never by holding the brief.
 
+One carve-out to the above: on prose construction — how sentences and
+paragraphs are built, banned constructions, jargon glossing, paragraph length —
+the `house-writing-style` skill is the authority, and its rules win over any
+looser phrasing here. This file still owns voice, audience, calibration, and
+sourcing (who the brief is for and what it must contain); the skill owns the
+mechanics of the writing itself. A conflict between them on mechanics resolves
+toward the skill.
+
 ## Who I am
 
 I am Matthew. I studied accounting at the University of Florida and was president
