@@ -23,9 +23,24 @@ That weighting lives in each topic config.
 Alongside this file, read `MEMORY.md` at the start of every run and apply it. This
 file (CLAUDE.md) is my fixed foundation and should not be auto-edited. `MEMORY.md`
 is the evolving layer: it holds preferences learned from my feedback, what I
-already know, and what has already been covered. When I give durable feedback,
-update `MEMORY.md` in place, replacing what it supersedes rather than appending,
-and record only standing preferences, not one-offs.
+already know, and what has already been covered. When I give durable feedback or ask for a change, route it to the file that
+owns that kind of rule — never default to MEMORY.md:
+
+- Prose and writing craft (how sentences are built, word choice, banned
+  constructions, causal chains, paragraph length) → the house-writing-style
+  skill.
+- Brief shape and coverage (beats, sections, ordering, ranking, what to cover
+  or exclude, sources, recurring voices) → the topic config under topics/.
+- The digest procedure itself (steps, gathering, memory updates, output
+  mechanics) → the research-digest skill.
+- Only two kinds of thing belong in MEMORY.md: durable cross-topic preferences
+  that fit none of the above, and STATE — what's been covered, the ledgers,
+  what I already know.
+
+The test: rules go to the file that owns them; state goes to MEMORY.md. When
+routing is ambiguous, say where you'd put it and why before making the edit.
+Update files in place, replacing what an edit supersedes rather than appending,
+and record only standing rules, not one-offs.
 
 Precedence and conflicts. These three files — this one, `MEMORY.md`, and the topic
 config under `topics/` — should agree, and a real contradiction between them is a
