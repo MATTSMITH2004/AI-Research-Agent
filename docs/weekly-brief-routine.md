@@ -53,7 +53,7 @@ attached.
    | `SENDGRID_FROM` | your verified Single Sender address (the From/To) |
    | `PULSE_RECIPIENTS` | the distribution list, Bcc'd — comma/space/semicolon separated |
 
-5. **Schedule trigger:** Weekly → Saturday → 9:00 AM, in your local (Eastern)
+5. **Schedule trigger:** Weekly → Saturday → 8:00 AM, in your local (Eastern)
    timezone. (The UI converts local → UTC automatically.)
 6. Paste the **prompt** below, then **Create**. Use **Run now** once to test.
 
@@ -68,12 +68,16 @@ attached.
 >    `MEMORY.md`'s "recently covered" list to skip anything already reported in a
 >    prior brief — never repeat an item. Updating MEMORY in step 6 sets the
 >    boundary so next week resumes exactly where this one stopped.
->    Follow the canonical format in `templates/ai-pulse-format-reference.docx` and
->    every rule in the config and MEMORY (structured deep items with the labeled
->    beats and "My read"; full "What people are saying" with podcast AND Substack
->    entries; the model-specs beat; the source-discovery + "New sources worth
->    adding" section; cite every source used; gloss all jargon/benchmarks; primary
->    sources first).
+>    Follow the canonical format in the topic config's "Output shape" section (the
+>    `templates/` reference file was removed — the format now lives entirely in
+>    topics) and every rule in the config, the skills, and MEMORY. The
+>    `research-digest` skill it runs automatically applies the `house-writing-style`
+>    skill for prose craft, so no separate step is needed for that. Key rules: the
+>    labeled beats (What happened / optional Does it hold up? / Both sides / Why it
+>    matters / My take); full "What people are saying" with podcast AND Substack
+>    entries; the model-specs and Model-standings beats; the source-discovery + "New
+>    sources worth adding" section; cite every source used; gloss all
+>    jargon/benchmarks; primary sources first.
 > 4. Pull podcast/YouTube transcripts with `scripts/fetch_transcripts.py` (two
 >    stages: list candidates, then fetch the AI-relevant ones).
 > 5. Save the brief to `briefs/ai-pulse-<YYYY-MM-DD>.md` (today's date) and render
@@ -91,8 +95,6 @@ attached.
 >    This sends a real email via SendGrid, Bcc'd to `PULSE_RECIPIENTS`, with the
 >    `.docx` attached. Confirm the script printed a "sent ... via SendGrid" line
 >    before finishing.
-> 9. Refresh `templates/ai-pulse-format-reference.{md,docx}` from this brief only
->    if the format changed.
 
 ## The sender — `scripts/mailer.py`
 

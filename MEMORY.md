@@ -19,6 +19,16 @@ How to maintain this file:
   procedure in the research-digest skill. Route per CLAUDE.md's Memory section —
   do not accept a rule here just because feedback arrived here.
 
+## One-off requests for the next brief
+
+A transient queue — this is state, not a rule, so it belongs here. Ad-hoc asks for
+the upcoming run only (e.g. "cover this specific interview/video this week"). Action
+each one in the next brief, then delete it from this list — do not let it linger or
+harden into a standing rule. If a request keeps recurring, it is really a source or
+coverage preference and belongs in the topic config instead.
+
+- (none currently open)
+
 ## Learned preferences
 
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.

@@ -54,6 +54,7 @@ SHOWS = {
     "dwarkesh":       {"type": "youtube", "handle": "@DwarkeshPatel", "name": "Dwarkesh Podcast"},
     "greg-isenberg":  {"type": "youtube", "handle": "@GregIsenberg", "name": "Greg Isenberg"},
     "hard-fork":      {"type": "podscripts", "slug": "hard-fork", "name": "Hard Fork", "yt": "@hardfork"},
+    "ai-engineer":    {"type": "youtube", "handle": "@aiDotEngineer", "name": "AI Engineer"},
     # --- Markets / finance / business ---
     "odd-lots":        {"type": "podscripts", "slug": "odd-lots", "name": "Odd Lots"},
     "in-good-company": {"type": "podscripts", "slug": "in-good-company-with-nicolai-tangen", "name": "In Good Company", "yt": "@InGoodCompanyPodcast"},
