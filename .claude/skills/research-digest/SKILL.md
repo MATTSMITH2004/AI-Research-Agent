@@ -70,8 +70,7 @@ is the subject matter. One skill, many topics.
 
 7. **Synthesize.** Before drafting a single sentence, read the `house-writing-style`
    skill and apply every rule in it — it governs how the prose itself is built
-   (causal chains, topic-sentence-first, jargon glossing, banned constructions,
-   attribution discipline). Then, for each item that makes the cut, write what
+   (causal chains, topic-sentence-first, jargon glossing, banned constructions, sourcing numbers with their limits). Then, for each item that makes the cut, write what
    happened and why it matters, judged through my lenses, in your own words and in
    the neutral voice set by `CLAUDE.md` and the topic config (not addressed to a
    reader). Do not reproduce source text. The "Writing and curation rules" section
