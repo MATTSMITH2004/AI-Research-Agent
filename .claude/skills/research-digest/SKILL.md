@@ -75,7 +75,9 @@ is the subject matter. One skill, many topics.
    happened and why it matters, judged through my lenses, in your own words and in
    the neutral voice set by `CLAUDE.md` and the topic config (not addressed to a
    reader). Do not reproduce source text. The "Writing and curation rules" section
-   below adds brief-level enforcement on top of the house style.
+   below adds brief-level enforcement on top of the house style. After drafting each item, re-read it and split any paragraph longer than
+   five sentences at a natural seam before moving on. This is a separate pass,
+   not a drafting-time intention — count, then split.
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
