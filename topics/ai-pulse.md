@@ -79,7 +79,7 @@ Pulse only.)
   has both a contestable claim and a live debate.
 
   Readability — keep paragraphs short. A beat is not required to be a single
-  paragraph. When a beat's prose runs long (more than about four or five sentences),
+  paragraph. When a beat's prose runs long (more than five sentences),
   break it into two or three shorter paragraphs at natural seams rather than one
   dense block — the first paragraph carries the bold beat label, the continuation
   paragraphs do not repeat it. This holds for every section, including the longer
