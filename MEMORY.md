@@ -14,6 +14,10 @@ How to maintain this file:
   one-off; "always lead with the money items" is a rule. If a rule is ambiguous,
   state it back to me before saving it.
 - Keep it lean. Trim anything stale.
+- This file holds state and cross-topic preferences ONLY. Style rules belong in
+  the house-writing-style skill; brief shape and coverage in the topic config;
+  procedure in the research-digest skill. Route per CLAUDE.md's Memory section —
+  do not accept a rule here just because feedback arrived here.
 
 ## Learned preferences
 
