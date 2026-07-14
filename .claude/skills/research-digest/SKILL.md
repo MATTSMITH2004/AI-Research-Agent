@@ -79,8 +79,7 @@ is the subject matter. One skill, many topics.
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
-   section, and match the worked example in `templates/` if the topic provides
-   one). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
+   section). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
    Then give me the highlights inline.
 
@@ -152,7 +151,7 @@ lives in the topic config, not here.
 - **Credential every named person, every time.** Any time a person is named —
   in a top development, a skim item, or a perspective entry — attach a
   credential clause: their role, their affiliation, and in one phrase what that
-  company or body. This holds on every mention, not
+  company or body does. This holds on every mention, not
   just the first, and whether or not they are quoted. Keep it to a clause, not
   a biography — a name that recurs in one item gets a light tag each time, not
   a repeated paragraph. Pull standing wording from the topic config's
@@ -175,8 +174,7 @@ lives in the topic config, not here.
 ## Brief format
 
 The brief's structure is defined by the **topic config**, not here. Follow its
-"Output shape" section as the canonical template, and match the worked example in
-`templates/` if the topic provides one. Keep the format in one place — do not carry
+"Output shape" section as the canonical template. Keep the format in one place — do not carry
 a second, drifting copy in this file.
 
 For a topic whose config does not define an output shape, fall back to a simple
