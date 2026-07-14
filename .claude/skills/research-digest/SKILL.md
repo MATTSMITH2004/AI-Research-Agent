@@ -68,15 +68,19 @@ is the subject matter. One skill, many topics.
    generally popular. Demote anything I already know or that was already covered in
    a recent brief (both tracked in `MEMORY.md`).
 
-7. **Synthesize.** For each item that makes the cut, write what happened and why
-   it matters, judged through my lenses, in your own words and in the neutral voice
-   set by `CLAUDE.md` and the topic config (not addressed to a reader). Do not
-   reproduce source text.
+7. **Synthesize.** Before drafting a single sentence, read the `house-writing-style`
+   skill and apply every rule in it — it governs how the prose itself is built
+   (causal chains, topic-sentence-first, jargon glossing, banned constructions, sourcing numbers with their limits). Then, for each item that makes the cut, write what
+   happened and why it matters, judged through my lenses, in your own words and in
+   the neutral voice set by `CLAUDE.md` and the topic config (not addressed to a
+   reader). Do not reproduce source text. The "Writing and curation rules" section
+   below adds brief-level enforcement on top of the house style. After drafting each item, re-read it and split any paragraph longer than
+   five sentences at a natural seam before moving on. This is a separate pass,
+   not a drafting-time intention — count, then split.
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
-   section, and match the worked example in `templates/` if the topic provides
-   one). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
+   section). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
    Then give me the highlights inline.
 
@@ -86,24 +90,96 @@ is the subject matter. One skill, many topics.
    strong source you found outside the config that I might want to add. This keeps
    the source coverage honest and visible rather than silently partial.
 
-10. **Update memory.** After the brief is done, update `MEMORY.md` in place:
-    - Add the items you just reported to the "recently covered" list for this
-      topic, and trim entries older than roughly the last 4 to 6 weeks.
-    - If I gave feedback this session (on style, sources, emphasis, or what I
-      already understand), fold it into the right section as a durable rule.
-      Replace any entry it supersedes rather than appending a new one. Record only
-      standing preferences, not one-offs, and if a rule is ambiguous, state it
-      back to me before saving it.
+10. **Update memory and route feedback.** After the brief is done:
+    - Update `MEMORY.md` with STATE only: add what you reported to the
+      "recently covered" list and trim past ~4-6 weeks; update the model ledger
+      if a covered release moved the standings; update the source-discovery
+      ledger's hit/miss marks. Do not write style or structure rules here.
+    - If I gave feedback this session, route it by kind:
+      - Prose/writing-craft (how sentences are built, word choice, banned
+        constructions, causal-chain or topic-sentence rules) → propose an edit
+        to the `house-writing-style` skill.
+      - Brief-shape or coverage (beats, sections, ordering, ranking, what to
+        cover or exclude, sources, recurring voices) → propose an edit to the
+        topic config.
+      - Only durable cross-topic preferences that are neither → MEMORY.md.
+    - For anything routed to a skill or config file, state the exact edit and
+      where it goes, and output it as a paste-ready block rather than writing
+      the file yourself. Record standing rules only, not one-offs; if a rule is
+      ambiguous, confirm before saving.
 
+## Writing and curation rules
+
+The `house-writing-style` skill (read at step 7) governs the prose itself. These
+rules sit on top of it and apply to every brief regardless of topic. Anything
+topic-specific — per-section voice mapping, content exclusions, ranking priors —
+lives in the topic config, not here.
+
+- **Section headers bind to their object.** Any header that interrogates or
+  qualifies something must name it. The header alone should tell me what is
+  examined.
+  - Before: `Does it hold up?`
+  - After: `Does the 99% figure hold up?`
+
+- **Every fact ties back to the item it lives in.** State the relevance in the
+  same sentence or the next. If a fact belongs to a different item, move it; if
+  it belongs nowhere, cut it.
+  - Before (inside the Fable-ban story): "Anthropic shipped Claude Sonnet 5 the
+    same day." — true, but the reader can't tell why it's in a story about the
+    ban.
+  - After: either cut it, or connect it — "Anthropic shipped Claude Sonnet 5 the
+    same day, a sign it spent the shutdown building rather than stalling." If the
+    only real home is a models-comparison item, move it there.
+
+- **Bullets build, not enumerate.** If two bullets in a significance section
+  share a causal link, connect them explicitly — one flowing into the next —
+  rather than listing them as parallel, interchangeable points.
+  - Before: one bullet says a licensing regime now exists with no law behind it;
+    a separate bullet says enterprises are shifting spend to Chinese open-weight
+    models. Presented as two unrelated facts.
+  - After: make the causal line the spine — "Because release timing is now an
+    unlegislated regulatory variable, enterprises are hedging: Coinbase already
+    cut its AI bill in half by defaulting to open-weight models like GLM 5.2."
+    The second point is the consequence of the first, not a neighbor to it.
+
+- **Every item carries a source link**, including short skim-list items. No
+  exceptions.
+  - Before: "Microsoft launched..." / "Meta barred its internal..." — stated flat
+    with no link.
+  - After: same claim, with the primary source linked inline. If no source can be
+    found, the item doesn't run.
+
+- **Credential every named person, every time.** Any time a person is named —
+  in a top development, a skim item, or a perspective entry — attach a
+  credential clause: their role, their affiliation, and in one phrase what that
+  company or body does. This holds on every mention, not
+  just the first, and whether or not they are quoted. Keep it to a clause, not
+  a biography — a name that recurs in one item gets a light tag each time, not
+  a repeated paragraph. Pull standing wording from the topic config's
+  recurring-voices roster where one exists, so the description stays consistent.
+  - Before: "...as Dean Ball put it, 'this opacity will not lend itself well to a
+    stable, investable industry.'"
+  - After: "...as Dean Ball, a former AI policy advisor in the Trump
+    administration, put it: 'this opacity will not lend itself well to a stable,
+    investable industry.'"
+
+- **Cross-references restate before contrasting.** Referencing another item is
+  encouraged, but restate what that item said in one clause before drawing the
+  contrast — never assume I hold it in memory.
+  - Before: "His price-reversal prediction is a direct, contrarian challenge to
+    this week's Item 4 above — worth watching which read wins."
+  - After: "Item 4 above argued memory prices will keep climbing on AI demand;
+    his prediction is the opposite — that prices reverse as capacity catches up.
+    Worth watching which read wins."
+    
 ## Brief format
 
 The brief's structure is defined by the **topic config**, not here. Follow its
-"Output shape" section as the canonical template, and match the worked example in
-`templates/` if the topic provides one. Keep the format in one place — do not carry
+"Output shape" section as the canonical template. Keep the format in one place — do not carry
 a second, drifting copy in this file.
 
 For a topic whose config does not define an output shape, fall back to a simple
-structure: a "Top developments" list (3 to 5 items, each a headline in my words,
+structure: a "Top developments" list (3 to 6 items, each a headline in my words,
 then what happened and why it matters, then a Source link), then "Worth a skim,"
 then "On my radar."
 

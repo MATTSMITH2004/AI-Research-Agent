@@ -14,29 +14,22 @@ How to maintain this file:
   one-off; "always lead with the money items" is a rule. If a rule is ambiguous,
   state it back to me before saving it.
 - Keep it lean. Trim anything stale.
-
-## One-off requests for the next brief
-
-Ad-hoc asks for the upcoming run only — NOT durable preferences. Action each one in
-the next brief, then delete it from this list (do not let it linger or harden into a
-standing rule).
-
-- (none currently open — the "Field Guide to Fable" request was actioned in the
-  week-of-Jul-11 brief. Correction for future reference: the video's raw transcript
-  was NOT fetchable via captions or the project's transcript script — no
-  "ai-engineer" show is configured in scripts/fetch_transcripts.py, and YouTube
-  caption access failed. Coverage was built from three cross-verified third-party
-  recap articles instead, disclosed inline in the brief per the sourcing rule.)
+- This file holds state and cross-topic preferences ONLY. Style rules belong in
+  the house-writing-style skill; brief shape and coverage in the topic config;
+  procedure in the research-digest skill. Route per CLAUDE.md's Memory section —
+  do not accept a rule here just because feedback arrived here.
 
 ## Learned preferences
 
 Refinements learned from my feedback. Empty to start; fill in as I react to briefs.
 
 ### Style and formatting
-- Canonical format reference: templates/ai-pulse-format-reference.docx/.md (the
-  week-of-Jun-24 brief). This is THE format going forward; match it. It replaced
-  the earlier June-20 layout, now archived in briefs/archive/. Regenerate the
-  reference from the latest brief whenever the format meaningfully changes.
+- Canonical format: topics/ai-pulse.md "Output shape" is THE format definition —
+  self-contained, no external template. The old reference docx
+  (templates/ai-pulse-format-reference.docx/.md) was DELETED Jul 2026; do not
+  look for it or flag its absence as a config error. If a worked example is ever
+  wanted again, regenerate it from a recent approved brief — but the Output
+  shape section remains canonical either way.
 - Pulse brief structure — the 3-required + 2-optional beat design (What happened,
   optional "Does it hold up?" / "Both sides," Why it matters, My take): the canonical
   template lives in topics/ai-pulse.md "Output shape." Don't restate the full
@@ -145,6 +138,31 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   SMTP) cannot connect. That is why we use an HTTPS email API. Microsoft 365 send
   is unavailable (connector exposes no send option), and the Gmail connector can
   only draft (no send, no attachments). SendGrid HTTPS API confirmed reachable.
+
+### Model ledger
+The running model-comparison tracker (process in topics/ai-pulse.md "What to
+track" item 1). THIS LEDGER IS PERSISTENT — never trim it (like the
+source-discovery ledger below, unlike the "recently covered" news list, which
+trims to ~4-6 weeks). Backstage store: the brief never renders this table raw.
+When a covered release moves a row, the brief's "Model standings" section shows
+a reduced Task / Current best / Contenders view with changed rows marked; the
+Basis and Updated columns stay here. Populate ONLY from models covered in
+briefs — no fresh benchmark searches to fill cells. An empty cell is honest; a
+guessed ranking is not.
+
+| Task | Current best | Contenders | Basis (what a brief showed) | Updated |
+|---|---|---|---|---|
+| Coding | — | GLM 5.2 | GLM 5.2 beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at ~1/6 cost, ~1pt behind Opus 4.8 on FrontierSWE (Jun 24 brief) | 2026-06-24 |
+| Writing | — | — | not yet established from covered briefs | — |
+| Reasoning | — | — | not yet established from covered briefs | — |
+| Agentic use | Mythos 5 | GPT-5.6 Sol | Mythos led on autonomous exploit build-and-run; Chinese tools matched only routine bug-finding (Jul 4 brief) | 2026-07-04 |
+| Cost / value | open-weight (GLM 5.2, Kimi) | — | Coinbase halved AI bill defaulting to open models, usage still grew; Sonnet 5 costs MORE per task than Opus 4.8 despite cheaper sticker (Jul 4 brief) | 2026-07-04 |
+| Frontier-general | — | Fable 5, GPT-5.6 Sol, Claude Sonnet 5 | three shipped week of Jul 4; no trustworthy head-to-head yet (METR couldn't score Sol due to benchmark-gaming) | 2026-07-04 |
+
+Update rules: one row per task; when a covered release takes a slot, the old
+holder moves to Contenders (keep two or three, do not delete); every filled
+cell cites which brief showed it and the date it last moved; a row change is
+what triggers the brief's "Model standings" section — no change, no section.
 
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process

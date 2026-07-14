@@ -23,9 +23,24 @@ That weighting lives in each topic config.
 Alongside this file, read `MEMORY.md` at the start of every run and apply it. This
 file (CLAUDE.md) is my fixed foundation and should not be auto-edited. `MEMORY.md`
 is the evolving layer: it holds preferences learned from my feedback, what I
-already know, and what has already been covered. When I give durable feedback,
-update `MEMORY.md` in place, replacing what it supersedes rather than appending,
-and record only standing preferences, not one-offs.
+already know, and what has already been covered. When I give durable feedback or ask for a change, route it to the file that
+owns that kind of rule — never default to MEMORY.md:
+
+- Prose and writing craft (how sentences are built, word choice, banned
+  constructions, causal chains, paragraph length) → the house-writing-style
+  skill.
+- Brief shape and coverage (beats, sections, ordering, ranking, what to cover
+  or exclude, sources, recurring voices) → the topic config under topics/.
+- The digest procedure itself (steps, gathering, memory updates, output
+  mechanics) → the research-digest skill.
+- Only two kinds of thing belong in MEMORY.md: durable cross-topic preferences
+  that fit none of the above, and STATE — what's been covered, the ledgers,
+  what I already know.
+
+The test: rules go to the file that owns them; state goes to MEMORY.md. When
+routing is ambiguous, say where you'd put it and why before making the edit.
+Update files in place, replacing what an edit supersedes rather than appending,
+and record only standing rules, not one-offs.
 
 Precedence and conflicts. These three files — this one, `MEMORY.md`, and the topic
 config under `topics/` — should agree, and a real contradiction between them is a
@@ -39,6 +54,14 @@ you hit at the bottom of the brief (the topic config's closing "Config notes" it
 briefly — what conflicted and which way it was resolved — and flag a major one
 clearly so I can come in and fix the files later. Resolution always happens
 out-of-band, in a later edit to these files, never by holding the brief.
+
+One carve-out to the above: on prose construction — how sentences and
+paragraphs are built, banned constructions, jargon glossing, paragraph length —
+the `house-writing-style` skill is the authority, and its rules win over any
+looser phrasing here. This file still owns voice, audience, calibration, and
+sourcing (who the brief is for and what it must contain); the skill owns the
+mechanics of the writing itself. A conflict between them on mechanics resolves
+toward the skill.
 
 ## Who I am
 
