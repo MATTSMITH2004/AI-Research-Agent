@@ -6,6 +6,7 @@ here each Saturday.
 
 | Week of | Word doc | Markdown |
 | --- | --- | --- |
+| July 11–18, 2026 | [ai-pulse-2026-07-18.docx](ai-pulse-2026-07-18.docx) | [ai-pulse-2026-07-18.md](ai-pulse-2026-07-18.md) |
 | July 4–11, 2026 | [ai-pulse-2026-07-11.docx](ai-pulse-2026-07-11.docx) | [ai-pulse-2026-07-11.md](ai-pulse-2026-07-11.md) |
 | June 28 – July 4, 2026 | [ai-pulse-2026-07-04.docx](ai-pulse-2026-07-04.docx) | [ai-pulse-2026-07-04.md](ai-pulse-2026-07-04.md) |
 | June 21–27, 2026 | [ai-pulse-2026-06-27.docx](ai-pulse-2026-06-27.docx) | [ai-pulse-2026-06-27.md](ai-pulse-2026-06-27.md) |
