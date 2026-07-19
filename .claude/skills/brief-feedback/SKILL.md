@@ -79,9 +79,27 @@ the memo rather than guessing.
    knows. Example: "This one should be lower regardless" (ranking, one-off);
    "cut this kind of story" (standing, topic config).
 
-6. **Positive signal** — something that worked. Record it; if a proposed rule
-   from the same doc would undermine it, surface the tension.
-   Example: "Very good what happened and does it hold up section."
+6. 6. **Positive signal** — something that worked. Do not let praise die in the
+   memo; convert it into durable reinforcement:
+   - If the praised passage exemplifies a specific rule, propose harvesting
+     it (trimmed to 1-3 sentences) as a real-brief AFTER example under that
+     rule in house-writing-style — praised output from actual briefs
+     outranks synthetic examples.
+   - If the praise is structural (a beat, a sequence, a format choice),
+     propose a "confirmed working" line in the topic config so the choice is
+     protected against later restructuring.
+   - If the praise attaches to no existing rule, surface it in the memo as a
+     possible unarticulated rule — praise without a rule is sometimes the
+     first sighting of one.
+   - Never collect praised passages into a free-floating exemplar gallery;
+     a positive example only teaches when attached to the rule it
+     demonstrates.
+   As before: if a proposed rule from the same doc would undermine a praised
+   behavior, surface the tension.
+   Example: "Very good what happened and does it hold up section" → propose
+   harvesting two sentences of that item as an AFTER under the claim-first
+   rule, plus a confirmed-working line for the beat sequence in the topic
+   config.
 
 7. **Unclassifiable** — the comment fits none of the kinds above. Do not
    force-fit it into the nearest kind. Put it in the memo's decisions-needed
