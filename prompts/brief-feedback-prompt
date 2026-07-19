@@ -1,0 +1,36 @@
+Process my brief feedback.
+
+1. git fetch origin && git checkout claude/ai-pulse-weekly && git pull.
+   Work on THIS branch and commit all changes here — it is the branch the
+   weekly brief routine checks out, and it auto-mirrors to main, so
+   committing here updates both. Edits made anywhere else will not reach
+   Saturday's run. Never work on main directly, never merge into or out of
+   main yourself (the mirror handles it), and never create a separate
+   branch for this: claude/ai-pulse-weekly is the destination.
+2. The commented brief is the .docx I've uploaded. Run the brief-feedback
+   skill on it (.claude/skills/brief-feedback/SKILL.md) — follow its
+   procedure exactly, every step.
+3. Extract ALL comments with their anchored text — every comment, no
+   sampling. Tell me the total count so I can sanity-check it against the
+   doc.
+4. Produce the proposal memo per the skill and then STOP. Do not edit any
+   file — not even "obvious" one-offs — until I have verdicted every item
+   (approve / edit / reject / defer).
+5. After my verdicts: apply only what I approved, exactly as ratified.
+   Before pushing, show me the full diff of every changed file so I can
+   confirm the edits match what I ratified. Then commit and push directly
+   to claude/ai-pulse-weekly — confirm with git branch that you are on it
+   before committing, and confirm the push succeeded. Do not open a PR;
+   the auto-mirror carries these changes to main on its own. Never
+   force-reset this branch. This session never runs scripts/mailer.py or
+   sends anything.
+6. Give me the closing two-line summary. Anything I deferred or flagged
+   for design goes in the summary only — not into any rule file.
+
+Reminders: rules route to the file that owns them per CLAUDE.md's Memory
+section — never default to MEMORY.md. CLAUDE.md itself is off-limits to
+this skill. If a comment fits no category, propose a new category in the
+memo rather than force-fitting it. MEMORY.md on this branch carries the
+rolling weekly state (recently-covered, ledgers) — edit only the specific
+sections your ratified items touch and leave the rolling state sections
+untouched.
