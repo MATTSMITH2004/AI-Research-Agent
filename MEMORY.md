@@ -185,6 +185,11 @@ Each run, mark commentary sources hit/miss and update "last contributed."
     compute economics. PROMOTED Jun 2026 (Matthew blessed it). MISS week of Jul
     18 (no post in window; most recent, Jul 9, predates it). Last contributed:
     week of Jul 11.
+  - The Diligence Stack (Ben Bajarin, Creative Strategies), thediligencestack.com
+    — analyst-grade deep dives connecting chips, datacenter infra, cloud, models,
+    and enterprise AI adoption; positioned as diligence support, no price targets;
+    a complement to SemiAnalysis. PROMOTED Jul 2026 (Matthew blessed it; surfaced
+    week of Jul 18 on "Gigawattonomics"). Last contributed: week of Jul 18.
   - No Priors (Sarah Guo + Elad Gil): MISS week of Jul 18 (no episode in window).
     Last contributed: week of Jul 11.
   - Dwarkesh Podcast: MISS week of Jul 18 (one in-window episode, pure physics
@@ -272,12 +277,6 @@ Each run, mark commentary sources hit/miss and update "last contributed."
   - Benedict Evans, ben-evans.com — MISS week of Jul 18 (no post in window;
     most recent, "Ways to think about token pricing," Jul 9, predates it).
     Surfaced week of Jul 11; on trial.
-  - The Diligence Stack (Ben Bajarin, Creative Strategies), thediligencestack.com
-    — analyst-grade newsletter connecting chips, datacenter infra, cloud, and
-    enterprise AI adoption; no price targets, positioned as diligence support.
-    Surfaced week of Jul 18 ("Gigawattonomics" — power/revenue-per-watt as the
-    right lens on AI infra economics, a genuine complement to SemiAnalysis).
-    New; on trial.
 - Flagged for possible pruning (~4 straight misses / quality drop / redundant):
   - Money Stuff: coverage gap this week (no Bloomberg access), not a confirmed
     miss — watch, not yet actionable.

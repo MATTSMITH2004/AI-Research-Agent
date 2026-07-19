@@ -260,7 +260,12 @@ Starter set, refine as I learn which ones earn it:
   Schneider) for US-China AI and chips, Import AI (Jack Clark) for frontier and
   policy, SemiAnalysis (Dylan Patel) for chips, datacenters, and compute economics
   (promoted Jun 2026 — the money-and-engineering read on the AI supply chain),
-  One Useful Thing (Ethan Mollick) for practical, operator-level AI use, and Every
+  The Diligence Stack (Ben Bajarin, Creative Strategies, thediligencestack.com)
+  for analyst-grade deep dives connecting semiconductors, datacenter
+  infrastructure, cloud, models, and enterprise AI adoption (promoted Jul 2026,
+  positioned as diligence support with no price targets, a complement to
+  SemiAnalysis), One Useful Thing (Ethan Mollick) for practical, operator-level
+  AI use, and Every
   (Dan Shipper, https://every.to) for hands-on, first-hand, falsifiable testing of
   AI tools and models rather than secondhand commentary.
   Finance and the tech-finance seam (the tangential angle I want): The Diff (Byrne
