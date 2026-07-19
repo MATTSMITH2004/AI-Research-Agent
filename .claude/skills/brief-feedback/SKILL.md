@@ -1,67 +1,182 @@
 ---
 name: brief-feedback
 description: >
-  Captures and routes Matthew's feedback on a delivered brief. Use this skill
-  whenever Matthew reacts to, critiques, or requests a change to a brief he has
-  received — its wording, structure, coverage, ranking, sources, recurring
-  voices, or the digest procedure itself. It records the feedback and routes
-  each point to the file that OWNS that kind of rule, per CLAUDE.md's Memory
-  section, rather than dumping everything into MEMORY.md. Do not use it for
-  generating a brief (that is research-digest) or for one-off asks about the
-  next run (those go straight into MEMORY.md's one-off queue).
+  Processes Matthew's commented feedback on a brief. Use whenever Matthew
+  uploads a Word document containing margin comments on a past brief, or asks
+  to process, ingest, or apply his brief feedback. Extracts every comment,
+  classifies and routes it under CLAUDE.md's routing doctrine, checks proposed
+  rules against existing ones, and presents a proposal memo for Matthew to
+  ratify. NEVER edits a rule file before ratification.
 ---
 
 # Brief feedback
 
-Turn a reaction to a brief into the right durable change. CLAUDE.md's "Memory"
-section is the authority on where each kind of rule lives; this skill is the
-procedure that applies it consistently every time feedback arrives, so a
-preference lands in the file that owns it instead of defaulting to MEMORY.md.
+Turn margin comments on a brief into correctly-routed, conflict-checked
+changes — with Matthew as the ratification step. The failure mode this skill
+exists to prevent is silent rule-drift: a misread comment hardening into a
+standing rule that quietly degrades every future brief. So the procedure is
+extract → classify → route → conflict-check → propose → STOP for verdicts →
+apply only what was approved.
 
-## When this fires
+## Step 1 — Extract every comment with its anchored text
 
-Matthew has read a brief and said something about it — "this section ran long,"
-"stop using that construction," "cover X every week," "the ranking was wrong,"
-"drop that source." Anything that should change how future briefs are made.
+Comments live in the docx XML, not the visible text. Unzip the .docx and
+parse:
+- `word/comments.xml` — comment id, author, text.
+- `word/document.xml` — for each id, collect the text between its
+  `commentRangeStart` and `commentRangeEnd` markers. That anchored text is
+  what the comment is about; a comment without its anchor is ambiguous.
 
-Not this skill: a request to run a brief (use research-digest), or a one-off ask
-scoped to the very next run only ("cover this interview this week") — that is
-transient state and goes into MEMORY.md's "One-off requests" queue, not here.
+Produce a numbered list: comment text + anchored passage + which brief
+section it sits in. Process every comment — never sample or skip. If a
+comment anchors to a point rather than a range, note the surrounding
+paragraph.
 
-## The routing rule (from CLAUDE.md)
+## Step 2 — Classify each comment
 
-Route each piece of feedback to the file that owns that kind of rule. Never
-default to MEMORY.md.
+Seven kinds. When genuinely torn between two, mark it ambiguous and ask in
+the memo rather than guessing.
 
-- **Prose and writing craft** — how sentences are built, word choice, banned
-  constructions, causal chains, paragraph length, jargon glossing → the
-  `house-writing-style` skill.
-- **Brief shape and coverage** — beats, sections, ordering, ranking, what to
-  cover or exclude, sources, recurring voices → the topic config under `topics/`.
-- **The digest procedure itself** — steps, gathering, memory updates, output
-  mechanics → the `research-digest` skill.
-- **Durable cross-topic preferences that fit none of the above, and STATE** —
-  what's been covered, the ledgers, what Matthew already knows → `MEMORY.md`.
+1. **One-off fix** — about this brief only. No rule implied.
+   Example: "We should also mention the risk of this revenue concentration"
+   (anchored to a chips-revenue stat). The fix is one-off; note it also
+   dual-classifies as evidence against the walk-the-full-chain rule (see
+   boundary note below).
 
-The test: rules go to the file that owns them; state goes to MEMORY.md. When
-routing is ambiguous, say where it would go and why before making the edit.
+2. **Violation of an existing rule** — the comment describes a failure a
+   standing rule already prohibits. This is NOT a duplicate to ignore; it is
+   evidence the rule did not bind, and the proposal is an ENFORCEMENT
+   SHARPENING: an audit trigger, a revision-pass check, or a named example
+   added to the rule — following the house pattern that a rule must be a
+   checkable act, not an aspiration.
+   Example: "What are parameters" anchored to "a 2.8-trillion-parameter
+   model" — the gloss-jargon rule exists and failed. Propose sharpening
+   (e.g., a post-draft jargon sweep), not a new rule.
+   Example: "I always want credentials on people" / "Even guests on a show" —
+   the credential rule exists; the sharpening names guests explicitly.
 
-## Procedure
+3. **New standing rule** — a generalizable instruction no current rule
+   covers. The tell: "always," "never," "every time," a self-generalization,
+   or the same complaint anchored in 2+ places.
+   Example: "I feel a general trend of sentences being too long, almost run
+   ons" — self-generalized; no sentence-length rule exists; draft one for
+   house-writing-style with a check and a before/after.
 
-1. **Separate durable from one-off.** A one-off ("make this week shorter") is
-   state for the next run → MEMORY.md's one-off queue. A rule ("always lead with
-   the money items") is durable → route it below. If unsure, state it back to
-   Matthew before saving.
-2. **Classify each point** against the routing rule above. One piece of feedback
-   can produce more than one edit in more than one file.
-3. **Edit in place.** Replace what the change supersedes rather than appending;
-   record standing rules, not a history of edits.
-4. **Flag conflicts, don't block.** If the feedback contradicts an existing rule
-   in another file, resolve it (MEMORY.md wins by precedence) and note the
-   contradiction so the files can be reconciled later.
-5. **Confirm ambiguous routing** with Matthew before writing, per the rule above.
+4. **Feature request or design question** — asks for new capability,
+   persistent structure, or a format change that alters how the whole brief
+   renders. Not a rule; route to a design conversation. Never draft these as
+   file edits.
+   Example: "This is terrible... maybe best, second best, third best... we
+   need to discuss this part further" (Model standings) — explicit design
+   flag.
+   Example: "Should we use Artificial Analysis going forward for the model
+   table" — a question about method and sources; design conversation.
+   Example: a request that every sentence visibly correspond to its source —
+   changes the rendering of every item; design conversation, not a routed
+   rule.
 
-## Notes
+5. **Curation/state** — coverage, ranking, sources, or what Matthew already
+   knows. Example: "This one should be lower regardless" (ranking, one-off);
+   "cut this kind of story" (standing, topic config).
 
-- v1 scaffold — the routing rules mirror CLAUDE.md; refine the procedure here as
-  the feedback loop is exercised. Confirm scope and triggers with Matthew.
+6. **Positive signal** — something that worked. Record it; if a proposed rule
+   from the same doc would undermine it, surface the tension.
+   Example: "Very good what happened and does it hold up section."
+
+7. **Unclassifiable** — the comment fits none of the kinds above. Do not
+   force-fit it into the nearest kind. Put it in the memo's decisions-needed
+   group with a proposed NEW category (name, definition, routing, and how it
+   would have classified this comment). If Matthew ratifies the category, add
+   it to this skill file as part of applying the verdicts — the taxonomy
+   grows, but only through ratification.
+
+Classification notes:
+- A margin QUESTION ("Cement what?", "What is a stopgap release?") is
+  confusion evidence: the brief failed the reader at that spot. Classify by
+  what failed (usually a rule violation — unglossed term, broken chain,
+  vague referent). Do not treat it as a question to answer in the memo.
+- Before finalizing a one-off, check whether an existing rule, generously
+  read, already prohibits the failure (e.g., "mention the risk of this
+  concentration" is a one-off fix AND a miss against CLAUDE.md's
+  every-item-carries-its-significance / walk-the-full-chain rule). If so,
+  dual-classify: route the fix as a one-off, and record the item under
+  enforcement failures as evidence against that rule — without proposing a
+  sharpening unless the same rule has failed on multiple anchors.
+- "I don't love X" about a word or phrase is a one-off unless the same
+  species of complaint anchors in 2+ places, in which case propose a
+  banned-constructions addition or a specificity rule.
+- A jargon complaint is a gloss failure, not a word ban: the term stays, the
+  explanation was missing. Never propose adding domain terms to the banned
+  list — banned constructions are for phrases Matthew never wants (dead
+  idioms, self-narration), not vocabulary that needed teaching.
+- A single complaint about a single passage stays a one-off unless the
+  comment itself generalizes. Do not promote irritation into permanent rules.
+
+## Step 3 — Route per CLAUDE.md's routing doctrine
+
+- Prose/writing craft → `house-writing-style` skill.
+- Brief shape, beats, coverage, ranking, sources, recurring voices → the
+  topic config under `topics/`.
+- Digest procedure (steps, gathering, output mechanics) → `research-digest`.
+- One-off fixes → MEMORY.md's "One-off requests for the next brief" section
+  (its action-then-delete discipline handles expiry).
+- Curation/state and cross-topic preferences fitting nothing above →
+  MEMORY.md.
+- Feature requests and design questions → no file; flag for a design
+  conversation with Matthew.
+- Enforcement sharpenings route to wherever the failed rule lives — and if
+  the sharpening is a revision-pass check, it lands in research-digest step 7
+  alongside the paragraph and jargon checks, since that is where post-draft
+  enforcement runs.
+
+## Step 4 — Conflict-check before proposing
+
+For every proposed rule or sharpening, read the destination file and check:
+- **Duplicate**: an existing rule already fully covers it and the brief
+  complied → propose nothing. (If the brief did NOT comply, it is a
+  violation — kind 2 — and gets a sharpening, not silence.)
+- **Conflict**: it contradicts an existing rule in any file → do not pick a
+  winner. Present both, name the tension, offer options. Apparent conflicts
+  are often scope splits (principle in one file, enforcement in another);
+  propose the split where it fits.
+- **Supersession**: it replaces an existing rule → propose replace-not-
+  append, quoting what it would remove.
+
+## Step 5 — The proposal memo, then STOP
+
+One memo, grouped in this order:
+1. Decisions needed — conflicts, ambiguous classifications, design
+   questions, and any proposed new categories. Options, not a single
+   recommendation.
+2. Enforcement failures — the failed rule, the evidence (comment + anchor),
+   and the drafted sharpening. Dual-classified one-offs appear here as
+   evidence lines even when no sharpening is proposed yet.
+3. New standing rules — each with source comment, destination, and the exact
+   paste-ready edit, written in the house register: a check with an audit
+   trigger and a before/after where possible. A rule that cannot be checked
+   will not bind.
+4. One-offs and curation — one line each.
+5. Positive signals — what to protect.
+
+Then stop. Ask Matthew to verdict each item: approve / edit / reject /
+defer. Apply nothing — including "obvious" one-offs — before verdicts.
+
+## Step 6 — Apply only what was ratified
+
+Apply approved edits exactly as ratified, on a `claude/`-prefixed branch per
+the standing git rules, replacing what each edit supersedes rather than
+appending. Rejected items are dropped without residue. Deferred items and
+design flags get one line in the closing summary so they are findable — they
+are NOT written into any rule file as pending.
+
+Close with a two-line summary: N comments → N one-offs queued, N sharpenings
+and N rules landed (by file), N design items open.
+
+## Boundaries
+
+- This skill never edits CLAUDE.md — foundation changes are always a direct
+  conversation, not a feedback-routing outcome.
+- It never resolves a rule conflict on its own authority, and never infers a
+  standing rule from tone alone.
+- If the uploaded document has no comments, say so and stop — do not infer
+  feedback from the skill text itself.
