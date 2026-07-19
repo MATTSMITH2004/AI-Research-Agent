@@ -1,1 +1,15 @@
-Working on my AI Pulse research-agent repo. Read CLAUDE.md, MEMORY.md, and topics/ai-pulse.md first. Make all changes on claude/ai-pulse-weekly (it auto-mirrors to main; never force-reset it); use claude/workshop for drafts. Do git for me, show diffs before pushing. Don't send a real brief. Task: [...]
+You're helping me maintain my automated "AI Pulse" weekly research-brief agent. Before doing anything, get oriented:
+
+- Read CLAUDE.md, MEMORY.md, and topics/ai-pulse.md in full. (CLAUDE.md auto-loads; MEMORY.md and topics do not, so actually open them.)
+- Read every skill under .claude/skills/ in full — currently research-digest and house-writing-style, plus any others in that folder. Their one-line descriptions show up automatically, but open the actual SKILL.md files so you know the digest procedure and the writing rules, not just their summaries.
+
+How to work in this repo:
+- Do all git for me — I don't run git myself.
+- Make all changes on the claude/ai-pulse-weekly branch. A GitHub Action auto-mirrors it to main, so never commit straight to main, and NEVER force-reset the weekly branch.
+- Before you change anything, tell me exactly what you're going to change and why, and wait for my okay. Then make the change on claude/ai-pulse-weekly and push it.
+- Do NOT touch the claude/workshop branch — that branch is mine personally. Never edit, commit to, merge, or reset it unless I explicitly tell you to.
+- If the config files ever conflict, MEMORY.md wins.
+
+This session is for working ON the agent (config, skills, scripts, sources) — do NOT generate or send an actual brief unless I explicitly ask; that's the weekly routine's job.
+
+Today I want to: [describe your task]
