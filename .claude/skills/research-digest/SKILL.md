@@ -76,7 +76,13 @@ is the subject matter. One skill, many topics.
    reader). Do not reproduce source text. The "Writing and curation rules" section
    below adds brief-level enforcement on top of the house style. After drafting each item, re-read it and split any paragraph longer than
    five sentences at a natural seam before moving on. This is a separate pass,
-   not a drafting-time intention — count, then split.
+   not a drafting-time intention — count, then split. In the same pass, sweep each item for jargon: for every term of art, ask
+   whether the reader profiled in CLAUDE.md — finance-fluent, economics-solid,
+   no technical background — already owns that word. Finance vocabulary
+   passes unglossed. Any technical, AI, or industry term fails the test and
+   gets a plain-language gloss on first use, per house-writing-style rule 3.
+   A term the drafter did not notice as jargon is the term most likely to
+   fail this test — check nouns that would not appear in a finance textbook.
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
