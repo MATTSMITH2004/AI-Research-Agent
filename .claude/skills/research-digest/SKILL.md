@@ -53,6 +53,12 @@ is the subject matter. One skill, many topics.
    - Shows that publish a transcript, episode page, show notes, or Substack post:
      fetch that page.
    - YouTube channels: pull the video's transcript (captions).
+   - Freshness check (No Priors, Dwarkesh, Greg Isenberg — the shows rerouted
+     to podscripts): the lister cross-checks each show's YouTube channel and
+     marks any in-window episode not yet on podscripts as YouTube-only. Fetch
+     those via captions. If captions are blocked this session (the fetch error
+     says so plainly), use the episode's official description plus third-party
+     recaps and record the gap in the coverage note.
    Cite the specific episode with a link. If you truly cannot get text for a given
    source this week, do not silently skip it. These shows are where the analysis
    and operator angles live, so they are not optional color.

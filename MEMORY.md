@@ -255,17 +255,18 @@ Each run, mark commentary sources hit/miss and update "last contributed."
   - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space: HIT week
     of Jul 18 (AI Engineer World's Fair recap — five practitioner throughlines;
     Lila Sciences on physical labs built like data centers — two posts).
-  - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer: BLOCKED again
-    week of Jul 18 — and this week's check confirmed the underlying problem is
-    bigger than this one channel: youtube-transcript-api is now IP-blocked for
-    ALL FOUR shows that route through fetch_transcripts.py's youtube handler
-    (No Priors, Dwarkesh, Greg Isenberg, AI Engineer), not just AI Engineer as
-    previously scoped. Coverage for AI Engineer and Greg Isenberg this week
-    relied on official episode descriptions and third-party recaps, not
-    verified transcripts. This is now a real tooling gap (three weeks running
-    for AI Engineer specifically) worth fixing directly — either a podscripts-
-    style transcript source for these shows, or a fix/rotation for the YouTube
-    fetch path — rather than continuing to hand-route around it.
+  - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer: the YouTube
+    tooling gap flagged here through Jul 18 was FIXED Jul 20, 2026. No Priors,
+    Dwarkesh, and Greg Isenberg (The Startup Ideas Podcast) now route through
+    podscripts as primary in fetch_transcripts.py — full pre-made transcripts,
+    verified current — with YouTube captions as fallback and an automatic
+    weekly freshness cross-check that marks episodes not yet on podscripts as
+    YouTube-only. AI Engineer itself stays captions-only (conference-talk
+    channel, no podcast feed, so no transcript site carries it): the captions
+    block is YouTube bot protection on datacenter IPs, varies by session, and
+    has no legitimate workaround (same posture as WSJ/DataDome — do not evade).
+    When a session's IP is blocked, cover AI Engineer from official episode
+    descriptions plus third-party recaps and say so in the coverage note.
   - ChinaTalk (Jordan Schneider), chinatalk.media — added to the standing
     rotation ledger (it was already a "Sources to prioritize" listed source but
     had not been separately tracked here). HIT week of Jul 18 ("China's Mythos

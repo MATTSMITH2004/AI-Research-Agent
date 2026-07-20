@@ -15,10 +15,16 @@ Two-stage design (see CLAUDE.md / topics config):
 Handlers:
   - podscripts : list from the show listing page (dates are inline), fetch the
                  transcript from the episode page. Covers a16z, Odd Lots,
-                 In Good Company, Hard Fork.
+                 In Good Company, Hard Fork — and, since Jul 2026, No Priors,
+                 Dwarkesh, and Greg Isenberg (rerouted off YouTube captions,
+                 which are IP-blocked from some cloud sessions). Shows with
+                 yt_check get a freshness cross-check each list run: in-window
+                 videos on the YouTube channel but not yet on podscripts are
+                 marked YouTube-only, so fetch those via captions.
   - youtube    : list recent videos by scraping the channel page, fetch captions
-                 via youtube-transcript-api. Covers No Priors, Dwarkesh,
-                 Greg Isenberg.
+                 via youtube-transcript-api. Covers AI Engineer only (a
+                 conference-talk channel with no podcast feed, so no transcript
+                 site carries it).
   - web        : date-addressed web editions (AI Daily Brief at /e/YYYY-MM-DD).
 
 Design notes / known limits are at the bottom of this file.
@@ -49,10 +55,14 @@ RETRIES = 3         # transient timeouts / 5xx are common; retry before giving u
 SHOWS = {
     # --- AI-focused ---
     "ai-daily-brief": {"type": "web", "base": "https://aidailybrief.ai/e/", "name": "The AI Daily Brief", "md_suffix": ".md"},
-    "no-priors":      {"type": "youtube", "handle": "@NoPriorsPodcast", "name": "No Priors"},
+    # no-priors / dwarkesh / greg-isenberg: podscripts primary (full human-readable
+    # transcripts), YouTube captions as fallback for episodes podscripts hasn't
+    # transcribed yet. yt_check merges the channel listing into `list` output and
+    # marks not-yet-on-podscripts episodes as YouTube-only.
+    "no-priors":      {"type": "podscripts", "slug": "no-priors-artificial-intelligence-technology-startups", "name": "No Priors", "yt": "@NoPriorsPodcast", "yt_check": True},
     "a16z":           {"type": "podscripts", "slug": "a16z-podcast", "name": "a16z Podcast", "yt": "@a16z"},
-    "dwarkesh":       {"type": "youtube", "handle": "@DwarkeshPatel", "name": "Dwarkesh Podcast"},
-    "greg-isenberg":  {"type": "youtube", "handle": "@GregIsenberg", "name": "Greg Isenberg"},
+    "dwarkesh":       {"type": "podscripts", "slug": "dwarkesh-podcast", "name": "Dwarkesh Podcast", "yt": "@DwarkeshPatel", "yt_check": True},
+    "greg-isenberg":  {"type": "podscripts", "slug": "the-startup-ideas-podcast", "name": "Greg Isenberg (The Startup Ideas Podcast)", "yt": "@GregIsenberg", "yt_check": True},
     "hard-fork":      {"type": "podscripts", "slug": "hard-fork", "name": "Hard Fork", "yt": "@hardfork"},
     "ai-engineer":    {"type": "youtube", "handle": "@aiDotEngineer", "name": "AI Engineer"},
     # --- Markets / finance / business ---
@@ -233,8 +243,55 @@ def _relative_in_window(pub, days):
 def youtube_fetch(vid):
     from youtube_transcript_api import YouTubeTranscriptApi
     api = YouTubeTranscriptApi()
-    fetched = api.fetch(vid)
+    try:
+        fetched = api.fetch(vid)
+    except Exception as e:
+        # YouTube bot protection blocks caption requests from some datacenter
+        # IPs; which egress IP a cloud session draws is luck. There is no
+        # legitimate workaround (the official API only serves captions to the
+        # video owner; proxy rotation is deliberate evasion — same posture as
+        # the WSJ/DataDome decision). Fail with instructions, not a stack trace.
+        if type(e).__name__ in ("IpBlocked", "RequestBlocked", "YouTubeRequestFailed"):
+            raise RuntimeError(
+                f"YouTube captions are blocked from this session's IP "
+                f"({type(e).__name__}) for video {vid}. This varies by session "
+                "and cannot be worked around legitimately. Fall back to the "
+                "episode's official description and third-party recaps, and "
+                "record the gap in the brief's Source coverage section."
+            ) from e
+        raise
     return " ".join(snip.text for snip in fetched).strip()
+
+
+def _title_words(s):
+    return set(re.findall(r"[a-z0-9]+", s.lower()))
+
+
+def _merge_youtube_extras(eps, handle, days, match_basis=None):
+    """Freshness cross-check: podscripts publishes a day or two behind a show.
+    Compare its episode list against the show's YouTube channel and append any
+    in-window video that has no podscripts counterpart, marked source=youtube-only
+    so the agent knows to fetch it via captions instead. match_basis, when given,
+    is a wider podscripts list to match against — YouTube's relative dates
+    ("2 weeks ago") are fuzzy, so matching against a padded window avoids
+    falsely flagging a near-boundary episode podscripts already has."""
+    try:
+        yt = youtube_list(handle, days)
+    except Exception as e:
+        sys.stderr.write(f"# freshness check vs {handle} failed "
+                         f"({type(e).__name__}); podscripts list only\n")
+        return eps
+    have = [_title_words(e["id"]) for e in (match_basis or eps)]
+    out = list(eps)
+    for v in yt:
+        w = _title_words(v["title"])
+        if not w:
+            continue
+        matched = any(len(w & h) / max(1, min(len(w), len(h))) >= 0.5
+                      for h in have)
+        if not matched:
+            out.append({**v, "source": "youtube-only"})
+    return out
 
 
 # --------------------------------------------------------------------------- #
@@ -289,6 +346,16 @@ def list_show(key, days):
     cfg = SHOWS[key]
     if cfg["type"] == "podscripts":
         try:
+            if cfg.get("yt_check") and cfg.get("yt"):
+                # list a padded window for matching (YouTube relative dates are
+                # fuzzy near the boundary), return only the requested window
+                eps_wide = podscripts_list(cfg["slug"], days + 7)
+                today = dt.date.today()
+                eps = [e for e in eps_wide
+                       if e["date"] is None
+                       or (today - dt.date.fromisoformat(e["date"])).days <= days]
+                return _merge_youtube_extras(eps, cfg["yt"], days,
+                                             match_basis=eps_wide)
             return podscripts_list(cfg["slug"], days)
         except Exception as e:
             if cfg.get("yt"):
@@ -370,7 +437,9 @@ def main():
                 if not eps:
                     print("  (no episodes in window)")
                 for e in eps:
-                    print(f"  [{e.get('date')}] {e['id']}")
+                    tag = ("  << YouTube-only (not yet on podscripts; "
+                           "fetch captions)") if e.get("source") == "youtube-only" else ""
+                    print(f"  [{e.get('date')}] {e['id']}{tag}")
                     print(f"       {e['title']}")
         return
 
@@ -409,6 +478,16 @@ if __name__ == "__main__":
 #   paywalled; podscripts covers Hard Fork/Odd Lots, the rest need WebFetch.
 # - Resilience: get() retries transient timeouts/5xx with backoff. podscripts
 #   shows with a "yt" handle fall back to YouTube when podscripts is fully down
-#   (a16z, hard-fork, in-good-company). The fallback yields fewer/clip episodes
-#   than podscripts, so it is a backstop, not a full replacement. Odd Lots has no
-#   yt fallback (its YouTube channel is sparse) — rely on retry + WebSearch there.
+#   (a16z, hard-fork, in-good-company, no-priors, dwarkesh, greg-isenberg). The
+#   fallback yields fewer/clip episodes than podscripts, so it is a backstop, not
+#   a full replacement. Odd Lots has no yt fallback (its YouTube channel is
+#   sparse) — rely on retry + WebSearch there.
+# - YouTube captions (youtube_fetch) are IP-blocked by YouTube bot protection
+#   from SOME cloud sessions — which egress IP a session draws is luck, and
+#   there is no legitimate workaround. That is why No Priors, Dwarkesh, and
+#   Greg Isenberg were rerouted (Jul 2026) to podscripts as primary; captions
+#   remain the fallback for episodes podscripts has not transcribed yet (the
+#   yt_check freshness merge marks those YouTube-only in `list` output). AI
+#   Engineer has no podcast feed, so it stays captions-only; when blocked, use
+#   the episode's official description plus third-party recaps and say so in
+#   the brief's Source coverage section.
