@@ -83,6 +83,13 @@ is the subject matter. One skill, many topics.
    gets a plain-language gloss on first use, per house-writing-style rule 3.
    A term the drafter did not notice as jargon is the term most likely to
    fail this test — check nouns that would not appear in a finance textbook.
+   Also in the same pass: rebuild every causal claim and every relayed argument
+   step by step — a, therefore b, therefore c (house-writing-style rule 1). If
+   a middle step cannot be written down, find it in the source or cut the
+   claim; a reader asking "why?" at a sentence marks exactly where this check
+   was skipped. Finally, sweep sentences as well as paragraphs: flag any
+   sentence with three or more commas or roughly thirty-plus words and split
+   it unless it is genuinely one idea (house-writing-style rule 8).
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
@@ -149,7 +156,11 @@ lives in the topic config, not here.
     The second point is the consequence of the first, not a neighbor to it.
 
 - **Every item carries a source link**, including short skim-list items. No
-  exceptions.
+  exceptions. A named source is a linked source: every primary document,
+  letter, filing, edition, or episode named in the text gets its own
+  hyperlink, at the point of naming or on the Source line, and "What people
+  are saying" entries link the specific transcript or post actually read, not
+  just the show's homepage.
   - Before: "Microsoft launched..." / "Meta barred its internal..." — stated flat
     with no link.
   - After: same claim, with the primary source linked inline. If no source can be
@@ -159,7 +170,11 @@ lives in the topic config, not here.
   in a top development, a skim item, or a perspective entry — attach a
   credential clause: their role, their affiliation, and in one phrase what that
   company or body does. This holds on every mention, not
-  just the first, and whether or not they are quoted. Keep it to a clause, not
+  just the first, and whether or not they are quoted. It includes podcast
+  hosts, co-hosts, and guests — everyone named in a "What people are saying"
+  entry, quoted or not: "with guests Kevin Xu, an investor who writes the
+  Interconnected newsletter on US-China tech, and Matt Sheehan, a Carnegie
+  Endowment fellow focused on Chinese AI policy." Keep it to a clause, not
   a biography — a name that recurs in one item gets a light tag each time, not
   a repeated paragraph. Pull standing wording from the topic config's
   recurring-voices roster where one exists, so the description stays consistent.

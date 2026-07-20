@@ -27,10 +27,11 @@ Playbook config overrides this with a reading-queue shape; this section governs
 Pulse only.)
 
 - **Title block.** "AI Pulse Brief" and a "Week of <date range>" line.
-- **Intro.** Two to four sentences on the week: name the single biggest story and
-  the through-line that connects the rest. Direct, no throat-clearing. Write it as
-  a neutral publication opener — do not address a reader by name or open with a
-  greeting ("Matthew," / "Good morning,").
+- **Intro.** Two to four sentences on the week: open with the week's theme — the
+  through-line — as the first sentence, then support it with the examples: the
+  biggest story and how the rest of the week connects to it. Direct, no
+  throat-clearing. Write it as a neutral publication opener — do not address a
+  reader by name or open with a greeting ("Matthew," / "Good morning,").
 - **Top developments (3 to 5).** Each item is a numbered heading written as a
   full claim sentence, not a short label. The heading should state what happened
   and signal why it is the story. Inside each item, walk the chain with these
@@ -41,16 +42,22 @@ Pulse only.)
     INLINE, next to the claim they qualify — there is no separate "evidence" beat
     (it only re-narrated the event). Prefer the primary source; cite every source
     actually drawn on for the item, not just the best one, on the Source line
-    below. If a claim has no source, do not make it.
-    Benchmarks and jargon: never drop a benchmark name or score without explaining,
-    in plain words, what the test measures and how to read the number (what counts
-    as good, what it means in practice). I do not know the benchmarks. Same for
+    below. Tag claims inline as well: after each claim or claim-cluster, add a
+    short bracketed tag ("[Apple complaint]", "[CNBC]") naming which Source-line
+    entry supports it, so each sentence is traceable to its source at the point
+    of reading. If a claim has no source, do not make it.
+    Benchmarks and jargon: never drop a benchmark, index, ranking, or score
+    without explaining, in plain words, what it measures, who measures it, and
+    how to read the number (what counts as good, what it means in practice). I
+    do not know the benchmarks. Same for
     terms like parameters, context window, or license — gloss them the first time.
   - **Does it hold up?** *(optional)* Include only when the item rests on a
     self-reported or contestable claim worth stress-testing — a vendor's own
     benchmark, a striking growth number, an unverified capability. State plainly
     what is actually proven versus what is self-reported or unverified. Skip it
-    when the facts are not in dispute.
+    when the facts are not in dispute. Write the label so it names its object —
+    "Does [the specific claim] hold up?", as in "**Does Moonshot's benchmark
+    claim hold up?**" — never the bare generic label.
   - **Both sides.** *(optional)* Include only when there is a genuine interpretive
     disagreement about what the news means (not a manufactured one). Open with one
     framing line naming the axis of dispute, then one bullet per side, each giving
@@ -87,18 +94,29 @@ Pulse only.)
   the thing to avoid.
 - **Model standings** *(conditional — only when rankings moved).* When a
   release this week changes the model ledger (a new best-in-class for coding,
-  reasoning, writing, agentic use, cost, or similar), show the current
-  standings as a table here, with any row that moved this week marked (a ▲ or
-  a bold "new" tag) so the change is visible at a glance. Include a one-line
-  lead above the table naming what moved and what showed it. When nothing
-  shipped that changes the standings, omit this section entirely — no table,
-  no "no changes" line. The ledger's full detail (basis, dates) lives in
-  MEMORY.md; the brief shows the standings themselves, not the basis column.
+  reasoning, writing, agentic use, value per dollar, or similar), show the
+  current standings as a table here: one row per task, with columns Best /
+  Second / Third, including a value-per-dollar row (capability delivered per
+  dollar, not just sticker price). Mark any row that moved this week (a ▲ or
+  a bold "new" tag) so the change is visible at a glance, and include a
+  one-line lead above the table naming what moved and what showed it. When
+  nothing shipped that changes the standings, omit this section entirely — no
+  table, no "no changes" line. Exception: the first brief after the ledger's
+  one-time baseline sweep (see MEMORY.md's model ledger) shows the full table
+  once to introduce the new standings, moved or not. The ledger's full detail
+  (basis, dates) lives in MEMORY.md; the brief shows the standings themselves,
+  not the basis column.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
-  Substacks, kept as its own section (do not fold it into the items). For each
-  show or writer worth surfacing, write two beats, each opened with a literal
+  Substacks, kept as its own section (do not fold it into the items). Each entry
+  worth surfacing is built in three layers. First, a claim-style header written
+  like the top developments — the source name, a colon, then the take as a full
+  claim ("**Interconnects: the distillation fight is about market position, and
+  open models have six months**"). Second, a sub-header line directly beneath it
+  carrying the speaker's name and credential clause (pulled from the
+  recurring-voices roster where one exists) — the credential lives here, never
+  in the header. Third, the two beats, each opened with a literal
   bold label: "**What it was about:**" then "**Why it matters:**". These two
   labels are keys that should stand out — in the Word doc they render bold in a
   distinct accent color (any bold label ending in a colon is auto-colored by the
@@ -108,7 +126,9 @@ Pulse only.)
     a frontier-lab leader, a serious investor), give more on what was actually
     said, not a single line.
   - Use a quote when there is a genuinely good one. Not every show needs a quote,
-    but a sharp line beats a paraphrase. Cite the specific episode or post.
+    but a sharp line beats a paraphrase. Weave the quote into a sentence with its
+    attribution ("Lambert's sharpest line: '…'"); never introduce one with a bare
+    label like "Quotable:". Cite the specific episode or post.
   - Gloss the jargon here too. Buzzy business or tech phrases a guest uses
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the
@@ -118,6 +138,11 @@ Pulse only.)
     two-beat entry at full depth; do not compress any of them into a summary
     paragraph or bury them as a footnote. (Substacks were the ones shortchanged
     before, so watch them especially, but the rule is medium-neutral.)
+  - One entry per topic, not per source. When one source contributes two or more
+    unrelated topics in a week, give each its own full three-layer entry with
+    its own claim-style header (a "Latent Space: …" entry for a conference
+    recap and a separate "Latent Space: …" entry for an unrelated company
+    story), rather than merging them into one entry.
 - **On my radar.** Things that have not landed yet, open questions, threads to
   follow next week. Bullets.
 - **New sources worth adding.** The output of the standing source-discovery beat

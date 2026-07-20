@@ -71,6 +71,11 @@ open-source models, raised an $800M Series C. Investors call this category
 'neoclouds': cloud providers that, unlike Amazon or Microsoft, don't tie
 customers into one company's ecosystem — the bundle of connected services like databases, storage, and security tools that your systems get built around, which is what makes a big provider like Amazon or Microsoft expensive to leave once you're in."
 
+A gloss must differentiate, not categorize. "A data and AI infrastructure
+company" fails — it fits fifty companies. Say what the company actually sells
+and to whom: "Databricks, which sells the software companies use to store,
+clean, and analyze large amounts of data and to build AI systems on top of it."
+
 ## 4. Every fact earns its place — visibly
 
 State each fact's relevance to the point it serves, in the same sentence or the
@@ -129,3 +134,42 @@ now profitable."
 AFTER: "Q1 revenue exceeded depreciation for the first time, per Exponential
 View's estimate — though depreciation is a proxy for hardware cost, not the full
 cost base, so 'profitable' overstates it."
+
+## 8. One idea per sentence; commas are not glue
+
+A sentence carries one working idea. Audit trigger: any sentence with three or
+more commas, or one that hangs a new fact, an explanation, or a quote off a
+comma ("..., a template other states will likely copy"), gets read back — if it
+stacks a second idea, split it. An inserted aside becomes its own sentence or a
+short parenthetical; a quote gets its own sentence with its attribution.
+
+BEFORE (week of Jul 18): "In 'China's Mythos Moment' (July 16), the hosts
+argued Beijing is actually better positioned than Washington to absorb a
+domestic model as capable as Anthropic's flagship, because China already has a
+working government-approval channel for new models, in place since 2023, and
+regular contact between labs and regulators, while the US process remains
+fragmented across agencies."
+
+AFTER: "In 'China's Mythos Moment' (July 16), the hosts argued Beijing is
+better positioned than Washington to absorb a domestic model as capable as
+Anthropic's flagship. China has had a working government-approval channel for
+new models since 2023, and its labs talk to their regulators regularly. The US
+process, by contrast, remains fragmented across agencies."
+
+## 9. Name the thing — no stand-in words at the verdict
+
+Where a sentence's judgment lands, the word carrying it must be concrete.
+Audit trigger: at each sentence that delivers a conclusion, check the
+load-bearing word. A coined phrase ("marketing rounding up"), a vague
+adjective ("increasingly artificial"), or a floating referent ("cement it,"
+"the frontier") gets replaced with the specific thing meant. This differs from
+rule 3: a real term of art is kept and glossed; a stand-in is not a term, and
+it gets replaced.
+
+BEFORE: "a regulatory ceiling, if it comes, looks increasingly artificial
+rather than safety-driven."
+AFTER: "a regulatory ceiling, if it comes, looks increasingly like protection
+for the incumbent labs rather than a safety measure."
+
+BEFORE: "asking government to cement it."
+AFTER: "asking government to lock in Anthropic's market lead."

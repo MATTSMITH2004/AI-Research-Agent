@@ -154,11 +154,26 @@ The running model-comparison tracker (process in topics/ai-pulse.md "What to
 track" item 1). THIS LEDGER IS PERSISTENT — never trim it (like the
 source-discovery ledger below, unlike the "recently covered" news list, which
 trims to ~4-6 weeks). Backstage store: the brief never renders this table raw.
-When a covered release moves a row, the brief's "Model standings" section shows
-a reduced Task / Current best / Contenders view with changed rows marked; the
-Basis and Updated columns stay here. Populate ONLY from models covered in
-briefs — no fresh benchmark searches to fill cells. An empty cell is honest; a
-guessed ranking is not.
+When a release moves a row, the brief's "Model standings" section shows a
+reduced Task / Best / Second / Third view with changed rows marked; the Basis
+and Updated columns stay here. Populate from two kinds of source: (1) models
+and results covered in briefs, and (2) a small set of independent evaluations
+checked directly — Artificial Analysis's Intelligence Index among them, as one
+input, never the sole source. Do not fill a cell from a lab's self-reported
+numbers alone. An empty cell is still honest; a guessed ranking is not.
+
+ONE-TIME BASELINE SWEEP — scheduled for the next weekly run (Sat Jul 25,
+2026), ratified from the Jul 18 feedback round: before drafting that brief,
+run a baseline pass across the major closed and open-weight models using
+independent evaluations (Artificial Analysis plus at least one other
+independent source per task where available) and restructure the table below
+to one row per task with Best / Second / Third columns, adding a "Value per
+dollar" row (capability delivered per dollar, not sticker price) in place of
+the current cost row. Keep the Basis and Updated columns, citing the
+evaluation each cell came from. That week's brief shows the full table once to
+introduce the new standings (see topics/ai-pulse.md "Model standings").
+Delete this paragraph after the sweep has run — from then on the update rules
+below govern.
 
 | Task | Current best | Contenders | Basis (what a brief showed) | Updated |
 |---|---|---|---|---|
@@ -169,10 +184,12 @@ guessed ranking is not.
 | Cost / value | open-weight (GLM 5.2, Kimi) | DeepSeek V4 Pro | Coinbase halved AI bill defaulting to open models, usage still grew; Sonnet 5 costs MORE per task than Opus 4.8 despite cheaper sticker (Jul 4 brief); Kimi K3 ~$0.94/benchmark task vs DeepSeek V4 Pro's ~$0.04/task — DeepSeek remains the cost leader even as Kimi K3 pushes capability (Jul 18 brief) | 2026-07-18 |
 | Frontier-general | Claude Fable 5 | GPT-5.6 (58.9), Kimi K3 (57.1), Claude Opus 4.8 (55.7), Claude Sonnet 5 | first trustworthy independent head-to-head: Artificial Analysis Intelligence Index scored Fable 5 highest (59.9) of the three that shipped week of Jul 4, with Kimi K3 (Moonshot, released this week) landing 4th overall, ahead of Opus 4.8 (Jul 18 brief) | 2026-07-18 |
 
-Update rules: one row per task; when a covered release takes a slot, the old
-holder moves to Contenders (keep two or three, do not delete); every filled
-cell cites which brief showed it and the date it last moved; a row change is
-what triggers the brief's "Model standings" section — no change, no section.
+Update rules: one row per task; when a release takes a slot, the displaced
+model moves down a column (keep the top three; keep a displaced model's basis
+in the Basis column rather than deleting it); every filled cell cites what
+showed it — the brief or the independent evaluation — and the date it last
+moved; a row change is what triggers the brief's "Model standings" section —
+no change, no section (except the one-time baseline introduction above).
 
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process
