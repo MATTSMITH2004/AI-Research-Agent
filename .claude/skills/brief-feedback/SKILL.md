@@ -176,6 +176,19 @@ One memo, grouped in this order:
 4. One-offs and curation — one line each.
 5. Positive signals — what to protect.
 
+Presentation rules for every memo item (added Jul 2026 after Matthew had to
+ask for both — the memo must answer these in place, not on request):
+- Ground every item in the brief itself. Quote the actual passage the
+  comment anchored to (the BEFORE), then show what that same passage would
+  look like under the proposal (the AFTER). For a design question, mock each
+  option on that passage so the choices are visible, not abstract. Never
+  present a proposal as a label plus a classification — if Matthew would
+  need to ask "what do you mean, give me an example," the item is not done.
+- Name the destination precisely. Every proposed edit states the file AND
+  the section or anchor within it ("topics/ai-pulse.md, the Intro bullet
+  under Output shape") so the where gets ratified along with the what, and
+  no follow-up "where is this going" round is needed.
+
 Then stop. Ask Matthew to verdict each item: approve / edit / reject /
 defer. Apply nothing — including "obvious" one-offs — before verdicts.
 
