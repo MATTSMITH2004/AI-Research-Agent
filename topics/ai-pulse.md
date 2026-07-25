@@ -328,7 +328,7 @@ appears as a section, a table, or an appendix in the output — the reader sees
 only the inline clauses it feeds, exactly like the source descriptions above
 inform sourcing without being printed. Edit it as the rotation changes.
 
-- Dean Ball — former AI policy advisor, Trump administration.
+- Dean Ball — policy lead, OpenAI (joined Jul 2026); former AI policy advisor, Trump administration.
 - Kevin Roose — tech columnist, The New York Times; co-host, Hard Fork.
 - Casey Newton — founder, Platformer; co-host, Hard Fork.
 - Ethan Mollick — professor, Wharton; writes One Useful Thing on applied AI.
