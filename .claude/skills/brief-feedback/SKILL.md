@@ -32,6 +32,13 @@ section it sits in. Process every comment — never sample or skip. If a
 comment anchors to a point rather than a range, note the surrounding
 paragraph.
 
+Archive the upload. Copy the document to `feedback/` as
+`ai-pulse-<YYYY-MM-DD>-feedback.docx`, dated for the brief it comments on
+(matching that brief's filename in `briefs/`), so the raw input behind every
+rule change stays traceable. It gets committed in Step 6 alongside whatever
+was ratified — including a round where Matthew rejects everything, since the
+document is the record either way.
+
 ## Step 2 — Classify each comment
 
 Seven kinds. When genuinely torn between two, mark it ambiguous and ask in
@@ -199,6 +206,11 @@ the standing git rules, replacing what each edit supersedes rather than
 appending. Rejected items are dropped without residue. Deferred items and
 design flags get one line in the closing summary so they are findable — they
 are NOT written into any rule file as pending.
+
+Commit the archived feedback document from Step 1 with those edits, and add
+its row to `feedback/README.md`: the brief commented on, the file, the
+comment count, and a one-line outcome (what was ratified and where, how much
+was deferred).
 
 Close with a two-line summary: N comments → N one-offs queued, N sharpenings
 and N rules landed (by file), N design items open.
