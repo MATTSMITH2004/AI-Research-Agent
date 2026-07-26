@@ -69,7 +69,9 @@ Pulse only.)
     the strongest version of that side and attributed where possible, then an
     optional closing line only if there is a real synthesis to name. If it would
     collapse to "the obvious view plus a token objection," cut the beat — a forced
-    debate is worse than none.
+    debate is worse than none. Each side runs two to four short sentences, not
+    one long one: the bullet format is not a licence for a single stacked
+    sentence per side (house-writing-style rule 8 applies here like everywhere).
   - **Why it matters.** *(required)* The so-what chain, step by step, traced
     through my standing lenses (technical, finance, operator) as general
     significance — neutral voice, not addressed to a reader. When there are several
@@ -182,11 +184,16 @@ Pulse only.)
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the
     no-unexplained-term rule.
-  - Every perspective source gets the same full treatment — podcast, YouTube
-    channel, or Substack alike. Give each one worth surfacing its own labeled
+  - Every perspective source that earns an entry gets the same full treatment —
+    podcast, YouTube channel, or Substack alike. Give each its own labeled
     two-beat entry at full depth; do not compress any of them into a summary
     paragraph or bury them as a footnote. (Substacks were the ones shortchanged
-    before, so watch them especially, but the rule is medium-neutral.)
+    before, so watch them especially, but the rule is medium-neutral.) This
+    governs DEPTH, not selection: whether a source earns an entry at all is the
+    one-entry-per-argument rule below. A source folded into a top development by
+    that rule is not being shortchanged here — it is being placed where its
+    argument belongs, with full credit on that item's Source line. Never thin an
+    entry that has earned its slot.
   - One entry per topic, not per source. When one source contributes two or more
     unrelated topics in a week, give each its own full three-layer entry with
     its own claim-style header (a "Latent Space: …" entry for a conference
@@ -396,11 +403,14 @@ citation.
 
 Backstage reference only — never render this list in a brief. It is a lookup
 the pipeline reads FROM: when a person here is named anywhere in the brief,
-pull their standing credential from this list and write it inline as a clause
-next to the name (per the digest's credential rule). The list itself never
-appears as a section, a table, or an appendix in the output — the reader sees
-only the inline clauses it feeds, exactly like the source descriptions above
-inform sourcing without being printed. Edit it as the rotation changes.
+pull their standing credential from this list and write it inline next to the
+name. The research-digest credential rule governs how much a credential must
+carry — role, organisation, what that organisation does, and what qualifies
+them on the subject — so write entries here at that depth and let that rule set
+the length, not this note. The list itself never appears as a section, a table,
+or an appendix in the output — the reader sees only the inline clauses it feeds,
+exactly like the source descriptions above inform sourcing without being
+printed. Edit it as the rotation changes.
 
 - Dean Ball — policy lead, OpenAI (joined Jul 2026); former AI policy advisor, Trump administration.
 - Nathan Lambert — research scientist at the Allen Institute for AI, a nonprofit

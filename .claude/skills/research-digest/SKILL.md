@@ -136,9 +136,10 @@ is the subject matter. One skill, many topics.
    section). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
    Run `scripts/check_prose.py` once more on the final markdown before
-   rendering. Do not render while it still reports run-ons, unlinked Source
-   lines, or unglossed terms — those are gates, not suggestions. Then give me
-   the highlights inline.
+   rendering. Every flag must be RESOLVED before rendering — fixed, or judged a
+   false positive on purpose. That is the gate: not a zero count, but no flag
+   left unexamined. The script reports candidates; the judgment stays yours.
+   Then give me the highlights inline.
 
 9. **Report what you reached.** Before or with the highlights, tell me plainly
    which written sources, podcasts, and YouTube channels you actually pulled from
