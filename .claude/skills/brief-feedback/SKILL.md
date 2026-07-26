@@ -266,9 +266,40 @@ appending. Rejected items are dropped without residue. Deferred items and
 design flags get one line in the closing summary so they are findable — they
 are NOT written into any rule file as pending.
 
-Verify before committing: re-search the rule files for the distinctive wording
-of each ratified change and confirm no superseded copy survived anywhere. A
-ratified edit is not applied until it is the only version in the repo.
+Then verify, in two separate passes. They catch different things, and running
+only the first is how the Jul 26 round shipped four conflicts.
+
+**Pass 1 — no superseded copy survives.** Re-search the rule files for the
+distinctive wording of each ratified change and confirm the old version is gone
+everywhere. A ratified edit is not applied until it is the only version in the
+repo.
+
+**Pass 2 — the new rules do not contradict the old ones.** Pass 1 only proves
+the text you replaced is gone; it says nothing about whether what you wrote can
+coexist with rules you never touched. For each newly written rule, find every
+existing rule that governs the same object — the same beat, section, artifact,
+or term — read them together, and ask whether a run obeying both could satisfy
+both. Four shapes to look for, each drawn from a real conflict this pass caught
+on Jul 26:
+
+- **A cap the new rule exceeds.** The recurring-voices roster said to write a
+  credential "as a clause" while the new credential rule required four
+  components. Fix: the lookup defers to the rule for depth instead of setting a
+  length itself.
+- **A prohibition the new rule requires you to break.** "Do not compress any
+  perspective source" read as forbidding the new fold-a-source-into-an-item
+  rule. Fix: scope them — one governs depth of an entry that earned its slot,
+  the other governs selection.
+- **A spec that never mentions the new rule's subject.** The sentence-length
+  rule for "Both sides" landed in two skills but not in the beat's own spec,
+  where the section is built. Fix: put it where the thing is made.
+- **The same check described with different force in two files.** Step 8 called
+  the prose checker's output "gates," the script called them "candidates." Fix:
+  say once what binding means — here, every flag resolved, not a zero count.
+
+Anything found in pass 2 gets fixed before committing, and named in the closing
+summary — a conflict introduced while fixing feedback is still a conflict
+Matthew has to live with next Saturday.
 
 Commit the archived feedback document from Step 1 with those edits, and add
 its row to `feedback/README.md`: the brief commented on, the file, the
