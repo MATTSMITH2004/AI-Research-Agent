@@ -10,20 +10,26 @@ Process my brief feedback.
 2. The commented brief is the .docx I've uploaded. Run the brief-feedback
    skill on it (.claude/skills/brief-feedback/SKILL.md) — follow its
    procedure exactly, every step.
-3. Extract ALL comments with their anchored text — every comment, no
-   sampling. Tell me the total count so I can sanity-check it against the
-   doc.
+3. Start with Step 0, before reading any new comment: audit the previous
+   round. Tell me which of last round's ratified changes actually landed
+   in this brief, which did not, and why. Then extract ALL comments with
+   their anchored text — every comment, no sampling. Tell me the total
+   count so I can sanity-check it against the doc.
 4. Produce the proposal memo per the skill and then STOP. Do not edit any
    file — not even "obvious" one-offs — until I have verdicted every item
    (approve / edit / reject / defer).
 5. After my verdicts: apply only what I approved, exactly as ratified.
-   Before pushing, show me the full diff of every changed file so I can
-   confirm the edits match what I ratified. Then commit and push directly
-   to claude/ai-pulse-weekly — confirm with git branch that you are on it
-   before committing, and confirm the push succeeded. Do not open a PR;
-   the auto-mirror carries these changes to main on its own. Never
-   force-reset this branch. This session never runs scripts/mailer.py or
-   sends anything.
+   Also do this round's bookkeeping without separate approval — archive
+   the .docx to feedback/, write the -ratified.md record with an
+   observable check for each approved item, and add the README row. That
+   record is what next round's audit reads, so it is part of applying,
+   not a change to ratify. Before pushing, show me the full diff of every
+   changed file so I can confirm the edits match what I ratified. Then
+   commit and push directly to claude/ai-pulse-weekly — confirm with git
+   branch that you are on it before committing, and confirm the push
+   succeeded. Do not open a PR; the auto-mirror carries these changes to
+   main on its own. Never force-reset this branch. This session never
+   runs scripts/mailer.py or sends anything.
 6. Give me the closing two-line summary. Anything I deferred or flagged
    for design goes in the summary only — not into any rule file.
 
