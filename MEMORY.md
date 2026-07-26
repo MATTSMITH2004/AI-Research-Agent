@@ -18,6 +18,17 @@ How to maintain this file:
   the house-writing-style skill; brief shape and coverage in the topic config;
   procedure in the research-digest skill. Route per CLAUDE.md's Memory section —
   do not accept a rule here just because feedback arrived here.
+- Write pointers, not copies. Where a bullet here mentions a rule owned by
+  another file — the topic config's Output shape, the house-writing-style skill,
+  the research-digest procedure — name what the rule covers and where it lives,
+  then stop. Never restate what the rule says. The test: if that file changed
+  tomorrow, would this sentence still be true? A pointer survives; a copy goes
+  stale and then silently overrides the real rule, because this file outranks
+  the others. A description here that has fallen behind its owner is a bug in
+  this file, not an override of that one: follow the owner file, and report the
+  mismatch in the brief's Config notes. State is different — the ledgers,
+  recently-covered, environment facts — this file owns that outright and spells
+  it out in full.
 
 ## One-off requests for the next brief
 
@@ -40,59 +51,12 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   look for it or flag its absence as a config error. If a worked example is ever
   wanted again, regenerate it from a recent approved brief — but the Output
   shape section remains canonical either way.
-- Pulse brief structure — the 3-required + 2-optional beat design (What happened,
-  optional "Does it hold up?" / "Both sides," Why it matters, My take): the canonical
-  template lives in topics/ai-pulse.md "Output shape." Don't restate the full
-  template here — edit it there. Standing reminders that tie to the other rules:
-  keep "My take" labeled as editorial, fold the evidence inline (no separate evidence
-  beat), and keep the voice neutral per the VOICE rule below.
-- VOICE (changed Jun 27, 2026): the brief reads neutrally for a distribution list,
-  not addressed to Matthew — the full rule lives in CLAUDE "Audience and voice" and
-  is applied in topics' beats. The deltas to remember: the beats were renamed ("Why
-  it matters to me" -> "Why it matters," "My read" -> "My take"), and only the
-  addressing is neutral — lenses, calibration, and what-matters stay personalized
-  to Matthew.
-- "What people are saying" format — its own section, two bold colon-labels
-  ("**What it was about:**" / "**Why it matters:**") that the renderer auto-colors
-  dark teal, Substack parity with the podcasts, depth scaled to the speaker, and a
-  quote when there's a good one: the full spec lives in topics/ai-pulse.md "Output
-  shape." Learned anchor to keep: the week-of-Jun-24 brief shortchanged the
-  Substacks by compressing them into one paragraph — give each its own full
-  two-beat entry, never compress.
 
 ### Sources
-- The sourcing rules themselves live in CLAUDE ("Voice and sourcing," "Jargon
-  rule") and topics ("Sources to prioritize" + the What-happened beat): cite every
-  source used on the Source line; primary sources over secondhand articles; gloss
-  every benchmark and every tech-business buzzword in plain words, in every section
-  including "What people are saying." Renderer detail (lives only here): source
-  links render as clickable blue hyperlinks, anchor = the domain.
-- Learned anchors to keep — specific past misses, do not repeat:
-  - Benchmarks/buzzwords: the week-of-Jun-24 Snowflake item left "craft-and-margin
-    economics" and "agent-driven legacy migrations" unexplained.
-  - Primary sources: the week-of-Jun-24 brief wrongly cited a TheStreet article for
-    Nadella's essay instead of his actual post.
-  - Finance fundamentals I already know (margins, valuation, and the like) do not
-    need glossing — but a vague tech-business phrase built around them still does.
-
-### Emphasis
-- Keep the lens mix balanced for now; do not tilt the whole brief toward any one
-  angle. The three I care about roughly equally: operator / idea-generation,
-  finance, and the technical apparatus.
-- The technical interest is genuine, not just background. I want to track how the
-  technology, the companies, and the people are advancing and what is changing —
-  and especially the different models and the specs and trade-offs between them.
-  When a model is material, give the concrete comparison (context window, price,
-  benchmarks, speed, strengths/weaknesses), pitched for fluency, not engineering.
-- Standing "models and their specs" beat, including open-weight and Chinese models
-  (GLM, DeepSeek, Kimi, Qwen, etc.) — see topics/ai-pulse.md "What to track" #1.
-
-### Sources, kept and dropped
-- WSJ: keep as a written/journalism source for article research, NOT as a podcast.
-  Read headlines/snippets via search and cite; full articles are paywalled and I
-  cannot legitimately get past it with these tools — no paywall-bypass mirrors, no
-  stored login. If a WSJ article is load-bearing, flag it and Matthew pastes the
-  text.
+- Sourcing rules live in CLAUDE ("Voice and sourcing," "Jargon rule") and topics
+  ("Sources to prioritize" + the What-happened beat) — follow them there.
+  Renderer detail (lives only here): source links render as clickable blue
+  hyperlinks, anchor = the domain.
 - WSJ full-article automation is PARKED until ~August 2026. WSJ sits behind
   DataDome bot protection that blocks server-side fetches (and the login itself)
   regardless of credentials, so do not scrape it. The plan: once Matthew has
@@ -100,21 +64,8 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   school), read full WSJ text through that legitimate channel. Revisit then. A
   browser-side one-click capture bookmarklet is the fallback if Factiva/ProQuest
   does not pan out.
-- Dropped from the weekly podcast scan: WSJ What's News, FT News Briefing, and
-  Bloomberg Talks.
-- AI Daily Brief sourcing — read every daily web/markdown edition in the window,
-  use it as a lead-finder to primary sources, the agent.json feed -> e/<date>.md
-  path, skip the audio transcript: the full rule now lives in topics/ai-pulse.md
-  (the AI Daily Brief entry under "AI-focused shows").
 
 ### Automation
-- CRITICAL git rule: NEVER force-reset claude/ai-pulse-weekly to main
-  (`git branch -f claude/ai-pulse-weekly main` + force-push). That DISCARDS the
-  routine's accumulated briefs and MEMORY updates — it already wiped the 06-27
-  brief once (recovered from orphaned commit 1a6d3ab). To push config changes from
-  main into the weekly branch, MERGE: `git checkout claude/ai-pulse-weekly &&
-  git merge main && git push` (no force). To bring accumulated briefs/MEMORY into
-  main, merge the other way (weekly -> main). Always merge, never force-reset.
 - The AI Pulse brief is meant to run as a weekly Claude Code Routine (Sat ~8am
   Eastern) that generates the brief and delivers it to Matthew. Setup guide and
   the ready-to-paste routine prompt: docs/weekly-brief-routine.md. The routine
@@ -125,8 +76,9 @@ Refinements learned from my feedback. Empty to start; fill in as I react to brie
   Reason: enabling "Allow unrestricted branch pushes" (needed to push to main)
   breaks routine creation on Matthew's GitHub install, but `claude/`-prefixed
   branches are always pushable. Keeping state on this branch preserves the
-  recently-covered history week to week, which is what prevents repeats. (To fold
-  the accumulated briefs into main, merge claude/ai-pulse-weekly -> main manually.)
+  recently-covered history week to week, which is what prevents repeats. A GitHub
+  Action (.github/workflows/sync-weekly-to-main.yml) merges this branch into main
+  on every push, so main stays a complete mirror with no manual merging.
 - Delivery: REAL SEND via scripts/mailer.py using the SendGrid HTTPS API. The
   digest goes to MULTIPLE recipients, so it must be a true sent email (no manual
   click), Bcc'd to the PULSE_RECIPIENTS list, with the rendered .docx attached.
@@ -329,12 +281,21 @@ Each run, mark commentary sources hit/miss and update "last contributed."
 
 ## Working process
 
-- For any change Matthew requests, always work on a branch first, show him the
-  change, and only merge to `main` after he approves. Handle all the git mechanics
-  for him — he does not run git himself. Exception: for tiny, obvious fixes he says
-  "just push," commit straight to `main`.
-- `main` is the live version the weekly Routine runs from, so any change meant to
-  affect the automated brief must end up merged to `main`.
+- `claude/ai-pulse-weekly` is where everything happens. The weekly routine checks
+  out that branch, runs from it, and pushes the new brief and MEMORY back to it.
+  NOTHING RUNS ON `main` — main is a mirror, kept current by a GitHub Action that
+  merges the weekly branch on every push. Any change meant to affect the brief
+  must land on `claude/ai-pulse-weekly`; edits made anywhere else never reach
+  Saturday's run.
+- Never commit to `main` directly, and never merge in either direction by hand —
+  the Action owns that.
+- NEVER force-reset `claude/ai-pulse-weekly` (`git branch -f` + force-push). It
+  discards the routine's accumulated briefs and MEMORY updates — it already wiped
+  the 06-27 brief once, recovered from orphaned commit 1a6d3ab.
+- `claude/workshop` is Matthew's personal branch. Do not edit, commit to, merge,
+  or reset it unless he explicitly asks.
+- Handle all git mechanics for Matthew — he does not run git himself. Show him the
+  change before pushing.
 
 ## Already known and covered
 

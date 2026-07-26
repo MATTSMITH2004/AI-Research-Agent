@@ -233,10 +233,13 @@ The promote/prune system (keep it lightweight):
    Include what people are saying about it.
    Maintain a running model-comparison tracker in MEMORY.md (the model
    ledger, persistent like the source-discovery ledger — never trimmed by the
-   news window). It records the current best models by task — coding, writing,
-   reasoning, agentic use, cost — as established by what the briefs have
-   actually covered. Populate and update it ONLY from models covered in briefs;
-   do not run fresh benchmark searches to fill it. Each week's sweep reads the
+   news window). It records the current best, second, and third models by task —
+   coding, writing, reasoning, agentic use, value per dollar, frontier-general.
+   Populate it from two kinds of source: models and results covered in briefs,
+   and a small set of independent evaluations checked directly (Artificial
+   Analysis's Intelligence Index among them, as one input, never the sole
+   source). Never fill a cell from a lab's self-reported numbers alone. The
+   one-time baseline sweep ran Jul 25, 2026; from here the weekly sweep reads the
    tracker to judge whether anything that shipped shifts the standings, and
    updates it when something does.
 3. The money. Funding rounds, infrastructure and data-center spend, big commercial

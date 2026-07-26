@@ -35,6 +35,10 @@ is the subject matter. One skill, many topics.
    a contradiction — `MEMORY.md` always takes precedence over everything, so apply
    its side and keep going, then note the contradiction at the bottom of the brief
    (the topic config's closing "Config notes" item) for me to resolve later.
+   While reading, spot-check MEMORY's pointer bullets against their owner files.
+   If MEMORY describes a rule differently than the file that owns it, follow the
+   owner and note the mismatch in Config notes — a stale summary in MEMORY is a
+   bug in MEMORY, not an override (see MEMORY's "write pointers, not copies").
 
 2. **Gather the written sources.** Work through each written source listed in the
    config, and also search the open web broadly, with several focused searches

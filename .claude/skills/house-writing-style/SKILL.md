@@ -76,6 +76,11 @@ company" fails — it fits fifty companies. Say what the company actually sells
 and to whom: "Databricks, which sells the software companies use to store,
 clean, and analyze large amounts of data and to build AI systems on top of it."
 
+A named failure to avoid repeating: the week-of-Jun-24 Snowflake item ran
+"craft-and-margin economics" and "agent-driven legacy migrations" with no gloss
+on either — both are exactly the kind of buzzy business phrase that must be said
+in plain words.
+
 ## 4. Every fact earns its place — visibly
 
 State each fact's relevance to the point it serves, in the same sentence or the

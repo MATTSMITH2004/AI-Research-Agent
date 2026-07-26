@@ -167,6 +167,22 @@ For every proposed rule or sharpening, read the destination file and check:
 - **Supersession**: it replaces an existing rule → propose replace-not-
   append, quoting what it would remove.
 
+**Sweep every rule file, not just the destination.** Before proposing an edit,
+search all four — `CLAUDE.md`, `topics/*.md`, `house-writing-style`,
+`research-digest` — plus `MEMORY.md`, for any passage describing the same rule,
+using the rule's distinctive words (a beat label, a section name, a format
+term). Editing the owner file while a second file still describes the old
+version does not produce a visible conflict; it produces a silent override,
+since MEMORY outranks the others and the two files never look like they
+disagree. Every stale copy found is part of the proposed edit — deleted, or
+reduced to a pointer — and is listed in the memo under the item that supersedes
+it, so what gets ratified is the whole change, not just its best-known half.
+Two real cases: the Jul 18 round moved "What people are saying" to three-layer
+entries in the topic config while MEMORY kept describing the two-layer form,
+and the next brief silently used the old format; the same round rewrote the
+model-ledger sourcing rule in MEMORY while the topic config kept the superseded
+"briefs only, no fresh searches" wording.
+
 ## Step 5 — The proposal memo, then STOP
 
 One memo, grouped in this order:
@@ -206,6 +222,10 @@ the standing git rules, replacing what each edit supersedes rather than
 appending. Rejected items are dropped without residue. Deferred items and
 design flags get one line in the closing summary so they are findable — they
 are NOT written into any rule file as pending.
+
+Verify before committing: re-search the rule files for the distinctive wording
+of each ratified change and confirm no superseded copy survived anywhere. A
+ratified edit is not applied until it is the only version in the repo.
 
 Commit the archived feedback document from Step 1 with those edits, and add
 its row to `feedback/README.md`: the brief commented on, the file, the
