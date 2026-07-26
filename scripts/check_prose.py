@@ -9,11 +9,20 @@ revision pass works from a list instead of from memory:
   - unlinked sections     research-digest "a named source is a linked source"
   - unlinked Source lines same rule — every named source carries its own link
   - unglossed terms       house-writing-style rule 3, against the glossary
-                          roster in topics/ai-pulse.md
+                          roster in topics/ai-pulse.md — VOCABULARY ONLY
   - banned constructions  house-writing-style rule 5
 
 The glossary check NEVER asks you to drop a term. Using the real word is the
 point (CLAUDE.md's jargon rule); the flag means the explanation is missing.
+
+WHAT THIS SCRIPT DOES NOT CHECK — companies. Every company named in a brief
+needs what it sells, to whom, and why it is in the story, and this script does
+not verify that. Deciding which companies need explaining depends on what the
+reader already knows, not on anything in the grammar: a loose proper-noun
+detector flagged 134 items on one brief (people, publications, fragments), and
+a tight one flagged 6 while missing the case that prompted the rule. Companies
+are enforced by the per-item enumeration in research-digest step 7, check 2. A
+clean run here is not evidence that companies were explained.
 
 It is a REPORTER, not an editor. It flags candidates; the writer judges each
 one and fixes or deliberately keeps it. A clean run is not proof the prose is

@@ -17,7 +17,8 @@ Anything without a mechanical check is marked **unverified**, never applied.
 | D3 | Empty cells carry a stated reason | topics | No empty standings cell without an explanation in that closing line | |
 | D4 | AI Daily Brief gets a full entry only when NLW makes a substantive argument; cite it on the Source line wherever it surfaced a lead | topics | Any ADB entry carries an NLW argument, not a recap; ADB appears on Source lines of items it surfaced | |
 | D5 | One entry per argument, not per source; a source arguing one side of a "Both sides" beat belongs inside the item | topics | No perspective entry restates a top development without adding a separable argument | |
-| F1 | Glossary roster in the topic config + mechanical gloss check | topics + script | `check_prose.py` reports 0 unglossed terms | |
+| F1 | Vocabulary glossary roster in the topic config + mechanical gloss check | topics + script | `check_prose.py` reports 0 unglossed terms | |
+| F1b | Companies: every one named gets what it sells, to whom, why it is in the story — enforced by a per-item enumeration, not by the script (amended Jul 26; a list of companies is always behind, and neither a loose nor a tight detector worked) | house-writing-style §3 + research-digest §7 | Every non-household company in the brief carries all three parts on first mention | |
 | F2 | A sentence asserting a mechanism is followed by the mechanism in plain words | house-writing-style §1 | No "creates/leads to/risks/favors" sentence followed by a topic change (qualitative — mark unverified if not mechanically checkable) | |
 | F3 | Every named source on a Source line carries its own hyperlink | topics + script | `check_prose.py` reports 0 unlinked Source lines | |
 | F4 | Credentials name role, organisation, what it does, and what qualifies them; never an unnamed attribution | research-digest | No bare job-title credentials; zero occurrences of "one commentator," "an analyst," "some observers" | |

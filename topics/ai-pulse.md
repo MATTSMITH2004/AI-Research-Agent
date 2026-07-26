@@ -438,6 +438,15 @@ rendered in a brief. `scripts/check_prose.py` reads this list and flags any term
 on it that appears without an explanation nearby, so the gloss rule is checked
 mechanically instead of by memory.
 
+**Vocabulary only — no companies.** Companies are deliberately not listed here.
+Every company named in a brief needs what it sells, to whom, and why it is in
+the story (house-writing-style rule 3), and that applies to companies nobody has
+heard of yet, so a list would always be behind. Companies are enforced instead
+by the per-item enumeration in research-digest step 7, check 2. This roster
+covers vocabulary, which a list handles well: the words below are not
+capitalised and cannot be spotted structurally, and the AI vocabulary changes
+yearly rather than weekly.
+
 This list never bans a term. Using the real word is the point: CLAUDE.md's
 jargon rule says to use it and gloss it in a few plain words the first time, so
 the vocabulary builds over time. The checker flags an UNGLOSSED use, never the
@@ -445,11 +454,9 @@ use itself. A gloss counts whether it is a parenthetical, a comma-clause, an
 em-dash aside, or its own sentence — parentheses when it runs a clause or two,
 its own sentence when it needs more room.
 
-Extend this list whenever a brief draws a "what does this mean" comment.
+Extend this list whenever a brief uses a term of art not already on it, without
+waiting for a "what does this mean" comment.
 
-- Companies and products: Hugging Face, Databricks, Snowflake, Palantir,
-  CoreWeave, Cursor, Harvey, Mercor, SambaNova, Modal, Together AI, Moonshot,
-  Z.ai, DeepSeek, Thinking Machines, Epoch AI, METR, Artificial Analysis
 - Model and training terms: parameters, context window, mixture of experts (MoE),
   open weights, distillation, fine-tuning, post-training, reinforcement learning,
   attention mechanism, inference, tokens, quantization, synthetic data,

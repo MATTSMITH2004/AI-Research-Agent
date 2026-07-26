@@ -92,13 +92,22 @@ is the subject matter. One skill, many topics.
 
    1. **Paragraphs.** Count the sentences in each paragraph. Split any past
       five at a natural seam. Count, then split — do not eyeball it.
-   2. **Jargon.** For every term of art, ask whether the reader profiled in
-      CLAUDE.md — finance-fluent, economics-solid, no technical background —
-      already owns that word. Finance vocabulary passes unglossed. Any
-      technical, AI, or industry term fails and gets a plain-language gloss on
-      first use (house-writing-style rule 3). A term the drafter did not notice
-      as jargon is the one most likely to fail — check nouns that would not
-      appear in a finance textbook.
+   2. **Jargon, then companies.** For every term of art, ask whether the reader
+      profiled in CLAUDE.md — finance-fluent, economics-solid, no technical
+      background — already owns that word. Finance vocabulary passes unglossed.
+      Any technical, AI, or industry term fails and gets a plain-language gloss
+      on first use (house-writing-style rule 3). A term the drafter did not
+      notice as jargon is the one most likely to fail — check nouns that would
+      not appear in a finance textbook.
+
+      Then, separately: **list every company named in this item, and for each
+      one point to where its three parts appear** — what it sells, to whom, and
+      why it is in this story. This is an enumeration, not a scan: an item names
+      perhaps three to eight companies, and the check is finished when every one
+      has been accounted for. Household names (Apple, Google, Amazon) are the
+      only exemption. A company you cannot write the three parts for is one you
+      do not understand well enough to have included — go find out or cut it.
+      No script covers this; the enumeration IS the enforcement.
    3. **Causal chains.** Rebuild every causal claim and every relayed argument
       step by step: a, therefore b, therefore c (rule 1). If a middle step
       cannot be written down, find it in the source or cut the claim. A reader

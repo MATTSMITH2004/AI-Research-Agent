@@ -97,12 +97,18 @@ A named failure to avoid repeating: the week-of-Jun-24 Snowflake item ran
 on either — both are exactly the kind of buzzy business phrase that must be said
 in plain words.
 
-When a company is central to an item, give a real explanation of what it does —
-what it sells, to whom, and why it is in this story — not a one-clause tag. Put
-it in parentheses right after the first mention when it runs a clause or two;
-give it its own sentence when it needs more room. `scripts/check_prose.py`
-checks this mechanically against the glossary roster in the topic config, and
-accepts either form.
+Every company named in an item gets three things on first mention: **what it
+sells, to whom, and why it is in this story.** All three, every company, with
+one exception — household names the reader plainly already knows (Apple,
+Google, Amazon, Microsoft). "A data and AI infrastructure company" fails
+because it answers none of the three. Put the explanation in parentheses right
+after the first mention when it runs a clause or two; give it its own sentence
+when it needs more room.
+
+This is not checkable by script — deciding which companies need explaining
+depends on what the reader knows, not on anything in the grammar, and both a
+loose and a tight detector were tried and failed. It is enforced instead by the
+per-item enumeration in research-digest step 7, check 2.
 
 BEFORE (week of Jul 25): "OpenAI and Hugging Face jointly disclosed that
 OpenAI's own models caused a real cyberattack on Hugging Face's infrastructure."
