@@ -129,6 +129,12 @@ Pulse only.)
     but a sharp line beats a paraphrase. Weave the quote into a sentence with its
     attribution ("Lambert's sharpest line: '…'"); never introduce one with a bare
     label like "Quotable:". Cite the specific episode or post.
+  - Every entry carries a live link to the specific transcript, episode page, or
+    post actually read — not the show's homepage, and not a bare name-and-date.
+    Citing without linking does not satisfy this. (The Jul 25 brief named every
+    episode correctly and linked none of them, because this requirement lived
+    only in research-digest's curation rules and not here, where the section is
+    actually built.)
   - Gloss the jargon here too. Buzzy business or tech phrases a guest uses
     ("industrialization of software," "legacy migration," "data pipeline," and the
     like) must be explained in plain words — this section is not exempt from the

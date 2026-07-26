@@ -84,28 +84,50 @@ is the subject matter. One skill, many topics.
    happened and why it matters, judged through my lenses, in your own words and in
    the neutral voice set by `CLAUDE.md` and the topic config (not addressed to a
    reader). Do not reproduce source text. The "Writing and curation rules" section
-   below adds brief-level enforcement on top of the house style. After drafting each item, re-read it and split any paragraph longer than
-   five sentences at a natural seam before moving on. This is a separate pass,
-   not a drafting-time intention — count, then split. In the same pass, sweep each item for jargon: for every term of art, ask
-   whether the reader profiled in CLAUDE.md — finance-fluent, economics-solid,
-   no technical background — already owns that word. Finance vocabulary
-   passes unglossed. Any technical, AI, or industry term fails the test and
-   gets a plain-language gloss on first use, per house-writing-style rule 3.
-   A term the drafter did not notice as jargon is the term most likely to
-   fail this test — check nouns that would not appear in a finance textbook.
-   Also in the same pass: rebuild every causal claim and every relayed argument
-   step by step — a, therefore b, therefore c (house-writing-style rule 1). If
-   a middle step cannot be written down, find it in the source or cut the
-   claim; a reader asking "why?" at a sentence marks exactly where this check
-   was skipped. Finally, sweep sentences as well as paragraphs: flag any
-   sentence with three or more commas or roughly thirty-plus words and split
-   it unless it is genuinely one idea (house-writing-style rule 8).
+   below adds brief-level enforcement on top of the house style.
+
+   **The revision pass.** After drafting each item, run these four checks as
+   separate acts, not as a drafting-time intention. Each is a thing you do and
+   finish, in order:
+
+   1. **Paragraphs.** Count the sentences in each paragraph. Split any past
+      five at a natural seam. Count, then split — do not eyeball it.
+   2. **Jargon.** For every term of art, ask whether the reader profiled in
+      CLAUDE.md — finance-fluent, economics-solid, no technical background —
+      already owns that word. Finance vocabulary passes unglossed. Any
+      technical, AI, or industry term fails and gets a plain-language gloss on
+      first use (house-writing-style rule 3). A term the drafter did not notice
+      as jargon is the one most likely to fail — check nouns that would not
+      appear in a finance textbook.
+   3. **Causal chains.** Rebuild every causal claim and every relayed argument
+      step by step: a, therefore b, therefore c (rule 1). If a middle step
+      cannot be written down, find it in the source or cut the claim. A reader
+      asking "why?" at a sentence marks exactly where this check was skipped.
+   4. **Sentences.** Split any sentence that stacks a second idea onto a comma
+      tail (rule 8).
+
+   Then run the mechanical check over the whole draft, which catches what a
+   read-through reliably misses:
+
+       python3 scripts/check_prose.py briefs/<topic>-<date>.md
+
+   It reports run-on sentences, over-long paragraphs, sections carrying no
+   source links, and banned constructions, each with a line number. Work the
+   list: fix what it flags, and where a flag is a false positive, leave it and
+   move on. Two of its numbers are about the document rather than any one line
+   — median sentence length and the share of sentences over rule 8's trigger.
+   A median much above ~20 words, or a rate much above ~25%, means check 4 did
+   not bind and the draft needs another pass, not a few spot fixes. (For scale:
+   the Jul 25 brief ran a 29-word median with 53% over trigger.) The script
+   flags; you judge.
 
 8. **Produce the brief as a Word document.** Format it using the topic config's
    output shape as the canonical structure (for ai-pulse, the "Output shape"
    section). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
-   Then give me the highlights inline.
+   Run `scripts/check_prose.py` once more on the final markdown before
+   rendering, so nothing introduced during assembly slips through. Then give me
+   the highlights inline.
 
 9. **Report what you reached.** Before or with the highlights, tell me plainly
    which written sources, podcasts, and YouTube channels you actually pulled from
