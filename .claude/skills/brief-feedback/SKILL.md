@@ -18,6 +18,37 @@ standing rule that quietly degrades every future brief. So the procedure is
 extract → classify → route → conflict-check → propose → STOP for verdicts →
 apply only what was approved.
 
+## Step 0 — Audit the previous round
+
+Before reading a single new comment, verify the last round actually landed.
+This runs first because its findings change how the new comments are read: a
+complaint that repeats last round's is not a new rule, it is evidence the last
+fix did not bind.
+
+1. Read the most recent `feedback/*-ratified.md` record.
+2. For each item, check the file it landed in — confirm the ratified wording
+   is still there and has not been overwritten by a later edit.
+3. For each item with an observable check, examine the brief now under comment
+   and mark it **applied**, **partially applied**, **not applied**, or **not
+   yet testable** (no occasion arose this week — carry it forward, never score
+   it as a pass). Check mechanically where the rule allows it: grep for a
+   banned label, count sentences carrying three or more commas, count
+   hyperlinks in a section that requires them. A qualitative rule gets a
+   qualitative read, marked as such.
+4. For anything not applied, diagnose why before proposing anything. Known
+   causes, in order of likelihood: a stale copy of the old rule survives in a
+   higher-precedence file (the Jul 25 failure — the topic config had the new
+   spec, MEMORY still described the old one); the rule reads as an aspiration
+   rather than a checkable act; it landed in a file the drafting step does not
+   read at the right moment; or it conflicts with another rule that won.
+   Re-ratifying the same words fixes none of these.
+5. Look for clustering. Several failures in one section of the brief usually
+   means one shared cause, not several independent ones — in the Jul 25 audit
+   a single stale note suppressed three separate ratified changes, all inside
+   "What people are saying."
+6. Write the results into the memo's first group, and fill in the Result
+   column of that round's record.
+
 ## Step 1 — Extract every comment with its anchored text
 
 Comments live in the docx XML, not the visible text. Unzip the .docx and
@@ -37,7 +68,9 @@ Archive the upload. Copy the document to `feedback/` as
 (matching that brief's filename in `briefs/`), so the raw input behind every
 rule change stays traceable. It gets committed in Step 6 alongside whatever
 was ratified — including a round where Matthew rejects everything, since the
-document is the record either way.
+document is the record either way. Its companion
+`ai-pulse-<YYYY-MM-DD>-ratified.md` record is written in Step 6, once the
+verdicts are in.
 
 ## Step 2 — Classify each comment
 
@@ -186,18 +219,22 @@ model-ledger sourcing rule in MEMORY while the topic config kept the superseded
 ## Step 5 — The proposal memo, then STOP
 
 One memo, grouped in this order:
-1. Decisions needed — conflicts, ambiguous classifications, design
+1. Last round's audit (Step 0) — what was ratified, what landed, what did
+   not, and for each failure the diagnosis plus a proposed fix aimed at the
+   cause rather than a restatement of the rule. Items still not yet testable
+   carry forward, named.
+2. Decisions needed — conflicts, ambiguous classifications, design
    questions, and any proposed new categories. Options, not a single
    recommendation.
-2. Enforcement failures — the failed rule, the evidence (comment + anchor),
+3. Enforcement failures — the failed rule, the evidence (comment + anchor),
    and the drafted sharpening. Dual-classified one-offs appear here as
    evidence lines even when no sharpening is proposed yet.
-3. New standing rules — each with source comment, destination, and the exact
+4. New standing rules — each with source comment, destination, and the exact
    paste-ready edit, written in the house register: a check with an audit
    trigger and a before/after where possible. A rule that cannot be checked
    will not bind.
-4. One-offs and curation — one line each.
-5. Positive signals — what to protect.
+5. One-offs and curation — one line each.
+6. Positive signals — what to protect.
 
 Presentation rules for every memo item (added Jul 2026 after Matthew had to
 ask for both — the memo must answer these in place, not on request):
@@ -232,8 +269,19 @@ its row to `feedback/README.md`: the brief commented on, the file, the
 comment count, and a one-line outcome (what was ratified and where, how much
 was deferred).
 
-Close with a two-line summary: N comments → N one-offs queued, N sharpenings
-and N rules landed (by file), N design items open.
+Write this round's record to `feedback/ai-pulse-<YYYY-MM-DD>-ratified.md`,
+following the format of the existing records: one row per ratified item —
+item, change, destination file, the observable check to run against the next
+brief, and an empty Result column for the next round's Step 0 to fill. An
+observable check must be something a later run can actually look at ("no
+occurrence of X," "every entry in section Y has Z"), not a restatement of the
+rule. Where a rule has no observable signature, say so in the row rather than
+inventing one. Close the record with the round's deferred items, so nothing
+approved-adjacent goes missing between rounds.
+
+Close with a two-line summary: last round's audit result (N of N landed), then
+N comments → N one-offs queued, N sharpenings and N rules landed (by file), N
+design items open.
 
 ## Boundaries
 
