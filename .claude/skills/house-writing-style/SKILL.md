@@ -40,6 +40,22 @@ When relaying someone's argument, render it as an explicit chain (their claim
 is a, therefore b, therefore c). If a step contradicts common intuition (e.g.
 "demand is set by price"), explain what they actually mean before moving on.
 
+Any sentence asserting a mechanism — "creates," "leads to," "risks," "favors,"
+"forces" — must be followed by the mechanism itself, in plain words, in the next
+sentence. If the next sentence moves on instead, the chain was asserted, not
+shown.
+
+BEFORE (week of Jul 25): "Beijing does not need chip parity with Nvidia, only
+enough domestic compute to keep its labs' work moving, which creates a captive
+demand loop favoring Chinese chipmakers regardless of whether their chips are
+competitive on price or performance."
+
+AFTER: "Beijing does not need chip parity with Nvidia — only enough domestic
+compute to keep its labs working. Export controls mean Chinese labs cannot buy
+the best Western chips at any price, so they buy domestic ones regardless of
+whether those chips win on merit. That guarantees Chinese chipmakers a captive
+customer base: demand created by the restrictions, not by the product."
+
 ## 2. Claim first, then evidence
 
 Open every item and paragraph with a topic sentence stating the frame. The
@@ -80,6 +96,25 @@ A named failure to avoid repeating: the week-of-Jun-24 Snowflake item ran
 "craft-and-margin economics" and "agent-driven legacy migrations" with no gloss
 on either — both are exactly the kind of buzzy business phrase that must be said
 in plain words.
+
+When a company is central to an item, give a real explanation of what it does —
+what it sells, to whom, and why it is in this story — not a one-clause tag. Put
+it in parentheses right after the first mention when it runs a clause or two;
+give it its own sentence when it needs more room. `scripts/check_prose.py`
+checks this mechanically against the glossary roster in the topic config, and
+accepts either form.
+
+BEFORE (week of Jul 25): "OpenAI and Hugging Face jointly disclosed that
+OpenAI's own models caused a real cyberattack on Hugging Face's infrastructure."
+
+AFTER: "OpenAI and Hugging Face jointly disclosed that OpenAI's own models
+caused a real cyberattack on the infrastructure of Hugging Face (the industry's
+main hub for publishing and downloading open AI models, which is why an
+intrusion there reaches well beyond one company)."
+
+The gloss pattern working, from the same brief (Matthew flagged this one as
+right): "…the models used that opening to escape the sandbox (the isolated
+testing environment meant to contain them)."
 
 ## 4. Every fact earns its place — visibly
 
@@ -160,6 +195,24 @@ better positioned than Washington to absorb a domestic model as capable as
 Anthropic's flagship. China has had a working government-approval channel for
 new models since 2023, and its labs talk to their regulators regularly. The US
 process, by contrast, remains fragmented across agencies."
+
+A second case, from the week of Jul 25 — four claims in one sentence, with the
+payload buried after a colon and a closing "not X" that adds nothing:
+
+BEFORE: "The prompt-injection red-team result is a concrete, adversarially
+tested security claim, rarer in this space than a benchmark score, and directly
+relevant to any legal or financial operation considering AI agents with real
+system access: injected instructions from untrusted content are a live,
+demonstrated risk across the industry, not a hypothetical one."
+
+AFTER: "Outside researchers were paid to break these tools, and every one except
+Claude Code fell. That is stronger evidence than a benchmark score, because
+someone was actively trying to make it fail. For any firm considering agents
+with access to real systems, it means hidden instructions buried in documents an
+agent reads are a demonstrated attack, not a theoretical one."
+
+A labelled beat is not a licence for one long sentence. A "Both sides" bullet,
+like any other prose, runs two to four short sentences per side.
 
 ## 9. Name the thing — no stand-in words at the verdict
 

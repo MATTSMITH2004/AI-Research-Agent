@@ -45,7 +45,12 @@ Pulse only.)
     below. Tag claims inline as well: after each claim or claim-cluster, add a
     short bracketed tag ("[Apple complaint]", "[CNBC]") naming which Source-line
     entry supports it, so each sentence is traceable to its source at the point
-    of reading. If a claim has no source, do not make it.
+    of reading. (Confirmed working, Jul 25 feedback — keep this bracketed-tag
+    format; the rules below extend it rather than replace it.) Hyperlink the
+    source in BOTH places: the inline tag and the Source-line entry it points to.
+    On the Source line, every named source carries its own hyperlink — a bare
+    name is not a citation, and one linked source does not cover the unlinked
+    ones beside it. If a claim has no source, do not make it.
     Benchmarks and jargon: never drop a benchmark, index, ranking, or score
     without explaining, in plain words, what it measures, who measures it, and
     how to read the number (what counts as good, what it means in practice). I
@@ -70,6 +75,33 @@ Pulse only.)
     significance — neutral voice, not addressed to a reader. When there are several
     distinct reasons, use an indented bullet list, each bullet led by a short bold
     phrase.
+    Trace consequences two steps out, not one. Naming what a development
+    contests or confirms is the setup, not the payoff: say what changes as a
+    result, for whom, and what would have to be true for it to matter more or
+    less. Where the reasoning rests on someone's premise, state that premise in
+    plain words before contesting it — a reader cannot weigh an argument whose
+    other side was never spelled out. A "why it matters" that restates the
+    item's significance in different words has not done the work. Run two or
+    more paragraphs whenever the chain needs the room; length here follows the
+    reasoning, not a target.
+    BEFORE (week of Jul 25): "Delangue's framing directly contests the premise
+    behind Washington's distillation crackdown (item 2) — that protecting two
+    dominant labs' market position is itself the safety-relevant outcome — and
+    his local-model routing prediction is a concrete, checkable trend to track."
+    AFTER: "Delangue contests the premise under Washington's crackdown. That
+    premise runs: the two leading US labs spend heavily on safety testing before
+    releasing anything, Chinese open-weight labs largely do not, so keeping the
+    safest labs commercially dominant keeps the most-used models the most-tested
+    ones. Restrict the cheap Chinese alternatives and buyers stay with the safer
+    product. / His counter is that the concentration is itself the danger. On his
+    read the restrictions guard against a security risk nobody has yet
+    demonstrated, while making certain the thing he thinks is actually dangerous
+    — two companies owning the technology everyone else has to build on. / The
+    test is observable within a year. Watch whether enterprise buyers keep moving
+    to open models on cost while Washington restricts them on security grounds.
+    If both keep happening, the restrictions are pushing demand to Chinese
+    suppliers rather than reducing it, and the labs that lobbied for them lose
+    the commercial case they were built on."
   - **My take.** *(required)* The writer's own opinion, clearly labeled as
     editorial and separated from the facts above, including the signal-versus-hype
     call. It is the writer's voice, not a note addressed to any one reader. When a
@@ -106,6 +138,17 @@ Pulse only.)
   once to introduce the new standings, moved or not. The ledger's full detail
   (basis, dates) lives in MEMORY.md; the brief shows the standings themselves,
   not the basis column.
+  Below the per-task table, add a combined overall ranking as two short lists —
+  "Overall, best regardless of cost" and "Overall, best per dollar," five models
+  each. Two lists rather than one blended score, so the capability-versus-cost
+  trade-off stays visible instead of disappearing into invented weights; never
+  publish a single ranking that silently mixes them. The per-task table stays
+  exactly as it is — the overall lists are an addition, not a replacement.
+  Close the section with one line naming how many independent evaluators the
+  standings drew on this week and which they were. Where a cell is empty, say
+  why in that line (evaluators disagree; a source was unreachable) — an empty
+  cell with a stated reason is honest and still tells the reader something; an
+  empty cell with no explanation reads as an oversight.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
 - **What people are saying.** The perspective layer from the podcasts and
@@ -149,6 +192,28 @@ Pulse only.)
     its own claim-style header (a "Latent Space: …" entry for a conference
     recap and a separate "Latent Space: …" entry for an unrelated company
     story), rather than merging them into one entry.
+  - One entry per argument, not per source that touched the story. A source
+    earns its own entry when its argument is separable from every top
+    development — a claim, framework, or piece of evidence worth reading even if
+    the news item did not exist. When a source mainly reinforces or restates an
+    item above, fold its point into that item and cite it there, rather than
+    giving it a second write-up. One specific case: when an item runs a "Both
+    sides" beat and a source is arguing for one of those sides, that source
+    belongs inside the item as one of the sides — attributed, with its
+    credential — not as a separate entry. It is taking a position in the item's
+    dispute, so the dispute is where the reader needs it.
+    Three guards against over-folding, because a thin perspective section is the
+    worse failure: the test is the ARGUMENT, not the topic — two sources on the
+    same news with genuinely different arguments both keep their entries; a
+    folded source keeps full credit, with its specific contribution named on that
+    item's Source line, never a bare citation; and when the call is close, the
+    entry stays. (The Jul 25 Epoch AI entry is the case this rule is for: it
+    restated item 1's incident with a foreseeability framing that belonged
+    inside item 1.)
+  - The AI Daily Brief earns a full entry when Nathaniel Whittemore makes a
+    substantive argument of his own, rather than relaying what happened. When it
+    only surfaced the lead, no entry — but cite it on the item's Source line
+    wherever it surfaced that lead, even when a primary source anchors the item.
 - **On my radar.** Things that have not landed yet, open questions, threads to
   follow next week. Bullets.
 - **New sources worth adding.** The output of the standing source-discovery beat
@@ -338,12 +403,55 @@ only the inline clauses it feeds, exactly like the source descriptions above
 inform sourcing without being printed. Edit it as the rotation changes.
 
 - Dean Ball — policy lead, OpenAI (joined Jul 2026); former AI policy advisor, Trump administration.
+- Nathan Lambert — research scientist at the Allen Institute for AI, a nonprofit
+  AI research lab; specialises in how models are refined after their initial
+  training (post-training); writes the Interconnects newsletter.
+- Dylan Patel — founder and chief analyst, SemiAnalysis, the research firm whose
+  supply-chain and datacenter cost modelling the industry treats as a reference;
+  writes on chips, compute economics, and datacenter buildouts.
+- Ben Bajarin — CEO and principal analyst, Creative Strategies, a Silicon Valley
+  technology research and advisory firm; writes The Diligence Stack on
+  semiconductors, cloud, and enterprise AI adoption.
+- Nathaniel Whittemore (NLW) — host and writer, The AI Daily Brief, a daily AI
+  news and analysis show and newsletter.
 - Kevin Roose — tech columnist, The New York Times; co-host, Hard Fork.
 - Casey Newton — founder, Platformer; co-host, Hard Fork.
 - Ethan Mollick — professor, Wharton; writes One Useful Thing on applied AI.
 - Nathan Lambert — post-training researcher; writes Interconnects.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
+
+### Terms to gloss (glossary roster)
+
+Backstage reference, exactly like the recurring-voices roster above — never
+rendered in a brief. `scripts/check_prose.py` reads this list and flags any term
+on it that appears without an explanation nearby, so the gloss rule is checked
+mechanically instead of by memory.
+
+This list never bans a term. Using the real word is the point: CLAUDE.md's
+jargon rule says to use it and gloss it in a few plain words the first time, so
+the vocabulary builds over time. The checker flags an UNGLOSSED use, never the
+use itself. A gloss counts whether it is a parenthetical, a comma-clause, an
+em-dash aside, or its own sentence — parentheses when it runs a clause or two,
+its own sentence when it needs more room.
+
+Extend this list whenever a brief draws a "what does this mean" comment.
+
+- Companies and products: Hugging Face, Databricks, Snowflake, Palantir,
+  CoreWeave, Cursor, Harvey, Mercor, SambaNova, Modal, Together AI, Moonshot,
+  Z.ai, DeepSeek, Thinking Machines, Epoch AI, METR, Artificial Analysis
+- Model and training terms: parameters, context window, mixture of experts (MoE),
+  open weights, distillation, fine-tuning, post-training, reinforcement learning,
+  attention mechanism, inference, tokens, quantization, synthetic data,
+  synthetic bootstrap, system prompt
+- Agent and tooling terms: harness, scaffolding, sandbox, prompt injection,
+  red-team, zero-day, agentic, orchestration, routing, MCP, skills, guardrails
+- Benchmarks and evaluations: SWE-bench, Terminal-Bench, FrontierSWE, DeepSWE,
+  Humanity's Last Exam, ARC-AGI, Intelligence Index, EQ-Bench, ExploitBench,
+  Exploit Gym, Elo
+- Business and market shorthand: neocloud, hyperscaler, capex, run rate, ARR,
+  take rate, wrapper, moat, regulatory capture, captive demand, black box,
+  forward-deployed engineer, industrialization of software, legacy migration
 
 ### Video and podcast sources
 

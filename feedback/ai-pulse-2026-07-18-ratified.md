@@ -6,7 +6,10 @@ Source doc: [ai-pulse-2026-07-18-feedback.docx](ai-pulse-2026-07-18-feedback.doc
 Audited against the **July 18–25, 2026 brief** on Jul 25, 2026 — the first brief
 produced after these changes landed.
 
-**Result: 12 of 15 applied, 1 failed, 2 partially applied.**
+**Result: 6 of 15 applied.** (Originally recorded as 12 — corrected Jul 26 when
+the next round's comments contradicted three "applied (qualitative)" marks. See
+"Correction" at the foot of this file. brief-feedback Step 0 now forbids marking
+an item applied without mechanical evidence.)
 
 | # | Change | File | Observable check in the next brief | Result |
 |---|---|---|---|---|
@@ -38,6 +41,23 @@ One stale copy suppressed three changes, not one.
 
 The stale copy is gone (`f1146af`), so the next brief is the real test of
 whether E4 and R1 bind there. Both carry forward to the next round's audit.
+
+## Correction (Jul 26, 2026)
+
+The Jul 26 feedback round contradicted three of the marks above. Corrected:
+
+| Item | Was | Actually | Evidence from the Jul 26 comments |
+|---|---|---|---|
+| E1 causal chains | Applied (qual.) | **FAILED** | Five separate "I don't follow the logic" comments |
+| E2a gloss differentiates | Applied (qual.) | **FAILED** | Databricks — the rule's own worked example — unglossed |
+| R2 name the thing | Applied (qual.) | **Partial** | "failure alignment" flagged as a meaningless term |
+| E2b index glossing | Applied | **Partial** | "10 points behind" never explained |
+| E3 credentials | Applied | **Partial** | Present but shallow; six comments |
+| E4 linked sources | Partial (perspective only) | **FAILED, wider** | Item 2's Source line carries 1 link for 7 named sources |
+
+Every item marked "applied (qualitative)" was wrong; every mechanically verified
+item was right. That asymmetry is the whole lesson, and it produced F7 in the
+Jul 26 round.
 
 ## Deferred from this round (not ratified, recorded so they stay findable)
 

@@ -104,17 +104,27 @@ is the subject matter. One skill, many topics.
       cannot be written down, find it in the source or cut the claim. A reader
       asking "why?" at a sentence marks exactly where this check was skipped.
    4. **Sentences.** Split any sentence that stacks a second idea onto a comma
-      tail (rule 8).
+      tail (rule 8). A labelled beat is not a licence for one long sentence —
+      a "Both sides" bullet runs two to four short sentences per side.
+   5. **Grammar.** Read every sentence for grammatical completeness. A sentence
+      that cannot be read cleanly gets rewritten, not patched.
+      BEFORE (week of Jul 25): "…the rest of the open-weight field is not as far
+      ahead as it is being covered as catching up to." AFTER: "…the rest of the
+      open-weight field may be less independently capable than its benchmark
+      scores suggest."
 
    Then run the mechanical check over the whole draft, which catches what a
    read-through reliably misses:
 
        python3 scripts/check_prose.py briefs/<topic>-<date>.md
 
-   It reports run-on sentences, over-long paragraphs, sections carrying no
-   source links, and banned constructions, each with a line number. Work the
-   list: fix what it flags, and where a flag is a false positive, leave it and
-   move on. Two of its numbers are about the document rather than any one line
+   It reports run-on sentences, over-long paragraphs, sections and Source lines
+   carrying no hyperlinks, unglossed terms from the topic config's glossary
+   roster, and banned constructions, each with a line number. Work the list: fix
+   what it flags, and where a flag is a false positive, leave it and move on.
+   The glossary check never asks you to drop a term — use the real word and
+   gloss it, per CLAUDE.md's jargon rule; the flag means the explanation is
+   missing, not the term. Two of its numbers are about the document rather than any one line
    — median sentence length and the share of sentences over rule 8's trigger.
    A median much above ~20 words, or a rate much above ~25%, means check 4 did
    not bind and the draft needs another pass, not a few spot fixes. (For scale:
@@ -126,7 +136,8 @@ is the subject matter. One skill, many topics.
    section). Save it as a `.docx` file to `briefs/<topic>-<YYYY-MM-DD>.docx`. (Keep a
    markdown copy alongside it if convenient, but the Word doc is the deliverable.)
    Run `scripts/check_prose.py` once more on the final markdown before
-   rendering, so nothing introduced during assembly slips through. Then give me
+   rendering. Do not render while it still reports run-ons, unlinked Source
+   lines, or unglossed terms — those are gates, not suggestions. Then give me
    the highlights inline.
 
 9. **Report what you reached.** Before or with the highlights, tell me plainly
@@ -198,23 +209,32 @@ lives in the topic config, not here.
   - After: same claim, with the primary source linked inline. If no source can be
     found, the item doesn't run.
 
-- **Credential every named person, every time.** Any time a person is named —
-  in a top development, a skim item, or a perspective entry — attach a
-  credential clause: their role, their affiliation, and in one phrase what that
-  company or body does. This holds on every mention, not
-  just the first, and whether or not they are quoted. It includes podcast
-  hosts, co-hosts, and guests — everyone named in a "What people are saying"
-  entry, quoted or not: "with guests Kevin Xu, an investor who writes the
-  Interconnected newsletter on US-China tech, and Matt Sheehan, a Carnegie
-  Endowment fellow focused on Chinese AI policy." Keep it to a clause, not
-  a biography — a name that recurs in one item gets a light tag each time, not
-  a repeated paragraph. Pull standing wording from the topic config's
-  recurring-voices roster where one exists, so the description stays consistent.
+- **Credential every named person, every time — with enough to judge them by.**
+  A credential names four things: the person's role, the organisation, what that
+  organisation actually does, and what specifically qualifies them on this
+  subject — prior roles, the work they are known for, or the institution's
+  standing. A job title alone fails. "An economist" fails; "an economist at X"
+  still fails. This holds on every mention, not just the first, whether or not
+  they are quoted, and it includes podcast hosts, co-hosts, and guests —
+  everyone named in a "What people are saying" entry.
+  - Before: "Interconnects (Nathan Lambert, post-training researcher)"
+  - After: "Nathan Lambert, a research scientist at the Allen Institute for AI —
+    a nonprofit AI research lab — who specialises in how models are refined
+    after their initial training and writes the Interconnects newsletter"
   - Before: "...as Dean Ball put it, 'this opacity will not lend itself well to a
     stable, investable industry.'"
-  - After: "...as Dean Ball, a former AI policy advisor in the Trump
-    administration, put it: 'this opacity will not lend itself well to a stable,
-    investable industry.'"
+  - After: "...as Dean Ball, OpenAI's policy lead and previously an AI policy
+    advisor in the Trump administration, put it: 'this opacity will not lend
+    itself well to a stable, investable industry.'"
+
+  **Never an unnamed attribution.** No "one commentator," "an analyst," "some
+  observers," or any claim attributed to a person who is not named. If the
+  person cannot be named and credentialed, the claim does not run.
+
+  Keep it to a clause or two, not a biography — a name recurring inside one item
+  gets a light tag on later mentions, not the full treatment repeated. Pull
+  standing wording from the topic config's recurring-voices roster where one
+  exists, so the description stays consistent across weeks.
 
 - **Cross-references restate before contrasting.** Referencing another item is
   encouraged, but restate what that item said in one clause before drawing the

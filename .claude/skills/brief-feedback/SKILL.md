@@ -31,10 +31,16 @@ fix did not bind.
 3. For each item with an observable check, examine the brief now under comment
    and mark it **applied**, **partially applied**, **not applied**, or **not
    yet testable** (no occasion arose this week — carry it forward, never score
-   it as a pass). Check mechanically where the rule allows it: grep for a
-   banned label, count sentences carrying three or more commas, count
-   hyperlinks in a section that requires them. A qualitative rule gets a
-   qualitative read, marked as such.
+   it as a pass). An item may only be marked applied on MECHANICAL evidence: a
+   grep, a count, a named line quoted from the brief. Where no mechanical check
+   exists, mark it **unverified** — never applied — and carry it forward.
+   Run `scripts/check_prose.py` on the brief as part of this step; it covers
+   sentence length, links, glossing, and banned constructions directly.
+   This rule exists because the Jul 25 audit marked three items "applied
+   (qualitative)" on a skim and all three had failed: the causal-chain rule
+   (five reader complaints), the gloss rule (Databricks, the rule's own worked
+   example, unglossed), and the stand-in-words rule. A spot-check is not an
+   audit.
 4. For anything not applied, diagnose why before proposing anything. Known
    causes, in order of likelihood: a stale copy of the old rule survives in a
    higher-precedence file (the Jul 25 failure — the topic config had the new

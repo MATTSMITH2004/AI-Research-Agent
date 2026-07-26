@@ -7,7 +7,13 @@ revision pass works from a list instead of from memory:
   - long sentences        house-writing-style rule 8 (one idea per sentence)
   - long paragraphs       topic config "Readability" (split past five sentences)
   - unlinked sections     research-digest "a named source is a linked source"
+  - unlinked Source lines same rule — every named source carries its own link
+  - unglossed terms       house-writing-style rule 3, against the glossary
+                          roster in topics/ai-pulse.md
   - banned constructions  house-writing-style rule 5
+
+The glossary check NEVER asks you to drop a term. Using the real word is the
+point (CLAUDE.md's jargon rule); the flag means the explanation is missing.
 
 It is a REPORTER, not an editor. It flags candidates; the writer judges each
 one and fixes or deliberately keeps it. A clean run is not proof the prose is
@@ -50,6 +56,10 @@ BANNED = [
     r"\bQuotable\b",
 ]
 
+GLOSSARY_CONFIG = "topics/ai-pulse.md"
+GLOSSARY_HEADING = "### Terms to gloss"
+GLOSS_WINDOW = 220      # chars after a term in which a gloss must appear
+
 SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
 # Abbreviations that must not end a sentence
 ABBREV = re.compile(r"\b(?:e\.g|i\.e|vs|Mr|Ms|Dr|Inc|Corp|Co|St|No|approx|U\.S|U\.K)\.$",
@@ -83,6 +93,55 @@ def split_sentences(text):
     return [s for s in out if s.strip()]
 
 
+def load_glossary(path=GLOSSARY_CONFIG):
+    """Read the glossary roster out of the topic config. The list lives in prose
+    so Matthew can edit it without touching code; this just parses it."""
+    try:
+        text = open(path, encoding="utf-8").read()
+    except OSError:
+        sys.stderr.write(f"# no glossary roster at {path}; skipping gloss check\n")
+        return []
+    if GLOSSARY_HEADING not in text:
+        return []
+    section = text.split(GLOSSARY_HEADING, 1)[1]
+    section = re.split(r"\n### ", section, 1)[0]
+    terms = []
+    for line in section.split("\n"):
+        m = re.match(r"\s*-\s+[^:]+:\s*(.+)$", line)
+        if m:
+            terms += [t.strip() for t in m.group(1).split(",") if t.strip()]
+        elif re.match(r"\s{2,}[A-Za-z]", line) and terms:
+            # continuation of a wrapped bullet
+            terms += [t.strip() for t in line.split(",") if t.strip()]
+    # drop parenthetical aliases: "mixture of experts (MoE)" -> both forms
+    out = []
+    for t in terms:
+        m = re.match(r"(.+?)\s*\(([^)]+)\)$", t)
+        if m:
+            out += [m.group(1).strip(), m.group(2).strip()]
+        else:
+            out.append(t)
+    return [t for t in out if len(t) > 2]
+
+
+def gloss_nearby(text, end):
+    """A gloss counts in any of its accepted forms: a parenthetical, a comma
+    clause, an em-dash aside, or an explanatory sentence right after.
+
+    Heuristic, and deliberately tight: the explanatory connector has to arrive
+    within ~45 characters of the term, because a "which" further downstream
+    usually belongs to a different clause. The Jul 25 brief's "new attention
+    mechanisms Moonshot calls 'Kimi Delta Attention'..." is the case that set
+    this — naming a thing is not explaining it, and a looser window read that
+    as glossed. Expect occasional misses in both directions; this narrows the
+    list a human reads, it does not replace the read."""
+    window = text[end:end + GLOSS_WINDOW]
+    return bool(re.match(r"\s*[\(,—–-]", window)
+                or re.search(r"\b(which|who|where|that|the company|a startup|"
+                             r"a nonprofit|a research|meaning|i\.e\.)\b",
+                             window[:45], re.IGNORECASE))
+
+
 def strip_markup(s):
     """Drop link URLs and bold/italic markers so word counts measure prose, not
     syntax. Keeps the link's anchor text."""
@@ -95,6 +154,9 @@ def check(path, quiet=False):
     lines = open(path, encoding="utf-8").read().split("\n")
 
     long_sentences, long_paras, banned_hits, all_lengths = [], [], [], []
+    unlinked_sources, gloss_hits = [], []
+    glossary = load_glossary()
+    seen_terms = set()      # gloss is required on FIRST use only
     sections = []          # (line_no, title, has_link, body_lines)
     current = None
 
@@ -116,6 +178,29 @@ def check(path, quiet=False):
             sections.append(current)
         if current and "](http" in raw:
             current["link"] = True
+
+        # Source lines: every named source needs its own link. Count the named
+        # entries (semicolon-separated) against the links present.
+        if raw.strip().startswith(("Source:", "**Source:")):
+            entries = [e for e in raw.split(";") if e.strip()]
+            links = raw.count("](http")
+            if links < len(entries):
+                unlinked_sources.append((i, len(entries), links,
+                                         raw.strip()[:70]))
+
+        # glossary: first use of a listed term must carry an explanation nearby
+        plain = strip_markup(raw)
+        for term in glossary:
+            if term.lower() in seen_terms:
+                continue
+            # match simple plurals too: "attention mechanisms" for the listed
+            # "attention mechanism", "tokens" for "token"
+            m = re.search(rf"\b{re.escape(term)}(?:e?s)?\b", plain,
+                          re.IGNORECASE)
+            if m:
+                seen_terms.add(term.lower())
+                if not gloss_nearby(plain, m.end()):
+                    gloss_hits.append((i, term))
 
         if is_skippable(raw):
             flush_para()
@@ -156,8 +241,10 @@ def check(path, quiet=False):
         n_severe = sum(1 for s in long_sentences if s[4])
         print(f"{n_severe} run-ons ({len(long_sentences)} borderline) | "
               f"{len(long_paras)} long paragraphs | {len(unlinked)} unlinked "
-              f"sections | {len(banned_hits)} banned constructions")
-        return 1 if (n_severe or long_paras or unlinked or banned_hits) else 0
+              f"sections | {len(unlinked_sources)} unlinked Source lines | "
+              f"{len(gloss_hits)} unglossed terms | {len(banned_hits)} banned")
+        return 1 if (n_severe or long_paras or unlinked or unlinked_sources
+                     or gloss_hits or banned_hits) else 0
 
     def header(t, n):
         print(f"\n{'=' * 70}\n{t}: {n}\n{'=' * 70}")
@@ -192,16 +279,31 @@ def check(path, quiet=False):
     for s in unlinked:
         print(f"  L{s['line']:<5} {s['title']}")
 
+    header("SOURCE LINES MISSING LINKS", len(unlinked_sources))
+    print("Every named source carries its own hyperlink — a bare name is not a "
+          "citation.")
+    for ln, n, links, txt in unlinked_sources:
+        print(f"  L{ln:<5} {n} sources, {links} links  {txt}...")
+
+    header("UNGLOSSED TERMS (first use)", len(gloss_hits))
+    print("house-writing-style rule 3, against the topic config's glossary "
+          "roster.\nKeep the term — add the explanation. Parenthetical, comma "
+          "clause, em-dash aside,\nor its own sentence all count.")
+    for ln, term in gloss_hits:
+        print(f"  L{ln:<5} {term}")
+
     header("BANNED CONSTRUCTIONS", len(banned_hits))
     print("house-writing-style rule 5.")
     for ln, hit in banned_hits:
         print(f"  L{ln:<5} \"{hit}\"")
 
-    must_fix = len(severe) + len(long_paras) + len(unlinked) + len(banned_hits)
+    must_fix = (len(severe) + len(long_paras) + len(unlinked)
+                + len(unlinked_sources) + len(gloss_hits) + len(banned_hits))
     print(f"\n{'=' * 70}\n{len(severe)} run-ons, {len(long_paras)} long "
-          f"paragraphs, {len(unlinked)} unlinked sections, {len(banned_hits)} "
-          f"banned constructions.\nFlags are candidates, not verdicts — judge "
-          f"each one.\n{'=' * 70}")
+          f"paragraphs, {len(unlinked)} unlinked sections, "
+          f"{len(unlinked_sources)} unlinked Source lines, {len(gloss_hits)} "
+          f"unglossed terms, {len(banned_hits)} banned constructions.\n"
+          f"Flags are candidates, not verdicts — judge each one.\n{'=' * 70}")
     return 1 if must_fix else 0
 
 
