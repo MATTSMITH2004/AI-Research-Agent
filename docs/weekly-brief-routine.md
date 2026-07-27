@@ -66,35 +66,52 @@ attached.
 > 3. Run the `research-digest` skill for `topics/ai-pulse.md` over the past 7 days
 >    (Saturday-to-Saturday: cover developments since last week's brief). Use
 >    `MEMORY.md`'s "recently covered" list to skip anything already reported in a
->    prior brief — never repeat an item. Updating MEMORY in step 6 sets the
->    boundary so next week resumes exactly where this one stopped.
->    Follow the canonical format in the topic config's "Output shape" section (the
->    `templates/` reference file was removed — the format now lives entirely in
->    topics) and every rule in the config, the skills, and MEMORY. The
->    `research-digest` skill it runs automatically applies the `house-writing-style`
->    skill for prose craft, so no separate step is needed for that. Key rules: the
->    labeled beats (What happened / optional Does it hold up? / Both sides / Why it
->    matters / My take); full "What people are saying" with podcast AND Substack
->    entries; the model-specs and Model-standings beats; the source-discovery + "New
->    sources worth adding" section; cite every source used; gloss all
->    jargon/benchmarks; primary sources first.
+>    prior brief — never re-report an already-covered development; ongoing stories
+>    continue, led by what's new since the last brief. Updating MEMORY in step 9
+>    sets the boundary so next week resumes exactly where this one stopped.
+>    Follow the canonical format in the topic config's "Output shape" section in
+>    full — it is the format definition, it changes as Matthew gives feedback, so
+>    read it rather than working from any summary of it (the `templates/` reference
+>    file was removed; the format lives entirely in topics). Apply every rule in
+>    the config, the skills, and MEMORY. The `research-digest` skill automatically
+>    applies the `house-writing-style` skill for prose craft, so no separate step
+>    is needed for that.
 > 4. Pull podcast/YouTube transcripts with `scripts/fetch_transcripts.py` (two
->    stages: list candidates, then fetch the AI-relevant ones).
-> 5. Save the brief to `briefs/ai-pulse-<YYYY-MM-DD>.md` (today's date) and render
->    the Word doc with
+>    stages: list candidates, then fetch the AI-relevant ones). For No Priors,
+>    Dwarkesh and Greg Isenberg the lister flags any episode not yet on podscripts
+>    as YouTube-only — fetch those via captions, and if captions are IP-blocked
+>    this session, say so in the coverage note rather than guessing.
+> 5. Save the brief to `briefs/ai-pulse-<YYYY-MM-DD>.md` (today's date).
+> 6. Run `python3 scripts/check_prose.py briefs/ai-pulse-<YYYY-MM-DD>.md` and
+>    resolve EVERY flag before going further — fix it, or judge it a false positive
+>    on purpose. Do not render while run-ons, unlinked Source lines, or unglossed
+>    terms are outstanding. Then read the NOT-CHECKED footer it prints and do that
+>    pass by hand: causal chains, claim-first ordering, whether each gloss actually
+>    explains, every company's three parts (what it sells, to whom, why it is in
+>    this story), credential depth, and stand-in words. A clean script run is not a
+>    finished revision pass.
+> 7. Render the Word doc with
 >    `python3 scripts/md_to_docx.py briefs/ai-pulse-<YYYY-MM-DD>.md briefs/ai-pulse-<YYYY-MM-DD>.docx`.
-> 6. Add a row for this brief at the TOP of the table in `briefs/README.md` (the
+> 8. Add a row for this brief at the TOP of the table in `briefs/README.md` (the
 >    archive index): the week-of date, and links to this brief's `.docx` and `.md`.
-> 7. Update `MEMORY.md` (recently-covered + the source-discovery ledger hit/miss),
->    then commit and push the brief, the updated `briefs/README.md`, AND the
->    updated `MEMORY.md` to the branch `claude/ai-pulse-weekly`. Pushing MEMORY
->    there is essential — it is how next week (which checks out that same branch in
->    step 1) knows what was already covered and avoids repeats.
-> 8. Send the brief by running:
+> 9. Update `MEMORY.md` — recently-covered, the source-discovery ledger hit/miss
+>    marks, the model ledger if anything this week moved a row — and the topic
+>    config's glossary roster with any term of art this brief used that is not
+>    already listed. Then commit and push the brief, the updated
+>    `briefs/README.md`, the updated `topics/ai-pulse.md`, AND the updated
+>    `MEMORY.md` to the branch `claude/ai-pulse-weekly`. Pushing MEMORY there is
+>    essential — it is how next week (which checks out that same branch in step 1)
+>    knows what was already covered and avoids repeats.
+> 10. Send the brief by running:
 >    `python3 scripts/mailer.py --docx briefs/ai-pulse-<YYYY-MM-DD>.docx --md briefs/ai-pulse-<YYYY-MM-DD>.md --subject "AI Pulse Brief — week of <date>"`
 >    This sends a real email via SendGrid, Bcc'd to `PULSE_RECIPIENTS`, with the
 >    `.docx` attached. Confirm the script printed a "sent ... via SendGrid" line
 >    before finishing.
+
+**Keeping this in sync.** The live routine stores its OWN copy of this prompt in
+the Claude Code Routines UI. Editing this file does not change it. Whenever this
+block changes, paste the new version into the routine, or Saturday keeps running
+the old one.
 
 ## The sender — `scripts/mailer.py`
 
