@@ -435,8 +435,14 @@ printed. Edit it as the rotation changes.
 
 Backstage reference, exactly like the recurring-voices roster above — never
 rendered in a brief. `scripts/check_prose.py` reads this list and flags any term
-on it that appears without an explanation nearby, so the gloss rule is checked
-mechanically instead of by memory.
+on it that appears without an explanation nearby, as a backstop to the judgment
+call, never a replacement for it.
+
+**This list is a floor, not the definition of what needs glossing.** Any term the
+reader does not already own qualifies, listed or not — house-writing-style rule 3
+governs, and it is universal. A term being absent from this list is not
+permission to leave it unexplained. The list exists so recurring terms cannot
+slip through by inattention, not to bound the job.
 
 **Vocabulary only — no companies.** Companies are deliberately not listed here.
 Every company named in a brief needs what it sells, to whom, and why it is in
@@ -564,12 +570,16 @@ Latent Space is now part of the Pulse rotation (listed under AI-focused shows
 above). Its deep build-tutorials still belong to the Playbook; here, pull its
 AI-market, model, and practitioner-trend discussions.
 
-## What I already know and have covered
+## What has already been covered
 
 Tracked in `MEMORY.md`, not here, since it changes from week to week. The agent
-reads it to avoid re-explaining what I understand and repeating what it already
-reported, and updates it after each run. Keep this config to what to look at; let
-`MEMORY.md` hold what I have already got.
+reads it to avoid repeating news it already reported, and updates it after each
+run. Keep this config to what to look at; let `MEMORY.md` hold what has already
+run.
+
+This governs COVERAGE, not explanation. It is not a licence to skip a gloss:
+terms are explained for the standing reader profile every week, however often
+they have appeared before (house-writing-style rule 3, settled Jul 26, 2026).
 
 ## Flag for me
 

@@ -313,6 +313,27 @@ def check(path, quiet=False):
           f"{len(unlinked_sources)} unlinked Source lines, {len(gloss_hits)} "
           f"unglossed terms, {len(banned_hits)} banned constructions.\n"
           f"Flags are candidates, not verdicts — judge each one.\n{'=' * 70}")
+
+    print(f"""
+{'=' * 70}
+NOT CHECKED BY THIS SCRIPT
+{'=' * 70}
+A clean run above means a few mechanical traps are clear. It is not a
+finished revision pass. This script cannot see:
+  - causal chains with a step missing          (rule 1)
+  - claim-first ordering                       (rule 2)
+  - whether a gloss actually explains anything (rule 3)
+  - terms of art NOT on the roster             (rule 3 - the roster is a
+                                                floor, not the definition)
+  - companies: what it sells / to whom / why   (rule 3 + digest step 7.2)
+  - facts that do not earn their place         (rule 4)
+  - noun-piles that should be plain clauses    (rule 6)
+  - numbers stated without their limits        (rule 7)
+  - stand-in words at the verdict              (rule 9)
+  - credential depth
+  - whether a link resolves to the right page
+  - every structural rule in the topic config
+{'=' * 70}""")
     return 1 if must_fix else 0
 
 

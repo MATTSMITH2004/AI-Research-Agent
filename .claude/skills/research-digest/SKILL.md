@@ -75,8 +75,10 @@ is the subject matter. One skill, many topics.
 
 6. **Rank by relevance to me.** Use the context file, the topic config, and
    `MEMORY.md` to judge what is genuinely new and material *to me*, not just
-   generally popular. Demote anything I already know or that was already covered in
-   a recent brief (both tracked in `MEMORY.md`).
+   generally popular. Demote any development already reported in a recent brief
+   (tracked in `MEMORY.md`). This is about which NEWS earns a slot, not about
+   which terms get explained — a story I already have is worth demoting; a term
+   I have seen before still gets glossed (house-writing-style rule 3).
 
 7. **Synthesize.** Before drafting a single sentence, read the `house-writing-style`
    skill and apply every rule in it — it governs how the prose itself is built
@@ -92,13 +94,16 @@ is the subject matter. One skill, many topics.
 
    1. **Paragraphs.** Count the sentences in each paragraph. Split any past
       five at a natural seam. Count, then split — do not eyeball it.
-   2. **Jargon, then companies.** For every term of art, ask whether the reader
-      profiled in CLAUDE.md — finance-fluent, economics-solid, no technical
-      background — already owns that word. Finance vocabulary passes unglossed.
-      Any technical, AI, or industry term fails and gets a plain-language gloss
-      on first use (house-writing-style rule 3). A term the drafter did not
-      notice as jargon is the one most likely to fail — check nouns that would
-      not appear in a finance textbook.
+   2. **Jargon, then companies.** Judge every term of art first, by hand. For
+      each one, ask whether the standing reader profiled in CLAUDE.md —
+      finance-fluent, economics-solid, no technical background — already owns
+      that word. Finance vocabulary passes unglossed. Any technical, AI, or
+      industry term fails and gets a plain-language gloss on first use
+      (house-writing-style rule 3). A term the drafter did not notice as jargon
+      is the one most likely to fail — check nouns that would not appear in a
+      finance textbook. Only after that judgment run the script, which catches
+      listed terms you missed. It runs second and narrower: the glossary roster
+      is a floor, never the definition of what needs glossing.
 
       Then, separately: **list every company named in this item, and for each
       one point to where its three parts appear** — what it sells, to whom, and

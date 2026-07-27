@@ -304,9 +304,16 @@ already been reported (so it does not repeat it). Maintained per topic.
 
 ### AI Pulse
 
-Baseline I already know (do not re-explain):
-
-- The basics of how agents are wired up: skills, context files, MCP.
+Glossing does NOT track what Matthew has learned (settled Jul 26, 2026). The
+brief is a publication for a distribution list, so terms are explained for the
+standing reader profile in CLAUDE.md's calibration section — a profile that does
+not level up week to week. A term gets glossed on first use in every brief, even
+one explained in earlier weeks; a reader who joined last week has not read the
+back catalogue. The former "baseline I already know (do not re-explain)" list
+was deleted here, because it licensed skipping exactly the glosses that rule
+now requires. Erring toward explaining is the deliberate choice. The full rule
+lives in the house-writing-style skill; this note records the decision and why
+the list is gone.
 
 Recently covered (rolling; keep roughly the last 4 to 6 weeks, trim older):
 

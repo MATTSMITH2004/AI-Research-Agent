@@ -75,6 +75,15 @@ numbers deserve more skepticism than they got." Then the details, in that order.
 No term the reader does not already own may carry the significance of a
 sentence. Gloss on first use — one plain clause — then use it freely. A term is
 worth keeping only if it recurs; otherwise use the plain version and drop it.
+
+The reader is a STANDING PROFILE, not a person who learns week to week: finance
+fluent, economics solid, no technical background (CLAUDE.md's calibration). That
+profile does not level up, so a term is glossed on its first use in EVERY brief,
+even one explained in earlier weeks. Never skip a gloss on the grounds that it
+was covered before or that Matthew knows it by now — the brief is a publication
+going to a distribution list, and a reader who joined last week has not read the
+back catalogue. When in doubt, explain it: an unnecessary gloss costs a clause,
+a missing one costs the point of the sentence.
 Company or product names that read as common nouns must be introduced so they
 cannot be misparsed.
 
