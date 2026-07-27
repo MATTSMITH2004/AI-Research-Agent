@@ -31,6 +31,21 @@ Anything without a mechanical check is marked **unverified**, never applied.
 | P1 | Praised sandbox gloss harvested as a worked example | house-writing-style §3 | (protection, not a check) | |
 | P2 | Inline bracketed-tag format marked confirmed working | topics | (protection, not a check) | |
 
+## Decided after the memo (same session, Jul 26)
+
+These came out of Matthew's questions during the apply phase rather than from a
+margin comment. They are recorded here so Step 0 audits them next week — a
+change decided in conversation is as binding as one that came from the doc, and
+an unrecorded change is one the audit cannot see.
+
+| # | Change | File | Observable check in the next brief | Result |
+|---|---|---|---|---|
+| L1 | Glossing targets a standing reader profile, not Matthew's accumulating knowledge: a term is glossed on first use in EVERY brief, however often it appeared before | house-writing-style §3 + MEMORY | Pick three terms glossed in the Jul 25 brief (e.g. sandbox, zero-day, distillation); each is glossed again on first use in the new brief | |
+| L2 | The glossary roster is a floor, not the definition of what needs glossing | topics + research-digest §7.2 | At least several terms glossed in the brief are NOT on the roster — evidence the judgment ran rather than only the list | |
+| L3 | `check_prose.py` prints a NOT-CHECKED footer naming what it cannot see | script | Process change, not brief-visible: verify by running the script | |
+| L4 | brief-feedback Step 6 runs two verification passes, the second for new-vs-old rule conflicts | brief-feedback §6 | Next round's apply phase reports a Pass 2 result, and no conflict ships unnamed | |
+| L5 | MEMORY's "baseline I already know (do not re-explain)" deleted; coverage and explanation are now distinct everywhere | MEMORY + topics + research-digest §6 | No file licenses skipping a gloss on grounds of prior coverage | |
+
 ## Baseline for next week's comparison
 
 Measured on the Jul 25 brief with `scripts/check_prose.py`:

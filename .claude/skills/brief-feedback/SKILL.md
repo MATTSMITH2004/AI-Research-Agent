@@ -306,6 +306,13 @@ its row to `feedback/README.md`: the brief commented on, the file, the
 comment count, and a one-line outcome (what was ratified and where, how much
 was deferred).
 
+Record decisions made after the memo too. A round rarely ends at the verdicts —
+Matthew's questions during the apply phase produce real changes, and a change
+decided in conversation binds exactly as much as one that came from a margin
+comment. Any such change gets its own row in the record, marked as decided
+after the memo, with the same observable check. An unrecorded change is one the
+next audit cannot see, which is how a rule quietly stops being enforced.
+
 Write this round's record to `feedback/ai-pulse-<YYYY-MM-DD>-ratified.md`,
 following the format of the existing records: one row per ratified item —
 item, change, destination file, the observable check to run against the next
