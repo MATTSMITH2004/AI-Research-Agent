@@ -1,0 +1,109 @@
+# Playbook Memory
+
+State file for the Playbook brief. Maintained by the teacher skill: updated after every issue (what was taught, at what depth), every quiz and monthly test (verification results), and every Pulse scouting handoff (queue additions). Baseline established 2026-07-23 via the four-phase foundational interview.
+
+## Reader baseline (interview summary)
+
+Accounting graduate, corporate-finance fluent, operates a working agent system (this repo) built through Claude without technical background. Knowledge clusters on the usage side and the narrative side; the mechanical layer beneath both is largely absent. Two standing traits verified across all four phases:
+
+- **Reasoning outruns vocabulary.** Repeatedly produced correct concepts he could not name (invented disintermediation logic while rating the term 0; articulated the reason–act–observe agent loop unprompted; reconstructed the vendor-financing circular-deal critique from memory). Lessons should bolt names and structure onto existing instincts, not build from zero.
+- **Finance fluency has a precise boundary.** Statements-and-valuation fluent (gross margin, depreciation mechanics, balance-sheet reasoning, spread economics — all verified strong). Tech business-model taxonomy absent (SaaS metrics, moat types, take rates, payments, vertical SaaS — all 0–1). Finance frames are the preferred on-ramp for new material.
+
+## Curriculum ledger
+
+Depth scale: **solid** (verified by explanation or later quiz) / **partial** (three-quarter formed, needs naming or completion) / **gap** (absent) / **misconception** (actively wrong, needs correction). Status updates only on evidence — teaching an item makes it *taught*, not *solid*; quizzes promote it.
+
+### Solid ground
+- Gross margin and why software's is structurally high (P4, best answer of interview)
+- Depreciation mechanics of PP&E; capex vs. expense (P3) — pending refinement, see misconception log
+- Seat-based vs. usage-based pricing as concepts (P4)
+- Rent-vs-own compute logic via balance-sheet reasoning (P3)
+- Foundation-model spread economics: expected token spend penciled against subscription price (P4)
+- The agent loop: input → reason → act/tools → output → inspect → repeat (P2, produced twice unprompted)
+- Context as "what's in the chat / what the model reads this run" (P2)
+- Agent memory mechanism: file read at start of each run supplies continuity (P2, mostly correct)
+- TSMC's moat as capital intensity + decades of tacit manufacturing knowledge (P3)
+- Export controls: what's restricted and the necessity-breeds-innovation counterargument (P3)
+- The infrastructure dependency chain as a relational map: energy → data centers → chips → cloud → models (P3 — edges known, nodes empty)
+- RLHF at concept level: output, feedback signal, adjustment toward desired result (P1)
+
+### Partial (name-and-structure work, fastest wins)
+- **The one-mechanism insight**: skills, CLAUDE.md, and MEMORY.md are all the same thing — text read into context before work begins. Holds three separate three-quarter versions; needs fusing. (P2, cornerstone)
+- Disintermediation: invented the final-product-vs-intermediate-product logic himself; needs the name and the framework (P4)
+- Switching costs under AI: self-generated thesis that AI collapses them; needs the full moat taxonomy around it (P4)
+- Training as feedback loop: knows the RLHF-style story; doesn't know where it sits in the pre-training → fine-tuning → RLHF pipeline (P1)
+- Wrapper company: correctly mapped Harvey to his own analyst-agent idea (build on Claude, sell the product); moat question open (P4)
+- Open weights: "free to download" plus the exact right open question — do I need my own compute to run it? (P1)
+- Hyperscaler / neocloud: right actors, wrong product (see storage misconception) (P3)
+- Claude chat vs. Code: same model, different harness — guessed correctly, wants confirmation and depth (P2)
+- Big-tech AI exposure: sophisticated instincts (Google high-risk/high-reward, Meta as an ROIC question, Apple optionality) without the underlying framework (P4)
+
+### Gaps by domain (0-rated, no partial structure)
+- **Model layer**: transformer, embedding, MoE, quantization, distillation, reasoning/test-time compute, hallucination mechanism, benchmarks, knowledge cutoff, GPU-vs-CPU, pre-training, fine-tuning, system prompt, API
+- **Agent layer**: MCP, RAG, vector database, orchestration/multi-agent, sandbox/environment, CLI/terminal, what a script/Python is, git mechanics, cron/scheduling, guardrails/evals, tool calling mechanics
+- **Infrastructure**: what compute is (keystone gap), chip physicality, fab/process node, HBM, interconnect, CUDA, data center anatomy, MW/GW as units, cooling/PUE, interconnection queues, PPAs, behind-the-meter, SMRs
+- **Business layer**: vertical SaaS, payments/interchange/payfac, marketplace/take rate, CAC/LTV, network effects, platform vs. product, TAM/SAM discipline, copilot-vs-agent business models, services-as-software, app/model/infra value-capture debate, the seat problem (blank), the $20 value chain (blank)
+
+### Misconception log
+Each corrects inside its natural lesson, not as a standalone scolding.
+
+| Misconception | Reality | Corrective lesson |
+|---|---|---|
+| Data centers sell storage; compute deals buy "storage space" | Compute is arithmetic capacity (chips-per-hour), storage is the filing cabinet | What Is Compute (keystone) |
+| Tokens are units of energy/cost | Tokens are units of text; cost follows | Tokens & Context |
+| Weights are "the algorithm" | Weights are the numbers; the program runs them | Model vs. Product vs. API |
+| GPU = training, CPU = inference | Both run on GPUs; real split is parallel arithmetic vs. general sequencing | What Is Compute |
+| Thin briefs = model rationing tokens | Context window filling; long-context degradation | Everything Is Text in Context |
+| fetch script listens to podcast audio | Deterministic code fetching published transcripts; whisper transcription is separate and only for Bloomberg | Scripts vs. Models |
+| Branch split was "a security protocol" | State accumulation (routine branch) vs. config stability (main) | What Git Actually Does |
+| Paying for WSJ/Economist grants API access | Subscription = login; API = separate product, usually separate contract | APIs & Keys |
+| Depreciation is "an accounting trick" | Real cost-matching; the live controversy is GPU useful-life assumptions vs. actual obsolescence | AI Capex & the Useful-Life Fight |
+| ARR = annual run rate | Annual recurring revenue (run-rate is the adjacent, different concept) | SaaS Metrics |
+| Clone-the-system = hand over repo + prompt | Repo is recipe; environment, subscription, secrets, schedule, keys are the kitchen | The Environment Layer |
+| Amazon "not really building models" | Builds models (and holds the Anthropic stake); AWS-first frame otherwise sound | Big-Tech Decomposition |
+
+### Open questions bank (his own words — high-priority lesson seeds)
+- "Would it suddenly look like ChatGPT?" (downloading an open-weight model) — P1
+- "If I downloaded an open weight model do I need my own cloud compute for tokens?" — P1
+- "How does my drilling in the ground for a barrel of oil go all the way from the ground to the data center to my model? What is compute?" — P3
+- "What is the memory really doing?" (HBM) — P3
+- "What is Oracle's actual role?" — P3
+- "Is AMD really making money, or funding its own revenue?" (circular deals) — P3
+- "Is chat actually better at writing than Code, and why?" — P2 (answered in-conversation; verify on first quiz)
+- "What does Harvey actually do?" — P4
+- "What does Toast actually do?" — P4
+- The three interview blanks, held as open: the seat problem, the $20 value chain, first-three-decomposition picks (syllabus proposed below in lieu)
+
+## Opening curriculum (sequenced; teacher skill selects per issue)
+
+Prerequisite chains matter more than unit order — units interleave.
+
+**Unit 1 — The Machine**
+1. Model vs. Product vs. API (answers "would it look like ChatGPT"; unlocks open-weights questions)
+2. Everything Is Text in Context (fuses the three partial insights; explains skills, CLAUDE.md, memory, thin briefs)
+3. Tokens & Context (corrects energy misconception; builds on solid context intuition)
+4. The Training Pipeline (slots his RLHF knowledge into pre-training → fine-tuning → RLHF)
+5. Training vs. Inference Economics (capex/opex on-ramp; cost asymmetry)
+
+**Unit 2 — The Agent** (requires 1.1–1.2)
+Scripts vs. Models · Tool Calls & MCP · APIs & Keys · What Git Actually Does · The Environment Layer (clone-it lesson) · Loop Engineering (queued via Pulse scout, 2026-07; requires most of Unit 2)
+
+**Unit 3 — The Physical Stack** (requires 1.5)
+What Is Compute (keystone — the oil-barrel-to-model walk) · The Chip · The Foundry Chain (fab, nodes, EUV) · Data Center Anatomy (power + cooling) · Feeding the Engine (HBM + interconnect) · The Compute Market (hyperscalers, neoclouds, the deals, Oracle's role) · Powering It (grid, PPAs, gas, SMRs)
+
+**Unit 4 — The Business** (requires 1.5; company decompositions require their layer's Unit 3 lessons where relevant)
+Business-Model Taxonomy I: SaaS metrics · II: Vertical SaaS, marketplaces, payments · The Moat Audit (names his instincts) · The AI-Exposure Framework (becomes a standing lens) · The Seat Problem & the $20 Value Chain (the two blanks, taught not asked) · Lab Economics · The Wrapper Question
+
+**Monthly decomposition syllabus** (proposed from interview evidence; standing veto): 1. Toast 2. Harvey 3. Nvidia
+
+## North-star project
+UHNW analyst agent (P2, Q34): portfolio-aware, prospectus-analyzing, no-trade agent for ultra-high-net-worth principals who have wealth managers but no analysts. Pedagogical capstone — requires model/API access, context vs. fine-tuning, document ingestion/RAG, output templating from exemplars, guardrails design. "Apply it" beats may advance it one step when material fits. Capability ranking from P4 Q33 weights all application: **buy / invest / operate > deal process**. Preferred application register: acquire → AI-nativize → cut cost.
+
+## Assessment record
+Weekly quiz results and monthly test results append here. Quiz misses re-queue the concept for reinforcement; passes promote *taught* → *solid*. None yet.
+
+## Open assignments
+Max one per issue, only when material naturally produces one; next issue follows up lightly. None yet.
+
+## Scouted queue (Pulse → Playbook handoffs)
+- 2026-07: Loop engineering — new term (Osmani/Steinberger, June 2026); teachable after Unit 2 foundations. Reader already holds the loop intuition; lesson supplies the name, the four-rung ladder (prompt → context → harness → loop engineering), and the audit of his own system against it.
