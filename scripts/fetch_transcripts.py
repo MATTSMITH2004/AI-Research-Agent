@@ -65,6 +65,11 @@ SHOWS = {
     "greg-isenberg":  {"type": "podscripts", "slug": "the-startup-ideas-podcast", "name": "Greg Isenberg (The Startup Ideas Podcast)", "yt": "@GregIsenberg", "yt_check": True},
     "hard-fork":      {"type": "podscripts", "slug": "hard-fork", "name": "Hard Fork", "yt": "@hardfork"},
     "ai-engineer":    {"type": "youtube", "handle": "@aiDotEngineer", "name": "AI Engineer"},
+    # latent-space: promoted to a primary standing source Jul 2026 (Matthew's
+    # call). Ships ~2 episodes a week, so yt_check earns its keep here. The
+    # WRITTEN Substack posts at latent.space are separate and are web-fetched
+    # like the other Substacks; this entry covers the podcast.
+    "latent-space":   {"type": "podscripts", "slug": "latent-space-the-ai-engineer-podcast", "name": "Latent Space", "yt": "@LatentSpacePod", "yt_check": True},
     # --- Markets / finance / business ---
     "odd-lots":        {"type": "podscripts", "slug": "odd-lots", "name": "Odd Lots"},
     "in-good-company": {"type": "podscripts", "slug": "in-good-company-with-nicolai-tangen", "name": "In Good Company", "yt": "@InGoodCompanyPodcast"},

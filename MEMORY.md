@@ -218,11 +218,17 @@ Each run, mark commentary sources hit/miss and update "last contributed."
     (still no episode since Jun 11). Third straight miss since promotion —
     approaching the ~4-miss prune threshold; flag to Matthew if a fourth
     straight miss follows next week.
-  - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space: HIT week
-    of Jul 25 (Databricks' Matei Zaharia and Reynold Xin on Omnigent, an
-    open-sourced cross-tool agent harness, and Lakebase — checked directly on
-    the show's own site, since it is not present in fetch_transcripts.py's
-    show config).
+  - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space: PROMOTED
+    TO A PRIMARY SOURCE Jul 26, 2026 (Matthew rates it highly and wants it
+    leaned on, not merely scanned) — full entry in topics under "AI-focused
+    shows." Now wired into fetch_transcripts.py as `latent-space` (podscripts
+    slug latent-space-the-ai-engineer-podcast, full transcripts, verified
+    current through Jul 28), so the hand-fetching noted here through Jul 25 is
+    no longer needed. It ships roughly twice a week, so expect two or three
+    in-window episodes; the written Substack posts are a separate stream and
+    are still web-fetched. HIT week of Jul 25 (Databricks' Matei Zaharia and
+    Reynold Xin on Omnigent, an open-sourced cross-tool agent harness, and
+    Lakebase).
   - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer: BLOCKED again
     week of Jul 25 — the same YouTube-caption IP block recurred this session
     (confirmed on a test video before giving up on the ~30 in-window talks

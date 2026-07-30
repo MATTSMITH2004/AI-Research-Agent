@@ -361,7 +361,10 @@ Starter set, refine as I learn which ones earn it:
   tools — do not use paywall-bypass mirrors, and do not store my login. When a
   specific WSJ article is load-bearing for an item, flag it and I will paste the
   text; otherwise cite from the search snippet and note the limit.
-- High-signal Substacks and independent analysts. AI and ecosystem: Interconnects
+- High-signal Substacks and independent analysts. AI and ecosystem: Latent Space
+  (swyx and Alessio Fanelli, latent.space) for AI engineering at the practitioner
+  level — a primary source, both its written posts and its podcast (see the
+  fuller entry under "AI-focused shows"), Interconnects
   (Nathan Lambert) for the model and open-weight scene, ChinaTalk (Jordan
   Schneider) for US-China AI and chips, Import AI (Jack Clark) for frontier and
   policy, SemiAnalysis (Dylan Patel) for chips, datacenters, and compute economics
@@ -537,9 +540,17 @@ AI-focused shows:
   technical interviews with AI researchers and builders at the frontier, hosted by a
   practitioner who runs his own AI company. Strongest for the build-real-fluency
   mandate — how the technology actually works, not just product news.
-- Latent Space (swyx / Shawn Wang and Alessio Fanelli), https://www.latent.space :
-  AI engineering at the practitioner level. Pull its AI-market, model, and
-  builder-trend discussions (leave the deep how-to-build tutorials to the Playbook).
+- Latent Space (swyx / Shawn Wang and Alessio Fanelli), https://www.latent.space —
+  A PRIMARY SOURCE (promoted Jul 2026, Matthew's call: he rates it highly and
+  wants it leaned on, not merely scanned). Two distinct streams, and both belong
+  in the brief: the PODCAST, wired into fetch_transcripts.py as `latent-space`
+  with full transcripts (it ships roughly twice a week, so expect two or three
+  in-window episodes and cover the AI-relevant ones rather than picking one), and
+  the WRITTEN Substack posts at latent.space, fetched directly like the other
+  Substacks. AI engineering at the practitioner level: pull its AI-market, model,
+  and builder-trend discussions and leave the deep how-to-build tutorials to the
+  Playbook. Where it has something on a story the brief is already covering, it
+  is a citable source for that item, not only a "What people are saying" entry.
 - AI Engineer (YouTube channel), https://www.youtube.com/@aiDotEngineer : talks and
   keynotes from the AI Engineer World's Fair and Summit, where practitioners present
   how they actually build with AI (e.g. the "Field Guide to Fable" talk). Pull the
@@ -566,9 +577,6 @@ article research (see "Sources to prioritize" above) — just not as a podcast.
 Optional and heavier: Acquired for occasional company deep dives, All-In for
 markets and venture chatter (more punditry, lower signal-to-noise).
 
-Latent Space is now part of the Pulse rotation (listed under AI-focused shows
-above). Its deep build-tutorials still belong to the Playbook; here, pull its
-AI-market, model, and practitioner-trend discussions.
 
 ## What has already been covered
 
