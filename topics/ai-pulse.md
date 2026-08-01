@@ -471,13 +471,17 @@ waiting for a "what does this mean" comment.
   attention mechanism, inference, tokens, quantization, synthetic data,
   synthetic bootstrap, system prompt
 - Agent and tooling terms: harness, scaffolding, sandbox, prompt injection,
-  red-team, zero-day, agentic, orchestration, routing, MCP, skills, guardrails
+  red-team, zero-day, agentic, orchestration, routing, MCP, skills, guardrails,
+  neurosymbolic AI, ontologies
 - Benchmarks and evaluations: SWE-bench, Terminal-Bench, FrontierSWE, DeepSWE,
   Humanity's Last Exam, ARC-AGI, Intelligence Index, EQ-Bench, ExploitBench,
   Exploit Gym, Elo
 - Business and market shorthand: neocloud, hyperscaler, capex, run rate, ARR,
   take rate, wrapper, moat, regulatory capture, captive demand, black box,
-  forward-deployed engineer, industrialization of software, legacy migration
+  forward-deployed engineer, industrialization of software, legacy migration,
+  free cash flow, circular financing
+- Hardware and infrastructure terms: high-bandwidth memory (HBM),
+  behind-the-meter power
 
 ### Video and podcast sources
 
