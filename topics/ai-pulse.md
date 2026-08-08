@@ -431,6 +431,13 @@ printed. Edit it as the rotation changes.
 - Casey Newton — founder, Platformer; co-host, Hard Fork.
 - Ethan Mollick — professor, Wharton; writes One Useful Thing on applied AI.
 - Nathan Lambert — post-training researcher; writes Interconnects.
+- Dwarkesh Patel — host, the Dwarkesh Podcast; long-form interviews with
+  frontier-lab researchers and leaders, plus solo essays on AI trends.
+- Marc Rubinstein — former hedge fund partner (Lansdowne Partners); writes
+  Net Interest on financial-sector plumbing and market structure.
+- Kevin Xu — hedge fund manager; writes Interconnected on Chinese AI and tech.
+- Alex Karp — co-founder and CEO, Palantir Technologies, a company that sells
+  data-analysis software to governments and large enterprises.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
 
@@ -469,7 +476,8 @@ waiting for a "what does this mean" comment.
 - Model and training terms: parameters, context window, mixture of experts (MoE),
   open weights, distillation, fine-tuning, post-training, reinforcement learning,
   attention mechanism, inference, tokens, quantization, synthetic data,
-  synthetic bootstrap, system prompt
+  synthetic bootstrap, system prompt, continual learning, reward hacking,
+  artificial general intelligence (AGI)
 - Agent and tooling terms: harness, scaffolding, sandbox, prompt injection,
   red-team, zero-day, agentic, orchestration, routing, MCP, skills, guardrails,
   neurosymbolic AI, ontologies
@@ -479,9 +487,10 @@ waiting for a "what does this mean" comment.
 - Business and market shorthand: neocloud, hyperscaler, capex, run rate, ARR,
   take rate, wrapper, moat, regulatory capture, captive demand, black box,
   forward-deployed engineer, industrialization of software, legacy migration,
-  free cash flow, circular financing
+  free cash flow, circular financing, public benefit corporation (PBC)
 - Hardware and infrastructure terms: high-bandwidth memory (HBM),
-  behind-the-meter power
+  behind-the-meter power, Compute Express Link (CXL), tensor processing unit
+  (TPU)
 
 ### Video and podcast sources
 
