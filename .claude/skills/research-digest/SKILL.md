@@ -120,7 +120,13 @@ is the subject matter. One skill, many topics.
    4. **Sentences.** Split any sentence that stacks a second idea onto a comma
       tail (rule 8). A labelled beat is not a licence for one long sentence —
       a "Both sides" bullet runs two to four short sentences per side.
-   5. **Grammar.** Read every sentence for grammatical completeness. A sentence
+   5. **Every paragraph earns its place.** For each paragraph in a perspective
+      entry, state in one clause why it is in the brief. If the honest answer is
+      "it was interesting," cut it (rule 4). Two real cases from the Aug 8 brief:
+      a Lucent vendor-financing digression inside the Ampere item, and an
+      anecdote about researchers privately discussing whether to marry — both
+      true, neither earning its space.
+   6. **Grammar.** Read every sentence for grammatical completeness. A sentence
       that cannot be read cleanly gets rewritten, not patched.
       BEFORE (week of Jul 25): "…the rest of the open-weight field is not as far
       ahead as it is being covered as catching up to." AFTER: "…the rest of the
@@ -245,6 +251,25 @@ lives in the topic config, not here.
   **Never an unnamed attribution.** No "one commentator," "an analyst," "some
   observers," or any claim attributed to a person who is not named. If the
   person cannot be named and credentialed, the claim does not run.
+
+  **Credential the publication and the show too, not only the people.** A show,
+  newsletter, or column named in the brief gets a short blurb saying what it is
+  — the same treatment a person gets. "Money Stuff" and "Hard Fork" mean nothing
+  to a reader who does not already follow them.
+  - Before: "Money Stuff" / "hosts Kevin Roose and Casey Newton"
+  - After: "Money Stuff, Matt Levine's daily Bloomberg column on markets and
+    financial plumbing" / "Hard Fork, the New York Times' weekly technology
+    podcast, hosted by Kevin Roose, a Times tech columnist who writes on AI's
+    social effects, and Casey Newton, who founded the tech newsletter Platformer"
+  For a show whose guest host rotates (a16z's, for one), credential whoever
+  actually hosted that episode — never assume last week's host.
+
+  **The one exemption: a sitting CEO of a named company.** "Jensen Huang, CEO of
+  Nvidia" is complete, because the role and the company are the credential. Every
+  other person — founders, partners, researchers, hosts, guests, analysts,
+  officials — gets the full treatment. For anyone whose authority is not obvious
+  from their title, say in a clause why this person is worth listening to on this
+  subject.
 
   Keep it to a clause or two, not a biography — a name recurring inside one item
   gets a light tag on later mentions, not the full treatment repeated. Pull

@@ -133,6 +133,24 @@ def load_glossary(path=GLOSSARY_CONFIG):
     return [t for t in out if len(t) > 2]
 
 
+def load_roster_names(path=GLOSSARY_CONFIG):
+    """Names from the topic config's recurring-voices roster. Used to check that
+    a person the brief names carries a credential clause nearby."""
+    try:
+        text = open(path, encoding="utf-8").read()
+    except OSError:
+        return []
+    if "### Recurring voices" not in text:
+        return []
+    section = re.split(r"\n### ", text.split("### Recurring voices", 1)[1], 1)[0]
+    names = []
+    for line in section.split("\n"):
+        m = re.match(r"\s*-\s+([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){1,2})\s+—", line)
+        if m:
+            names.append(m.group(1).strip())
+    return names
+
+
 def gloss_nearby(text, end):
     """A gloss counts in any of its accepted forms: a parenthetical, a comma
     clause, an em-dash aside, or an explanatory sentence right after.
@@ -164,6 +182,9 @@ def check(path, quiet=False):
 
     long_sentences, long_paras, banned_hits, all_lengths = [], [], [], []
     unlinked_sources, gloss_hits = [], []
+    unlinked_tags, bare_names, bullet_mix = [], [], []
+    roster_names = load_roster_names()
+    section_bullets = {}   # section title -> set of bullet markers seen
     glossary = load_glossary()
     seen_terms = set()      # gloss is required on FIRST use only
     sections = []          # (line_no, title, has_link, body_lines)
@@ -197,8 +218,37 @@ def check(path, quiet=False):
                 unlinked_sources.append((i, len(entries), links,
                                          raw.strip()[:70]))
 
+        # inline bracketed source tags must be hyperlinked (Aug 9 rule): the tag
+        # points at the Source line, and BOTH carry the link.
+        for m in re.finditer(r"\[([^\]\[]{2,80})\]", raw):
+            inner = m.group(1)
+            if inner.startswith("^") or "](" in raw[m.start():m.start() + len(inner) + 4]:
+                continue
+            # a markdown link looks like [text](url) — skip those
+            after = raw[m.end():m.end() + 2]
+            if after.startswith("("):
+                continue
+            # heuristic: a source tag is Capitalised, no sentence punctuation
+            if re.match(r"[A-Z]", inner) and not re.search(r"[.!?]$", inner):
+                unlinked_tags.append((i, m.group(0)[:60]))
+
+        # bullet-marker consistency within a section
+        if current and is_bullet(raw):
+            section_bullets.setdefault(current["title"], set()).add(
+                raw.strip()[0])
+
         # glossary: first use of a listed term must carry an explanation nearby
         plain = strip_markup(raw)
+
+        # roster names must carry a credential clause nearby
+        for name in roster_names:
+            if name.lower() in seen_terms:
+                continue
+            m = re.search(rf"\b{re.escape(name)}\b", plain)
+            if m:
+                seen_terms.add(name.lower())
+                if not gloss_nearby(plain, m.end()):
+                    bare_names.append((i, name))
         for term in glossary:
             if term.lower() in seen_terms:
                 continue
@@ -287,6 +337,26 @@ def check(path, quiet=False):
     print("research-digest — a named source is a linked source.")
     for s in unlinked:
         print(f"  L{s['line']:<5} {s['title']}")
+
+    bullet_mix = [(t, sorted(m)) for t, m in section_bullets.items() if len(m) > 1]
+
+    header("INLINE SOURCE TAGS MISSING LINKS", len(unlinked_tags))
+    print("Hyperlink the source in BOTH places — the inline tag and the Source "
+          "line.")
+    for ln, tag in unlinked_tags[:25]:
+        print(f"  L{ln:<5} {tag}")
+    if len(unlinked_tags) > 25:
+        print(f"  … and {len(unlinked_tags) - 25} more")
+
+    header("NAMED PEOPLE MISSING A CREDENTIAL", len(bare_names))
+    print("From the topic config's recurring-voices roster. Everyone gets a "
+          "credential except a\nsitting CEO of a named company.")
+    for ln, n in bare_names:
+        print(f"  L{ln:<5} {n}")
+
+    header("MIXED BULLET MARKERS IN A SECTION", len(bullet_mix))
+    for t, marks in bullet_mix:
+        print(f"  {t}: {' '.join(marks)}")
 
     header("SOURCE LINES MISSING LINKS", len(unlinked_sources))
     print("Every named source carries its own hyperlink — a bare name is not a "

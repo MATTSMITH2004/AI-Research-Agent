@@ -17,6 +17,7 @@ is caught within a week instead of drifting.
 
 | Brief commented on | Feedback doc | Comments | Ratified record | Outcome |
 | --- | --- | --- | --- | --- |
+| August 1–8, 2026 | [ai-pulse-2026-08-08-feedback.docx](ai-pulse-2026-08-08-feedback.docx) | 32 | [record](ai-pulse-2026-08-08-ratified.md) | 17 ratified Aug 9, 1 rejected. Perspective entries restructured to four layers with the "Why it matters" beat removed; standings run weekly; credentials extended to shows and publications; two new mechanical checks (inline-tag links, missing credentials). Audit of the Jul 25 round: 3 applied clean, 2 failed, 2 partial, 3 unverified |
 | July 18–25, 2026 | [ai-pulse-2026-07-25-feedback.docx](ai-pulse-2026-07-25-feedback.docx) | 44 | [record](ai-pulse-2026-07-25-ratified.md) | 17 ratified Jul 26, 0 deferred. Adds a glossary roster with a mechanical gloss check, Source-line link enforcement, deeper credentials, a combined model ranking, and the one-entry-per-argument rule |
 | July 11–18, 2026 | [ai-pulse-2026-07-18-feedback.docx](ai-pulse-2026-07-18-feedback.docx) | 41 | [record](ai-pulse-2026-07-18-ratified.md) | 15 ratified Jul 20, 8 deferred. Audited against the Jul 25 brief: **6 applied, not the 12 first recorded** — three items were marked applied on a skim and had failed. Corrections in that record; brief-feedback Step 0 now requires mechanical evidence |
 

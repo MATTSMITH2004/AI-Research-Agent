@@ -38,7 +38,14 @@ each one in the next brief, then delete it from this list — do not let it ling
 harden into a standing rule. If a request keeps recurring, it is really a source or
 coverage preference and belongs in the topic config instead.
 
-- (none currently open)
+- Do not repeat the Aug 8 Ampere/Situational Awareness framing: the brief argued
+  that three newsletters covering the same collapse showed "the market is
+  actively looking for the AI trade's first real stress test." Matthew's read is
+  that it was simply a good story, well told. Coverage volume is weak evidence of
+  market intent — market inference itself is welcome, but ground it in prices,
+  flows, or positioning rather than in how many writers wrote about something.
+- Phrasing: "human maintainers" (Aug 8, item 1) reads oddly. Say "the people who
+  maintain the project."
 
 ## Learned preferences
 
@@ -106,9 +113,10 @@ The running model-comparison tracker (process in topics/ai-pulse.md "What to
 track" item 1). THIS LEDGER IS PERSISTENT — never trim it (like the
 source-discovery ledger below, unlike the "recently covered" news list, which
 trims to ~4-6 weeks). Backstage store: the brief never renders this table raw.
-When a release moves a row, the brief's "Model standings" section shows a
-reduced Task / Best / Second / Third view with changed rows marked; the Basis
-and Updated columns stay here. Populate from two kinds of source: (1) models
+The brief's "Model standings" section runs EVERY week (changed Aug 9, 2026 — the
+full rule lives in topics/ai-pulse.md "Model standings"), showing a reduced Task
+/ Best / Second / Third view with any changed row marked; the Basis and Updated
+columns stay here. Populate from two kinds of source: (1) models
 and results covered in briefs, and (2) a small set of independent evaluations
 checked directly — Artificial Analysis's Intelligence Index among them, as one
 input, never the sole source. Do not fill a cell from a lab's self-reported
@@ -340,20 +348,12 @@ Each run, mark commentary sources hit/miss and update "last contributed."
     in rotation, not a new one; Recode China AI (Tony Peng) — small China-AI
     roundup, redundant with ChinaTalk/Interconnected already in rotation/on
     trial (Aug 1 scouting).
-  - REVERSED week of Aug 8: Zvi Mowshowitz's "Don't Worry About the Vase" was
-    passed on week of Aug 1 as "redundant with the existing general-AI-news
-    sources already in rotation" — a generic redundancy call made without a
-    deep inspection. This week's independent source-discovery scouting
-    surfaced it again on its own (not told about the prior rejection) and
-    found a more specific case: its function is weekly cross-source synthesis
-    (this week's issue tied together three separate stories — the DeepMind
-    shakeup, the OpenAI/Meta/Kimi sandbox-escape cluster, the Situational
-    Awareness fund collapse — each independently covered by a different
-    source this brief already uses), which is a distinct value-add from any
-    single existing source rather than a duplicate of one. Re-surfaced in this
-    week's brief with that context flagged; moved to the candidates list below
-    pending Matthew's fresh call, rather than silently re-added or silently
-    kept hidden.
+  - Zvi Mowshowitz's "Don't Worry About the Vase" is NO LONGER on this list.
+    Passed on week of Aug 1 as redundant, re-surfaced independently week of
+    Aug 8 on a more specific case (weekly cross-source synthesis), and Matthew
+    ratified it onto the trial tier Aug 9. Its live entry is in the candidates
+    list above; this line exists only so the earlier rejection is not read as
+    still standing.
 
 ## Working process
 

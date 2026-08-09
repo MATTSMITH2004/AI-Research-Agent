@@ -246,3 +246,8 @@ for the incumbent labs rather than a safety measure."
 
 BEFORE: "asking government to cement it."
 AFTER: "asking government to lock in Anthropic's market lead."
+
+Stand-ins to replace on sight, added as they come up:
+- "issues" where the real word is **weaknesses**, **limits**, or **failures**.
+  A study finding agents could not complete open-ended research at a publishable
+  level documents a weakness, not an issue.

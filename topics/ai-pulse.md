@@ -126,20 +126,16 @@ Pulse only.)
   paragraphs do not repeat it. This holds for every section, including the longer
   "What people are saying" entries, not just the top items. Dense walls of text are
   the thing to avoid.
-- **Model standings** *(conditional — only when rankings moved).* When a
-  release this week changes the model ledger (a new best-in-class for coding,
-  reasoning, writing, agentic use, value per dollar, or similar), show the
-  current standings as a table here: one row per task, with columns Best /
-  Second / Third, including a value-per-dollar row (capability delivered per
-  dollar, not just sticker price). Mark any row that moved this week (a ▲ or
-  a bold "new" tag) so the change is visible at a glance, and include a
-  one-line lead above the table naming what moved and what showed it. When
-  nothing shipped that changes the standings, omit this section entirely — no
-  table, no "no changes" line. Exception: the first brief after the ledger's
-  one-time baseline sweep (see MEMORY.md's model ledger) shows the full table
-  once to introduce the new standings, moved or not. The ledger's full detail
-  (basis, dates) lives in MEMORY.md; the brief shows the standings themselves,
-  not the basis column.
+- **Model standings** *(every week — changed Aug 9, 2026; it used to appear only
+  when a row moved, and two silent weeks in a row made its absence read as an
+  oversight).* Show the current standings as a table here: one row per task,
+  with columns Best / Second / Third, including a value-per-dollar row
+  (capability delivered per dollar, not just sticker price). Mark any row that
+  moved this week (a ▲ or a bold "new" tag) so the change is visible at a
+  glance, and lead with one line naming what moved and what showed it — or
+  saying plainly that nothing moved this week, which is itself information. The
+  ledger's full detail (basis, dates) lives in MEMORY.md; the brief shows the
+  standings themselves, not the basis column.
   Below the per-task table, add a combined overall ranking as two short lists —
   "Overall, best regardless of cost" and "Overall, best per dollar," five models
   each. Two lists rather than one blended score, so the capability-versus-cost
@@ -153,20 +149,64 @@ Pulse only.)
   empty cell with no explanation reads as an oversight.
 - **Worth a skim.** Shorter items that are relevant but not urgent. One bullet
   each: a bold lead-in sentence, a one-line why, and a link.
+- **On my radar.** Things that have not landed yet, open questions, threads to
+  follow next week. Bullets.
 - **What people are saying.** The perspective layer from the podcasts and
   Substacks, kept as its own section (do not fold it into the items). Each entry
-  worth surfacing is built in three layers. First, a claim-style header written
-  like the top developments — the source name, a colon, then the take as a full
-  claim ("**Interconnects: the distillation fight is about market position, and
-  open models have six months**"). Second, a sub-header line directly beneath it
-  carrying the speaker's name and credential clause (pulled from the
-  recurring-voices roster where one exists) — the credential lives here, never
-  in the header. Third, the two beats, each opened with a literal
-  bold label: "**What it was about:**" then "**Why it matters:**". These two
-  labels are keys that should stand out — in the Word doc they render bold in a
-  distinct accent color (any bold label ending in a colon is auto-colored by the
-  renderer), so always write them exactly as those two bold, colon-terminated
-  labels. Two more rules:
+  worth surfacing is built in FOUR visually distinct layers (restructured Aug 9,
+  2026 — the old two-beat "What it was about / Why it matters" shape is retired):
+
+  1. **Header** — a claim-style heading written like the top developments: the
+     source name, a colon, then the take as a full claim. It must state the
+     argument, not the topic. Bad: "Hard Fork: sandbox escapes look different
+     once you know the vocabulary behind alignment." Good: "**Hard Fork: the
+     outside investigator both OpenAI and Anthropic call after an incident says
+     these are containment failures, not model failures**".
+  2. **Credential line** — *italicised*, on its own line directly beneath the
+     header, so it reads as a distinct sub-heading rather than part of the
+     header or the body. It carries who is speaking, what qualifies them, and
+     what the show or publication is. Pull standing wording from the
+     recurring-voices roster where one exists.
+  3. **Body** — the substance, in ordinary paragraphs with no bold label. Take
+     ONE or TWO things from the episode and explain them properly; never survey
+     everything that was discussed. For each: what it actually is, why it is
+     relevant to this reader, and — where the speaker describes a concrete
+     process or mechanism — walk it step by step in plain words rather than
+     repeating their jargon. A single topic covered well is a complete entry;
+     five topics at a paragraph each is a failure.
+  4. **Closing paragraph** — no label, no "Why it matters:". Tie the speaker's
+     view to the rest of the brief and to what has been running in recent weeks:
+     what it contradicts, confirms, extends, or prices differently ("this cuts
+     against item 2's read," "the third investor this month to mark down their
+     own return expectations"). The perspective in this section belongs to the
+     SPEAKER, not to the writer — do not add the writer's own verdict here. That
+     is what "My take" is for, and it lives in the top developments, not here.
+
+  Further rules for the section:
+  - Depth over coverage. An entry may cover a single topic from an episode —
+    that is a complete entry, not a thin one. Take the one or two things that
+    genuinely matter and explain each properly: what it is, why it is relevant
+    to this reader, and how it connects to what the brief has been covering.
+    Where a speaker describes a concrete process, walk it step by step in plain
+    words instead of repeating their vocabulary.
+    BEFORE (week of Aug 8, the Isenberg entry): "Schneider walked through
+    building an AI agent that monitors LinkedIn posts from niche industry
+    influencers, identifies who engaged with them, and finds those people's
+    contact information through an automated lookup service… His argument:
+    engagement with a specific influencer's content is a stronger buying-intent
+    signal than traditional demographic or firmographic targeting."
+    AFTER: "Schneider's method starts from a simple observation: the people who
+    like and comment on a niche expert's LinkedIn posts have effectively
+    raised their hands as interested in that expert's subject. So he built a
+    system that watches a chosen expert's posts, records everyone who engages,
+    looks up those people's work email addresses through a paid data service,
+    and then emails them — with a second automated step handling the replies and
+    pushing toward a sales call. The claim worth testing is the premise: that
+    engaging with one specific person's content says more about whether someone
+    will buy than knowing their job title and company size, which is what
+    advertisers normally target on. His reasoning is that the older signals are
+    now drowned in AI-generated cold outreach, so a behavioural signal survives
+    where a demographic one does not."
   - Scale the depth to the speaker. When it is a high-signal voice (a major CEO,
     a frontier-lab leader, a serious investor), give more on what was actually
     said, not a single line.
@@ -185,8 +225,8 @@ Pulse only.)
     like) must be explained in plain words — this section is not exempt from the
     no-unexplained-term rule.
   - Every perspective source that earns an entry gets the same full treatment —
-    podcast, YouTube channel, or Substack alike. Give each its own labeled
-    two-beat entry at full depth; do not compress any of them into a summary
+    podcast, YouTube channel, or Substack alike. Give each its own four-layer
+    entry at full depth; do not compress any of them into a summary
     paragraph or bury them as a footnote. (Substacks were the ones shortchanged
     before, so watch them especially, but the rule is medium-neutral.) This
     governs DEPTH, not selection: whether a source earns an entry at all is the
@@ -195,7 +235,7 @@ Pulse only.)
     argument belongs, with full credit on that item's Source line. Never thin an
     entry that has earned its slot.
   - One entry per topic, not per source. When one source contributes two or more
-    unrelated topics in a week, give each its own full three-layer entry with
+    unrelated topics in a week, give each its own full four-layer entry with
     its own claim-style header (a "Latent Space: …" entry for a conference
     recap and a separate "Latent Space: …" entry for an unrelated company
     story), rather than merging them into one entry.
@@ -221,8 +261,6 @@ Pulse only.)
     substantive argument of his own, rather than relaying what happened. When it
     only surfaced the lead, no entry — but cite it on the item's Source line
     wherever it surfaced that lead, even when a primary source anchors the item.
-- **On my radar.** Things that have not landed yet, open questions, threads to
-  follow next week. Bullets.
 - **New sources worth adding.** The output of the standing source-discovery beat
   (see "Source discovery" below). One to three newly found high-signal sources
   this week — Substacks, podcasts, YouTube channels, analysts, sites — each with a
@@ -239,6 +277,14 @@ Pulse only.)
   what conflicted and which way it was resolved — noting that MEMORY.md always wins
   by rule, and flag a major contradiction clearly so it can be fixed in the files
   later. This is a report only; it never blocks or delays the brief.
+
+Length target (set Aug 9, 2026): aim for 15 to 18 rendered pages. This is a soft
+target, not a hard cap — a genuinely rich week may run past it, and when it does,
+say so in one line rather than cutting something that earned its place. But treat
+going over as a prompt to check the perspective section first: that is where
+length actually accumulates (it was ~45% of the Aug 8 brief), and the fix is
+depth over coverage — fewer entries, each explaining one or two things properly —
+not thinner entries. Never trim a top development to hit the target.
 
 Length follows substance. A quiet week is short; a rich week can run long. Never
 pad, and never compress something worth teaching just to stay short.
@@ -332,7 +378,21 @@ The promote/prune system (keep it lightweight):
 7. Regulation and policy when it actually lands. Rules, liability, IP, anything
    that changes the playing field, with a bias toward the business and
    transactional angle.
-8. Adjacent and tangential developments. The second-order stuff: AI's effect on the
+8. Confirmed working, do not restructure away (Aug 9, 2026 feedback):
+   - Falsifiable capability-limit findings — studies that test what AI cannot yet
+     do and report a concrete negative result (the "AI as Normal Technology"
+     finding that agents with real budget and six days still could not produce
+     publishable open-ended research). These land harder than capability claims,
+     so hunt for them actively rather than only reporting them when they appear.
+     Call them weaknesses or limits, never "issues."
+   - Hands-on product and implementation deep-dives — how a specific team
+     actually built or deployed something, at the level of what they did and
+     what broke (the Latent Space ChatGPT Work entry). Matthew asked for more of
+     these in Pulse. They lean toward Playbook territory; keep them here anyway
+     when they carry a market or strategy read, and leave pure how-to-build
+     tutorials to the Playbook.
+
+9. Adjacent and tangential developments. The second-order stuff: AI's effect on the
    broader economy and labor, notable moves in markets and business that connect
    back to AI or to operating, and the occasional non-AI development that is simply
    worth an operator's attention. Use judgment, but err toward including a strong
@@ -470,8 +530,12 @@ use itself. A gloss counts whether it is a parenthetical, a comma-clause, an
 em-dash aside, or its own sentence — parentheses when it runs a clause or two,
 its own sentence when it needs more room.
 
-Extend this list whenever a brief uses a term of art not already on it, without
-waiting for a "what does this mean" comment.
+Extend this list every run, not only after a complaint: as part of writing the
+brief, add any term of art it introduced that is not already here. The floor
+should rise weekly. The Aug 8 brief is the case for this — the checker reported
+zero unglossed terms while "high-risk system obligations," "automated research,"
+"AlphaFold-scale," and "less-verifiable domains" all went unexplained, because
+none of them were on the list yet.
 
 - Model and training terms: parameters, context window, mixture of experts (MoE),
   open weights, distillation, fine-tuning, post-training, reinforcement learning,
@@ -487,6 +551,13 @@ waiting for a "what does this mean" comment.
 - Business and market shorthand: neocloud, hyperscaler, capex, run rate, ARR,
   take rate, wrapper, moat, regulatory capture, captive demand, black box,
   forward-deployed engineer, industrialization of software, legacy migration,
+  vendor financing, switching costs, buying intent
+- Hardware: TPU, GPU, ASIC, accelerator, inference chip, HBM
+- Policy and regulatory: high-risk system obligations, safe harbour, voluntary
+  framework, export controls, notified body, conformity assessment
+- Added Aug 2026 from unglossed uses: automated research, recursive
+  self-improvement, verifiable domains, AlphaFold, reward hacking, alignment,
+  containment, eval harness,
   free cash flow, circular financing, public benefit corporation (PBC)
 - Hardware and infrastructure terms: high-bandwidth memory (HBM),
   behind-the-meter power, Compute Express Link (CXL), tensor processing unit
