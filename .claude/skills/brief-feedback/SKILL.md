@@ -258,11 +258,37 @@ ask for both — the memo must answer these in place, not on request):
 Then stop. Ask Matthew to verdict each item: approve / edit / reject /
 defer. Apply nothing — including "obvious" one-offs — before verdicts.
 
-## Step 6 — Apply only what was ratified
+## Step 6 — Confirm the ratified set, then apply
 
-Apply approved edits exactly as ratified, on a `claude/`-prefixed branch per
-the standing git rules, replacing what each edit supersedes rather than
-appending. Rejected items are dropped without residue. Deferred items and
+**Stop again before editing anything.** Verdicts routinely reshape a proposal:
+Matthew merges items, amends wording, rejects half of one, or answers a design
+question in a way that changes what the edit actually says. What gets applied is
+therefore often NOT what the memo proposed, and he has not seen it yet.
+
+So present a confirmation table first — every ratified item, one row each:
+
+| # | Final text, as amended by the verdict | Destination: file → section |
+|---|---|---|
+
+Rules for the table:
+- Quote the text that will actually be written, not a description of it. If a
+  verdict changed the wording, show the changed wording.
+- Name the destination to the section, not just the file: "topics/ai-pulse.md →
+  the What-people-are-saying spec," "house-writing-style → rule 9's stand-in
+  list." Matthew has asked more than once where a change is going; the answer
+  belongs here, before it lands.
+- Where several verdicts collapsed into one edit, show the composite as one row
+  and name every item it absorbs — that merged edit is the one most likely to
+  have drifted from what he thought he approved.
+- Where a verdict rejected part of a proposal, say what is NOT being written.
+
+Then wait. Apply nothing until he confirms the table. This is a second stop, not
+a replacement for Step 5's: Step 5 asks "do you want this?", Step 6 asks "is this
+what you meant?"
+
+Once confirmed, apply the edits exactly as ratified, on a `claude/`-prefixed
+branch per the standing git rules, replacing what each edit supersedes rather
+than appending. Rejected items are dropped without residue. Deferred items and
 design flags get one line in the closing summary so they are findable — they
 are NOT written into any rule file as pending.
 

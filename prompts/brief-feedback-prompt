@@ -18,7 +18,12 @@ Process my brief feedback.
 4. Produce the proposal memo per the skill and then STOP. Do not edit any
    file — not even "obvious" one-offs — until I have verdicted every item
    (approve / edit / reject / defer).
-5. After my verdicts: apply only what I approved, exactly as ratified.
+5. After my verdicts, STOP again before editing anything: show me a table of
+   every ratified item with the final text as amended by my verdicts and the
+   exact destination (file AND section) it will land in. Where several of my
+   verdicts collapsed into one edit, show that composite as one row and name
+   what it absorbs. Wait for my confirmation, then apply only what I approved,
+   exactly as ratified.
    Also do this round's bookkeeping without separate approval — archive
    the .docx to feedback/, write the -ratified.md record with an
    observable check for each approved item, and add the README row. That
