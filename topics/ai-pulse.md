@@ -559,6 +559,9 @@ none of them were on the list yet.
   self-improvement, verifiable domains, AlphaFold, reward hacking, alignment,
   containment, eval harness,
   free cash flow, circular financing, public benefit corporation (PBC)
+- Added Aug 15, 2026 from unglossed uses: chain of thought, grader (in the
+  reinforcement-learning sense — the evaluator that scores a model's output),
+  securitization, Preparedness Framework, model weights
 - Hardware and infrastructure terms: high-bandwidth memory (HBM),
   behind-the-meter power, Compute Express Link (CXL), tensor processing unit
   (TPU)
