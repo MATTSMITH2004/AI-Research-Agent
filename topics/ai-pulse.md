@@ -555,8 +555,7 @@ none of them were on the list yet.
 - Hardware: TPU, GPU, ASIC, accelerator, inference chip, HBM
 - Policy and regulatory: high-risk system obligations, safe harbour, voluntary
   framework, export controls, notified body, conformity assessment
-- Added Aug 2026 from unglossed uses: automated research, recursive
-  self-improvement, verifiable domains, AlphaFold, reward hacking, alignment,
+- Added Aug 2026 from unglossed uses: automated research, recursive self-improvement, verifiable domains, AlphaFold, reward hacking, alignment,
   containment, eval harness,
   free cash flow, circular financing, public benefit corporation (PBC)
 - Added Aug 15, 2026 from unglossed uses: chain of thought, grader (in the
@@ -565,6 +564,9 @@ none of them were on the list yet.
 - Hardware and infrastructure terms: high-bandwidth memory (HBM),
   behind-the-meter power, Compute Express Link (CXL), tensor processing unit
   (TPU)
+- Added Aug 29, 2026 from unglossed uses: neural operator, Fourier transform,
+  grader-seeking, flops (floating-point operations per second), speculative
+  decoding, agent harness, scaffolding
 
 ### Video and podcast sources
 
