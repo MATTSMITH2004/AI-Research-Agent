@@ -567,6 +567,9 @@ none of them were on the list yet.
 - Added Aug 29, 2026 from unglossed uses: neural operator, Fourier transform,
   grader-seeking, flops (floating-point operations per second), speculative
   decoding, agent harness, scaffolding
+- Added Sept 5, 2026 from unglossed uses: autoformalization, proof assistant
+  (Lean), world model, embedding model, retrieval, revolving credit facility,
+  cloud secrets manager, administrator access
 
 ### Video and podcast sources
 
