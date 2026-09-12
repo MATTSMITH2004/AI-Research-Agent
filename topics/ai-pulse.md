@@ -570,6 +570,11 @@ none of them were on the list yet.
 - Added Sept 5, 2026 from unglossed uses: autoformalization, proof assistant
   (Lean), world model, embedding model, retrieval, revolving credit facility,
   cloud secrets manager, administrator access
+- Added Sept 12, 2026 from unglossed uses: Millennium Prize problem,
+  preference cascade, vendor-financing structure (a supplier extending
+  favorable terms to lock in a buyer's future purchases), behind-the-meter
+  power (confirmed still needs the gloss despite being listed below — kept
+  glossed at first use every week per the standing rule)
 
 ### Video and podcast sources
 
