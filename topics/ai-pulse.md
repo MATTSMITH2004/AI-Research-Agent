@@ -498,6 +498,10 @@ printed. Edit it as the rotation changes.
 - Kevin Xu — hedge fund manager; writes Interconnected on Chinese AI and tech.
 - Alex Karp — co-founder and CEO, Palantir Technologies, a company that sells
   data-analysis software to governments and large enterprises.
+- Greg Brockman — president and co-founder, OpenAI; has led its engineering
+  organization since 2015.
+- Jasmine Sun — technology writer known for on-the-ground reporting on AI
+  data-center communities and their political backlash.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
 
@@ -575,6 +579,13 @@ none of them were on the list yet.
   favorable terms to lock in a buyer's future purchases), behind-the-meter
   power (confirmed still needs the gloss despite being listed below — kept
   glossed at first use every week per the standing rule)
+- Added Sept 19, 2026 from unglossed uses: agent swarm, botnet, classifier
+  (a model trained to sort input into a fixed set of categories or scores,
+  rather than generate open-ended text), diffusion (an AI architecture that
+  generates many words in parallel rather than one at a time), open-endedness
+  (AI systems designed to keep generating genuinely novel behavior rather
+  than converging on one fixed solution), context compaction (summarizing an
+  AI agent's earlier conversation to free up space in its working memory)
 
 ### Video and podcast sources
 
@@ -629,8 +640,11 @@ AI-focused shows:
 - Greg Isenberg, https://www.youtube.com/@GregIsenberg : startup ideas and using
   AI to build and grow a business. Strongest feed for the idea-generation and
   operator lens.
-- Hard Fork (New York Times), https://www.nytimes.com/column/hard-fork : weekly,
-  accessible, ties AI to the broader news cycle. NYT publishes transcripts.
+- Hard Fork (New York Times), https://www.nytimes.com/column/hard-fork : ENDED
+  Sept 18, 2026 — hosts Kevin Roose and Casey Newton wrapped the show with a
+  final episode and are launching a new NYT/NPR show, "Machine Gods," in
+  October. Keep checking for the new show's launch; drop this line once it is
+  confirmed dead and "Machine Gods" is confirmed live.
 - Stratechery / Sharp Tech (Ben Thompson), https://stratechery.com : strategy,
   platform economics, and market structure.
 - The Cognitive Revolution (Nathan Labenz), https://www.cognitiverevolution.ai :
