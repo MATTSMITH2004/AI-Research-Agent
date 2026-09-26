@@ -586,6 +586,18 @@ none of them were on the list yet.
   (AI systems designed to keep generating genuinely novel behavior rather
   than converging on one fixed solution), context compaction (summarizing an
   AI agent's earlier conversation to free up space in its working memory)
+- Added Sept 26, 2026 from unglossed uses: harness (the software wrapper that
+  decides what tools, memory, or context a model is allowed to use while
+  being tested — the same benchmark can score very differently under
+  different harnesses), benchmaxing (training or tuning a model specifically
+  to score well on a public benchmark rather than to perform better in
+  general), AI winter (a historical period where disappointed expectations
+  about AI cause funding and interest to collapse — has happened twice
+  before this decade), aggregation theory (Ben Thompson's framework for how
+  internet platforms win by controlling the interface between users and a
+  fragmented supply of content or sellers), reinforcement learning from
+  human feedback (RLHF) (a training method that rewards a model for
+  responses people rate as good)
 
 ### Video and podcast sources
 

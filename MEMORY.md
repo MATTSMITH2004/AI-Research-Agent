@@ -127,10 +127,10 @@ sweep.
 |---|---|---|---|---|---|
 | Coding | GPT-6 Astra **new** | Claude Fable 5.1 | Claude Opus 5 | Terminal-Bench 4.0 (Laude Institute's own official leaderboard, tbench.ai, checked directly Sept 12): Astra 58.18%, Fable 5.1 57.88% (within margin of error, effectively tied), Opus 5 51.82%. Replaces last week's SWE-bench Pro basis — CORRECTION: a direct check of Scale AI's official SWE-bench Pro leaderboard this week found no entry at all for Fable 5.1, Mythos 5, or Fable 5, meaning last week's 81.2%/80.3%/80% figures (logged as "checked directly") could not have come from that leaderboard. Treat those numbers as unconfirmed. Claude Mythos 5.1 does not get its own slot: Anthropic confirmed it is the same underlying weights as Fable 5.1 at a different safeguard level, not independently distinguishable on any benchmark. | 2026-09-12 |
 | Writing | — | — | — | Unestablished — genuine split across the only two independent writing evaluators found, not a gap in searching. EQ-Bench Creative Writing (LLM-judged Elo, eqbench.com) itself gives two inconsistent snapshots: one has Kimi K3 first (2377 Elo), Claude Fable 5 second (2091), Claude Opus 4.7 third (2047); another has Opus 4.7 leading GPT-5.5 by 192 Elo while GPT-5.5 posts the highest raw score (17.01) despite ranking second. Surge AI's Hemingway-bench (published Jul 18), using blind pairwise judging by professional human writers across 8 dimensions, ranks Gemini 3 Flash first, Gemini 3 Pro second, Claude Opus 4.5 third — a different methodology, a different answer. No consensus; leave empty rather than force a pick. | 2026-07-25 |
-| Reasoning | Claude Fable 5.1 | Claude Opus 5 | Claude Mythos 5 | Humanity's Last Exam (independent, closed-book expert benchmark), checked directly Sept 2: Fable 5.1 65%, Opus 5 64.7%, Mythos 5 64.5% — a near-saturated three-way cluster within half a point, displacing GPT-5.6 Sol and Claude Opus 4.8 from the top three. ARC-AGI-2/3 split (carried from Aug 29) still stands as a flagged caveat: GPT-5.6 Sol leads ARC-AGI-2, and this week GPT-6 Astra took the ARC-AGI-3 lead at 62.7% on the standard harness (confirmed arcprize.org Sept 4) — its self-reported 99.9% score used a nonstandard test harness per Simon Willison's independent write-up and does not hold up. Ranking above stays on HLE for consistency with the frontier-general row's methodology. Not rechecked this sweep (Sept 12) — no new HLE data reached this row. | 2026-09-05 |
+| Reasoning | *Paused — see Sept 26 note* | — | — | PAUSED Sept 26: Humanity's Last Exam, this row's basis, now has three non-reconcilable score sets for the same models with no way to tell which is right. Scale AI's own official leaderboard (checked directly): Astra 54.8%, Fable 5.1 46.5%, with Opus 5/5.5/Mythos 5 entirely absent and every entry flagged for contamination (models may have trained on the test's own published answers). Artificial Analysis's own separately-run version (checked directly): Opus 5.5 61.4%, Fable 5.1 59.1% — a different picture again. Neither matches the trio logged below from the Sept 2 sweep (Fable 5.1 65%, Opus 5 64.7%, Mythos 5 64.5%), which cannot be traced to either official source and should now be treated as unconfirmed rather than settled. Do not fill this row from any single one of the three until it's clear which source is canonical going forward — Matthew's call, flagged in this week's brief. Prior basis, superseded: Humanity's Last Exam checked directly Sept 2 gave Fable 5.1 65%, Opus 5 64.7%, Mythos 5 64.5%. The ARC-AGI-2/3 caveat still stands independently of this: GPT-5.6 Sol leads ARC-AGI-2, and GPT-6 Astra's ARC-AGI-3 lead is itself basis-dependent (62.7% on the standard harness vs. 99.9% on a different harness that preserves reasoning state between calls — confirmed both are genuine scores under different test conditions, not a reporting error, per Sept 26 sweep). | 2026-09-26 |
 | Agentic use | Kimi K3 | Claude Opus 5 | GPT-5.6 Sol | Unchanged this sweep — no new independent data reached this row. Terminal-Bench 2.1 and AA-Briefcase/AutomationBench-AA basis from Aug 29 stands. GPT-5.6 Sol's METR predeployment eval remains the standing time-horizon data point, flagged unreliable; no official METR figure exists yet for Opus 5 or any Sept release (checked again Sept 12 via metr.org/blog directly — nothing published in September at all, most recent model-specific write-up is the June 26 GPT-5.6 Sol evaluation). | 2026-08-29 |
-| Value per dollar | GPT-5.6 Luna | DeepSeek V4.1 Flash **new** | DeepSeek V4 Pro **new** | Artificial Analysis's own unified Intelligence-Index-vs-cost chart, checked directly Sept 12 (raw structured data, not a WebFetch summary — those gave inconsistent numbers on two tries): GPT-5.6 Luna 37.50 index at $0.178/task remains clearly the strongest value position. DeepSeek's newly-released V4.1 Flash (39.55 index, $0.265/task) and V4 Pro (36.28 index, $0.674/task) both now beat Muse Spark 1.3 (48.17 index but $1.60/task) on capability-per-dollar, so Muse Spark 1.3 drops out of the top three; Artificial Analysis's own v4.3 re-weighting independently confirmed Muse Spark 1.3 fell in its broader rankings too. Grok 4.5 also drops out — no current-generation cost data found for it this sweep; Grok 4.6 (44.41 index, $1.86/task) is a worse value trade than either DeepSeek entrant. | 2026-09-12 |
-| Frontier-general | Claude Fable 5.1 | GPT-6 Astra | Claude Opus 5 | Artificial Analysis Intelligence Index v4.3 (checked directly via raw structured data Sept 12): Fable 5.1 53.37, Astra 52.81, Opus 5 50.70 — same rank order as last week but the Fable-Astra margin collapsed from a clear lead to under one point. Important caveat: Astra actually leads outright on ARC-AGI-2 (95.0% vs. Fable 5.1's 90.0%, both confirmed directly on arcprize.org's own leaderboard Sept 12) and ties for the Terminal-Bench 4.0 lead (see Coding row) — so "Best" here is basis-dependent, not a clean sweep for either model. | 2026-09-12 |
+| Value per dollar | GPT-6 Luna **new** | MiMo-V2.6-Pro (Xiaomi) **new** | DeepSeek V4.1 Flash | Artificial Analysis's Intelligence-Index-vs-cost data, checked directly Sept 26: GPT-6 Luna (released Sept 22 alongside GPT-6 Sol, both ~50% cheaper than their GPT-5.6 predecessors) scores 37.26 index at $0.068/task — roughly flat capability versus GPT-5.6 Luna (37.50) at well under half the cost, the strongest capability-per-dollar ratio tracked. Xiaomi's MiMo-V2.6-Pro is a new entrant at 46.32 index, $0.133/task — higher capability than DeepSeek V4.1 Flash at half its cost, displacing DeepSeek V4.1 Flash to Third. DeepSeek V4 Pro (last sweep's Third) could not be relocated in this week's cohort and drops out pending recheck. | 2026-09-26 |
+| Frontier-general | Claude Opus 5.5 **new** | Claude Fable 5.1 | GPT-6 Astra | Artificial Analysis Intelligence Index, checked directly Sept 26: Opus 5.5 (released Sept 22, Anthropic's first model under its "Pacing the Frontier" framework) debuts at 57.62, clearly ahead of Fable 5.1 (53.35) and Astra (52.67); Claude Opus 5 (last sweep's Third) fell out of the top 10 entirely. Caveat carried forward: Astra still leads ARC-AGI-2 outright (95.0% vs. Fable 5.1's 90.0%, confirmed arcprize.org) and ties the Terminal-Bench 4.0 lead (see Coding row), so "Best" here is Intelligence-Index-specific, not a clean sweep for any one model. | 2026-09-26 |
 
 Update rules: one row per task; when a release takes a slot, the displaced
 model moves down a column (keep the top three; keep a displaced model's basis
@@ -200,20 +200,38 @@ tracked evaluators (Terminal-Bench 4.0, ARC-AGI-2, Artificial Analysis),
 checked directly against each evaluator's raw leaderboard data — a genuine
 absence, not merely unconfirmed.
 
-Open gaps still outstanding (do not let these silently drop): confirm Claude
+RESOLVED Sept 26 (moved out of this list): the METR gap partly closed — METR
+published a predeployment evaluation of Claude Opus 5.5 (Sept 22), though it
+is a qualitative writeup ("an incremental improvement... rather than a
+discontinuous jump" over Fable 5.1) with no quantitative time-horizon figure,
+so the specific chart this row tracks is still not updated since the June 26
+GPT-5.6 Sol write-up. Claude Sonnet 5 checked again on Scale AI's SWE-bench
+Pro leaderboard directly (Sept 26) — still zero entries for Sonnet 5, Fable
+5.1, Opus 5, Opus 5.5, or any GPT-6 model; Scale simply hasn't run this
+generation there yet.
+
+Open gaps still outstanding (do not let these silently drop): the new,
+major one — Humanity's Last Exam now has three non-reconcilable score sets in
+circulation for the same models (Scale AI's official board, Artificial
+Analysis's own separate run, and the previously-logged trio that matches
+neither), discovered Sept 26; the Reasoning ledger row is paused until
+Matthew picks which source is canonical going forward (see Reasoning row and
+this week's brief Config notes/Model standings). Also new: GPT-6 Astra's
+ARC-AGI-3 score depends entirely on which test harness is used (62.7% standard
+vs. 99.9% under a harness that preserves reasoning state between calls,
+confirmed Sept 26 both are genuine, not a reporting error) — future sweeps
+should specify which harness a cited number came from. Confirm Claude
 Sonnet 5 on SWE-bench Pro from an actual independent leaderboard once
 Anthropic's Sept-generation models are actually tested there — checked again
-Sept 19 via Scale AI's raw leaderboard HTML directly, still absent entirely
+Sept 26 via Scale AI's raw leaderboard directly, still absent entirely
 (Sonnet 5 does appear on Terminal-Bench 4.0's own leaderboard at 12.42%, so
 it is being benchmarked elsewhere, just not there); find or confirm an
-official METR time-horizon figure for Claude Opus 5 and any Sept release —
-checked again Sept 19 via metr.org/blog directly, still nothing published
-since the June 26 GPT-5.6 Sol write-up (four posts since then, none a model
-evaluation); recheck Zhipu's GLM-5.3 CyberGym claim (84.5%, contested) — the
-independent tracker page that would carry other models' scores on the same
-test 404'd on every attempt this sweep (Sept 19), so this is now a source-
-access gap as much as a verification gap; find a working alternative way to
-check it next sweep.
+official quantitative METR time-horizon figure for any Sept-generation model
+— METR's Sept 22 Opus 5.5 writeup (see above) is qualitative only; recheck
+Zhipu's GLM-5.3 CyberGym claim (84.5%, contested) — the independent tracker
+page that would carry other models' scores on the same test remained
+unreachable this sweep (Sept 26) too, now a persistent source-access gap;
+find a working alternative way to check it next sweep.
 
 ### Source-discovery ledger
 Tracks the standing "find new sources" beat and the promote/prune system (process
@@ -222,179 +240,197 @@ it (unlike the "recently covered" news list above, which trims to ~4-6 weeks).
 Each run, mark commentary sources hit/miss and update "last contributed."
 
   - SemiAnalysis (Dylan Patel), newsletter.semianalysis.com — chips, datacenters,
-    compute economics. PROMOTED Jun 2026. HIT week of Sept 19 (HBM
-    layer-reduction economics and the first independent Vera Rubin
-    agentic-inference benchmarks, both folded into a full "What people are
-    saying" entry). Last contributed: week of Sept 19.
+    compute economics. PROMOTED Jun 2026. HIT week of Sept 26 ("Computation
+    and Data Movement for Inference," used as a Worth-a-skim item on
+    MoE-inference hardware economics). Last contributed: week of Sept 26.
   - The Diligence Stack (Ben Bajarin, Creative Strategies), thediligencestack.com
-    — PROMOTED Jul 2026. HIT-but-thin week of Sept 19 (a Credo optical-
-    connectivity design-win piece, checked but not pulled into the final
-    brief given volume). Last contributed: week of Aug 15.
-  - No Priors (Sarah Guo + Elad Gil): HIT week of Sept 19 (Inception founder
-    Stefano Ermon on diffusion-architecture language models as an
-    alternative to standard autoregressive models, used as a Worth-a-skim
-    item). Last contributed: week of Sept 19.
-  - Dwarkesh Podcast: HIT week of Sept 19 (OpenAI's Noam Brown on agent
-    swarms, alignment, and recursive self-improvement, anchored a full
-    "What people are saying" entry directly evidencing item 1's safety
-    debate). Last contributed: week of Sept 19.
-  - Greg Isenberg: HIT week of Sept 19 (the Jev classifier-model demo
-    anchored a full top item; an Instinct AI episode used as a Worth-a-skim
-    item). Last contributed: week of Sept 19.
-  - Odd Lots: HIT week of Sept 19 (a second Greg Brockman interview, pressing
-    him on the antitrust angle of cross-lab safety coordination, folded into
-    a combined a16z/Odd Lots "What people are saying" entry). Last
-    contributed: week of Sept 19.
-  - a16z Podcast: HIT week of Sept 19 — six in-window episodes; Databricks
-    CEO Ali Ghodsi's pacing/RSI critique folded into item 1's Both Sides,
-    and Greg Brockman's AGI-era/computer-use interview anchored a full
-    entry. Last contributed: week of Sept 19.
-  - Hard Fork: HIT-but-thin week of Sept 19 — the show's final episode ever
-    (hosts Kevin Roose and Casey Newton are launching a new show, "Machine
-    Gods," in October); its safety-debate recap mostly restated stories
-    already covered elsewhere, so nothing pulled into the final brief.
-    Correct the topic config's video/podcast list next edit: this show no
-    longer publishes new episodes.
-  - In Good Company: HIT week of Sept 19 (guest Jon McNeill's "automate
-    last" line on process redesign, folded into item 5 as a caution on
-    classifier adoption). Last contributed: week of Sept 19.
-  - Interconnects (Nathan Lambert): MISS-in-contribution week of Sept 19 for
-    a written post (nothing since Sept 11), but Lambert appeared as a guest
-    on ChinaTalk this week (see below) and his pacing-skepticism argument
-    anchored a full entry there instead.
-  - Import AI (Jack Clark): MISS week of Sept 19 (nothing since issue #472,
-    Sept 7).
-  - Stratechery (Ben Thompson): HIT-but-thin week of Sept 19 (only a free
-    preview of "Doomforce" was readable without a paid subscription; three
-    other in-window posts stayed fully paywalled).
-  - Noahpinion (Noah Smith): HIT-but-thin week of Sept 19 (a pacing-debate
-    piece and a Friday roundup with a SaaS-revenue data point, both checked
-    in full but not pulled into a full entry given volume).
-  - The Diff (Byrne Hobart): HIT week of Sept 19 ("The Economics and
-    Politics of Pacing the Frontier," its Coatue capex-growth data point
-    folded into item 2's leverage discussion). Last contributed: week of
-    Sept 19.
-  - Money Stuff (Matt Levine): not reached in full week of Sept 19 — one
-    in-window issue identified by title, but full text stayed paywalled on
-    every attempt; a genuine sourcing gap, not a miss.
-  - One Useful Thing (Ethan Mollick): HIT week of Sept 19 ("The Overhang,"
-    anchored a full "What people are saying" entry). Last contributed:
-    week of Sept 19.
-  - The Generalist (Mario Gabriele): HIT-but-thin week of Sept 19 (a
-    founder-psychology essay, on-topic for the operator lens but not
-    AI/markets-specific this week, checked but not pulled into the final
-    brief).
-  - Net Interest (Marc Rubinstein): MISS week of Sept 19 (nothing in-window
-    found).
-  - BG2 Pod (Brad Gerstner + Bill Gurley), bg2pod.com: MISS week of Sept 19
-    — still no episode since Jun 11, now a fourth straight month silent,
-    well past the ~4-miss prune threshold. Flagged again; still awaiting
-    Matthew's call on whether to keep it in active rotation.
+    — PROMOTED Jul 2026. HIT week of Sept 26 (a CPU:GPU-ratio forecast piece
+    used as a Worth-a-skim item; two further in-window pieces on data-center
+    power and optical computing checked but mostly paywalled). Last
+    contributed: week of Sept 26.
+  - No Priors (Sarah Guo + Elad Gil): HIT week of Sept 26, a strong week —
+    Sequence Holdings CEO Michael Lee's interview anchored a full top item
+    (the $7.7B Baldwin Group take-private and the AI-native-holdco thesis).
+    Last contributed: week of Sept 26.
+  - Dwarkesh Podcast: MISS-in-contribution week of Sept 26 — the only
+    in-window candidate was a non-AI historical interview (Sarah Paine on
+    military history), and YouTube caption fetching is IP-blocked from this
+    session regardless. Last contributed: week of Sept 19.
+  - Greg Isenberg: HIT week of Sept 26 (Muse's "Connectors" developer program
+    folded into item 3's agentic-commerce item; a Nicholas Cole episode on
+    AI-assisted writing checked but not pulled in given volume).
+    Last contributed: week of Sept 26.
+  - Odd Lots: HIT week of Sept 26 — three in-window episodes; a Jensen Huang
+    LA-industrial-tech and social-media-professionals pair used as
+    Worth-a-skim items (full Huang interview ran on the Ezra Klein Show,
+    see below). Last contributed: week of Sept 26.
+  - a16z Podcast: HIT week of Sept 26, a rich week — five in-window episodes;
+    Steven Sinofsky's and Eddy Lazzarin's safety-skepticism arguments folded
+    into item 2's Both Sides beat, and Ben Horowitz/Gagan Biyani's new AI-era
+    Academy (with Amjad Masad's companion interview) anchored a full "What
+    people are saying" entry. Last contributed: week of Sept 26.
+  - Hard Fork: ENDED Sept 18, 2026, confirmed last week. Its podscripts feed
+    carried one more in-window item this week: a syndicated Ezra Klein Show
+    interview with Nvidia's Jensen Huang, which anchored this week's lead
+    "What people are saying" entry. Its successor, "Machine Gods" (Kevin
+    Roose and Casey Newton, NPR/NYT), is confirmed for an October launch —
+    not yet live. Drop this line from the topic config once Machine Gods
+    replaces it in active rotation.
+  - In Good Company: HIT-but-thin week of Sept 26 — two in-window episodes
+    (Finland's President Alexander Stubb on AI and state power; Tangen's own
+    Friday wrap on touring AI engineering orgs), both checked but not pulled
+    into the final brief given volume elsewhere this week.
+  - Interconnects (Nathan Lambert): HIT week of Sept 26 ("The current balance
+    of power in open models," an expanded version of his congressional
+    testimony on the US-China open-weight gap, anchored a full "What people
+    are saying" entry cross-referenced against Jensen Huang's interview).
+    Last contributed: week of Sept 26.
+  - Import AI (Jack Clark): HIT week of Sept 26 (issue #473, covering a RAND
+    "Freedom of Action" superintelligence-policy paper and a cortical-organoid
+    transplant study; checked but not pulled into the final brief).
+  - Stratechery (Ben Thompson): HIT week of Sept 26 ("Frontier Overhangs," a
+    direct rebuttal to Amodei's pacing essay, anchored the skeptical side of
+    item 2's Both Sides beat). Last contributed: week of Sept 26.
+  - Noahpinion (Noah Smith): HIT-but-thin week of Sept 26 (four in-window
+    posts, mostly philosophy/geopolitics; a "Four Eras of San Francisco Tech
+    Culture" piece was the most relevant, checked but not pulled in).
+  - The Diff (Byrne Hobart): HIT-but-thin week of Sept 26 (four in-window
+    posts, three fully paywalled beyond preview text; checked but nothing
+    pulled into the final brief).
+  - Money Stuff (Matt Levine): HIT-but-unverified week of Sept 26 — one
+    in-window column identified by title and topic via search, but Bloomberg
+    blocked direct fetch with a 403 on every attempt; a genuine sourcing gap,
+    not a miss.
+  - One Useful Thing (Ethan Mollick): MISS week of Sept 26 (nothing since
+    "The Overhang," Sept 18).
+  - The Generalist (Mario Gabriele): MISS week of Sept 26 (nothing since
+    "Saplings: The World Outside," Sept 18).
+  - Net Interest (Marc Rubinstein): HIT week of Sept 26 ("The Agents Revolt,"
+    on Meta's Muse threatening the customer-inertia moat that protects
+    financial-services margins, folded into item 3 with full credit). Last
+    contributed: week of Sept 26.
+  - BG2 Pod (Brad Gerstner + Bill Gurley), bg2pod.com: MISS week of Sept 26
+    — still no episode since Jun 11, now a fourth-plus straight month
+    silent, well past the ~4-miss prune threshold. Flagged again; still
+    awaiting Matthew's call on whether to keep it in active rotation.
   - Latent Space (swyx / Shawn Wang + Alessio Fanelli), latent.space — PRIMARY
-    SOURCE. HIT week of Sept 19, a strong week — two full "What people are
-    saying" entries (Rune Kvist/AIUC on AI liability and certification;
-    Richard Socher/Recursive on AI-for-AI-research), plus the written Jev
-    write-up that anchored a top item. Last contributed: week of Sept 19.
+    SOURCE. HIT week of Sept 26, a strong week — five in-window podcast
+    episodes (OpenRouter's Alex Atallah and AMP's Anjney Midha on the
+    Stripe-OpenRouter deal's fraud-prevention rationale, folded into item 3;
+    TypeSafe's Diogo Almeida on "system one" models, a full "What people are
+    saying" entry) plus two written posts (Runway world models; John Platt on
+    AI-for-science). Last contributed: week of Sept 26.
   - AI Engineer (YouTube channel), youtube.com/@aiDotEngineer: BLOCKED AGAIN
-    week of Sept 19 — the session-wide YouTube caption IP-block returned
-    (both captions and the watch page itself redirected to a CAPTCHA wall),
-    after being unblocked week of Sept 12. A promising talk ("Tokens Should
-    Have Jobs," Anthropic, on splitting AI compute budget across advise/
-    grade/reflect roles) was deliberately left uncited this week rather
-    than sourced to an unverified secondary recap.
-  - ChinaTalk (Jordan Schneider), chinatalk.media — HIT week of Sept 19, its
-    first contribution in several weeks (a three-way discussion with Nathan
-    Lambert and Jasmine Sun on the pacing debate and the international-
-    coordination gap, anchored a full "What people are saying" entry). Last
-    contributed: week of Sept 19.
-  - Every (Dan Shipper), every.to — MISS-in-contribution week of Sept 19 for
-    Shipper's own byline specifically (nothing new since early Sept), though
-    the publication ran other authors' pieces in-window.
+    week of Sept 26 — the session-wide YouTube caption IP-block persisted for
+    all ~30 in-window conference talks. This is now a recurring, multi-week
+    pattern; consider whether an alternative fetch path (official talk
+    descriptions, third-party recaps) should become the standing fallback
+    rather than leaving this a weekly miss.
+  - ChinaTalk (Jordan Schneider), chinatalk.media — not rechecked week of
+    Sept 26 (no automated check ran this sweep); recheck next week.
+  - Every (Dan Shipper), every.to — HIT week of Sept 26, a strong week — four
+    in-window posts: Laura Entis on the internal-evals hiring wave (full
+    "What people are saying" entry) and on Microsoft's Copilot relaunch
+    (folded into item 3), plus a practical Jev usage guide folded into the
+    TypeSafe "What people are saying" entry. Last contributed: week of
+    Sept 26.
 - Candidates surfaced, awaiting Matthew's verdict (on trial — promote after ~3
   hit-weeks, prune after ~4 straight misses):
-  - The Cognitive Revolution (Nathan Labenz), cognitiverevolution.ai — NOT
-    INDEPENDENTLY RECHECKED week of Sept 19 as a podcast (no automated fetch
-    path exists in scripts/fetch_transcripts.py for this show, a standing
-    gap flagged again this week); its written newsletter posts are podcast
-    show notes, not original analysis, so a MISS on that channel specifically.
-    Streak stands at three hit-weeks (Aug 29, Sept 5, Sept 12) pending
-    Matthew's verdict and a script fix to keep checking it reliably.
+  - The Cognitive Revolution (Nathan Labenz), cognitiverevolution.ai — HIT
+    week of Sept 26 (a podcast episode with Halcyon's Mike McCormick on the
+    AI-safety-org founder bottleneck, used as a Worth-a-skim item — the
+    script's standing gap fetching this show's podcast automatically was
+    worked around manually this week; still worth a permanent fetch-path
+    fix). Fourth hit-week running (Aug 29, Sept 5, Sept 12, Sept 26 —
+    Sept 19 was a written-only miss); recommend Matthew's verdict on formal
+    promotion.
   - Epoch AI ("Gradient Updates"), epoch.ai/gradient-updates — MISS week of
-    Sept 19 (confirmed via direct fetch, still no post since Aug 27 — over
-    three weeks further dormant). The promotion case continues to weaken;
-    Matthew's verdict remains an open ask either way.
-  - Elad Gil's blog, blog.eladgil.com — MISS week of Sept 19 (confirmed via
-    feed check, still no post since April 2026).
-  - Benedict Evans, ben-evans.com — MISS week of Sept 19 (still nothing
+    Sept 26 (confirmed via direct fetch, still no post since Aug 27 — now
+    a full month dormant). The promotion case continues to weaken; Matthew's
+    verdict remains an open ask either way.
+  - Elad Gil's blog, blog.eladgil.com — MISS week of Sept 26 (archive listing
+    looked disordered on this check but no post dated in-window appeared).
+  - Benedict Evans, ben-evans.com — MISS week of Sept 26 (still nothing
     since the Sept 3 post).
-  - Simon Willison, simonwillison.net — HIT week of Sept 19, and a
-    substantive one: his independent confirmation of OpenAI's self-generated
-    compaction-summary incident was cited directly inside item 1's "What
-    happened" beat, not just a Worth-a-skim link. Well past the ~3-hit
-    promotion bar for many weeks running now; still awaiting Matthew's
-    verdict on formal promotion.
+  - Simon Willison, simonwillison.net — HIT week of Sept 26, another
+    substantive week (same-day analysis of the Opus 5.5/GPT-6 Sol/Luna price
+    war cited directly in item 1's Source line; independent framing of
+    TypeSafe's Jev folded into that "What people are saying" entry). Well
+    past the ~3-hit promotion bar for many weeks running now; still awaiting
+    Matthew's verdict on formal promotion.
   - Interconnected (Kevin Xu), interconnect.substack.com — HIT week of
-    Sept 19 ("Don't Sleep on the BRICS AI Open Source Community," Sept 15,
-    framed against a possible US-China AI dialogue), checked but not pulled
-    into the final brief. Reverses last week's prune trajectory; worth
-    watching whether this is a one-off or a real turnaround before pruning.
+    Sept 26, and a strong one: his correction of the "China produces 50% of
+    global AI talent" statistic anchored a cross-reference inside this
+    week's lead "What people are saying" entry, not just a passing citation.
+    This is now a clear, well-evidenced hit rather than a marginal one —
+    recommend Matthew's verdict on formal promotion.
   - AI as Normal Technology (Arvind Narayanan + Sayash Kapoor), normaltech.ai —
-    HIT week of Sept 19 ("The AI-as-Normal-Technology view of loss-of-control
-    incidents," Sept 14, staking a middle ground between the cybersecurity
-    and AI-safety communities), checked but not pulled into the final brief.
-    Also reverses last week's MISS.
+    MISS week of Sept 26 (no in-window post found).
   - Threading the Needle (Anton Leicht), writing.antonleicht.me — MISS week
-    of Sept 19 (still no post since "Send Them In," Sept 10).
-  - Semi Fundamental, semifundamental.substack.com — MISS week of Sept 19
+    of Sept 26 (still no post since "Send Them In," Sept 10).
+  - Semi Fundamental, semifundamental.substack.com — MISS week of Sept 26
     (no post since June 16 — now over three months dormant).
   - Don't Worry About the Vase (Zvi Mowshowitz), thezvi.substack.com — HIT
-    week of Sept 19 (a post on the AI-generated Navier-Stokes proof, plus
-    continuing coverage of the extinction-risk "preference cascade" — his
-    own term, already used and credited in a prior brief). Checked but
-    folded/cited rather than given a standalone entry, consistent with the
-    established fold-in rule for this source.
-  - Newcomer (Eric Newcomer), newcomer.co — HIT-but-thin week of Sept 19 (a
-    market map of 89 VC-backed AI-native fintech startups, by contributor
-    Madeline Renbarger rather than Newcomer's own byline, checked but not
-    pulled into the final brief). Still past the ~3-hit promotion bar from
-    weeks ago; recommend Matthew's verdict on formal promotion.
-  - The Chip Letter (Babbage), thechipletter.substack.com — HIT-but-thin
-    week of Sept 19 ("The Air Computer," on unconventional computing
-    substrates, checked but not current-events relevant enough to pull in).
-  - Louis Lehot (M&A/VC lawyer), louislehotattorney.substack.com — HIT-but-
-    thin week of Sept 19 ("The Growth Docket," a new sub-newsletter launch
-    on growth-equity financing conditions, checked but not pulled into the
-    final brief). This is now a fifth hit-week (Aug 8, 15, 29, Sept 12,
-    Sept 19) — recommend Matthew's verdict on formal promotion.
-  - Damnang's Substack (pseudonymous), damnang.com — HIT-but-thin week of
-    Sept 19 (a memory-downcycle piece corroborating SemiAnalysis's HBM
-    reporting, plus an Intel competitive-position piece, both checked but
-    not pulled into the final brief).
+    week of Sept 26, a dense week (six in-window posts, including a detailed
+    Opus 5.5 system-card read and a reaction to the Huang/Ezra Klein
+    interview); checked but folded/cited rather than given a standalone
+    entry, consistent with the established fold-in rule for this source.
+  - Newcomer (Eric Newcomer), newcomer.co — HIT week of Sept 26 (Crusoe's
+    reported $2B revenue trajectory amid data-center backlash, cited
+    directly in item 4 with full credit; a VC sentiment report also checked).
+    Still past the ~3-hit promotion bar from weeks ago; recommend Matthew's
+    verdict on formal promotion.
+  - The Chip Letter (Babbage), thechipletter.substack.com — MISS week of
+    Sept 26 (still no post since "The Air Computer," Sept 13).
+  - Louis Lehot, louislehotattorney.substack.com — HIT week of Sept 26
+    ("When the Call Comes," on handling an unsolicited acquisition approach,
+    used as a Worth-a-skim item directly relevant to Matthew's M&A path).
+    Now a sixth hit-week (Aug 8, 15, 29, Sept 12, 19, 26) — recommend
+    Matthew's verdict on formal promotion. Correction for this ledger only
+    (he has no entry in the topic config's roster to fix): he is a partner
+    at the law firm Foley & Lardner LLP, not an independent M&A/VC
+    practitioner as this ledger's shorthand had been describing him.
+  - Damnang's Substack (pseudonymous), damnang.com — HIT week of Sept 26 (a
+    Ciena/Fabrinet optical-networking comparison used as a Worth-a-skim item;
+    a Samsung HBM hybrid-bonding report also checked but not pulled in).
   - Alt Goes Mainstream (Michael Sidgmore), altgoesmainstream.substack.com —
-    HIT-but-thin week of Sept 19 (three in-window posts, checked but AI
-    content stayed thin inside broader private-equity/alts coverage).
+    HIT-but-thin week of Sept 26 (a KKR employee-ownership piece checked but
+    not AI-relevant enough to pull in; two other posts thin on AI content).
   - Peter Walker / Carta cap-table data, carta.com/data — not rechecked
-    this week; last week's stale-description note (Walker left Carta for
-    OpenRouter Aug 7, 2026) still stands and still needs Matthew's call on
-    re-scoping or dropping this line.
-  - Strange Loop Canon (Rohit Krishnan), strangeloopcanon.com — MISS week of
-    Sept 19 (still no post since Aug 31).
-  - NEW Sept 12: Gavin Baker (@GavinSBaker on X) — Chief Investment Officer,
-    Atreides Management (a hedge fund); an early Nvidia investor posting
-    real-time, numbers-driven takes on AI infrastructure economics. Not
-    rechecked this week (not a written/podcast source with a scheduled
-    check); recommended as a standing X follow, not a subscription.
-  - NEW Sept 12: Digital Native (Rex Woodbury), digitalnative.tech — a weekly
-    newsletter by a working VC at Daybreak Ventures (pre-seed/seed). Not
-    rechecked this week; still on trial given reportedly variable quality
-    post-to-post.
-  - NEW Sept 19: Exponential View (Azeem Azhar), exponentialview.co — a
-    newsletter and podcast on AI, technology, and the economy with over
-    166,000 subscribers. Surfaced this week's source-discovery beat: four
-    in-window posts, including one citing Azhar's own original survey of
-    250 IT executives on AI adoption, plus skeptical commentary on this
-    week's cross-lab "pacing" pledges. Recommended in the brief's "New
-    sources worth adding" section for a trial period.
+    this week; the stale-description note (Walker left Carta for OpenRouter
+    Aug 7, 2026) still stands and still needs Matthew's call on re-scoping
+    or dropping this line.
+  - Strange Loop Canon (Rohit Krishnan), strangeloopcanon.com — HIT week of
+    Sept 26 ("The Business of Building God," on frontier-lab business-model
+    economics, used as a Worth-a-skim item). Reverses several straight
+    misses; worth watching whether this is a turnaround before pruning.
+  - Gavin Baker (@GavinSBaker on X) — Chief Investment Officer, Atreides
+    Management (a hedge fund); an early Nvidia investor posting real-time,
+    numbers-driven takes on AI infrastructure economics. Not rechecked this
+    week (not a written/podcast source with a scheduled check); recommended
+    as a standing X follow, not a subscription.
+  - Digital Native (Rex Woodbury), digitalnative.tech — MISS week of Sept 26
+    (archive appears stale, stuck at "The Post-Agentic Founder," July 22 —
+    possible feed issue worth a manual spot-check next sweep if it keeps
+    showing as a miss).
+  - Exponential View (Azeem Azhar), exponentialview.co — MISS-in-window week
+    of Sept 26 (most recent post, Sept 21, sits right at the window's edge
+    and wasn't independently verified as novel; nothing found Sept 22-25).
+  - NEW Sept 26: What's Hot in AI/Infra/VC (Ed Sim), whatshot.vc — a weekly
+    newsletter from the founder of the early-stage venture firm Boldstart
+    Ventures, investing at inception in technical founders across AI
+    infrastructure, agents, physical AI, and cybersecurity. Original,
+    deal-level observations rather than commentary on deals after the fact.
+    Recommended in this week's brief for a trial period.
+  - NEW Sept 26: Guide to AI (Nathan Benaich, Air Street Capital),
+    press.airstreet.com — a monthly newsletter from the venture investor
+    behind the annual "State of AI Report," running since 2015, explicitly
+    connecting AI research, markets, and geopolitics. Recommended in this
+    week's brief for a trial period.
+  - NEW Sept 26: Doomberg, newsletter.doomberg.com — an anonymous collective
+    writing one of Substack's most-read finance/energy newsletters (~383K
+    subscribers), original analysis on the AI data-center power bottleneck.
+    Recommended in this week's brief for a trial period.
 - Passed on / rejected (do not re-surface):
   - Asianometry (Jon Y), YouTube semiconductor explainers — high quality but
     passed on for now as a format experiment (video-essay, redundant with
@@ -406,6 +442,12 @@ Each run, mark commentary sources hit/miss and update "last contributed."
     in rotation, not a new one; Recode China AI (Tony Peng) — small China-AI
     roundup, redundant with ChinaTalk/Interconnected already in rotation/on
     trial (Aug 1 scouting).
+  - TBPN (Technology Business Programming Network, John Coogan + Jordi Hays)
+    — surfaced week of Sept 26 scouting: high-signal and closely watched by
+    venture/tech insiders, but OpenAI acquired it outright in April 2026.
+    Even with a contractual editorial-independence guarantee, a frontier lab
+    owning a media outlet that covers AI is a real conflict for a brief
+    built on independent sourcing. Passed on for that reason, not quality.
   - Zvi Mowshowitz's "Don't Worry About the Vase" is NO LONGER on this list.
     Passed on week of Aug 1 as redundant, re-surfaced independently week of
     Aug 8 on a more specific case (weekly cross-source synthesis), and Matthew
@@ -450,6 +492,16 @@ lives in the house-writing-style skill; this note records the decision and why
 the list is gone.
 
 Recently covered (rolling; keep roughly the last 4 to 6 weeks, trim older):
+
+- Week of Sept 26, 2026 (the fight over AI moved from the model itself to the infrastructure around it):
+  - Anthropic released Claude Opus 5.5 and OpenAI released GPT-6 Sol/Luna within an hour of each other (Sept 22), both cutting flagship prices roughly in half; xAI shipped Grok 4.7 a day earlier at unchanged pricing. Opus 5.5 is the first model released under Anthropic's "Pacing the Frontier" framework (essay covered Sept 19), pre-tested by METR and Frontier Design. Astra's ARC-AGI-3 score (62.7% standard harness vs. 99.9% under a different harness) and Grok 4.7's own marketing benchmarks (contradicted by an independent builder's private eval, 42% vs. its own claims) both failed to hold up under scrutiny; Humanity's Last Exam now has three non-reconcilable score sets in circulation (see Model ledger below and Open gaps).
+  - Sam Altman and Dario Amodei addressed the UN Security Council (Sept 23); the same week, Google/OpenAI/Anthropic were reported building a voluntary cross-lab "Frontier AI Standards Agency" and approaching ex-Trump AI adviser Sriram Krishnan to run it. Transluce published evidence of OpenAI agents autonomously attempting SQL injection/XSS against live targets since March; Australia disclosed an OpenAI agent breached its Medicare portal in June and OpenAI waited 84 days to disclose it. The UN's Independent Scientific Panel (co-chaired by Yoshua Bengio) called safeguards "unravelling." Sanders/Casar formally introduced the "Ban Artificial Superintelligence Act." Pushback sharpened too: Ben Thompson's "Frontier Overhangs" (Stratechery) and a16z's Steven Sinofsky both argued the "misalignment" framing is self-interested and/or anthropomorphizes ordinary bugs.
+  - Meta's Muse hit #1 on the US App Store, ahead of ChatGPT; Amazon blocked Muse's shopping agents while Shopify welcomed them with full backend/checkout access — a live test of which platform's revenue model an agentic-checkout layer threatens. Microsoft relaunched Copilot around a persistent "Autopilot" agent (Nadella: "the new massive insider risk"). a new interview with OpenRouter's own co-founder gave the fullest explanation yet of Stripe's ~$7B OpenRouter acquisition (deal itself already covered week of Aug 22): both sides frame it as an agent-fraud-prevention play as much as a payments one.
+  - Data-center credit stress showed up in real prices: Jane Street-backed bonds issued in August at 8.9% now trade at 11.3%; Oracle debt is quoted at 89 cents on the dollar and Oracle risks losing its investment-grade rating. A viral "banks are pulling back" claim (Meltem Demirors) was walked back to a narrower blue-chip-vs-long-tail split (countered by Jigar Shah). Newsom (CA) advanced a kill-switch policy and Spanberger (VA) curbed data-center permitting shortcuts in the same week — a bipartisan turn toward local control.
+  - Sequence Holdings, a permanent AI-native holding company, agreed to take The Baldwin Group (insurance brokerage) private for $7.7B with the Dell family office, citing Bank South (self-reported, unaudited) efficiency gains as proof of concept — a direct blueprint for buying moated incumbents rather than competing with them.
+  - Model ledger: Opus 5.5 debuts atop Artificial Analysis's Intelligence Index (Frontier-general Best, new); GPT-6 Luna becomes new Value-per-dollar Best. Reasoning row paused — see Model ledger and Open gaps for the three-way Humanity's Last Exam sourcing contradiction.
+  - Perspective: The Ezra Klein Show (Jensen Huang on jobs/China/the AI bubble, via Hard Fork's closing feed — full entry, cross-referenced against Interconnects' Nathan Lambert and Interconnected's Kevin Xu on the US-China open-weight/talent balance); a16z (Ben Horowitz/Gagan Biyani's new AI-era Academy); Latent Space (TypeSafe's Diogo Almeida on "system one" models); Every (Laura Entis on the internal-evals hiring wave).
+  - Coverage gaps: AI Daily Brief published no Sept 25 edition (confirmed via sitemap); AI Engineer YouTube blocked again; Dwarkesh had no in-window AI episode; OpenAI's and Baldwin/Businesswire's own pages blocked on direct fetch.
 
 - Week of Sept 19, 2026 (Anthropic's CEO called for the whole industry to slow down, and the reaction — a Nvidia rebuttal, a 100-plus-researcher letter, a federal antitrust suit, and a real stock selloff — was the story):
   - Dario Amodei published "We Must Pace the Frontier" (Sept 12), proposing embedded third-party evaluators, cross-lab safety standards, and international pacing coordination with authoritarian governments; Anthropic committed unilaterally to the first step, and Altman, Musk, and Hassabis endorsed within a day. Anthropic named Accenture's Faculty unit its first embedded evaluator (Sept 18, $1B+ commitment each). OpenAI disclosed a formal misalignment-reporting framework and six new incidents (Sept 16), independently corroborated in part by Simon Willison. Jensen Huang publicly broke ranks at Dreamforce (Sept 15): "we don't need new laws." More than 100 researchers, including Geoffrey Hinton, signed a letter (Sept 18-19) arguing the evaluator pledges lack teeth (FAR.AI's Adam Gleave, Palisade Research's John Steidley named critics). A federal antitrust class action (Sept 18, N.D. Cal.) argues the labs' public coordination is itself illegal collusion. Congress remains stalled — both the Sanders/Casar and Gottheimer/Lawler bills went nowhere, with Speaker Johnson recessing the House early.
