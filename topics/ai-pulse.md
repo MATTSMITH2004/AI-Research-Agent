@@ -502,6 +502,14 @@ printed. Edit it as the rotation changes.
   organization since 2015.
 - Jasmine Sun — technology writer known for on-the-ground reporting on AI
   data-center communities and their political backlash.
+- Zvi Mowshowitz — writes Don't Worry About the Vase, a long-running weekly AI-policy and
+  model-release newsletter that closely reads lab documents and legislation.
+- Ben Thompson — founder of Stratechery, a paid analysis publication on technology strategy
+  and platform economics.
+- Jack Clark — Anthropic co-founder; writes the Import AI newsletter.
+- Anish Acharya — general partner at Andreessen Horowitz who invests in consumer AI
+  products.
+- Nicolai Tangen — CEO of Norges Bank Investment Management, Norway's sovereign wealth fund.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
 
@@ -599,6 +607,23 @@ none of them were on the list yet.
   human feedback (RLHF) (a training method that rewards a model for
   responses people rate as good)
 
+- Added Oct 3, 2026 from unglossed or newly used terms: civil investigative demand
+  (a formal, subpoena-like order for documents and testimony), Section 5 of the FTC Act
+  (the FTC's authority over unfair or deceptive practices), safe harbor (a legal rule
+  shielding conduct from liability if conditions are met), non-cancelable commitment and
+  take-or-pay obligation (a payment owed whether or not the service is used),
+  convertible financing (money that can convert into shares, marked up as the company's
+  value rises, producing a non-cash loss), adjusted operating profitability (a
+  company-defined profit measure), credit-default swap (insurance against a borrower
+  defaulting), market breadth, roll-up (buying many small firms in a fragmented industry
+  and merging operations), holding company, system of record (the master database a
+  company runs on), human-in-the-loop (people check an agent's work until trusted),
+  cost per task versus price per token, effort setting (how long a model thinks before
+  answering), cached input, judgment model (picks from a fixed list of answers instead of
+  writing text), gated release, sparse attention, DRAM, SRAM, memory bandwidth, principal-
+  agent problem, Bitter Lesson (general methods plus more compute beat hand-built
+  structure), open-weight marketplace
+
 ### Video and podcast sources
 
 These are the commentary layer, not a headline feed. Their value is not breaking
@@ -652,11 +677,12 @@ AI-focused shows:
 - Greg Isenberg, https://www.youtube.com/@GregIsenberg : startup ideas and using
   AI to build and grow a business. Strongest feed for the idea-generation and
   operator lens.
-- Hard Fork (New York Times), https://www.nytimes.com/column/hard-fork : ENDED
-  Sept 18, 2026 — hosts Kevin Roose and Casey Newton wrapped the show with a
-  final episode and are launching a new NYT/NPR show, "Machine Gods," in
-  October. Keep checking for the new show's launch; drop this line once it is
-  confirmed dead and "Machine Gods" is confirmed live.
+- Hard Fork (New York Times), https://www.nytimes.com/column/hard-fork : hosts Kevin
+  Roose and Casey Newton left after a Sept 18, 2026 farewell episode and are launching
+  a new NYT/NPR show, "Machine Gods," in October (not yet live as of Oct 3). The feed
+  itself kept publishing: an Oct 1 trailer says the show continues "for the next few
+  months" with interim hosting (Max Reed with Times reporters), and a full episode ran
+  Oct 2. Keep scanning the feed; revisit this line when Machine Gods launches.
 - Stratechery / Sharp Tech (Ben Thompson), https://stratechery.com : strategy,
   platform economics, and market structure.
 - The Cognitive Revolution (Nathan Labenz), https://www.cognitiverevolution.ai :
