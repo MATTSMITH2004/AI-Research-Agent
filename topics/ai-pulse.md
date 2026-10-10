@@ -490,7 +490,6 @@ printed. Edit it as the rotation changes.
 - Kevin Roose — tech columnist, The New York Times; co-host, Hard Fork.
 - Casey Newton — founder, Platformer; co-host, Hard Fork.
 - Ethan Mollick — professor, Wharton; writes One Useful Thing on applied AI.
-- Nathan Lambert — post-training researcher; writes Interconnects.
 - Dwarkesh Patel — host, the Dwarkesh Podcast; long-form interviews with
   frontier-lab researchers and leaders, plus solo essays on AI trends.
 - Marc Rubinstein — former hedge fund partner (Lansdowne Partners); writes
@@ -623,6 +622,22 @@ none of them were on the list yet.
   writing text), gated release, sparse attention, DRAM, SRAM, memory bandwidth, principal-
   agent problem, Bitter Lesson (general methods plus more compute beat hand-built
   structure), open-weight marketplace
+
+- Added Oct 10, 2026 from unglossed or newly used terms: Unique Games Conjecture
+  (a computer-science conjecture about approximating constraint puzzles), Dirichlet
+  L-function / zero-free region (zeros of number-theory functions that govern prime
+  spacing), Hodge Conjecture, Millennium Prize problem (one of seven $1M Clay Institute
+  problems), Lean / proof assistant (software that mechanically checks proofs),
+  Moravec's paradox (tasks hard for people can be easy for machines and vice versa),
+  matrix-multiplication exponent, gross versus net revenue (counting partner-channel
+  sales before or after the partner's share), annualized revenue / run rate, pre-money
+  valuation, private credit (loans made by asset managers outside banks), special
+  purpose vehicle (SPV) lease-back, mixture of experts / active parameters,
+  Terminal-Bench v2.1, SWE-bench Verified, OSWorld, hallucination rate (AA-Omniscience:
+  how often a model guesses wrong instead of abstaining), output tokens per task,
+  tokenizer, mask set (stencils used to print a chip), lithography, guard banding,
+  X-ray diffraction, harness (as moat), AI gateway / model-routing service,
+  OAuth-style agent protocol
 
 ### Video and podcast sources
 
