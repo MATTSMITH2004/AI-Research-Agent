@@ -6,6 +6,7 @@ here each Saturday.
 
 | Week of | Word doc | Markdown |
 | --- | --- | --- |
+| October 11–17, 2026 | [ai-pulse-2026-10-17.docx](ai-pulse-2026-10-17.docx) | [ai-pulse-2026-10-17.md](ai-pulse-2026-10-17.md) |
 | October 4–10, 2026 | [ai-pulse-2026-10-10.docx](ai-pulse-2026-10-10.docx) | [ai-pulse-2026-10-10.md](ai-pulse-2026-10-10.md) |
 | September 27–October 3, 2026 | [ai-pulse-2026-10-03.docx](ai-pulse-2026-10-03.docx) | [ai-pulse-2026-10-03.md](ai-pulse-2026-10-03.md) |
 | September 20–26, 2026 | [ai-pulse-2026-09-26.docx](ai-pulse-2026-09-26.docx) | [ai-pulse-2026-09-26.md](ai-pulse-2026-09-26.md) |

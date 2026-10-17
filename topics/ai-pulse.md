@@ -476,9 +476,11 @@ exactly like the source descriptions above inform sourcing without being
 printed. Edit it as the rotation changes.
 
 - Dean Ball — policy lead, OpenAI (joined Jul 2026); former AI policy advisor, Trump administration.
-- Nathan Lambert — research scientist at the Allen Institute for AI, a nonprofit
-  AI research lab; specialises in how models are refined after their initial
-  training (post-training); writes the Interconnects newsletter.
+- Nathan Lambert — founder of a new nonprofit research lab (the Oct 14, 2026 a16z
+  episode spells it "Trillium"); previously co-led post-training at the Allen
+  Institute for AI, a nonprofit AI lab, where he helped build the open Olmo model;
+  specialises in how models are refined after their initial training
+  (post-training); writes the Interconnects newsletter.
 - Dylan Patel — founder and chief analyst, SemiAnalysis, the research firm whose
   supply-chain and datacenter cost modelling the industry treats as a reference;
   writes on chips, compute economics, and datacenter buildouts.
@@ -509,6 +511,17 @@ printed. Edit it as the rotation changes.
 - Anish Acharya — general partner at Andreessen Horowitz who invests in consumer AI
   products.
 - Nicolai Tangen — CEO of Norges Bank Investment Management, Norway's sovereign wealth fund.
+- Alex Rampell — general partner at Andreessen Horowitz; co-founded the payments
+  company TrialPay (acquired by Visa); board member and investor at VGS.
+- Terry Angelos — chief strategy officer, VGS (Very Good Security), which vaults
+  payment-card numbers for merchants, neobanks and AI labs; former Visa executive.
+- Pushmeet Kohli — Google DeepMind scientist who worked alongside John Jumper on
+  AlphaFold, DeepMind's protein-structure prediction system.
+- Gil Luria — technology analyst at the investment bank DA Davidson; calls CoreWeave
+  the "subprime tranche" of AI.
+- Torsten Slok — chief economist at Apollo, an asset manager.
+- Dan Shipper — co-founder and CEO of Every, a media and software company that tests
+  AI tools hands-on.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
 
@@ -638,6 +651,21 @@ none of them were on the list yet.
   tokenizer, mask set (stencils used to print a chip), lithography, guard banding,
   X-ray diffraction, harness (as moat), AI gateway / model-routing service,
   OAuth-style agent protocol
+
+- Added Oct 17, 2026 from unglossed or newly used terms: tranche (a layer of a loan;
+  senior is repaid first, junior pays more), coupon (annual interest rate on a bond or
+  loan), yield / implied rate (return implied by a bond's price), convertible debt,
+  unsecured notes, backlog (contracted future revenue), take-private (buying out a
+  listed company's shareholders), written consent (controlling holders approve a deal
+  without a vote), clean-room (rebuilding a product's behavior without copying its code),
+  headless (software that agents call directly instead of clicking through a website),
+  open banking, chargeback (card network refunds a customer when a merchant fails to
+  deliver), agentic token (a card-network credential issued to an agent with a spending
+  cap), wallet (a service that stores payment credentials), civil investigative demand
+  (already listed), tokenizer, Active Memory / Active Focus (Meta's agent features),
+  defender's window (period in which the best AI cyber tools reach defenders first),
+  formal verification (mathematical proof that software has a property), distillation
+  (already listed), junior tranche, EUV lithography, hallucination rate (already listed)
 
 ### Video and podcast sources
 
