@@ -522,6 +522,23 @@ printed. Edit it as the rotation changes.
 - Torsten Slok — chief economist at Apollo, an asset manager.
 - Dan Shipper — co-founder and CEO of Every, a media and software company that tests
   AI tools hands-on.
+- Nick Cammarata — interpretability researcher at Goodfire, a startup that builds tools
+  for looking inside AI models; previously did early interpretability research at OpenAI
+  and co-developed the superposition theory he now disputes.
+- Neel Nanda — leads interpretability work at Google DeepMind; the most-cited skeptic of
+  Cammarata's "neurons are already clean" essay.
+- Don Wilson — founder and CEO of DRW, a Chicago trading firm helping build exchange-traded
+  futures on GPU rental prices.
+- Dane Knecht — chief technology officer of Cloudflare, which sells website security and
+  delivery services and sits in front of a large share of web traffic.
+- Mark Levine — New York City Comptroller and investment adviser to the city's roughly
+  $325 billion pension funds.
+- Kelsey Piper — journalist who covers AI policy.
+- Nathan Calvin — AI-policy lawyer at the advocacy group Encode.
+- Alex Bores — New York legislator who has pushed state AI-safety rules.
+- Emil Michael — Pentagon undersecretary, defense department.
+- David Sacks — venture investor who advised the Trump administration on AI policy.
+- Zvi Mowshowitz — (see above) writes Don't Worry About the Vase.
 - (extend: Levie, Armstrong, Andreessen, Karp, Isenberg, Wildeford, Azhar,
   and others as they recur — one clause each.)
 
@@ -666,6 +683,20 @@ none of them were on the list yet.
   defender's window (period in which the best AI cyber tools reach defenders first),
   formal verification (mathematical proof that software has a property), distillation
   (already listed), junior tranche, EUV lithography, hallucination rate (already listed)
+
+- Added Oct 24, 2026 from newly used terms: defender's window (period when the best AI
+  cyber tools reach defenders before attackers), CVSS (the 0-10 severity score for
+  software flaws), mod_php (PHP running inside the web server), WAF (web application
+  firewall: filters malicious web requests), patch vs deployment gap, fair-value
+  measurement (marking financial instruments to current value, so a rising valuation
+  produces a paper loss on convertibles), super-voting shares, non-voting share class
+  (Class C), preemption (federal law overriding state law), 501(c)(3), LLC, futures
+  contract / strip / forward vs spot, basis trade, crack spread and crunch spread,
+  superposition, neuron / detector, polysemantic, interpretability, Model Context
+  Protocol server, personal agent, retention, node (a chip-manufacturing generation),
+  yield (share of chips on a wafer that work), High-NA EUV, backside power,
+  multi-patterning, foundry, Entity List, Trainium, hurdle rate, barbell demand,
+  post-training.
 
 ### Video and podcast sources
 
