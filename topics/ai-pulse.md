@@ -698,6 +698,8 @@ none of them were on the list yet.
   multi-patterning, foundry, Entity List, Trainium, hurdle rate, barbell demand,
   post-training.
 
+- Added Oct 31, 2026 from newly used terms: Form S-1 (registration statement filed with the SEC before an IPO), controlled company (Nasdaq exemption when founders hold over half the votes), dual-class / Class F share (voting share with no economics), SAFE (simple agreement for future equity), net revenue retention (revenue from a customer group now divided by their revenue a year earlier), recursive self-improvement (RSI), DNS tunneling (hiding data inside address lookups), covert channel (leaking signals through shared hardware such as a processor cache), offline world (cached copy of the web for training with no live access), FrontierCode 2.0, Terminal-Bench-Science, HLE-Diamond, private test set, contingency fee, rainmaker, wind-down versus Chapter 11, personalized / surveillance pricing (first-degree price discrimination), pull request, OSWorld.
+
 ### Video and podcast sources
 
 These are the commentary layer, not a headline feed. Their value is not breaking
