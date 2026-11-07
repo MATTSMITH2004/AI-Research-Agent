@@ -700,6 +700,8 @@ none of them were on the list yet.
 
 - Added Oct 31, 2026 from newly used terms: Form S-1 (registration statement filed with the SEC before an IPO), controlled company (Nasdaq exemption when founders hold over half the votes), dual-class / Class F share (voting share with no economics), SAFE (simple agreement for future equity), net revenue retention (revenue from a customer group now divided by their revenue a year earlier), recursive self-improvement (RSI), DNS tunneling (hiding data inside address lookups), covert channel (leaking signals through shared hardware such as a processor cache), offline world (cached copy of the web for training with no live access), FrontierCode 2.0, Terminal-Bench-Science, HLE-Diamond, private test set, contingency fee, rainmaker, wind-down versus Chapter 11, personalized / surveillance pricing (first-degree price discrimination), pull request, OSWorld.
 
+- Added Nov 7, 2026 from newly used terms: S-1/A (amended registration statement), Responsible Scaling Policy (Anthropic's rules tying safeguards to capability thresholds), recursive self-improvement threshold (a year of progress equal to two at the 2018-2024 pace), GDPx (SemiAnalysis's 11-domain agentic benchmark), pass@1 (share of tasks passed on the first try), safety classifier (filter that blocks answers judged dangerous), sandbagged (scores depressed by refusals), MATH-500, IFEval, EBITDA, force majeure, charter amendment, moratorium, metered pricing versus flat subscription, personal agent.
+
 ### Video and podcast sources
 
 These are the commentary layer, not a headline feed. Their value is not breaking
