@@ -704,6 +704,8 @@ none of them were on the list yet.
 
 - Added Nov 14, 2026 from newly used terms: Entity List (already used; Commerce blacklist), remote-access loophole (renting export-banned chips in data centers outside China), key-person risk, concurrent private placement, Class N (non-voting) stock, greenshoe, fully diluted valuation, terminable (a contract either side may end), investment-grade rating, credit event, effort setting (low to max), sub-agent, Remote Labor Index (CAIS/Scale test of real freelance projects), ARC-AGI-3, Bug Hunt Bench, HoneyBench, formal verification, Lean, specification (the precise statement of what is to be proved), side channel, decision model (scores fixed choices instead of writing text), reinforcement learning environment, supervised fine-tuning (SFT), training loss, coordination costs, Millennium Prize problem, transformer, points per dollar.
 
+- Added Nov 21, 2026 from newly used terms: concurrent private placement, controlled company, lock-up, fully diluted, deferred revenue, customer prepayment, debt-to-assets ratio, interim final rule, end-use control, total processing performance (TPP), AI Diffusion Rule, indemnity, embedded assessment, reinforcement-learning run, cost per successful task, model gateway, router, AA-Briefcase, Bug Hunt Bench, FrontierML, superintelligence, MCP server, interpretability, digital twin.
+
 ### Video and podcast sources
 
 These are the commentary layer, not a headline feed. Their value is not breaking
@@ -758,11 +760,10 @@ AI-focused shows:
   AI to build and grow a business. Strongest feed for the idea-generation and
   operator lens.
 - Hard Fork (New York Times), https://www.nytimes.com/column/hard-fork : hosts Kevin
-  Roose and Casey Newton left after a Sept 18, 2026 farewell episode and are launching
-  a new NYT/NPR show, "Machine Gods," in October (not yet live as of Oct 3). The feed
-  itself kept publishing: an Oct 1 trailer says the show continues "for the next few
-  months" with interim hosting (Max Reed with Times reporters), and a full episode ran
-  Oct 2. Keep scanning the feed; revisit this line when Machine Gods launches.
+  Roose and Casey Newton left after a Sept 18, 2026 farewell; the feed continues with
+  interim hosts (Max Reed with Erin Griffith and Mike Isaac as of Nov 2026). Their
+  successor show, Machine Gods (Machine Gods Media, licensed to NPR, twice weekly;
+  transcripts at npr.org/machinegods), is LIVE as of Oct 2026 — scan both feeds.
 - Stratechery / Sharp Tech (Ben Thompson), https://stratechery.com : strategy,
   platform economics, and market structure.
 - The Cognitive Revolution (Nathan Labenz), https://www.cognitiverevolution.ai :
