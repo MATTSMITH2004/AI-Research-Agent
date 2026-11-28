@@ -706,6 +706,8 @@ none of them were on the list yet.
 
 - Added Nov 21, 2026 from newly used terms: concurrent private placement, controlled company, lock-up, fully diluted, deferred revenue, customer prepayment, debt-to-assets ratio, interim final rule, end-use control, total processing performance (TPP), AI Diffusion Rule, indemnity, embedded assessment, reinforcement-learning run, cost per successful task, model gateway, router, AA-Briefcase, Bug Hunt Bench, FrontierML, superintelligence, MCP server, interpretability, digital twin.
 
+- Added Nov 28, 2026 from newly used terms: 8-K, presumption of denial, short covering, Form 12b-25, 10-Q certification, Form 4, S-1/A (amended registration statement), Generalized Riemann Hypothesis, Dirichlet L-function, Mathlib, axiom (in Lean), sorry (Lean's unfinished-step marker), kernel / proof checker, VP versus VNP, permanent versus determinant, Exponential Time Hypothesis, Polymath project, handoverism, Jevons paradox, price elasticity, shadow traffic, time to first token, verifier, looped transformer, side letter, credit-default swap.
+
 ### Video and podcast sources
 
 These are the commentary layer, not a headline feed. Their value is not breaking
